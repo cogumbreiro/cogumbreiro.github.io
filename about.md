@@ -1,29 +1,61 @@
 ---
 layout: page
 permalink: /about/index.html
-title: About the Theme
-tagline: Minimal Mistakes, a Jekyll Theme
-tags: [about, Jekyll, theme, responsive]
+title: About Tiago
+#tagline: About Tiago
+tags: [about]
 modified: 9-9-2013
-image:
-  feature: texture-feature-02.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
 ---
 
-Jekyll is pretty rad and figured releasing a cleaned up version of [my site](http://mademistakes.com)[^1] as a theme for others to hack and build on would be fun. So here be that theme --- I call it **Minimal Mistakes**, a responsive Jekyll theme with large featured images and solid typography. 
+[My curriculum vitae is available online in PDF.](cv-en.pdf) Last update was on
+July 2011.
 
-## Minimal Mistakes is all about:
+I had a great experience visiting [Vivek Sarkar] and the [Habanero group] at
+[Rice University], during the year of 2012.
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers. 
-* Minimal embellishments --- content first.
-* Large feature images for posts and pages.
-* Author sidebar to pimp your bio, photo[^2], and social media links.
-* Simple and clear permalink structure *(ie: domain.com/category/post-title)*
+## Affiliations
 
-<a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install Minimal Mistakes Theme</a>
+These are my roles:
+    
+ * PhD student advised by [Francisco Martins]
+ * researcher at the [LaSIGE] resarch unit, in particular a member of
+   the [GLOSS] resarch team.
 
-[^1]: Since open sourcing this theme I have released a couple other Jekyll themes. My website [Made Mistakes](http://mademistakes.com) is currently using a modified version of my [So Simple Theme](http://mmistakes.github.io/so-simple-theme/).
+## Projects
+    
+Current:
+  
+  * MACAW - Macroprogramming for Wireless Sensor Networks.
+    PTDC/EIA-EIA/115730/2009 (from March 2011 to February 2014)
 
-[^2]: Fancy avatars provided by [Brandon Mathis](http://brandonmathis.com/projects/fancy-avatars/demo/) under a [Creative Commons Attribution 3.0 License](http://creativecommons.org/licenses/by/3.0/).
+Past:
+
+  *	[Callas], Calculi and Languages for Sensor Networks,
+	PTDC/EIA/71462/2006. From January 2008 to April 2011.
+
+## Tools
+
+  * [MIL], a multithreaded typed assembly language. Developed a compiler
+    from the pi-calculus into MIL (Master's thesis). Extended
+    the typechecker and the interpreter of MIL.
+  * [Callas], a language for programming wireless sensor networks. Developed
+    the compiler from Callas into Callas bytecode. Implemented the Callas
+    bytecode interpreter with support for SunSPOT.
+
+## Refereeing
+
+External referee for: [SENSORNETS'12], [SAC'11], [SAC'10], [APLAS'08]
+
+[Rice University]: http://rice.edu/
+[SENSORNETS'12]: http://www.sensornets.org/
+[APLAS'08]: http://research.microsoft.com/en-us/um/people/grama/APLAS2008/
+[SAC'11]: http://www.acm.org/conferences/sac/sac2011/
+[SAC'10]: http://www.acm.org/conferences/sac/sac2010/
+[Callas]: http://www.dcc.fc.up.pt/callas/
+[MIL]: http://gloss.di.fc.ul.pt/?q=node/60
+[GLOSS]: http://gloss.di.fc.ul.pt
+[LaSIGE]: http://lasige.di.fc.ul.pt/
+[Francisco Martins]: http://homepages.di.fc.ul.pt/~fmartins/
+[Vivek Sarkar]:  http://www.cs.rice.edu/~vsarkar/
+[Habanero group]: http://habanero.rice.edu/
+
