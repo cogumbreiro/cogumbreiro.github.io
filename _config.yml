@@ -1,25 +1,21 @@
-title:            Site Title
-tagline:          A short tagline
-description:      Describe your website.
+title:            Home
+tagline:          #A short tagline
+description:      #Describe your website.
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://localhost:4000
 
 # Owner/author information
 owner:
-  name:           Your Name
-  avatar:         bio-photo.jpg
-  bio:            "Describe your self."
-  email:          your@email.com
+  name:           Tiago Cogumbreiro
+  avatar:         avatar.jpeg
+  bio:            # "Describe your self."
+  email:          cogumbreiro@di.fc.ul.pt
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
-  linkedin:       
-  instagram:      
-  lastfm:         
-  tumblr:         
+  bitbucket: cogumbreiro
+  dblp: /c/Cogumbreiro:Tiago.html
+  gscholar: 4uTAp_gAAAAJ
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:    
+  google_plus: https://plus.google.com/+TiagoCogumbreiro
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
@@ -32,16 +28,12 @@ bing_verify:
 links:
   - title: About
     url: /about/
-  - title: Articles
-    url: /articles/
-  - title: Theme Setup
-    url: /theme-setup/
-  - title: Made Mistakes
-    url: http://mademistakes.com
-    external: true
+#  - title: Code
+#    url: https://bitbucket.org/cogumbreiro/
+#    external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    Europe/Lisbon
 future:      true
 pygments:    true
 markdown:    kramdown
