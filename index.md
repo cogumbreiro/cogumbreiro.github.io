@@ -8,6 +8,11 @@ description: "A responsive Jekyll theme with editorial tendencies by designer Mi
 #  creditlink: http://texturelovers.com
 ---
 
+<figure class="image-pull-right">
+<img src="{{ site.url }}/images/qrcode.png" alt="v-Card" class=".image-pull-right" width="128" />
+<figcaption>My v-Card as a QR Code.</figcaption>
+</figure>
+
 Hello, I am a PhD student, advised by [Francisco Martins] at [ULisboa]. I am
 interested in type theory, concurrency, and parallel programming.
  
