@@ -13,8 +13,8 @@ description: "A responsive Jekyll theme with editorial tendencies by designer Mi
 <figcaption>My v-Card as a QR Code.</figcaption>
 </figure>
 
-Hello, I am a PhD student, advised by [Francisco Martins] at [ULisboa]. I am
-interested in type theory, concurrency, and parallel programming.
+Hello, I am a PhD student advised by [Francisco Martins] at [ULisboa]. I am
+interested in type theory, concurrency theory, and parallel programming.
  
 ## Publications
 

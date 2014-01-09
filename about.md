@@ -7,7 +7,7 @@ tags: [about]
 modified: 9-9-2013
 ---
 
-[My curriculum vitae is available online in PDF.](cv-en.pdf) Last update was on
+[My curriculum vitae is available online in PDF.]({{ site.url }}assets/cv-en.pdf) Last update was on
 July 2011.
 
 I had a great experience visiting [Vivek Sarkar] and the [Habanero group] at
