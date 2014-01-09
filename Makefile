@@ -18,10 +18,10 @@ build: $(OUT_HTML)
 
 $(OUT_HTML): $(BIB)
 	bibtex2html $(BIBOPTS) -s $(BST) -o $(patsubst %.html,%,$@) $(BIB)
-	./replace.py $@ $(patsubst %.html,%_bib.html,$@) "{{ include.url }}"
-	./replace.py $(patsubst %.html,%_bib.html,$@) '<h1>'$(shell basename $(BIB))'</h1>' ""
-	./replace.py $(patsubst %.html,%_bib.html,$@) $@ "{{ include.url }}"
-	./replace.py $(patsubst %.html,%_bib.html,$@) '</a><pre>' "</a>\n<pre>"
+	./replace.py $@ $(patsubst %.html,%_bib.html,$@) "{{ include.url }}" # Make the link a parameter
+	./replace.py $(patsubst %.html,%_bib.html,$@) $@ "{{ include.url }}" # Make the link a parameter
+	./replace.py $(patsubst %.html,%_bib.html,$@) '<h1>'$(shell basename $(BIB))'</h1>' "" # Remove the header, because ugly
+	./replace.py $(patsubst %.html,%_bib.html,$@) '</a><pre>' "</a>\n<pre>" # HACK: Jekyll breaks silently without this
 
 publish: build
 	rsync -arzv _site/ $(USER)@$(SERVER):$(REMOTE_DIR)
