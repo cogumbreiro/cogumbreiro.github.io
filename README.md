@@ -1,6 +1,6 @@
 # Tiago Cogumbreiro's scholar web page
 
-Feel free to 
+Feel free to branch and alter this website.
 
 * website: http://cogumbreiro.github.io/
 * source code: https://github.com/cogumbreiro/cogumbreiro.github.io
