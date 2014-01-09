@@ -5,6 +5,14 @@ Feel free to
 * website: http://cogumbreiro.github.io/
 * source code: https://github.com/cogumbreiro/cogumbreiro.github.io
 
+## Workflow
+
+* alter a page: `git commit`; `git push`
+* alter the publications: `make`; `git commit`; `git push`
+
+To edit a page from anywhere in the world you can use
+[Prose](http://prose.io/)!
+
 ## Configuration
 
 This website uses the awesome Jekyll theme
@@ -16,8 +24,6 @@ I've added support for the generation a publications page from a bibtex file.
 * the bibtex database is located in `_bibliography/publications.bib`;
 * the bibtex2html style is located in `_bibliography/style.bst`;
 * the rsync upload can be configured in `Makefile`.
-
-
 
 ## Dependencies
 
