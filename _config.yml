@@ -9,7 +9,6 @@ owner:
   avatar:         bio-photo.jpg
   bio:            # "Describe your self."
   email:          cogumbreiro@di.fc.ul.pt
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
   bitbucket: cogumbreiro
   dblp: /c/Cogumbreiro:Tiago.html
   gscholar: 4uTAp_gAAAAJ
@@ -27,7 +26,7 @@ bing_verify:
 # For external links add external: true
 links:
   - title: About
-    url: /about/
+    url: about/
 #  - title: Code
 #    url: https://bitbucket.org/cogumbreiro/
 #    external: true
