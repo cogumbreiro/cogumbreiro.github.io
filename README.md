@@ -33,8 +33,6 @@ I've added support for the generation a publications page from a bibtex file.
 * [Python](http://www.python.org/)
 * [rsync](https://rsync.samba.org/) (optional)
 
----
-
 ## License
 
 This website is free and open source software, distributed under the
