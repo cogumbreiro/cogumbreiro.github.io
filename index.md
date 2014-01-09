@@ -1,11 +1,7 @@
 ---
 layout: page
-description: "A responsive Jekyll theme with editorial tendencies by designer Michael Rose."
+# description: "A responsive Jekyll theme with editorial tendencies by designer Michael Rose."
 #tags: [Jekyll, theme, responsive, blog, template]
-#image:
-#  feature: texture-feature-01.jpg
-#  credit: Texture Lovers
-#  creditlink: http://texturelovers.com
 ---
 
 <figure class="image-pull-right">
@@ -18,7 +14,7 @@ interested in type theory, concurrency theory, and parallel programming.
  
 ## Publications
 
-{% bibtex _bibliography/style.bst _bibliography/publications.bib %}
+{% include publications.html url="publications.html" %}
 
 [Francisco Martins]: http://homepages.di.fc.ul.pt/~fmartins/
 [ULisboa]: http://www.ulisboa.pt/

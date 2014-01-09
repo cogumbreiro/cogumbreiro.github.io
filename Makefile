@@ -1,18 +1,33 @@
 USER = cogumbreiro
 SERVER = lasige-serv
 REMOTE_DIR = /home/cogumbreiro/public_html
+DEST = _site/
+BST = $(PWD)/_bibliography/style.bst
+OUT_HTML = $(PWD)/_includes/publications.html
+OUT_BIB_HTML = $(PWD)/_includes/publications_bib.html
+BIB = $(PWD)/_bibliography/publications.bib
+URL = 
+
+BIBOPTS = -nofooter -noheader -nokeywords -nokeys -nodoc -dl
+
 
 all: build
 
-build:
-	jekyll build
+build: $(OUT_HTML)
+	jekyll build -d $(DEST)
+
+$(OUT_HTML): $(BIB)
+	bibtex2html $(BIBOPTS) -s $(BST) -o $(patsubst %.html,%,$@) $(BIB)
+	./replace.py $@ $(patsubst %.html,%_bib.html,$@) "{{ include.url }}"
+	./replace.py $(patsubst %.html,%_bib.html,$@) '<h1>'$(shell basename $(BIB))'</h1>' ""
+	./replace.py $(patsubst %.html,%_bib.html,$@) $@ "{{ include.url }}"
+	./replace.py $(patsubst %.html,%_bib.html,$@) '</a><pre>' "</a>\n<pre>"
 
 publish: build
 	rsync -arzv _site/ $(USER)@$(SERVER):$(REMOTE_DIR)
 
 clean:
-	rm -f $(DST)/index.html
-	rm -f $(TMP)/publications.html
+	rm -rf $(DEST)
 
 serve:
 	jekyll serve --watch
