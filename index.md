@@ -14,7 +14,9 @@ interested in type theory, concurrency theory, and parallel programming.
  
 ## Publications
 
+<ul>
 {% include publications.html url="publications.html" %}
+</ul>
 
 [Francisco Martins]: http://homepages.di.fc.ul.pt/~fmartins/
 [ULisboa]: http://www.ulisboa.pt/
