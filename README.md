@@ -25,6 +25,15 @@ I've added support for the generation a publications page from a bibtex file.
 * the bibtex2html style is located in `_bibliography/style.bst`;
 * the rsync upload can be configured in `Makefile`.
 
+### Theme configuration
+
+Theme configuration is a bit tricky.
+
+* [grunt](http://gruntjs.com/): to automate
+* [less](http://lesscss.org/): to generate the CSS
+* [Node](http://nodejs.org/): for Grunt ([tutorial for Ubuntu](http://howtonode.org/how-to-install-nodejs))
+ 
+
 ## Dependencies
 
 * [Make](https://www.gnu.org/software/make/)
