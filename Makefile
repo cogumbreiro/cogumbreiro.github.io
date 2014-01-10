@@ -25,7 +25,6 @@ $(OUT_HTML): $(BIB)
 	./replace.py $(patsubst %.html,%_bib.html,$@) '<h1>'$(shell basename $(BIB))'</h1>' "" # Remove the header, because ugly
 	./replace.py $(patsubst %.html,%_bib.html,$@) '<a name=' '<div class="bib"><a name='
 	./replace.py $(patsubst %.html,%_bib.html,$@) '</pre>' '</pre></div>' # Remove the header, because ugly
-#	./replace.py $(patsubst %.html,%_bib.html,$@) '<a name=' '<a id=' # HACK: Jekyll breaks silently without this
 	./replace.py $(patsubst %.html,%_bib.html,$@) '</a><pre>' "</a>\n<pre>" # HACK: Jekyll breaks silently without this
 
 publish: build
