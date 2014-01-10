@@ -1,6 +1,6 @@
 # Tiago Cogumbreiro's scholar web page
 
-Feel free to 
+Feel free to branch and alter this website.
 
 * website: http://cogumbreiro.github.io/
 * source code: https://github.com/cogumbreiro/cogumbreiro.github.io
@@ -41,8 +41,6 @@ Theme configuration is a bit tricky.
 * [bibtex2html](https://www.lri.fr/~filliatr/bibtex2html/)
 * [Python](http://www.python.org/)
 * [rsync](https://rsync.samba.org/) (optional)
-
----
 
 ## License
 
