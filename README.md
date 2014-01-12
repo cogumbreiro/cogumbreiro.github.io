@@ -29,9 +29,8 @@ I've added support for the generation a publications page from a bibtex file.
 
 Theme configuration is a bit tricky.
 
-* [grunt](http://gruntjs.com/): to automate
-* [less](http://lesscss.org/): to generate the CSS
-* [Node](http://nodejs.org/): for Grunt ([tutorial for Ubuntu](http://howtonode.org/how-to-install-nodejs))
+* [less](http://lesscss.org/): to generate the CSS (Ubuntu package `node-less`)
+* [uglifyjs](http://lesscss.org/): to merge JS (`node-uglify`)
  
 
 ## Dependencies
@@ -40,7 +39,6 @@ Theme configuration is a bit tricky.
 * [Jekyll](http://jekyllrb.com)
 * [bibtex2html](https://www.lri.fr/~filliatr/bibtex2html/)
 * [Python](http://www.python.org/)
-* [rsync](https://rsync.samba.org/) (optional)
 
 ## License
 
