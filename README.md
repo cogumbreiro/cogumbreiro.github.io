@@ -33,8 +33,8 @@ Theme configuration is split into two parts:
 * The CSS is *generated* from LESS sources; the outcome is
   `assets/css/ie.min.css` and `assets/css/main.min.css`.
 * The LESS source code is in `_template/less`.
-* The JS source code is *merges* every source in `_template/js` into
-  `assets/js/scripts.min.js`.
+* The JS source code in `_template/js` is *merged*  into
+  `assets/js/scripts.min.js` (this is what is used).
 
 ## Theme dependencies
 
