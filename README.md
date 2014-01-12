@@ -25,13 +25,21 @@ I've added support for the generation a publications page from a bibtex file.
 * the bibtex2html style is located in `_bibliography/style.bst`;
 * the rsync upload can be configured in `Makefile`.
 
-### Theme configuration
+## Theme configuration
 
-Theme configuration is a bit tricky.
+Theme configuration is split into two parts:
 
-* [less](http://lesscss.org/): to generate the CSS (Ubuntu package `node-less`)
-* [uglifyjs](http://lesscss.org/): to merge JS (`node-uglify`)
- 
+* HTML structure is in `_layouts` and `_includes` (see Jekyll docs).
+* The CSS is *generated* from LESS sources; the outcome is
+  `assets/css/ie.min.css` and `assets/css/main.min.css`.
+* The LESS source code is in `_template/less`.
+* The JS source code is *merges* every source in `_template/js` into
+  `assets/js/scripts.min.js`.
+
+## Theme dependencies
+
+* [less](http://lesscss.org/): to generate CSS from LESS (Ubuntu package `node-less`)
+* [uglifyjs](http://lesscss.org/): to merge JS (Ubuntu package `node-uglify`)
 
 ## Dependencies
 
