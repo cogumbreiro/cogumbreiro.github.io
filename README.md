@@ -45,6 +45,30 @@ Theme configuration is split into two parts:
 * [less](http://lesscss.org/): to generate CSS from LESS. Ubuntu package `node-less`. *Only needed if you change the CSS.*
 * [uglifyjs](http://lesscss.org/): to merge JS. Ubuntu package `node-uglify`. *Only needed if you change the JS.* When this file is not found, we use `cat` instead.
 
+# Contents cheat sheet
+
+* `404.md`: this page is shown when the user misses a URL
+* `about.md`: about the author
+* `assets`: any file here is copied verbatim to `_site`
+* `_bibliography`: configure the publications list
+* `_config.yml`: configure the website
+* `_drafts`: any file here is *not* copied to `site`
+* `favicon.ico`: the site icon
+* `favicon.png`: the site icon
+* `images`: any image here should be compressed and copied to `assets`
+* `_includes`: HTML snippets available to the templating system
+* `index.md`: the entry point web page
+* `_js`: all the content here is merged into a single JS file
+* `_layouts`: defines a template that renders the content
+* `_less`: LESS generates CSS
+* `LICENSE`: GPL2 
+* `Makefile`: generates GitHub.Pages-compatible content
+* `_posts`: here keep blog posts
+* `publications.md`: renders the .bibtex file
+* `README.md`: this document
+* `_site`: the generated HTML content
+* `sitemap.xml`: this file is used by web crawlers
+
 # License
 
 This website is free and open source software, distributed under the
