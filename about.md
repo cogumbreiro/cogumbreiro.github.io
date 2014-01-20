@@ -2,9 +2,10 @@
 layout: page
 permalink: /about/index.html
 title: About Tiago
-#tagline: About Tiago
-tags: [about]
-modified: 9-9-2013
+tags: 
+  - about
+modified: "9-9-2013"
+published: true
 ---
 
 [My curriculum vitae is available online in PDF.]({{ site.url }}assets/cv-en.pdf) Last update was on
@@ -44,9 +45,10 @@ Past:
 
 ## Refereeing
 
-External referee for: [SENSORNETS'12], [SAC'11], [SAC'10], [APLAS'08]
+External referee for: [Places'14] [SENSORNETS'12], [SAC'11], [SAC'10], [APLAS'08]
 
 [Rice University]: http://rice.edu/
+[Places'14]: http://places14.di.fc.ul.pt/
 [SENSORNETS'12]: http://www.sensornets.org/
 [APLAS'08]: http://research.microsoft.com/en-us/um/people/grama/APLAS2008/
 [SAC'11]: http://www.acm.org/conferences/sac/sac2011/
@@ -58,4 +60,3 @@ External referee for: [SENSORNETS'12], [SAC'11], [SAC'10], [APLAS'08]
 [Francisco Martins]: http://homepages.di.fc.ul.pt/~fmartins/
 [Vivek Sarkar]:  http://www.cs.rice.edu/~vsarkar/
 [Habanero group]: http://habanero.rice.edu/
-
