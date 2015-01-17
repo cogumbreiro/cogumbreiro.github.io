@@ -9,10 +9,13 @@ layout: page
 <figcaption>My v-Card as a QR Code.</figcaption>
 </figure>
 
-Hello, I am a research assistant at [Imperial College London], where I work with [Nobuko Yoshida].
-I am concluding my PhD at [ULisboa], and am advised by [Francisco Martins]. I am
-excited by type theory, concurrency theory, and parallel programming (in no particular order).
- 
+Tiago has submited his PhD thesis at [ULisboa], where he was advised
+by [Francisco Martins]. Tiago is excited by programming with dependent types,
+concurrency theory, and parallel programming. Past experience, includes being a
+research assistant at [Imperial College London], and a visiting scholar at
+[Rice University].
+
+
 ## Publications
 
 <ul>
@@ -21,5 +24,6 @@ excited by type theory, concurrency theory, and parallel programming (in no part
 
 [Francisco Martins]: http://homepages.di.fc.ul.pt/~fmartins/
 [ULisboa]: http://www.ulisboa.pt/
-[Imperial College London]: http://www3.imperial.ac.uk/
+[Imperial College London]: http://imperial.ac.uk/
+[Rice University]: http://rice.edu/
 [Nobuko Yoshida]: http://www.doc.ic.ac.uk/~yoshida/
