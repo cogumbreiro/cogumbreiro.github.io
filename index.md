@@ -18,9 +18,9 @@ and [Why3] to produce certified algorithms.
 Past experience, includes being a research assistant at [Imperial
 College London], where he was supervised by [Nobuko Yoshida], and a
 visiting scholar at [Rice University], where he was supervised by
-[Vivek Sarkar]. Tiago received his Ph.D. at [ULisboa] (2015), where he
-was advised by [Francisco Martins], and his B.Sc. at [Universidade dos
-Açores].
+[Vivek Sarkar]. Tiago received his Ph.D., March '15, at [ULisboa],
+where he was advised by [Francisco Martins], and his B.Sc. at
+[Universidade dos Açores].
 
 ## Publications
 
