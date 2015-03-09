@@ -9,12 +9,18 @@ layout: page
 <figcaption>My v-Card as a QR Code.</figcaption>
 </figure>
 
-Tiago has submited his PhD thesis at [ULisboa], where he was advised
-by [Francisco Martins]. Tiago is excited by programming with dependent types,
-concurrency theory, and parallel programming. Past experience, includes being a
-research assistant at [Imperial College London], and a visiting scholar at
-[Rice University].
+Tiago is excited by concurrency theory and parallel programming. In
+his Ph.D., Tiago proposed two techniques to handle barrier deadlocks:
+a deadlock-free programming interface, and a runtime verification
+tool, called [Armus]. Recently, he has been interested in using [Coq]
+and [Why3] to produce certified algorithms.
 
+Past experience, includes being a research assistant at [Imperial
+College London], where he was supervised by [Nobuko Yoshida], and a
+visiting scholar at [Rice University], where he was supervised by
+[Vivek Sarkar]. Tiago received his Ph.D. at [ULisboa] (2015), where he
+was advised by [Francisco Martins], and his B.Sc. at [Universidade dos
+Açores].
 
 ## Publications
 
@@ -27,3 +33,7 @@ research assistant at [Imperial College London], and a visiting scholar at
 [Imperial College London]: http://imperial.ac.uk/
 [Rice University]: http://rice.edu/
 [Nobuko Yoshida]: http://www.doc.ic.ac.uk/~yoshida/
+[Universidade dos Açores]: http://www.uac.pt/
+[Coq]: https://coq.inria.fr/
+[Why3]: http://why3.lri.fr/
+[Armus]: https://bitbucket.org/cogumbreiro/armus
