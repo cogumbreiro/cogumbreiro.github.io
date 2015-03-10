@@ -10,10 +10,11 @@ layout: page
 </figure>
 
 Tiago is excited by concurrency theory and parallel programming. In
-his Ph.D., Tiago proposed two techniques to handle barrier deadlocks:
-a deadlock-free programming interface, and a runtime verification
-tool, called [Armus]. Recently, he has been interested in using [Coq]
-and [Why3] to produce certified algorithms.
+his Ph.D. thesis, entitled [Programming Multicores Safely], Tiago
+proposed two techniques to handle barrier deadlocks: a deadlock-free
+programming interface, and a runtime verification tool, called
+[Armus]. Recently, he has been interested in using [Coq] and [Why3] to
+produce certified algorithms.
 
 Past experience, includes being a research assistant at [Imperial
 College London], where he was supervised by [Nobuko Yoshida], and a
@@ -38,3 +39,4 @@ where he was advised by [Francisco Martins], and his B.Sc. at
 [Why3]: http://why3.lri.fr/
 [Armus]: https://bitbucket.org/cogumbreiro/armus
 [Vivek Sarkar]: http://vsarkar.rice.edu
+[Programming Multicores Safely]: https://bitbucket.org/cogumbreiro/armus/downloads/cogumbreiro-phd-thesis.pdf
