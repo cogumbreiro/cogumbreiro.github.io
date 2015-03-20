@@ -9,7 +9,8 @@ layout: page
 <figcaption>My v-Card as a QR Code.</figcaption>
 </figure>
 
-Tiago is excited by concurrency theory and parallel programming. In
+Tiago is a postdoc at [Rice University], working with [Vivek Sarkar].
+He is excited by concurrency theory and parallel programming. In
 his Ph.D. thesis, entitled [Programming Multicores Safely], Tiago
 proposed two techniques to handle barrier deadlocks: a deadlock-free
 programming interface, and a runtime verification tool, called
