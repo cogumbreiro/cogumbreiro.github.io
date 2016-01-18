@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>HJ.Phasers.Welformedness</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library HJ.Phasers.Welformedness</h1>
+
+<div class="code">
+
+<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  WellFormedness catpures a local property of taskviews: the relationship between
+  signal-phase, wait-phase, and mode.
+  It is an invariant of execution, thus, as we show, welformedness is preserved by
+  the various reduction relations.
+
+<div class="paragraph"> </div>
+
+  We, first, define the notion of welformed for taskviews. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Module</span> <a name="Taskview"><span class="id" title="module">Taskview</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+A welformed taskview has three possible cases:
+  (i) the task has wait-capability and is ready to issue a signal,
+  in which case the signal-phase and wait-phase match;
+  (ii) the  task has wait-capability and has issued a signal, in which case
+  the signal-phase is ahead of the wait-phase exactly one phase;
+  (iii) the task is registered in signal-only mode, in which case the wait-phase
+  cannot be ahead of the signal-phase.
+</div>
+<div class="code">
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Inductive</span> <a name="Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <span class="id" title="var">v</span> : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a name="Taskview.tv_welformed_sw_eq"><span class="id" title="constructor">tv_welformed_sw_eq</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <span class="id" title="var">v</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#wait_phase"><span class="id" title="projection">wait_phase</span></a> <span class="id" title="var">v</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#signal_phase"><span class="id" title="projection">signal_phase</span></a> <span class="id" title="var">v</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#WellFormed"><span class="id" title="inductive">WellFormed</span></a> <span class="id" title="var">v</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a name="Taskview.tv_welformed_sw_succ"><span class="id" title="constructor">tv_welformed_sw_succ</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <span class="id" title="var">v</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#S"><span class="id" title="constructor">S</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#wait_phase"><span class="id" title="projection">wait_phase</span></a> <span class="id" title="var">v</span>) <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#signal_phase"><span class="id" title="projection">signal_phase</span></a> <span class="id" title="var">v</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#WellFormed"><span class="id" title="inductive">WellFormed</span></a> <span class="id" title="var">v</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a name="Taskview.tv_welformed_so"><span class="id" title="constructor">tv_welformed_so</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <span class="id" title="var">v</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#WellFormed"><span class="id" title="inductive">WellFormed</span></a> <span class="id" title="var">v</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <a name="Taskview.tv_welformed_wo"><span class="id" title="constructor">tv_welformed_wo</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <span class="id" title="var">v</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WAIT_ONLY"><span class="id" title="constructor">WAIT_ONLY</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#WellFormed"><span class="id" title="inductive">WellFormed</span></a> <span class="id" title="var">v</span>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Section</span> <a name="Taskview.Facts"><span class="id" title="section">Facts</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Taskview.tv_wellformed_inv_sw"><span class="id" title="lemma">tv_wellformed_inv_sw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#wait_phase"><span class="id" title="projection">wait_phase</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#signal_phase"><span class="id" title="projection">signal_phase</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#7a45dffb109c3069e5c675be68643e60"><span class="id" title="notation">\/</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#S"><span class="id" title="constructor">S</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#wait_phase"><span class="id" title="projection">wait_phase</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#signal_phase"><span class="id" title="projection">signal_phase</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+    Regardless of the registration mode, the wait-phase cannot be
+    greater than the signal-phase. 
+</div>
+<div class="code">
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Taskview.welformed_wait_phase_le_signal_phase"><span class="id" title="lemma">welformed_wait_phase_le_signal_phase</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#wait_phase"><span class="id" title="projection">wait_phase</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Peano.html#9b077c369e19739ef880736ba34623ff"><span class="id" title="notation">&lt;=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#signal_phase"><span class="id" title="projection">signal_phase</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Taskview.tv_make_welformed"><span class="id" title="lemma">tv_make_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#make"><span class="id" title="definition">Taskview.make</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Taskview.tv_signal_preserves_welformed"><span class="id" title="lemma">tv_signal_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#SignalPre"><span class="id" title="inductive">SignalPre</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#signal"><span class="id" title="definition">Taskview.signal</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Taskview.tv_try_signal_preserves_welformed"><span class="id" title="lemma">tv_try_signal_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#try_signal"><span class="id" title="definition">Taskview.try_signal</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Taskview.tv_wait_preserves_welformed"><span class="id" title="lemma">tv_wait_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#WaitPre"><span class="id" title="inductive">WaitPre</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#wait"><span class="id" title="definition">Taskview.wait</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a>).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+The operational semantics of taskviews preserves the property of <span class="inlinecode"><a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a></span>. 
+</div>
+<div class="code">
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Theorem</span> <a name="Taskview.tv_reduces_preserves_welformed"><span class="id" title="lemma">tv_reduces_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span> <span class="id" title="var">o</span> <span class="id" title="var">v&acute;</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#Reduces"><span class="id" title="inductive">Reduces</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v&acute;"><span class="id" title="variable">v&acute;</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Taskview.signal_phase_le_signal"><span class="id" title="lemma">signal_phase_le_signal</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#signal_phase"><span class="id" title="projection">signal_phase</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Peano.html#9b077c369e19739ef880736ba34623ff"><span class="id" title="notation">&lt;=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#signal_phase"><span class="id" title="projection">signal_phase</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#signal"><span class="id" title="definition">signal</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Taskview.reduces_wait_inv_wait_cap"><span class="id" title="lemma">reduces_wait_inv_wait_cap</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span> <span class="id" title="var">v&acute;</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#Reduces"><span class="id" title="inductive">Reduces</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#WAIT"><span class="id" title="constructor">WAIT</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#signal_phase"><span class="id" title="projection">signal_phase</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#wait_phase"><span class="id" title="projection">wait_phase</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v&acute;"><span class="id" title="variable">v&acute;</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Taskview.reduces_trans_inv"><span class="id" title="lemma">reduces_trans_inv</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span> <span class="id" title="var">o</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#x"><span class="id" title="variable">x</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#SignalCap"><span class="id" title="inductive">SignalCap</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#x"><span class="id" title="variable">x</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#Reduces"><span class="id" title="inductive">Reduces</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#WAIT"><span class="id" title="constructor">WAIT</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#y"><span class="id" title="variable">y</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#Reduces"><span class="id" title="inductive">Reduces</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#z"><span class="id" title="variable">z</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#SIGNAL"><span class="id" title="constructor">SIGNAL</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Let</span> <a name="Taskview.Facts.tv_wellformed_set_mode_sw"><span class="id" title="variable">tv_wellformed_set_mode_sw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#set_mode"><span class="id" title="definition">set_mode</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#r"><span class="id" title="variable">r</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Taskview.set_mode_preserves_welformed"><span class="id" title="lemma">set_mode_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#r_le"><span class="id" title="inductive">r_le</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#r"><span class="id" title="variable">r</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#set_mode"><span class="id" title="definition">set_mode</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#r"><span class="id" title="variable">r</span></a>).<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.Facts"><span class="id" title="section">Facts</span></a>.<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HJ.Phasers.Welformedness.html#Taskview"><span class="id" title="module">Taskview</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+A welformed phaser is such that
+  every taskview mentioned in this phaser is welformed. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Module</span> <a name="Phaser"><span class="id" title="module">Phaser</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Inductive</span> <a name="Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<span class="id" title="var">ph</span>:<a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a>) : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="Phaser.ph_welformed_def"><span class="id" title="constructor">ph_welformed_def</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <span class="id" title="var">ph</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">Taskview.WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#WellFormed"><span class="id" title="inductive">WellFormed</span></a> <span class="id" title="var">ph</span>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phaser.ph_welformed_add"><span class="id" title="lemma">ph_welformed_add</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">Taskview.WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Vars.html#Map_TID.add"><span class="id" title="definition">Map_TID.add</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phaser.ph_welformed_to_tv_welformed"><span class="id" title="lemma">ph_welformed_to_tv_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Taskview.WellFormed"><span class="id" title="inductive">Taskview.WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#v"><span class="id" title="variable">v</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phaser.ph_signal_preserves_welformed"><span class="id" title="lemma">ph_signal_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#SignalPre"><span class="id" title="inductive">SignalPre</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#signal"><span class="id" title="definition">signal</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phaser.ph_try_signal_preserves_welformed"><span class="id" title="lemma">ph_try_signal_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#try_signal"><span class="id" title="definition">try_signal</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phaser.ph_wait_preserves_welformed"><span class="id" title="lemma">ph_wait_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#WaitPre"><span class="id" title="inductive">WaitPre</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#wait"><span class="id" title="definition">wait</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phaser.ph_try_wait_preserves_welformed"><span class="id" title="lemma">ph_try_wait_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#TryWaitPre"><span class="id" title="inductive">TryWaitPre</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#try_wait"><span class="id" title="definition">try_wait</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phaser.ph_drop_preserves_welformed"><span class="id" title="lemma">ph_drop_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#drop"><span class="id" title="definition">drop</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phaser.ph_register_preserves_welformed"><span class="id" title="lemma">ph_register_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#RegisterPre"><span class="id" title="inductive">RegisterPre</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#register"><span class="id" title="definition">register</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phaser.ph_reduces_preserves_welformed"><span class="id" title="lemma">ph_reduces_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span> <span class="id" title="var">o</span> <span class="id" title="var">ph&acute;</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#Reduces"><span class="id" title="inductive">Reduces</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph&acute;"><span class="id" title="variable">ph&acute;</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph&acute;"><span class="id" title="variable">ph&acute;</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phaser.ph_make_welformed"><span class="id" title="lemma">ph_make_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#make"><span class="id" title="definition">make</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a>).<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HJ.Phasers.Welformedness.html#Phaser"><span class="id" title="module">Phaser</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Nonsurprisingly, a welformed phasermap is such that
+  every phaser mentioned in this phasermap is welformed. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Module</span> <a name="Phasermap"><span class="id" title="module">Phasermap</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Inductive</span> <a name="Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<span class="id" title="var">m</span>:<a class="idref" href="HJ.Phasers.Phasermap.html#phasermap"><span class="id" title="definition">phasermap</span></a>) : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a name="Phasermap.pm_welformed_def"><span class="id" title="constructor">pm_welformed_def</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="keyword">forall</span> <span class="id" title="var">p</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_PHID.MapsTo"><span class="id" title="definition">Map_PHID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> <span class="id" title="var">m</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">Phaser.WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#WellFormed"><span class="id" title="inductive">WellFormed</span></a> <span class="id" title="var">m</span>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phasermap.pm_welformed_add"><span class="id" title="lemma">pm_welformed_add</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">m</span> <span class="id" title="var">ph</span> <span class="id" title="var">p</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">Phaser.WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Vars.html#Map_PHID.add"><span class="id" title="definition">Map_PHID.add</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phasermap.pm_ph_new_preserves_welformed"><span class="id" title="lemma">pm_ph_new_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">p</span> <span class="id" title="var">m</span> <span class="id" title="var">t</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phasermap.html#PhNewPre"><span class="id" title="inductive">PhNewPre</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phasermap.html#ph_new"><span class="id" title="definition">ph_new</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phasermap.pm_ph_signal_preserves_welformed"><span class="id" title="lemma">pm_ph_signal_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">p</span> <span class="id" title="var">t</span> <span class="id" title="var">m</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phasermap.html#PhSignalPre"><span class="id" title="inductive">PhSignalPre</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phasermap.html#ph_signal"><span class="id" title="definition">ph_signal</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phasermap.pm_ph_drop_preserves_welformed"><span class="id" title="lemma">pm_ph_drop_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">p</span> <span class="id" title="var">t</span> <span class="id" title="var">m</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phasermap.html#PhDropPre"><span class="id" title="inductive">PhDropPre</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phasermap.html#ph_drop"><span class="id" title="definition">ph_drop</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phasermap.pm_signal_all_preserves_welformed"><span class="id" title="lemma">pm_signal_all_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">m</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phasermap.html#signal_all"><span class="id" title="definition">signal_all</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phasermap.pm_wait_all_preserves_welformed"><span class="id" title="lemma">pm_wait_all_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">m</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phasermap.html#WaitAllPre"><span class="id" title="inductive">WaitAllPre</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phasermap.html#wait_all"><span class="id" title="definition">wait_all</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phasermap.pm_drop_all_preserves_welformed"><span class="id" title="lemma">pm_drop_all_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">m</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phasermap.html#drop_all"><span class="id" title="definition">drop_all</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phasermap.ph_async_1_preserves_welformed"><span class="id" title="lemma">ph_async_1_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ps</span> <span class="id" title="var">t</span> <span class="id" title="var">m</span> <span class="id" title="var">p</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phasermap.html#AsyncPre"><span class="id" title="inductive">AsyncPre</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ps"><span class="id" title="variable">ps</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_PHID.MapsTo"><span class="id" title="definition">Map_PHID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">Phaser.WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phaser.WellFormed"><span class="id" title="inductive">Phaser.WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phasermap.html#async_1"><span class="id" title="definition">async_1</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ps"><span class="id" title="variable">ps</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ph"><span class="id" title="variable">ph</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phasermap.pm_async_preserves_welformed"><span class="id" title="lemma">pm_async_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ps</span> <span class="id" title="var">t</span> <span class="id" title="var">m</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phasermap.html#AsyncPre"><span class="id" title="inductive">AsyncPre</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ps"><span class="id" title="variable">ps</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> (<a class="idref" href="HJ.Phasers.Phasermap.html#async"><span class="id" title="definition">async</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#ps"><span class="id" title="variable">ps</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="Phasermap.pm_reduces_preserves_welformed"><span class="id" title="lemma">pm_reduces_preserves_welformed</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">m</span> <span class="id" title="var">t</span> <span class="id" title="var">o</span> <span class="id" title="var">m&acute;</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phasermap.html#Reduces"><span class="id" title="inductive">Reduces</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m&acute;"><span class="id" title="variable">m&acute;</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed"><span class="id" title="inductive">WellFormed</span></a> <a class="idref" href="HJ.Phasers.Welformedness.html#m&acute;"><span class="id" title="variable">m&acute;</span></a>.<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HJ.Phasers.Welformedness.html#Phasermap"><span class="id" title="module">Phasermap</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

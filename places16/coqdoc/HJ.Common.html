@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>HJ.Common</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library HJ.Common</h1>
+
+<div class="code">
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="RequestOf"><span class="id" title="section">RequestOf</span></a>.<br/>
+<span class="id" title="keyword">Variable</span> <a name="RequestOf.O"><span class="id" title="variable">O</span></a>:<span class="id" title="keyword">Type</span>.<br/>
+<span class="id" title="keyword">Variable</span> <span class="id" title="keyword">Check</span> : <a class="idref" href="HJ.Vars.html#tid"><span class="id" title="definition">tid</span></a> -&gt; <a class="idref" href="HJ.Common.html#RequestOf.O"><span class="id" title="variable">O</span></a> -&gt; <span class="id" title="keyword">Prop</span>.<br/>
+<span class="id" title="keyword">Variable</span> <a name="RequestOf.reqs"><span class="id" title="variable">reqs</span></a>: <a class="idref" href="HJ.Vars.html#Map_TID.t"><span class="id" title="definition">Map_TID.t</span></a> <a class="idref" href="HJ.Common.html#RequestOf.O"><span class="id" title="variable">O</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="RequestToCheck"><span class="id" title="inductive">RequestToCheck</span></a> : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<a name="request_to_check_def"><span class="id" title="constructor">request_to_check_def</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">o</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Common.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Common.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="HJ.Common.html#RequestOf.reqs"><span class="id" title="variable">reqs</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">Check</span> <a class="idref" href="HJ.Common.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Common.html#o"><span class="id" title="variable">o</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Common.html#RequestToCheck"><span class="id" title="inductive">RequestToCheck</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="CheckToRequest"><span class="id" title="inductive">CheckToRequest</span></a>: <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<a name="check_to_request_def"><span class="id" title="constructor">check_to_request_def</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">o</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">Check</span> <a class="idref" href="HJ.Common.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Common.html#o"><span class="id" title="variable">o</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Common.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Common.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="HJ.Common.html#RequestOf.reqs"><span class="id" title="variable">reqs</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Common.html#CheckToRequest"><span class="id" title="inductive">CheckToRequest</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="RequestOf"><span class="id" title="inductive">RequestOf</span></a> : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<a name="request_of_def"><span class="id" title="constructor">request_of_def</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Common.html#CheckToRequest"><span class="id" title="inductive">CheckToRequest</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Common.html#RequestToCheck"><span class="id" title="inductive">RequestToCheck</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Common.html#RequestOf"><span class="id" title="inductive">RequestOf</span></a>.<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HJ.Common.html#RequestOf"><span class="id" title="section">RequestOf</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="request_of"><span class="id" title="section">request_of</span></a>.<br/>
+<span class="id" title="keyword">Variable</span> <a name="request_of.O"><span class="id" title="variable">O</span></a>:<span class="id" title="keyword">Type</span>.<br/>
+<span class="id" title="keyword">Variable</span> <span class="id" title="keyword">Check</span>: <a class="idref" href="HJ.Vars.html#tid"><span class="id" title="definition">tid</span></a> -&gt; <a class="idref" href="HJ.Common.html#request_of.O"><span class="id" title="variable">O</span></a> -&gt; <span class="id" title="keyword">Prop</span>.<br/>
+<span class="id" title="keyword">Definition</span> <a name="request_of"><span class="id" title="definition">request_of</span></a> := <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#72ca3fac4636a1b19c963b12162882cf"><span class="id" title="notation">{</span></a> <span class="id" title="var">r</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#72ca3fac4636a1b19c963b12162882cf"><span class="id" title="notation">:</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.t"><span class="id" title="definition">Map_TID.t</span></a> <a class="idref" href="HJ.Common.html#request_of.O"><span class="id" title="variable">O</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#72ca3fac4636a1b19c963b12162882cf"><span class="id" title="notation">|</span></a> @<a class="idref" href="HJ.Common.html#RequestOf"><span class="id" title="inductive">RequestOf</span></a> <a class="idref" href="HJ.Common.html#request_of.O"><span class="id" title="variable">O</span></a> <span class="id" title="keyword">Check</span> <span class="id" title="var">r</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#72ca3fac4636a1b19c963b12162882cf"><span class="id" title="notation">}</span></a> .<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HJ.Common.html#request_of"><span class="id" title="section">request_of</span></a>.<br/>
+
+<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

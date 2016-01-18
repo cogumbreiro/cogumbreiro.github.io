@@ -1,0 +1,1914 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>HJ Formalization in Coq</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1>HJ Formalization in Coq</h1>
+<table>
+<tr>
+<td>Global Index</td>
+<td><a href="index.html#global_A">A</a></td>
+<td><a href="index.html#global_B">B</a></td>
+<td><a href="index.html#global_C">C</a></td>
+<td><a href="index.html#global_D">D</a></td>
+<td><a href="index.html#global_E">E</a></td>
+<td><a href="index.html#global_F">F</a></td>
+<td><a href="index.html#global_G">G</a></td>
+<td><a href="index.html#global_H">H</a></td>
+<td><a href="index.html#global_I">I</a></td>
+<td>J</td>
+<td>K</td>
+<td><a href="index.html#global_L">L</a></td>
+<td><a href="index.html#global_M">M</a></td>
+<td><a href="index.html#global_N">N</a></td>
+<td><a href="index.html#global_O">O</a></td>
+<td><a href="index.html#global_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#global_R">R</a></td>
+<td><a href="index.html#global_S">S</a></td>
+<td><a href="index.html#global_T">T</a></td>
+<td><a href="index.html#global_U">U</a></td>
+<td><a href="index.html#global_V">V</a></td>
+<td><a href="index.html#global_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(493 entries)</td>
+</tr>
+<tr>
+<td>Notation Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td><a href="index.html#notation_N">N</a></td>
+<td>O</td>
+<td>P</td>
+<td>Q</td>
+<td>R</td>
+<td>S</td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(10 entries)</td>
+</tr>
+<tr>
+<td>Module Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td><a href="index.html#module_F">F</a></td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td><a href="index.html#module_M">M</a></td>
+<td><a href="index.html#module_N">N</a></td>
+<td>O</td>
+<td><a href="index.html#module_P">P</a></td>
+<td>Q</td>
+<td>R</td>
+<td><a href="index.html#module_S">S</a></td>
+<td><a href="index.html#module_T">T</a></td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(30 entries)</td>
+</tr>
+<tr>
+<td>Variable Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td><a href="index.html#variable_F">F</a></td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td>P</td>
+<td>Q</td>
+<td><a href="index.html#variable_R">R</a></td>
+<td>S</td>
+<td><a href="index.html#variable_T">T</a></td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(45 entries)</td>
+</tr>
+<tr>
+<td>Library Index</td>
+<td>A</td>
+<td>B</td>
+<td><a href="index.html#library_C">C</a></td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td><a href="index.html#library_L">L</a></td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td><a href="index.html#library_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#library_R">R</a></td>
+<td>S</td>
+<td><a href="index.html#library_T">T</a></td>
+<td>U</td>
+<td><a href="index.html#library_V">V</a></td>
+<td><a href="index.html#library_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(10 entries)</td>
+</tr>
+<tr>
+<td>Lemma Index</td>
+<td><a href="index.html#lemma_A">A</a></td>
+<td><a href="index.html#lemma_B">B</a></td>
+<td><a href="index.html#lemma_C">C</a></td>
+<td><a href="index.html#lemma_D">D</a></td>
+<td><a href="index.html#lemma_E">E</a></td>
+<td><a href="index.html#lemma_F">F</a></td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td><a href="index.html#lemma_L">L</a></td>
+<td><a href="index.html#lemma_M">M</a></td>
+<td><a href="index.html#lemma_N">N</a></td>
+<td>O</td>
+<td><a href="index.html#lemma_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#lemma_R">R</a></td>
+<td><a href="index.html#lemma_S">S</a></td>
+<td><a href="index.html#lemma_T">T</a></td>
+<td><a href="index.html#lemma_U">U</a></td>
+<td>V</td>
+<td><a href="index.html#lemma_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(169 entries)</td>
+</tr>
+<tr>
+<td>Constructor Index</td>
+<td><a href="index.html#constructor_A">A</a></td>
+<td>B</td>
+<td><a href="index.html#constructor_C">C</a></td>
+<td><a href="index.html#constructor_D">D</a></td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td><a href="index.html#constructor_I">I</a></td>
+<td>J</td>
+<td>K</td>
+<td><a href="index.html#constructor_L">L</a></td>
+<td><a href="index.html#constructor_M">M</a></td>
+<td>N</td>
+<td>O</td>
+<td><a href="index.html#constructor_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#constructor_R">R</a></td>
+<td><a href="index.html#constructor_S">S</a></td>
+<td><a href="index.html#constructor_T">T</a></td>
+<td><a href="index.html#constructor_U">U</a></td>
+<td>V</td>
+<td><a href="index.html#constructor_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(81 entries)</td>
+</tr>
+<tr>
+<td>Inductive Index</td>
+<td><a href="index.html#inductive_A">A</a></td>
+<td>B</td>
+<td><a href="index.html#inductive_C">C</a></td>
+<td><a href="index.html#inductive_D">D</a></td>
+<td>E</td>
+<td><a href="index.html#inductive_F">F</a></td>
+<td>G</td>
+<td><a href="index.html#inductive_H">H</a></td>
+<td><a href="index.html#inductive_I">I</a></td>
+<td>J</td>
+<td>K</td>
+<td><a href="index.html#inductive_L">L</a></td>
+<td>M</td>
+<td>N</td>
+<td><a href="index.html#inductive_O">O</a></td>
+<td><a href="index.html#inductive_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#inductive_R">R</a></td>
+<td><a href="index.html#inductive_S">S</a></td>
+<td><a href="index.html#inductive_T">T</a></td>
+<td><a href="index.html#inductive_U">U</a></td>
+<td>V</td>
+<td><a href="index.html#inductive_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(45 entries)</td>
+</tr>
+<tr>
+<td>Projection Index</td>
+<td>A</td>
+<td>B</td>
+<td><a href="index.html#projection_C">C</a></td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td><a href="index.html#projection_G">G</a></td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td><a href="index.html#projection_M">M</a></td>
+<td>N</td>
+<td>O</td>
+<td>P</td>
+<td>Q</td>
+<td><a href="index.html#projection_R">R</a></td>
+<td><a href="index.html#projection_S">S</a></td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td><a href="index.html#projection_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(11 entries)</td>
+</tr>
+<tr>
+<td>Section Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td><a href="index.html#section_D">D</a></td>
+<td>E</td>
+<td><a href="index.html#section_F">F</a></td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td>P</td>
+<td>Q</td>
+<td><a href="index.html#section_R">R</a></td>
+<td><a href="index.html#section_S">S</a></td>
+<td><a href="index.html#section_T">T</a></td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(18 entries)</td>
+</tr>
+<tr>
+<td>Definition Index</td>
+<td><a href="index.html#definition_A">A</a></td>
+<td><a href="index.html#definition_B">B</a></td>
+<td>C</td>
+<td><a href="index.html#definition_D">D</a></td>
+<td><a href="index.html#definition_E">E</a></td>
+<td><a href="index.html#definition_F">F</a></td>
+<td><a href="index.html#definition_G">G</a></td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td><a href="index.html#definition_M">M</a></td>
+<td>N</td>
+<td>O</td>
+<td><a href="index.html#definition_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#definition_R">R</a></td>
+<td><a href="index.html#definition_S">S</a></td>
+<td><a href="index.html#definition_T">T</a></td>
+<td><a href="index.html#definition_U">U</a></td>
+<td>V</td>
+<td><a href="index.html#definition_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(69 entries)</td>
+</tr>
+<tr>
+<td>Record Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td><a href="index.html#record_O">O</a></td>
+<td><a href="index.html#record_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#record_R">R</a></td>
+<td>S</td>
+<td><a href="index.html#record_T">T</a></td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(5 entries)</td>
+</tr>
+</table>
+<hr/>
+<h1>Global Index</h1>
+<a name="global_A"></a><h2>A </h2>
+<a href="HJ.Phasers.Phasermap.html#ASYNC">ASYNC</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#async">async</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#AsyncPre">AsyncPre</a> [inductive, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#async_notina_mapsto_rtl">async_notina_mapsto_rtl</a> [lemma, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#async_notina_mapsto">async_notina_mapsto</a> [lemma, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#async_simpl_notin">async_simpl_notin</a> [lemma, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#async_op">async_op</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#async_pre">async_pre</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#async_1">async_1</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#as_tv_op_inv_wait">as_tv_op_inv_wait</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#as_tv_op_inv_signal">as_tv_op_inv_signal</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#as_tv_op">as_tv_op</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#Await">Await</a> [inductive, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#await_def">await_def</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="global_B"></a><h2>B </h2>
+<a href="HJ.Vars.html#beq_tid_refl">beq_tid_refl</a> [lemma, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#beq_tid_to_eq">beq_tid_to_eq</a> [lemma, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#beq_tid">beq_tid</a> [definition, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#BlockedBy">BlockedBy</a> [definition, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#BlockedBy">BlockedBy</a> [definition, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<br/><br/><a name="global_C"></a><h2>C </h2>
+<a href="HJ.Phasers.Phasermap.html#can_run">can_run</a> [projection, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#can_run">can_run</a> [projection, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#case_reduces">case_reduces</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Common.html#CheckToRequest">CheckToRequest</a> [inductive, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#check_to_request_def">check_to_request_def</a> [constructor, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html">Common</a> [library]<br/>
+<br/><br/><a name="global_D"></a><h2>D </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Defs">Defs</a> [section, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Defs">Defs</a> [section, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#Defs">Defs</a> [section, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#DROP">DROP</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#drop">drop</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#DropPre">DropPre</a> [inductive, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#DROP_ALL">DROP_ALL</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#drop_all_op">drop_all_op</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#drop_all">drop_all</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#drop_mapsto_inv">drop_mapsto_inv</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#drop_op">drop_op</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#drop_pre">drop_pre</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="global_E"></a><h2>E </h2>
+<a href="HJ.Phasers.Taskview.html#eval">eval</a> [definition, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#eval_preserves_mode">eval_preserves_mode</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ex2">ex2</a> [definition, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<br/><br/><a name="global_F"></a><h2>F </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facilitates">Facilitates</a> [definition, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facilitates">Facilitates</a> [inductive, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#Facts">Facts</a> [section, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts">Facts</a> [section, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#Facts">Facts</a> [section, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts">Facts</a> [section, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#Facts">Facts</a> [section, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#Facts">Facts</a> [section, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym">Facts.Antisym</a> [section, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.Antisym">Facts.Antisym</a> [section, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym.gx">Facts.Antisym.gx</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym.gy">Facts.Antisym.gy</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.Antisym.wfx">Facts.Antisym.wfx</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.Antisym.wfy">Facts.Antisym.wfy</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym.wx">Facts.Antisym.wx</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym.wy">Facts.Antisym.wy</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym.x">Facts.Antisym.x</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.Antisym.x">Facts.Antisym.x</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym.y">Facts.Antisym.y</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.Antisym.y">Facts.Antisym.y</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2">Facts.EX2</a> [section, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.is_sw">Facts.EX2.is_sw</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.mt1">Facts.EX2.mt1</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.R1">Facts.EX2.R1</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.R2">Facts.EX2.R2</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.t">Facts.EX2.t</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.v">Facts.EX2.v</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.wf">Facts.EX2.wf</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.x">Facts.EX2.x</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.y">Facts.EX2.y</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.z">Facts.EX2.z</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.ph_ge_reduces_some">Facts.ph_ge_reduces_some</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.ph_ge_refl_preserves_reduces_register">Facts.ph_ge_refl_preserves_reduces_register</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.ph_ge_refl_preserves_reduces_drop">Facts.ph_ge_refl_preserves_reduces_drop</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.ph_ge_refl_preserves_reduces_some">Facts.ph_ge_refl_preserves_reduces_some</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.signal_preserves_lhs">Facts.signal_preserves_lhs</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Trans">Facts.Trans</a> [section, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.tv_nhb_register_right">Facts.tv_nhb_register_right</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.tv_nhb_register_both">Facts.tv_nhb_register_both</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.tv_nhb_register_left">Facts.tv_nhb_register_left</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.tv_eval_preserves_le">Facts.tv_eval_preserves_le</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.tv_nhb_reduces_trans_sw">Facts.tv_nhb_reduces_trans_sw</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.tv_nhb_reduces">Facts.tv_nhb_reduces</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.tv_wait_ge_lhs">Facts.tv_wait_ge_lhs</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.tv_signal_ge_lhs">Facts.tv_signal_ge_lhs</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.wait_preserves_rhs.L2">Facts.wait_preserves_rhs.L2</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.wait_preserves_rhs.L1">Facts.wait_preserves_rhs.L1</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.wait_preserves_rhs.G1">Facts.wait_preserves_rhs.G1</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.wait_preserves_rhs.v2">Facts.wait_preserves_rhs.v2</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.wait_preserves_rhs.v1">Facts.wait_preserves_rhs.v1</a> [variable, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.wait_preserves_rhs">Facts.wait_preserves_rhs</a> [section, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Vars.html#fid">fid</a> [definition, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID">FID</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.compare">FID.compare</a> [lemma, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.eq">FID.eq</a> [definition, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.eq_dec">FID.eq_dec</a> [definition, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.eq_trans">FID.eq_trans</a> [definition, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.eq_sym">FID.eq_sym</a> [definition, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.eq_refl">FID.eq_refl</a> [definition, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.lt">FID.lt</a> [definition, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.lt_not_eq">FID.lt_not_eq</a> [lemma, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.lt_trans">FID.lt_trans</a> [lemma, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.lt_trans&acute;">FID.lt_trans'</a> [variable, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.t">FID.t</a> [definition, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Forall">Forall</a> [inductive, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#foreach">foreach</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<br/><br/><a name="global_G"></a><h2>G </h2>
+<a href="HJ.Phasers.Taskview.html#get_signal_phase">get_signal_phase</a> [definition, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#get_wait_phase">get_wait_phase</a> [definition, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#get_impl">get_impl</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#get_new_task">get_new_task</a> [projection, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#get_args">get_args</a> [projection, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#get_impl">get_impl</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#get_mode">get_mode</a> [projection, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#get_task">get_task</a> [projection, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="global_H"></a><h2>H </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#HappensBefore">HappensBefore</a> [inductive, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#HappensBefore">HappensBefore</a> [inductive, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<br/><br/><a name="global_I"></a><h2>I </h2>
+<a href="HJ.Phasers.Phasermap.html#In">In</a> [inductive, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#in_def">in_def</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<br/><br/><a name="global_L"></a><h2>L </h2>
+<a href="HJ.Phasers.Lang.html">Lang</a> [library]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#le_spec">le_spec</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Vars.html#lt">lt</a> [inductive, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#lt_trans_ex">lt_trans_ex</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#lt_spec">lt_spec</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Vars.html#lt_cons_rhs">lt_cons_rhs</a> [constructor, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#lt_cons">lt_cons</a> [constructor, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#lt_lt">lt_lt</a> [constructor, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#lt_nil">lt_nil</a> [constructor, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<br/><br/><a name="global_M"></a><h2>M </h2>
+<a href="HJ.Phasers.Taskview.html#make">make</a> [definition, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#make">make</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#make">make</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#make_wait_phase">make_wait_phase</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#make_signal_phase">make_signal_phase</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#make_mode">make_mode</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#make_mapsto">make_mapsto</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Vars.html#Map_FID_Extra">Map_FID_Extra</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_FID_Props">Map_FID_Props</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_FID_Facts">Map_FID_Facts</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_FID">Map_FID</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_PHID_Extra">Map_PHID_Extra</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_PHID_Props">Map_PHID_Props</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_PHID_Facts">Map_PHID_Facts</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_PHID">Map_PHID</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_TID_Extra">Map_TID_Extra</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_TID_Props">Map_TID_Props</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_TID_Facts">Map_TID_Facts</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_TID">Map_TID</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#MayHappenParallel">MayHappenParallel</a> [definition, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#MayHappenParallel">MayHappenParallel</a> [definition, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#mk_phased">mk_phased</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#mk_op">mk_op</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#mk_registry">mk_registry</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#mk_op">mk_op</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#mode">mode</a> [projection, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#mode_set_mode_rw">mode_set_mode_rw</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<br/><br/><a name="global_N"></a><h2>N </h2>
+<a href="HJ.Phasers.Regmode.html#neq_wo_to_signal_cap">neq_wo_to_signal_cap</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#neq_so_to_wait_cap">neq_so_to_wait_cap</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Notations">Notations</a> [module, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Notations">Notations</a> [module, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#Notations">Notations</a> [module, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#598fea7113d873a28f2963cb50eb9b80">_ || _ (phaser_scope)</a> [notation, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#d4a9edc8c4e7f93e3c726479eedcf5dd">_ >= _ (phaser_scope)</a> [notation, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#e292e6e240e95fe8b2274cd28307f284">_ <= _ (phaser_scope)</a> [notation, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#81a9619d3eb83d6159fde996c9dfa967">_ > _ (phaser_scope)</a> [notation, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#55a71dc4a32593a87282ca6b918a08e2">_ < _ (phaser_scope)</a> [notation, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#d4a9edc8c4e7f93e3c726479eedcf5dd">_ >= _ (phaser_scope)</a> [notation, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#e292e6e240e95fe8b2274cd28307f284">_ <= _ (phaser_scope)</a> [notation, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#81a9619d3eb83d6159fde996c9dfa967">_ > _ (phaser_scope)</a> [notation, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#55a71dc4a32593a87282ca6b918a08e2">_ < _ (phaser_scope)</a> [notation, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#5155dfebf813586d53b1cb2f7573d969">_ <= _ (reg_scope)</a> [notation, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#not_signal_cap_to_wo">not_signal_cap_to_wo</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#not_wait_cap_to_so">not_wait_cap_to_so</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<br/><br/><a name="global_O"></a><h2>O </h2>
+<a href="HJ.Phasers.Taskview.html#op">op</a> [inductive, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#op">op</a> [inductive, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#Op">Op</a> [record, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#op">op</a> [inductive, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#Op">Op</a> [record, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="global_P"></a><h2>P </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Par">Par</a> [inductive, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#par_def">par_def</a> [constructor, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#phased">phased</a> [record, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PhasedPre">PhasedPre</a> [inductive, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#phased_pre">phased_pre</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#phaser">phaser</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser">Phaser</a> [module, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Phaser.html">Phaser</a> [library]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html">Phaser</a> [library]<br/>
+<a href="HJ.Phasers.Phasermap.html#phasermap">phasermap</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap">Phasermap</a> [module, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html">Phasermap</a> [library]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.ph_async_1_preserves_welformed">Phasermap.ph_async_1_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_reduces_preserves_welformed">Phasermap.pm_reduces_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_async_preserves_welformed">Phasermap.pm_async_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_drop_all_preserves_welformed">Phasermap.pm_drop_all_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_wait_all_preserves_welformed">Phasermap.pm_wait_all_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_signal_all_preserves_welformed">Phasermap.pm_signal_all_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_ph_drop_preserves_welformed">Phasermap.pm_ph_drop_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_ph_signal_preserves_welformed">Phasermap.pm_ph_signal_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_ph_new_preserves_welformed">Phasermap.pm_ph_new_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_welformed_add">Phasermap.pm_welformed_add</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_welformed_def">Phasermap.pm_welformed_def</a> [constructor, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed">Phasermap.WellFormed</a> [inductive, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_make_welformed">Phaser.ph_make_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_reduces_preserves_welformed">Phaser.ph_reduces_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_register_preserves_welformed">Phaser.ph_register_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_drop_preserves_welformed">Phaser.ph_drop_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_try_wait_preserves_welformed">Phaser.ph_try_wait_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_wait_preserves_welformed">Phaser.ph_wait_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_try_signal_preserves_welformed">Phaser.ph_try_signal_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_signal_preserves_welformed">Phaser.ph_signal_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_welformed_to_tv_welformed">Phaser.ph_welformed_to_tv_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_welformed_add">Phaser.ph_welformed_add</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_welformed_def">Phaser.ph_welformed_def</a> [constructor, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.WellFormed">Phaser.WellFormed</a> [inductive, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PhDropPre">PhDropPre</a> [inductive, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Vars.html#phid">phid</a> [definition, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#PHID">PHID</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PhNewPre">PhNewPre</a> [inductive, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PhSignalPre">PhSignalPre</a> [inductive, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_par_symm">ph_par_symm</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_drop_lhs_ge_rhs">ph_drop_lhs_ge_rhs</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_register_lhs_ge_rhs">ph_register_lhs_ge_rhs</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_wait_lhs_ge_rhs">ph_wait_lhs_ge_rhs</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_signal_lhs_ge_rhs">ph_signal_lhs_ge_rhs</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_s_reduces_trans_refl_ge">ph_s_reduces_trans_refl_ge</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_s_reduces_trans_refl_ge_refl">ph_s_reduces_trans_refl_ge_refl</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_s_reduces_trans_refl_welformed">ph_s_reduces_trans_refl_welformed</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_s_reduces_preserves_ge_left">ph_s_reduces_preserves_ge_left</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_reduces_drop_preserves_ge_left">ph_reduces_drop_preserves_ge_left</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_reduces_updates_preserves_ge_left">ph_reduces_updates_preserves_ge_left</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_ge_reduce">ph_ge_reduce</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_ge_refl_preserves_reduce">ph_ge_refl_preserves_reduce</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_hb_antisym">ph_hb_antisym</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_hb_irreflexive">ph_hb_irreflexive</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_hb_trans">ph_hb_trans</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_chb_to_not_hb">ph_chb_to_not_hb</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_hb_to_not_chb">ph_hb_to_not_chb</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_rel_inv">ph_rel_inv</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_happens_before_def">ph_happens_before_def</a> [constructor, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_rel_def">ph_rel_def</a> [constructor, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_new_impl_mapsto">ph_new_impl_mapsto</a> [lemma, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PH_DROP">PH_DROP</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PH_SIGNAL">PH_SIGNAL</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PH_NEW">PH_NEW</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_drop_op">ph_drop_op</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_drop">ph_drop</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_drop_pre">ph_drop_pre</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_signal_op">ph_signal_op</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_signal">ph_signal</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_signal_pre">ph_signal_pre</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_new_op">ph_new_op</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_new">ph_new</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_new_pre">ph_new_pre</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_reduces_to_tv_reduce">ph_reduces_to_tv_reduce</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_to_tv_correct">ph_to_tv_correct</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_in">ph_in</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_register_inv_mapsto">ph_register_inv_mapsto</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_register_mapsto_eq">ph_register_mapsto_eq</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_register_in_1">ph_register_in_1</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_register_mapsto_neq">ph_register_mapsto_neq</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_register_rw">ph_register_rw</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_drop_rw">ph_drop_rw</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_wait_rw">ph_wait_rw</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_signal_rw">ph_signal_rw</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_update_rw">ph_update_rw</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_reduces_spec">ph_reduces_spec</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_s_reduces">ph_s_reduces</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_reduces">ph_reduces</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_async_mapsto_rw">pm_async_mapsto_rw</a> [lemma, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_async_1_mapsto">pm_async_1_mapsto</a> [lemma, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_async_1_mapsto_eq">pm_async_1_mapsto_eq</a> [lemma, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_async_1_mapsto_neq">pm_async_1_mapsto_neq</a> [lemma, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_async_1_rw">pm_async_1_rw</a> [lemma, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_foreach_mapsto_rw">pm_foreach_mapsto_rw</a> [lemma, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_ph_drop_rw">pm_ph_drop_rw</a> [lemma, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_ph_signal_rw">pm_ph_signal_rw</a> [lemma, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_update_rw">pm_update_rw</a> [lemma, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<br/><br/><a name="global_R"></a><h2>R </h2>
+<a href="HJ.Phasers.Taskview.html#Reduces">Reduces</a> [inductive, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#reduces">reduces</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#Reduces">Reduces</a> [inductive, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#Reduces">Reduces</a> [inductive, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ReducesDestructs">ReducesDestructs</a> [inductive, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ReducesUpdates">ReducesUpdates</a> [inductive, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#reduces_wait_inv_sw">reduces_wait_inv_sw</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#reduces_signal_inv_sw">reduces_signal_inv_sw</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#reduces_preserves_mode">reduces_preserves_mode</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#reduces_rw_wait">reduces_rw_wait</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#reduces_rw_signal">reduces_rw_signal</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#reduces_spec">reduces_spec</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_par">reduces_par</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_ne">reduces_ne</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_update_inv">reduces_update_inv</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_mapsto_neq_rtl">reduces_mapsto_neq_rtl</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_mapsto_neq">reduces_mapsto_neq</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_destructs_def">reduces_destructs_def</a> [constructor, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_updates_def">reduces_updates_def</a> [constructor, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#REGISTER">REGISTER</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#register">register</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#RegisterPre">RegisterPre</a> [inductive, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#register_op">register_op</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#register_pre">register_pre</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#registry">registry</a> [record, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#regmode">regmode</a> [inductive, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html">Regmode</a> [library]<br/>
+<a href="HJ.Phasers.Regmode.html#regmode_eq_dec">regmode_eq_dec</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Common.html#RequestOf">RequestOf</a> [inductive, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#RequestOf">RequestOf</a> [section, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#RequestOf.Check">RequestOf.Check</a> [variable, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#RequestOf.O">RequestOf.O</a> [variable, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#RequestOf.reqs">RequestOf.reqs</a> [variable, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#RequestToCheck">RequestToCheck</a> [inductive, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#request_of">request_of</a> [definition, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#request_of.Check">request_of.Check</a> [variable, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#request_of.O">request_of.O</a> [variable, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#request_of">request_of</a> [section, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#request_of_def">request_of_def</a> [constructor, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#request_to_check_def">request_to_check_def</a> [constructor, in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#run">run</a> [projection, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#run">run</a> [projection, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#r_le_sw">r_le_sw</a> [constructor, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#r_le_wo">r_le_wo</a> [constructor, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#r_le_so">r_le_so</a> [constructor, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#r_le">r_le</a> [inductive, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<br/><br/><a name="global_S"></a><h2>S </h2>
+<a href="HJ.Phasers.Taskview.html#Semantics">Semantics</a> [section, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#set_mode_preserves_wait_phase">set_mode_preserves_wait_phase</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#set_mode_preserves_signal_phase">set_mode_preserves_signal_phase</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#set_mode_ident">set_mode_ident</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#set_mode">set_mode</a> [definition, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#set_wait_phase">set_wait_phase</a> [definition, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#set_signal_phase">set_signal_phase</a> [definition, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Vars.html#Set_FID_Extra">Set_FID_Extra</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_FID">Set_FID</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#set_phid">set_phid</a> [definition, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_PHID_Extra">Set_PHID_Extra</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_PHID">Set_PHID</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#set_tid">set_tid</a> [definition, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_TID_Dep">Set_TID_Dep</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_TID_Extra">Set_TID_Extra</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_TID_Props">Set_TID_Props</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_TID">Set_TID</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#SIGNAL">SIGNAL</a> [constructor, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal">signal</a> [definition, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#SIGNAL">SIGNAL</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal">signal</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#SignalCap">SignalCap</a> [inductive, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#SignalPhase">SignalPhase</a> [inductive, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#SignalPre">SignalPre</a> [inductive, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#SignalPre">SignalPre</a> [inductive, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_wait_cap_signal_phase">signal_wait_cap_signal_phase</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_so_signal_phase">signal_so_signal_phase</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_phase_set_signal_phase">signal_phase_set_signal_phase</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_preserves_wait_phase">signal_preserves_wait_phase</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_preserves_mode">signal_preserves_mode</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_phase_def">signal_phase_def</a> [constructor, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_pre_s">signal_pre_s</a> [constructor, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_pre_w">signal_pre_w</a> [constructor, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_phase">signal_phase</a> [projection, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#SIGNAL_ALL">SIGNAL_ALL</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#signal_all_op">signal_all_op</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#signal_all">signal_all</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#signal_preserves_rhs">signal_preserves_rhs</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal_mapsto_spec">signal_mapsto_spec</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal_mapsto_inv">signal_mapsto_inv</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal_mapsto_neq">signal_mapsto_neq</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal_mapsto_eq">signal_mapsto_eq</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal_op">signal_op</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal_pre">signal_pre</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_wait_cap_to_sw">signal_cap_wait_cap_to_sw</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_and_wait_cap_to_sw">signal_cap_and_wait_cap_to_sw</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_wo_dec">signal_cap_wo_dec</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_rw">signal_cap_rw</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_to_neq_wo">signal_cap_to_neq_wo</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_dec">signal_cap_dec</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_so">signal_cap_so</a> [constructor, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_sw">signal_cap_sw</a> [constructor, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#SIGNAL_WAIT">SIGNAL_WAIT</a> [constructor, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#SIGNAL_ONLY">SIGNAL_ONLY</a> [constructor, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#so_to_not_wait_cap">so_to_not_wait_cap</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#SReduces">SReduces</a> [inductive, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#Sync">Sync</a> [inductive, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#sync_wait">sync_wait</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#sync_so">sync_so</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="global_T"></a><h2>T </h2>
+<a href="HJ.Phasers.Taskview.html#taskview">taskview</a> [record, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview">Taskview</a> [module, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Taskview.html">Taskview</a> [library]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html">Taskview</a> [library]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.Facts">Taskview.Facts</a> [section, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.Facts.tv_wellformed_set_mode_sw">Taskview.Facts.tv_wellformed_set_mode_sw</a> [variable, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.reduces_trans_inv">Taskview.reduces_trans_inv</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.reduces_wait_inv_wait_cap">Taskview.reduces_wait_inv_wait_cap</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.set_mode_preserves_welformed">Taskview.set_mode_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.signal_phase_le_signal">Taskview.signal_phase_le_signal</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_reduces_preserves_welformed">Taskview.tv_reduces_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_wait_preserves_welformed">Taskview.tv_wait_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_try_signal_preserves_welformed">Taskview.tv_try_signal_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_signal_preserves_welformed">Taskview.tv_signal_preserves_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_make_welformed">Taskview.tv_make_welformed</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_wellformed_inv_sw">Taskview.tv_wellformed_inv_sw</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_welformed_wo">Taskview.tv_welformed_wo</a> [constructor, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_welformed_so">Taskview.tv_welformed_so</a> [constructor, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_welformed_sw_succ">Taskview.tv_welformed_sw_succ</a> [constructor, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_welformed_sw_eq">Taskview.tv_welformed_sw_eq</a> [constructor, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.welformed_wait_phase_le_signal_phase">Taskview.welformed_wait_phase_le_signal_phase</a> [lemma, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.WellFormed">Taskview.WellFormed</a> [inductive, in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Vars.html#tid">tid</a> [definition, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#TID">TID</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#tid_eq_rw">tid_eq_rw</a> [lemma, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#TID_Facts">TID_Facts</a> [module, in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#TryWaitPre">TryWaitPre</a> [inductive, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#try_signal_signal_phase_sw">try_signal_signal_phase_sw</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#try_signal_preserves_wait_phase">try_signal_preserves_wait_phase</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#try_signal_preserves_mode">try_signal_preserves_mode</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#try_signal">try_signal</a> [definition, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_signal_mapsto_inv">try_signal_mapsto_inv</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_signal_mapsto_neq">try_signal_mapsto_neq</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_signal_mapsto_eq">try_signal_mapsto_eq</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_wait_op">try_wait_op</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_wait">try_wait</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_wait_pre_so">try_wait_pre_so</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_wait_pre_can_wait">try_wait_pre_can_wait</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_signal_op">try_signal_op</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_signal">try_signal</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#TV">TV</a> [constructor, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#tv_reduces_wait">tv_reduces_wait</a> [constructor, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#tv_reduces_signal">tv_reduces_signal</a> [constructor, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_ex_2">tv_ex_2</a> [definition, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_ex_1">tv_ex_1</a> [definition, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_lt_antisym">tv_lt_antisym</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_lt_trans">tv_lt_trans</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_lt_irreflexive">tv_lt_irreflexive</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_nhb_eval_lhs">tv_nhb_eval_lhs</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_lhs_eval_ge">tv_lhs_eval_ge</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_welformed_to_ge_refl">tv_welformed_to_ge_refl</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_hb_ge_dec">tv_hb_ge_dec</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_not_ge_rw_lt">tv_not_ge_rw_lt</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_not_ge_to_lt">tv_not_ge_to_lt</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_not_lt_rw_tv_ge">tv_not_lt_rw_tv_ge</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_not_lt_to_ge">tv_not_lt_to_ge</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_hb_to_not_ge">tv_hb_to_not_ge</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_nhb_to_not_lt">tv_nhb_to_not_lt</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_hb_dec">tv_hb_dec</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_nhb_dec">tv_nhb_dec</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_nhb_wo">tv_nhb_wo</a> [constructor, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_nhb_so">tv_nhb_so</a> [constructor, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_nhb_ge">tv_nhb_ge</a> [constructor, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_hb_def">tv_hb_def</a> [constructor, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<br/><br/><a name="global_U"></a><h2>U </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Update">Update</a> [inductive, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#update">update</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#update">update</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#update_register">update_register</a> [constructor, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#update_wait">update_wait</a> [constructor, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#update_signal">update_signal</a> [constructor, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#update_mapsto_spec">update_mapsto_spec</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#update_mapsto_neq">update_mapsto_neq</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#update_mapsto_eq">update_mapsto_eq</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="global_V"></a><h2>V </h2>
+<a href="HJ.Vars.html">Vars</a> [library]<br/>
+<br/><br/><a name="global_W"></a><h2>W </h2>
+<a href="HJ.Phasers.Taskview.html#WAIT">WAIT</a> [constructor, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait">wait</a> [definition, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#WAIT">WAIT</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait">wait</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#WaitAllPre">WaitAllPre</a> [inductive, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#WaitCap">WaitCap</a> [inductive, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#WaitPhase">WaitPhase</a> [inductive, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#WaitPre">WaitPre</a> [inductive, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#WaitPre">WaitPre</a> [inductive, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_wait_phase">wait_wait_phase</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_phase_set_wait_phase">wait_phase_set_wait_phase</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_preserves_signal_phase">wait_preserves_signal_phase</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_preserves_mode">wait_preserves_mode</a> [lemma, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_phase_def">wait_phase_def</a> [constructor, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_pre_sw">wait_pre_sw</a> [constructor, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_pre_wo">wait_pre_wo</a> [constructor, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_phase">wait_phase</a> [projection, in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#WAIT_ALL">WAIT_ALL</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#wait_all_op">wait_all_op</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#wait_all">wait_all</a> [definition, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#wait_all_pre">wait_all_pre</a> [constructor, in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#wait_preserves_rhs">wait_preserves_rhs</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait_mapsto_inv">wait_mapsto_inv</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait_mapsto_neq">wait_mapsto_neq</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait_mapsto_spec">wait_mapsto_spec</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait_mapsto_eq">wait_mapsto_eq</a> [lemma, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait_op">wait_op</a> [definition, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait_pre">wait_pre</a> [constructor, in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#wait_cap_so_dec">wait_cap_so_dec</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#wait_cap_rw">wait_cap_rw</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#wait_cap_to_neq_so">wait_cap_to_neq_so</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#wait_cap_dec">wait_cap_dec</a> [lemma, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#wait_cap_wo">wait_cap_wo</a> [constructor, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#wait_cap_sw">wait_cap_sw</a> [constructor, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#WAIT_ONLY">WAIT_ONLY</a> [constructor, in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html">Welformedness</a> [library]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#WellOrdered">WellOrdered</a> [inductive, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#well_ordered_to_facilitates">well_ordered_to_facilitates</a> [lemma, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#well_ordered_def">well_ordered_def</a> [constructor, in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<br/><br/><hr/>
+<h1>Notation Index</h1>
+<a name="notation_N"></a><h2>N </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#598fea7113d873a28f2963cb50eb9b80">_ || _ (phaser_scope)</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#d4a9edc8c4e7f93e3c726479eedcf5dd">_ >= _ (phaser_scope)</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#e292e6e240e95fe8b2274cd28307f284">_ <= _ (phaser_scope)</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#81a9619d3eb83d6159fde996c9dfa967">_ > _ (phaser_scope)</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#55a71dc4a32593a87282ca6b918a08e2">_ < _ (phaser_scope)</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#d4a9edc8c4e7f93e3c726479eedcf5dd">_ >= _ (phaser_scope)</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#e292e6e240e95fe8b2274cd28307f284">_ <= _ (phaser_scope)</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#81a9619d3eb83d6159fde996c9dfa967">_ > _ (phaser_scope)</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#55a71dc4a32593a87282ca6b918a08e2">_ < _ (phaser_scope)</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#5155dfebf813586d53b1cb2f7573d969">_ <= _ (reg_scope)</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<br/><br/><hr/>
+<h1>Module Index</h1>
+<a name="module_F"></a><h2>F </h2>
+<a href="HJ.Vars.html#FID">FID</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<br/><br/><a name="module_M"></a><h2>M </h2>
+<a href="HJ.Vars.html#Map_FID_Extra">Map_FID_Extra</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_FID_Props">Map_FID_Props</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_FID_Facts">Map_FID_Facts</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_FID">Map_FID</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_PHID_Extra">Map_PHID_Extra</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_PHID_Props">Map_PHID_Props</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_PHID_Facts">Map_PHID_Facts</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_PHID">Map_PHID</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_TID_Extra">Map_TID_Extra</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_TID_Props">Map_TID_Props</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_TID_Facts">Map_TID_Facts</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Map_TID">Map_TID</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<br/><br/><a name="module_N"></a><h2>N </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Notations">Notations</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Notations">Notations</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#Notations">Notations</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<br/><br/><a name="module_P"></a><h2>P </h2>
+<a href="HJ.Phasers.Welformedness.html#Phaser">Phaser</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap">Phasermap</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Vars.html#PHID">PHID</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<br/><br/><a name="module_S"></a><h2>S </h2>
+<a href="HJ.Vars.html#Set_FID_Extra">Set_FID_Extra</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_FID">Set_FID</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_PHID_Extra">Set_PHID_Extra</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_PHID">Set_PHID</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_TID_Dep">Set_TID_Dep</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_TID_Extra">Set_TID_Extra</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_TID_Props">Set_TID_Props</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#Set_TID">Set_TID</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<br/><br/><a name="module_T"></a><h2>T </h2>
+<a href="HJ.Phasers.Welformedness.html#Taskview">Taskview</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Vars.html#TID">TID</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#TID_Facts">TID_Facts</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<br/><br/><hr/>
+<h1>Variable Index</h1>
+<a name="variable_F"></a><h2>F </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym.gx">Facts.Antisym.gx</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym.gy">Facts.Antisym.gy</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.Antisym.wfx">Facts.Antisym.wfx</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.Antisym.wfy">Facts.Antisym.wfy</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym.wx">Facts.Antisym.wx</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym.wy">Facts.Antisym.wy</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym.x">Facts.Antisym.x</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.Antisym.x">Facts.Antisym.x</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym.y">Facts.Antisym.y</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.Antisym.y">Facts.Antisym.y</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.is_sw">Facts.EX2.is_sw</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.mt1">Facts.EX2.mt1</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.R1">Facts.EX2.R1</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.R2">Facts.EX2.R2</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.t">Facts.EX2.t</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.v">Facts.EX2.v</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.wf">Facts.EX2.wf</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.x">Facts.EX2.x</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.y">Facts.EX2.y</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.z">Facts.EX2.z</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.ph_ge_reduces_some">Facts.ph_ge_reduces_some</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.ph_ge_refl_preserves_reduces_register">Facts.ph_ge_refl_preserves_reduces_register</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.ph_ge_refl_preserves_reduces_drop">Facts.ph_ge_refl_preserves_reduces_drop</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.ph_ge_refl_preserves_reduces_some">Facts.ph_ge_refl_preserves_reduces_some</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.signal_preserves_lhs">Facts.signal_preserves_lhs</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.tv_nhb_register_right">Facts.tv_nhb_register_right</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.tv_nhb_register_both">Facts.tv_nhb_register_both</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.tv_nhb_register_left">Facts.tv_nhb_register_left</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.tv_eval_preserves_le">Facts.tv_eval_preserves_le</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.tv_nhb_reduces_trans_sw">Facts.tv_nhb_reduces_trans_sw</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.tv_nhb_reduces">Facts.tv_nhb_reduces</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.tv_wait_ge_lhs">Facts.tv_wait_ge_lhs</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.tv_signal_ge_lhs">Facts.tv_signal_ge_lhs</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.wait_preserves_rhs.L2">Facts.wait_preserves_rhs.L2</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.wait_preserves_rhs.L1">Facts.wait_preserves_rhs.L1</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.wait_preserves_rhs.G1">Facts.wait_preserves_rhs.G1</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.wait_preserves_rhs.v2">Facts.wait_preserves_rhs.v2</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.wait_preserves_rhs.v1">Facts.wait_preserves_rhs.v1</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Vars.html#FID.lt_trans&acute;">FID.lt_trans'</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<br/><br/><a name="variable_R"></a><h2>R </h2>
+<a href="HJ.Common.html#RequestOf.Check">RequestOf.Check</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#RequestOf.O">RequestOf.O</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#RequestOf.reqs">RequestOf.reqs</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#request_of.Check">request_of.Check</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#request_of.O">request_of.O</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<br/><br/><a name="variable_T"></a><h2>T </h2>
+<a href="HJ.Phasers.Welformedness.html#Taskview.Facts.tv_wellformed_set_mode_sw">Taskview.Facts.tv_wellformed_set_mode_sw</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<br/><br/><hr/>
+<h1>Library Index</h1>
+<a name="library_C"></a><h2>C </h2>
+<a href="HJ.Common.html">Common</a> <br/>
+<br/><br/><a name="library_L"></a><h2>L </h2>
+<a href="HJ.Phasers.Lang.html">Lang</a> <br/>
+<br/><br/><a name="library_P"></a><h2>P </h2>
+<a href="HJ.Phasers.Phaser.html">Phaser</a> <br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html">Phaser</a> <br/>
+<a href="HJ.Phasers.Phasermap.html">Phasermap</a> <br/>
+<br/><br/><a name="library_R"></a><h2>R </h2>
+<a href="HJ.Phasers.Regmode.html">Regmode</a> <br/>
+<br/><br/><a name="library_T"></a><h2>T </h2>
+<a href="HJ.Phasers.Taskview.html">Taskview</a> <br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html">Taskview</a> <br/>
+<br/><br/><a name="library_V"></a><h2>V </h2>
+<a href="HJ.Vars.html">Vars</a> <br/>
+<br/><br/><a name="library_W"></a><h2>W </h2>
+<a href="HJ.Phasers.Welformedness.html">Welformedness</a> <br/>
+<br/><br/><hr/>
+<h1>Lemma Index</h1>
+<a name="lemma_A"></a><h2>A </h2>
+<a href="HJ.Phasers.Phasermap.html#async_notina_mapsto_rtl">async_notina_mapsto_rtl</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#async_notina_mapsto">async_notina_mapsto</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#async_simpl_notin">async_simpl_notin</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#as_tv_op_inv_wait">as_tv_op_inv_wait</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#as_tv_op_inv_signal">as_tv_op_inv_signal</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="lemma_B"></a><h2>B </h2>
+<a href="HJ.Vars.html#beq_tid_refl">beq_tid_refl</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#beq_tid_to_eq">beq_tid_to_eq</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<br/><br/><a name="lemma_C"></a><h2>C </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#case_reduces">case_reduces</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<br/><br/><a name="lemma_D"></a><h2>D </h2>
+<a href="HJ.Phasers.Phaser.html#drop_mapsto_inv">drop_mapsto_inv</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="lemma_E"></a><h2>E </h2>
+<a href="HJ.Phasers.Taskview.html#eval_preserves_mode">eval_preserves_mode</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<br/><br/><a name="lemma_F"></a><h2>F </h2>
+<a href="HJ.Vars.html#FID.compare">FID.compare</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.lt_not_eq">FID.lt_not_eq</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.lt_trans">FID.lt_trans</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<br/><br/><a name="lemma_L"></a><h2>L </h2>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#le_spec">le_spec</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#lt_trans_ex">lt_trans_ex</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#lt_spec">lt_spec</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<br/><br/><a name="lemma_M"></a><h2>M </h2>
+<a href="HJ.Phasers.Taskview.html#make_wait_phase">make_wait_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#make_signal_phase">make_signal_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#make_mode">make_mode</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#make_mapsto">make_mapsto</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#mode_set_mode_rw">mode_set_mode_rw</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<br/><br/><a name="lemma_N"></a><h2>N </h2>
+<a href="HJ.Phasers.Regmode.html#neq_wo_to_signal_cap">neq_wo_to_signal_cap</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#neq_so_to_wait_cap">neq_so_to_wait_cap</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#not_signal_cap_to_wo">not_signal_cap_to_wo</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#not_wait_cap_to_so">not_wait_cap_to_so</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<br/><br/><a name="lemma_P"></a><h2>P </h2>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.ph_async_1_preserves_welformed">Phasermap.ph_async_1_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_reduces_preserves_welformed">Phasermap.pm_reduces_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_async_preserves_welformed">Phasermap.pm_async_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_drop_all_preserves_welformed">Phasermap.pm_drop_all_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_wait_all_preserves_welformed">Phasermap.pm_wait_all_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_signal_all_preserves_welformed">Phasermap.pm_signal_all_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_ph_drop_preserves_welformed">Phasermap.pm_ph_drop_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_ph_signal_preserves_welformed">Phasermap.pm_ph_signal_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_ph_new_preserves_welformed">Phasermap.pm_ph_new_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_welformed_add">Phasermap.pm_welformed_add</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_make_welformed">Phaser.ph_make_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_reduces_preserves_welformed">Phaser.ph_reduces_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_register_preserves_welformed">Phaser.ph_register_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_drop_preserves_welformed">Phaser.ph_drop_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_try_wait_preserves_welformed">Phaser.ph_try_wait_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_wait_preserves_welformed">Phaser.ph_wait_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_try_signal_preserves_welformed">Phaser.ph_try_signal_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_signal_preserves_welformed">Phaser.ph_signal_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_welformed_to_tv_welformed">Phaser.ph_welformed_to_tv_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_welformed_add">Phaser.ph_welformed_add</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_par_symm">ph_par_symm</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_drop_lhs_ge_rhs">ph_drop_lhs_ge_rhs</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_register_lhs_ge_rhs">ph_register_lhs_ge_rhs</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_wait_lhs_ge_rhs">ph_wait_lhs_ge_rhs</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_signal_lhs_ge_rhs">ph_signal_lhs_ge_rhs</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_s_reduces_trans_refl_ge">ph_s_reduces_trans_refl_ge</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_s_reduces_trans_refl_ge_refl">ph_s_reduces_trans_refl_ge_refl</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_s_reduces_trans_refl_welformed">ph_s_reduces_trans_refl_welformed</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_s_reduces_preserves_ge_left">ph_s_reduces_preserves_ge_left</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_reduces_drop_preserves_ge_left">ph_reduces_drop_preserves_ge_left</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_reduces_updates_preserves_ge_left">ph_reduces_updates_preserves_ge_left</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_ge_reduce">ph_ge_reduce</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_ge_refl_preserves_reduce">ph_ge_refl_preserves_reduce</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_hb_antisym">ph_hb_antisym</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_hb_irreflexive">ph_hb_irreflexive</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_hb_trans">ph_hb_trans</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_chb_to_not_hb">ph_chb_to_not_hb</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_hb_to_not_chb">ph_hb_to_not_chb</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_rel_inv">ph_rel_inv</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_new_impl_mapsto">ph_new_impl_mapsto</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_reduces_to_tv_reduce">ph_reduces_to_tv_reduce</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_to_tv_correct">ph_to_tv_correct</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_in">ph_in</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_register_inv_mapsto">ph_register_inv_mapsto</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_register_mapsto_eq">ph_register_mapsto_eq</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_register_in_1">ph_register_in_1</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_register_mapsto_neq">ph_register_mapsto_neq</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_register_rw">ph_register_rw</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_drop_rw">ph_drop_rw</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_wait_rw">ph_wait_rw</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_signal_rw">ph_signal_rw</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_update_rw">ph_update_rw</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_reduces_spec">ph_reduces_spec</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_async_mapsto_rw">pm_async_mapsto_rw</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_async_1_mapsto">pm_async_1_mapsto</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_async_1_mapsto_eq">pm_async_1_mapsto_eq</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_async_1_mapsto_neq">pm_async_1_mapsto_neq</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_async_1_rw">pm_async_1_rw</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_foreach_mapsto_rw">pm_foreach_mapsto_rw</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_ph_drop_rw">pm_ph_drop_rw</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_ph_signal_rw">pm_ph_signal_rw</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#pm_update_rw">pm_update_rw</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<br/><br/><a name="lemma_R"></a><h2>R </h2>
+<a href="HJ.Phasers.Taskview.html#reduces_wait_inv_sw">reduces_wait_inv_sw</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#reduces_signal_inv_sw">reduces_signal_inv_sw</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#reduces_preserves_mode">reduces_preserves_mode</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#reduces_rw_wait">reduces_rw_wait</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#reduces_rw_signal">reduces_rw_signal</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#reduces_spec">reduces_spec</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_par">reduces_par</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_ne">reduces_ne</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_update_inv">reduces_update_inv</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_mapsto_neq_rtl">reduces_mapsto_neq_rtl</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_mapsto_neq">reduces_mapsto_neq</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#regmode_eq_dec">regmode_eq_dec</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<br/><br/><a name="lemma_S"></a><h2>S </h2>
+<a href="HJ.Phasers.Taskview.html#set_mode_preserves_wait_phase">set_mode_preserves_wait_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#set_mode_preserves_signal_phase">set_mode_preserves_signal_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#set_mode_ident">set_mode_ident</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_wait_cap_signal_phase">signal_wait_cap_signal_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_so_signal_phase">signal_so_signal_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_phase_set_signal_phase">signal_phase_set_signal_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_preserves_wait_phase">signal_preserves_wait_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_preserves_mode">signal_preserves_mode</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#signal_preserves_rhs">signal_preserves_rhs</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal_mapsto_spec">signal_mapsto_spec</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal_mapsto_inv">signal_mapsto_inv</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal_mapsto_neq">signal_mapsto_neq</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal_mapsto_eq">signal_mapsto_eq</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_wait_cap_to_sw">signal_cap_wait_cap_to_sw</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_and_wait_cap_to_sw">signal_cap_and_wait_cap_to_sw</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_wo_dec">signal_cap_wo_dec</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_rw">signal_cap_rw</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_to_neq_wo">signal_cap_to_neq_wo</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_dec">signal_cap_dec</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#so_to_not_wait_cap">so_to_not_wait_cap</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<br/><br/><a name="lemma_T"></a><h2>T </h2>
+<a href="HJ.Phasers.Welformedness.html#Taskview.reduces_trans_inv">Taskview.reduces_trans_inv</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.reduces_wait_inv_wait_cap">Taskview.reduces_wait_inv_wait_cap</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.set_mode_preserves_welformed">Taskview.set_mode_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.signal_phase_le_signal">Taskview.signal_phase_le_signal</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_reduces_preserves_welformed">Taskview.tv_reduces_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_wait_preserves_welformed">Taskview.tv_wait_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_try_signal_preserves_welformed">Taskview.tv_try_signal_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_signal_preserves_welformed">Taskview.tv_signal_preserves_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_make_welformed">Taskview.tv_make_welformed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_wellformed_inv_sw">Taskview.tv_wellformed_inv_sw</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.welformed_wait_phase_le_signal_phase">Taskview.welformed_wait_phase_le_signal_phase</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Vars.html#tid_eq_rw">tid_eq_rw</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#try_signal_signal_phase_sw">try_signal_signal_phase_sw</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#try_signal_preserves_wait_phase">try_signal_preserves_wait_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#try_signal_preserves_mode">try_signal_preserves_mode</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_signal_mapsto_inv">try_signal_mapsto_inv</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_signal_mapsto_neq">try_signal_mapsto_neq</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_signal_mapsto_eq">try_signal_mapsto_eq</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_lt_antisym">tv_lt_antisym</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_lt_trans">tv_lt_trans</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_lt_irreflexive">tv_lt_irreflexive</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_nhb_eval_lhs">tv_nhb_eval_lhs</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_lhs_eval_ge">tv_lhs_eval_ge</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_welformed_to_ge_refl">tv_welformed_to_ge_refl</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_hb_ge_dec">tv_hb_ge_dec</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_not_ge_rw_lt">tv_not_ge_rw_lt</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_not_ge_to_lt">tv_not_ge_to_lt</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_not_lt_rw_tv_ge">tv_not_lt_rw_tv_ge</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_not_lt_to_ge">tv_not_lt_to_ge</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_hb_to_not_ge">tv_hb_to_not_ge</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_nhb_to_not_lt">tv_nhb_to_not_lt</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_hb_dec">tv_hb_dec</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_nhb_dec">tv_nhb_dec</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<br/><br/><a name="lemma_U"></a><h2>U </h2>
+<a href="HJ.Phasers.Phaser.html#update_mapsto_spec">update_mapsto_spec</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#update_mapsto_neq">update_mapsto_neq</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#update_mapsto_eq">update_mapsto_eq</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="lemma_W"></a><h2>W </h2>
+<a href="HJ.Phasers.Taskview.html#wait_wait_phase">wait_wait_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_phase_set_wait_phase">wait_phase_set_wait_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_preserves_signal_phase">wait_preserves_signal_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_preserves_mode">wait_preserves_mode</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#wait_preserves_rhs">wait_preserves_rhs</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait_mapsto_inv">wait_mapsto_inv</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait_mapsto_neq">wait_mapsto_neq</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait_mapsto_spec">wait_mapsto_spec</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait_mapsto_eq">wait_mapsto_eq</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#wait_cap_so_dec">wait_cap_so_dec</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#wait_cap_rw">wait_cap_rw</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#wait_cap_to_neq_so">wait_cap_to_neq_so</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#wait_cap_dec">wait_cap_dec</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#well_ordered_to_facilitates">well_ordered_to_facilitates</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<br/><br/><hr/>
+<h1>Constructor Index</h1>
+<a name="constructor_A"></a><h2>A </h2>
+<a href="HJ.Phasers.Phasermap.html#ASYNC">ASYNC</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#async_pre">async_pre</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#await_def">await_def</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="constructor_C"></a><h2>C </h2>
+<a href="HJ.Common.html#check_to_request_def">check_to_request_def</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<br/><br/><a name="constructor_D"></a><h2>D </h2>
+<a href="HJ.Phasers.Phaser.html#DROP">DROP</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#DROP_ALL">DROP_ALL</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#drop_pre">drop_pre</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="constructor_I"></a><h2>I </h2>
+<a href="HJ.Phasers.Phasermap.html#in_def">in_def</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<br/><br/><a name="constructor_L"></a><h2>L </h2>
+<a href="HJ.Vars.html#lt_cons_rhs">lt_cons_rhs</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#lt_cons">lt_cons</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#lt_lt">lt_lt</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#lt_nil">lt_nil</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<br/><br/><a name="constructor_M"></a><h2>M </h2>
+<a href="HJ.Phasers.Phasermap.html#mk_phased">mk_phased</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#mk_op">mk_op</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#mk_registry">mk_registry</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#mk_op">mk_op</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="constructor_P"></a><h2>P </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#par_def">par_def</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#phased_pre">phased_pre</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.pm_welformed_def">Phasermap.pm_welformed_def</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.ph_welformed_def">Phaser.ph_welformed_def</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_happens_before_def">ph_happens_before_def</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ph_rel_def">ph_rel_def</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PH_DROP">PH_DROP</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PH_SIGNAL">PH_SIGNAL</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PH_NEW">PH_NEW</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_drop_pre">ph_drop_pre</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_signal_pre">ph_signal_pre</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_new_pre">ph_new_pre</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_s_reduces">ph_s_reduces</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#ph_reduces">ph_reduces</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="constructor_R"></a><h2>R </h2>
+<a href="HJ.Phasers.Phasermap.html#reduces">reduces</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_destructs_def">reduces_destructs_def</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#reduces_updates_def">reduces_updates_def</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#REGISTER">REGISTER</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#register_pre">register_pre</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Common.html#request_of_def">request_of_def</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#request_to_check_def">request_to_check_def</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#r_le_sw">r_le_sw</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#r_le_wo">r_le_wo</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#r_le_so">r_le_so</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<br/><br/><a name="constructor_S"></a><h2>S </h2>
+<a href="HJ.Phasers.Taskview.html#SIGNAL">SIGNAL</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#SIGNAL">SIGNAL</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_phase_def">signal_phase_def</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_pre_s">signal_pre_s</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal_pre_w">signal_pre_w</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#SIGNAL_ALL">SIGNAL_ALL</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal_pre">signal_pre</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_so">signal_cap_so</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#signal_cap_sw">signal_cap_sw</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#SIGNAL_WAIT">SIGNAL_WAIT</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#SIGNAL_ONLY">SIGNAL_ONLY</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#sync_wait">sync_wait</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#sync_so">sync_so</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="constructor_T"></a><h2>T </h2>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_welformed_wo">Taskview.tv_welformed_wo</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_welformed_so">Taskview.tv_welformed_so</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_welformed_sw_succ">Taskview.tv_welformed_sw_succ</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Taskview.tv_welformed_sw_eq">Taskview.tv_welformed_sw_eq</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_wait_pre_so">try_wait_pre_so</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_wait_pre_can_wait">try_wait_pre_can_wait</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#TV">TV</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#tv_reduces_wait">tv_reduces_wait</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#tv_reduces_signal">tv_reduces_signal</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_nhb_wo">tv_nhb_wo</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_nhb_so">tv_nhb_so</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_nhb_ge">tv_nhb_ge</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_hb_def">tv_hb_def</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<br/><br/><a name="constructor_U"></a><h2>U </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#update_register">update_register</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#update_wait">update_wait</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#update_signal">update_signal</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<br/><br/><a name="constructor_W"></a><h2>W </h2>
+<a href="HJ.Phasers.Taskview.html#WAIT">WAIT</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#WAIT">WAIT</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_phase_def">wait_phase_def</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_pre_sw">wait_pre_sw</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#wait_pre_wo">wait_pre_wo</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#WAIT_ALL">WAIT_ALL</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#wait_all_pre">wait_all_pre</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait_pre">wait_pre</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#wait_cap_wo">wait_cap_wo</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#wait_cap_sw">wait_cap_sw</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#WAIT_ONLY">WAIT_ONLY</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#well_ordered_def">well_ordered_def</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<br/><br/><hr/>
+<h1>Inductive Index</h1>
+<a name="inductive_A"></a><h2>A </h2>
+<a href="HJ.Phasers.Phasermap.html#AsyncPre">AsyncPre</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#Await">Await</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="inductive_C"></a><h2>C </h2>
+<a href="HJ.Common.html#CheckToRequest">CheckToRequest</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<br/><br/><a name="inductive_D"></a><h2>D </h2>
+<a href="HJ.Phasers.Phaser.html#DropPre">DropPre</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="inductive_F"></a><h2>F </h2>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facilitates">Facilitates</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Forall">Forall</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<br/><br/><a name="inductive_H"></a><h2>H </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#HappensBefore">HappensBefore</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#HappensBefore">HappensBefore</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<br/><br/><a name="inductive_I"></a><h2>I </h2>
+<a href="HJ.Phasers.Phasermap.html#In">In</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<br/><br/><a name="inductive_L"></a><h2>L </h2>
+<a href="HJ.Vars.html#lt">lt</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<br/><br/><a name="inductive_O"></a><h2>O </h2>
+<a href="HJ.Phasers.Taskview.html#op">op</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#op">op</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#op">op</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="inductive_P"></a><h2>P </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Par">Par</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PhasedPre">PhasedPre</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phasermap.WellFormed">Phasermap.WellFormed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Welformedness.html#Phaser.WellFormed">Phaser.WellFormed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PhDropPre">PhDropPre</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PhNewPre">PhNewPre</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#PhSignalPre">PhSignalPre</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<br/><br/><a name="inductive_R"></a><h2>R </h2>
+<a href="HJ.Phasers.Taskview.html#Reduces">Reduces</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#Reduces">Reduces</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#Reduces">Reduces</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ReducesDestructs">ReducesDestructs</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ReducesUpdates">ReducesUpdates</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#RegisterPre">RegisterPre</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#regmode">regmode</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Common.html#RequestOf">RequestOf</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#RequestToCheck">RequestToCheck</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#r_le">r_le</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<br/><br/><a name="inductive_S"></a><h2>S </h2>
+<a href="HJ.Phasers.Regmode.html#SignalCap">SignalCap</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#SignalPhase">SignalPhase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#SignalPre">SignalPre</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#SignalPre">SignalPre</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#SReduces">SReduces</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#Sync">Sync</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="inductive_T"></a><h2>T </h2>
+<a href="HJ.Phasers.Welformedness.html#Taskview.WellFormed">Taskview.WellFormed</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#TryWaitPre">TryWaitPre</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="inductive_U"></a><h2>U </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Update">Update</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<br/><br/><a name="inductive_W"></a><h2>W </h2>
+<a href="HJ.Phasers.Phasermap.html#WaitAllPre">WaitAllPre</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#WaitCap">WaitCap</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#WaitPhase">WaitPhase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#WaitPre">WaitPre</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#WaitPre">WaitPre</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#WellOrdered">WellOrdered</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<br/><br/><hr/>
+<h1>Projection Index</h1>
+<a name="projection_C"></a><h2>C </h2>
+<a href="HJ.Phasers.Phasermap.html#can_run">can_run</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#can_run">can_run</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="projection_G"></a><h2>G </h2>
+<a href="HJ.Phasers.Phasermap.html#get_new_task">get_new_task</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#get_args">get_args</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#get_mode">get_mode</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#get_task">get_task</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="projection_M"></a><h2>M </h2>
+<a href="HJ.Phasers.Taskview.html#mode">mode</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<br/><br/><a name="projection_R"></a><h2>R </h2>
+<a href="HJ.Phasers.Phasermap.html#run">run</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#run">run</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="projection_S"></a><h2>S </h2>
+<a href="HJ.Phasers.Taskview.html#signal_phase">signal_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<br/><br/><a name="projection_W"></a><h2>W </h2>
+<a href="HJ.Phasers.Taskview.html#wait_phase">wait_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<br/><br/><hr/>
+<h1>Section Index</h1>
+<a name="section_D"></a><h2>D </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Defs">Defs</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Defs">Defs</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#Defs">Defs</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="section_F"></a><h2>F </h2>
+<a href="HJ.Phasers.Taskview.html#Facts">Facts</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts">Facts</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#Facts">Facts</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts">Facts</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#Facts">Facts</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Regmode.html#Facts">Facts</a> [in <a href="HJ.Phasers.Regmode.html">HJ.Phasers.Regmode</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Antisym">Facts.Antisym</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.Antisym">Facts.Antisym</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2">Facts.EX2</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.Trans">Facts.Trans</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#Facts.wait_preserves_rhs">Facts.wait_preserves_rhs</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<br/><br/><a name="section_R"></a><h2>R </h2>
+<a href="HJ.Common.html#RequestOf">RequestOf</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<a href="HJ.Common.html#request_of">request_of</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<br/><br/><a name="section_S"></a><h2>S </h2>
+<a href="HJ.Phasers.Taskview.html#Semantics">Semantics</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<br/><br/><a name="section_T"></a><h2>T </h2>
+<a href="HJ.Phasers.Welformedness.html#Taskview.Facts">Taskview.Facts</a> [in <a href="HJ.Phasers.Welformedness.html">HJ.Phasers.Welformedness</a>]<br/>
+<br/><br/><hr/>
+<h1>Definition Index</h1>
+<a name="definition_A"></a><h2>A </h2>
+<a href="HJ.Phasers.Phasermap.html#async">async</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#async_op">async_op</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#async_1">async_1</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#as_tv_op">as_tv_op</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="definition_B"></a><h2>B </h2>
+<a href="HJ.Vars.html#beq_tid">beq_tid</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#BlockedBy">BlockedBy</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#BlockedBy">BlockedBy</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<br/><br/><a name="definition_D"></a><h2>D </h2>
+<a href="HJ.Phasers.Phaser.html#drop">drop</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#drop_all_op">drop_all_op</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#drop_all">drop_all</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#drop_op">drop_op</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="definition_E"></a><h2>E </h2>
+<a href="HJ.Phasers.Taskview.html#eval">eval</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#ex2">ex2</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<br/><br/><a name="definition_F"></a><h2>F </h2>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#Facilitates">Facilitates</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Vars.html#fid">fid</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.eq">FID.eq</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.eq_dec">FID.eq_dec</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.eq_trans">FID.eq_trans</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.eq_sym">FID.eq_sym</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.eq_refl">FID.eq_refl</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.lt">FID.lt</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#FID.t">FID.t</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#foreach">foreach</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<br/><br/><a name="definition_G"></a><h2>G </h2>
+<a href="HJ.Phasers.Taskview.html#get_signal_phase">get_signal_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#get_wait_phase">get_wait_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#get_impl">get_impl</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#get_impl">get_impl</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="definition_M"></a><h2>M </h2>
+<a href="HJ.Phasers.Taskview.html#make">make</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#make">make</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#make">make</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Phaser.html#MayHappenParallel">MayHappenParallel</a> [in <a href="HJ.Phasers.PhaseOrdering.Phaser.html">HJ.Phasers.PhaseOrdering.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#MayHappenParallel">MayHappenParallel</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<br/><br/><a name="definition_P"></a><h2>P </h2>
+<a href="HJ.Phasers.Phaser.html#phaser">phaser</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#phasermap">phasermap</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Vars.html#phid">phid</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_drop_op">ph_drop_op</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_drop">ph_drop</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_signal_op">ph_signal_op</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_signal">ph_signal</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_new_op">ph_new_op</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#ph_new">ph_new</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<br/><br/><a name="definition_R"></a><h2>R </h2>
+<a href="HJ.Phasers.Phaser.html#register">register</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#register_op">register_op</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Common.html#request_of">request_of</a> [in <a href="HJ.Common.html">HJ.Common</a>]<br/>
+<br/><br/><a name="definition_S"></a><h2>S </h2>
+<a href="HJ.Phasers.Taskview.html#set_mode">set_mode</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#set_wait_phase">set_wait_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#set_signal_phase">set_signal_phase</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Vars.html#set_phid">set_phid</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Vars.html#set_tid">set_tid</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#signal">signal</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal">signal</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#signal_all_op">signal_all_op</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#signal_all">signal_all</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#signal_op">signal_op</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="definition_T"></a><h2>T </h2>
+<a href="HJ.Vars.html#tid">tid</a> [in <a href="HJ.Vars.html">HJ.Vars</a>]<br/>
+<a href="HJ.Phasers.Taskview.html#try_signal">try_signal</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_wait_op">try_wait_op</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_wait">try_wait</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_signal_op">try_signal_op</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#try_signal">try_signal</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_ex_2">tv_ex_2</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<a href="HJ.Phasers.PhaseOrdering.Taskview.html#tv_ex_1">tv_ex_1</a> [in <a href="HJ.Phasers.PhaseOrdering.Taskview.html">HJ.Phasers.PhaseOrdering.Taskview</a>]<br/>
+<br/><br/><a name="definition_U"></a><h2>U </h2>
+<a href="HJ.Phasers.Phasermap.html#update">update</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#update">update</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="definition_W"></a><h2>W </h2>
+<a href="HJ.Phasers.Taskview.html#wait">wait</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait">wait</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#wait_all_op">wait_all_op</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phasermap.html#wait_all">wait_all</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#wait_op">wait_op</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><hr/>
+<h1>Record Index</h1>
+<a name="record_O"></a><h2>O </h2>
+<a href="HJ.Phasers.Phasermap.html#Op">Op</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<a href="HJ.Phasers.Phaser.html#Op">Op</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="record_P"></a><h2>P </h2>
+<a href="HJ.Phasers.Phasermap.html#phased">phased</a> [in <a href="HJ.Phasers.Phasermap.html">HJ.Phasers.Phasermap</a>]<br/>
+<br/><br/><a name="record_R"></a><h2>R </h2>
+<a href="HJ.Phasers.Phaser.html#registry">registry</a> [in <a href="HJ.Phasers.Phaser.html">HJ.Phasers.Phaser</a>]<br/>
+<br/><br/><a name="record_T"></a><h2>T </h2>
+<a href="HJ.Phasers.Taskview.html#taskview">taskview</a> [in <a href="HJ.Phasers.Taskview.html">HJ.Phasers.Taskview</a>]<br/>
+<br/><br/><hr/><table>
+<tr>
+<td>Global Index</td>
+<td><a href="index.html#global_A">A</a></td>
+<td><a href="index.html#global_B">B</a></td>
+<td><a href="index.html#global_C">C</a></td>
+<td><a href="index.html#global_D">D</a></td>
+<td><a href="index.html#global_E">E</a></td>
+<td><a href="index.html#global_F">F</a></td>
+<td><a href="index.html#global_G">G</a></td>
+<td><a href="index.html#global_H">H</a></td>
+<td><a href="index.html#global_I">I</a></td>
+<td>J</td>
+<td>K</td>
+<td><a href="index.html#global_L">L</a></td>
+<td><a href="index.html#global_M">M</a></td>
+<td><a href="index.html#global_N">N</a></td>
+<td><a href="index.html#global_O">O</a></td>
+<td><a href="index.html#global_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#global_R">R</a></td>
+<td><a href="index.html#global_S">S</a></td>
+<td><a href="index.html#global_T">T</a></td>
+<td><a href="index.html#global_U">U</a></td>
+<td><a href="index.html#global_V">V</a></td>
+<td><a href="index.html#global_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(493 entries)</td>
+</tr>
+<tr>
+<td>Notation Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td><a href="index.html#notation_N">N</a></td>
+<td>O</td>
+<td>P</td>
+<td>Q</td>
+<td>R</td>
+<td>S</td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(10 entries)</td>
+</tr>
+<tr>
+<td>Module Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td><a href="index.html#module_F">F</a></td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td><a href="index.html#module_M">M</a></td>
+<td><a href="index.html#module_N">N</a></td>
+<td>O</td>
+<td><a href="index.html#module_P">P</a></td>
+<td>Q</td>
+<td>R</td>
+<td><a href="index.html#module_S">S</a></td>
+<td><a href="index.html#module_T">T</a></td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(30 entries)</td>
+</tr>
+<tr>
+<td>Variable Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td><a href="index.html#variable_F">F</a></td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td>P</td>
+<td>Q</td>
+<td><a href="index.html#variable_R">R</a></td>
+<td>S</td>
+<td><a href="index.html#variable_T">T</a></td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(45 entries)</td>
+</tr>
+<tr>
+<td>Library Index</td>
+<td>A</td>
+<td>B</td>
+<td><a href="index.html#library_C">C</a></td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td><a href="index.html#library_L">L</a></td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td><a href="index.html#library_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#library_R">R</a></td>
+<td>S</td>
+<td><a href="index.html#library_T">T</a></td>
+<td>U</td>
+<td><a href="index.html#library_V">V</a></td>
+<td><a href="index.html#library_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(10 entries)</td>
+</tr>
+<tr>
+<td>Lemma Index</td>
+<td><a href="index.html#lemma_A">A</a></td>
+<td><a href="index.html#lemma_B">B</a></td>
+<td><a href="index.html#lemma_C">C</a></td>
+<td><a href="index.html#lemma_D">D</a></td>
+<td><a href="index.html#lemma_E">E</a></td>
+<td><a href="index.html#lemma_F">F</a></td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td><a href="index.html#lemma_L">L</a></td>
+<td><a href="index.html#lemma_M">M</a></td>
+<td><a href="index.html#lemma_N">N</a></td>
+<td>O</td>
+<td><a href="index.html#lemma_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#lemma_R">R</a></td>
+<td><a href="index.html#lemma_S">S</a></td>
+<td><a href="index.html#lemma_T">T</a></td>
+<td><a href="index.html#lemma_U">U</a></td>
+<td>V</td>
+<td><a href="index.html#lemma_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(169 entries)</td>
+</tr>
+<tr>
+<td>Constructor Index</td>
+<td><a href="index.html#constructor_A">A</a></td>
+<td>B</td>
+<td><a href="index.html#constructor_C">C</a></td>
+<td><a href="index.html#constructor_D">D</a></td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td><a href="index.html#constructor_I">I</a></td>
+<td>J</td>
+<td>K</td>
+<td><a href="index.html#constructor_L">L</a></td>
+<td><a href="index.html#constructor_M">M</a></td>
+<td>N</td>
+<td>O</td>
+<td><a href="index.html#constructor_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#constructor_R">R</a></td>
+<td><a href="index.html#constructor_S">S</a></td>
+<td><a href="index.html#constructor_T">T</a></td>
+<td><a href="index.html#constructor_U">U</a></td>
+<td>V</td>
+<td><a href="index.html#constructor_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(81 entries)</td>
+</tr>
+<tr>
+<td>Inductive Index</td>
+<td><a href="index.html#inductive_A">A</a></td>
+<td>B</td>
+<td><a href="index.html#inductive_C">C</a></td>
+<td><a href="index.html#inductive_D">D</a></td>
+<td>E</td>
+<td><a href="index.html#inductive_F">F</a></td>
+<td>G</td>
+<td><a href="index.html#inductive_H">H</a></td>
+<td><a href="index.html#inductive_I">I</a></td>
+<td>J</td>
+<td>K</td>
+<td><a href="index.html#inductive_L">L</a></td>
+<td>M</td>
+<td>N</td>
+<td><a href="index.html#inductive_O">O</a></td>
+<td><a href="index.html#inductive_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#inductive_R">R</a></td>
+<td><a href="index.html#inductive_S">S</a></td>
+<td><a href="index.html#inductive_T">T</a></td>
+<td><a href="index.html#inductive_U">U</a></td>
+<td>V</td>
+<td><a href="index.html#inductive_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(45 entries)</td>
+</tr>
+<tr>
+<td>Projection Index</td>
+<td>A</td>
+<td>B</td>
+<td><a href="index.html#projection_C">C</a></td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td><a href="index.html#projection_G">G</a></td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td><a href="index.html#projection_M">M</a></td>
+<td>N</td>
+<td>O</td>
+<td>P</td>
+<td>Q</td>
+<td><a href="index.html#projection_R">R</a></td>
+<td><a href="index.html#projection_S">S</a></td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td><a href="index.html#projection_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(11 entries)</td>
+</tr>
+<tr>
+<td>Section Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td><a href="index.html#section_D">D</a></td>
+<td>E</td>
+<td><a href="index.html#section_F">F</a></td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td>P</td>
+<td>Q</td>
+<td><a href="index.html#section_R">R</a></td>
+<td><a href="index.html#section_S">S</a></td>
+<td><a href="index.html#section_T">T</a></td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(18 entries)</td>
+</tr>
+<tr>
+<td>Definition Index</td>
+<td><a href="index.html#definition_A">A</a></td>
+<td><a href="index.html#definition_B">B</a></td>
+<td>C</td>
+<td><a href="index.html#definition_D">D</a></td>
+<td><a href="index.html#definition_E">E</a></td>
+<td><a href="index.html#definition_F">F</a></td>
+<td><a href="index.html#definition_G">G</a></td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td><a href="index.html#definition_M">M</a></td>
+<td>N</td>
+<td>O</td>
+<td><a href="index.html#definition_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#definition_R">R</a></td>
+<td><a href="index.html#definition_S">S</a></td>
+<td><a href="index.html#definition_T">T</a></td>
+<td><a href="index.html#definition_U">U</a></td>
+<td>V</td>
+<td><a href="index.html#definition_W">W</a></td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(69 entries)</td>
+</tr>
+<tr>
+<td>Record Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td><a href="index.html#record_O">O</a></td>
+<td><a href="index.html#record_P">P</a></td>
+<td>Q</td>
+<td><a href="index.html#record_R">R</a></td>
+<td>S</td>
+<td><a href="index.html#record_T">T</a></td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(5 entries)</td>
+</tr>
+</table>
+<hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

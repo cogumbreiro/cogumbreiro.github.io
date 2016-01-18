@@ -1,0 +1,697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>HJ.Phasers.Phaser</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library HJ.Phasers.Phaser</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="Defs"><span class="id" title="section">Defs</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  A phaser is a map from task names <span class="inlinecode"><a class="idref" href="HJ.Vars.html#tid"><span class="id" title="definition">tid</span></a></span> into taskviews, represented
+  by parametric type <span class="inlinecode"><span class="id" title="var">Map_TID.t</span></span>.
+
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="phaser"><span class="id" title="definition">phaser</span></a> := <a class="idref" href="HJ.Vars.html#Map_TID.t"><span class="id" title="definition">Map_TID.t</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#taskview"><span class="id" title="record">taskview</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  The following record defines the specification of a phaser operation.
+  An operation is issued by a task of type <span class="inlinecode"><a class="idref" href="HJ.Vars.html#tid"><span class="id" title="definition">tid</span></a></span> and targets a <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a></span>.
+  The pre condition <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#can_run"><span class="id" title="projection">can_run</span></a></span> must be satisfied to execute the implementation <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#run"><span class="id" title="projection">run</span></a></span> on
+  a given phaser.
+  
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Record</span> <a name="Op"><span class="id" title="record">Op</span></a> := <a name="mk_op"><span class="id" title="constructor">mk_op</span></a> {<br/>
+&nbsp;&nbsp;<a name="can_run"><span class="id" title="projection">can_run</span></a>: <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> -&gt; <span class="id" title="keyword">Prop</span>;<br/>
+&nbsp;&nbsp;<a name="run"><span class="id" title="projection">run</span></a>: <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> -&gt; <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a><br/>
+}.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#make"><span class="id" title="definition">make</span></a></span> creates a new phaser and registers task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> with it.
+  Task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> becomes registered with the initial taskview <span class="inlinecode"><span class="id" title="var">Taskview.make</span></span>.
+
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="make"><span class="id" title="definition">make</span></a> <span class="id" title="var">t</span> := <a class="idref" href="HJ.Vars.html#Map_TID.add"><span class="id" title="definition">add</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#make"><span class="id" title="definition">Taskview.make</span></a> (<a class="idref" href="HJ.Vars.html#Map_TID.empty"><span class="id" title="definition">Map_TID.empty</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#taskview"><span class="id" title="record">taskview</span></a>).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab1"></a><h1 class="section">Signal</h1>
+
+<div class="paragraph"> </div>
+
+
+<div class="paragraph"> </div>
+
+  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#update"><span class="id" title="definition">update</span></a></span> targets a phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span> and is used internally to mutate
+  the taskview associated with task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> using function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#f"><span class="id" title="variable">f</span></a></span> to mutate.
+  If task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> is not registered in <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>, then the phaser is left unchanged.
+
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="update"><span class="id" title="definition">update</span></a> (<span class="id" title="var">t</span>:<a class="idref" href="HJ.Vars.html#tid"><span class="id" title="definition">tid</span></a>) (<span class="id" title="var">f</span>:<a class="idref" href="HJ.Phasers.Taskview.html#taskview"><span class="id" title="record">taskview</span></a> -&gt; <a class="idref" href="HJ.Phasers.Taskview.html#taskview"><span class="id" title="record">taskview</span></a>) (<span class="id" title="var">ph</span>:<a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a>) : <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <a class="idref" href="HJ.Vars.html#Map_TID.find"><span class="id" title="definition">find</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> <span class="id" title="var">v</span> =&gt; <a class="idref" href="HJ.Vars.html#Map_TID.add"><span class="id" title="definition">add</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#f"><span class="id" title="variable">f</span></a> <span class="id" title="var">v</span>) <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a><br/>
+&nbsp;&nbsp;| <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#None"><span class="id" title="constructor">None</span></a> =&gt; <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+For the signal to take any effect the task must be registered with the phaser. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="SignalPre"><span class="id" title="inductive">SignalPre</span></a> (<span class="id" title="var">t</span>:<a class="idref" href="HJ.Vars.html#tid"><span class="id" title="definition">tid</span></a>) (<span class="id" title="var">ph</span>:<a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a>) : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<a name="signal_pre"><span class="id" title="constructor">signal_pre</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <span class="id" title="var">t</span> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <span class="id" title="var">ph</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#SignalPre"><span class="id" title="inductive">Taskview.SignalPre</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#SignalPre"><span class="id" title="inductive">SignalPre</span></a> <span class="id" title="var">t</span> <span class="id" title="var">ph</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  Signal just applies <span class="inlinecode"><span class="id" title="var">Taskview.signal</span></span> to the taskview associated with
+  task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span>.
+  
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="signal"><span class="id" title="definition">signal</span></a> (<span class="id" title="var">t</span>:<a class="idref" href="HJ.Vars.html#tid"><span class="id" title="definition">tid</span></a>) : <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> -&gt; <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> := <a class="idref" href="HJ.Phasers.Phaser.html#update"><span class="id" title="definition">update</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#signal"><span class="id" title="definition">Taskview.signal</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  We now pair the pre condition with the implementation. This is later used
+  in the definition of the operational semantics.
+  
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="signal_op"><span class="id" title="definition">signal_op</span></a> <span class="id" title="var">t</span> := <a class="idref" href="HJ.Phasers.Phaser.html#mk_op"><span class="id" title="constructor">mk_op</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#SignalPre"><span class="id" title="inductive">SignalPre</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a>) (<a class="idref" href="HJ.Phasers.Phaser.html#signal"><span class="id" title="definition">signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a>).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#try_signal"><span class="id" title="definition">try_signal</span></a></span> can be called without a pre-condition. It is crucial for
+  the definition of an instruction that signals all phasers.
+  
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="try_signal"><span class="id" title="definition">try_signal</span></a> (<span class="id" title="var">t</span>:<a class="idref" href="HJ.Vars.html#tid"><span class="id" title="definition">tid</span></a>) : <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> -&gt; <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> := <a class="idref" href="HJ.Phasers.Phaser.html#update"><span class="id" title="definition">update</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#try_signal"><span class="id" title="definition">Taskview.try_signal</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+We define <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#try_signal_op"><span class="id" title="definition">try_signal_op</span></a></span> without a pre-condition. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="try_signal_op"><span class="id" title="definition">try_signal_op</span></a> <span class="id" title="var">t</span> := <a class="idref" href="HJ.Phasers.Phaser.html#mk_op"><span class="id" title="constructor">mk_op</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">ph</span> =&gt; <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#True"><span class="id" title="inductive">True</span></a>) (<a class="idref" href="HJ.Phasers.Phaser.html#try_signal"><span class="id" title="definition">try_signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a>).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab2"></a><h1 class="section">Wait</h1>
+
+<div class="paragraph"> </div>
+
+
+<div class="paragraph"> </div>
+
+  Predicate <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#Await"><span class="id" title="inductive">Await</span></a></span> holds when all tasks registered in phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span> 
+  with a signal capability have a signal phase of at least <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#n"><span class="id" title="variable">n</span></a></span>.
+  By only awaiting tasks with a signal capability, predicate <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#Await"><span class="id" title="inductive">Await</span></a></span>
+  <i>disregards</i> any task registered with a <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#WAIT_ONLY"><span class="id" title="constructor">WAIT_ONLY</span></a></span> mode, regardless
+  of its signal phase.
+  
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="Await"><span class="id" title="inductive">Await</span></a> <span class="id" title="var">ph</span> <span class="id" title="var">n</span> : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<a name="await_def"><span class="id" title="constructor">await_def</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <span class="id" title="var">ph</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#SignalCap"><span class="id" title="inductive">SignalCap</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#signal_phase"><span class="id" title="projection">signal_phase</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Peano.html#08fe8636f4b45ae6787c490d19de1366"><span class="id" title="notation">&gt;=</span></a> <span class="id" title="var">n</span>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#Await"><span class="id" title="inductive">Await</span></a> <span class="id" title="var">ph</span> <span class="id" title="var">n</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  Predicate <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#Sync"><span class="id" title="inductive">Sync</span></a></span> defines what happens when a
+  task synchronizes with the other members of a phaser, which is triggered when
+  a task performs either wait on a phaser, or next.
+  The semantics of <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#Sync"><span class="id" title="inductive">Sync</span></a></span> depends on the registration mode of the task.
+  Tasks registered in <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a></span> mode do not block, so predicate <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#Sync"><span class="id" title="inductive">Sync</span></a></span> always
+  holds. Tasks that are not registered in <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a></span> mode
+  (that is tasks with a wait capability) only holds once all 
+  members with a signal capability issued at least as many signals as the task
+  synchronizing.
+  
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="Sync"><span class="id" title="inductive">Sync</span></a> : <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> -&gt; <a class="idref" href="HJ.Vars.html#tid"><span class="id" title="definition">tid</span></a> -&gt; <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;| <a name="sync_so"><span class="id" title="constructor">sync_so</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#Sync"><span class="id" title="inductive">Sync</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a><br/>
+&nbsp;&nbsp;| <a name="sync_wait"><span class="id" title="constructor">sync_wait</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#WaitCap"><span class="id" title="inductive">WaitCap</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#Await"><span class="id" title="inductive">Await</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#S"><span class="id" title="constructor">S</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#wait_phase"><span class="id" title="projection">wait_phase</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a>)) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#Sync"><span class="id" title="inductive">Sync</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  Wait consists of thee pre-conditions: (i) task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> is registered in phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>,
+  (ii) task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> has signalled as per <span class="inlinecode"><span class="id" title="var">Taskview.WaitPre</span></span>,
+  and (iii) task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> must be able to synchronize with the other members through phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>.
+  
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="WaitPre"><span class="id" title="inductive">WaitPre</span></a> <span class="id" title="var">t</span> <span class="id" title="var">ph</span> : <span class="id" title="keyword">Prop</span>  := <br/>
+&nbsp;&nbsp;<a name="wait_pre"><span class="id" title="constructor">wait_pre</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <span class="id" title="var">t</span> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <span class="id" title="var">ph</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#WaitPre"><span class="id" title="inductive">Taskview.WaitPre</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#Sync"><span class="id" title="inductive">Sync</span></a> <span class="id" title="var">ph</span> <span class="id" title="var">t</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#WaitPre"><span class="id" title="inductive">WaitPre</span></a> <span class="id" title="var">t</span> <span class="id" title="var">ph</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Operationally, wait applies <span class="inlinecode"><span class="id" title="var">Taskview.wait</span></span> on the taskview associated with task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span>.
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="wait"><span class="id" title="definition">wait</span></a> (<span class="id" title="var">t</span>:<a class="idref" href="HJ.Vars.html#tid"><span class="id" title="definition">tid</span></a>) : <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> -&gt; <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> := <a class="idref" href="HJ.Phasers.Phaser.html#update"><span class="id" title="definition">update</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#wait"><span class="id" title="definition">Taskview.wait</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="wait_op"><span class="id" title="definition">wait_op</span></a> <span class="id" title="var">t</span> := <a class="idref" href="HJ.Phasers.Phaser.html#mk_op"><span class="id" title="constructor">mk_op</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#WaitPre"><span class="id" title="inductive">WaitPre</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a>) (<a class="idref" href="HJ.Phasers.Phaser.html#wait"><span class="id" title="definition">wait</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a>).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#try_wait"><span class="id" title="definition">try_wait</span></a></span> can even be invoked by any task.
+  This is important to show deadlock-freedom of phasermap operations.
+  
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="TryWaitPre"><span class="id" title="inductive">TryWaitPre</span></a> <span class="id" title="var">t</span> <span class="id" title="var">ph</span> : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;| <a name="try_wait_pre_can_wait"><span class="id" title="constructor">try_wait_pre_can_wait</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#WaitPre"><span class="id" title="inductive">WaitPre</span></a> <span class="id" title="var">t</span> <span class="id" title="var">ph</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#TryWaitPre"><span class="id" title="inductive">TryWaitPre</span></a> <span class="id" title="var">t</span> <span class="id" title="var">ph</span><br/>
+&nbsp;&nbsp;| <a name="try_wait_pre_so"><span class="id" title="constructor">try_wait_pre_so</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <span class="id" title="var">t</span> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <span class="id" title="var">ph</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#TryWaitPre"><span class="id" title="inductive">TryWaitPre</span></a> <span class="id" title="var">t</span> <span class="id" title="var">ph</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="try_wait"><span class="id" title="definition">try_wait</span></a> := <a class="idref" href="HJ.Phasers.Phaser.html#wait"><span class="id" title="definition">wait</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="try_wait_op"><span class="id" title="definition">try_wait_op</span></a> <span class="id" title="var">t</span> := <a class="idref" href="HJ.Phasers.Phaser.html#mk_op"><span class="id" title="constructor">mk_op</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#TryWaitPre"><span class="id" title="inductive">TryWaitPre</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a>) (<a class="idref" href="HJ.Phasers.Phaser.html#try_wait"><span class="id" title="definition">try_wait</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a>).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab3"></a><h1 class="section">Drop</h1>
+
+<div class="paragraph"> </div>
+
+
+<div class="paragraph"> </div>
+
+  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#drop"><span class="id" title="definition">drop</span></a></span> removes the taskview associated with the given task.
+  The pre-condition to issue a <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#drop"><span class="id" title="definition">drop</span></a></span> is that task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> must be registered
+  in phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>.
+  
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="DropPre"><span class="id" title="inductive">DropPre</span></a> <span class="id" title="var">t</span> (<span class="id" title="var">ph</span>:<a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a>) : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<a name="drop_pre"><span class="id" title="constructor">drop_pre</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.In"><span class="id" title="definition">Map_TID.In</span></a> <span class="id" title="var">t</span> <span class="id" title="var">ph</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#DropPre"><span class="id" title="inductive">DropPre</span></a> <span class="id" title="var">t</span> <span class="id" title="var">ph</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="drop"><span class="id" title="definition">drop</span></a> : <a class="idref" href="HJ.Vars.html#tid"><span class="id" title="definition">tid</span></a> -&gt; <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> -&gt; <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> := @<a class="idref" href="HJ.Vars.html#Map_TID.remove"><span class="id" title="definition">remove</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#taskview"><span class="id" title="record">taskview</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="drop_op"><span class="id" title="definition">drop_op</span></a> <span class="id" title="var">t</span> := <a class="idref" href="HJ.Phasers.Phaser.html#mk_op"><span class="id" title="constructor">mk_op</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#DropPre"><span class="id" title="inductive">DropPre</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a>) (<a class="idref" href="HJ.Phasers.Phaser.html#drop"><span class="id" title="definition">drop</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a>).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab4"></a><h1 class="section">Register</h1>
+
+<div class="paragraph"> </div>
+
+
+<div class="paragraph"> </div>
+
+  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#register"><span class="id" title="definition">register</span></a></span> embodies the invocation of an async phased, and
+  it requires the task being registered and the registration mode of the task.
+  
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Record</span> <a name="registry"><span class="id" title="record">registry</span></a> := <a name="mk_registry"><span class="id" title="constructor">mk_registry</span></a> {<br/>
+&nbsp;&nbsp;<a name="get_task"><span class="id" title="projection">get_task</span></a>: <a class="idref" href="HJ.Vars.html#tid"><span class="id" title="definition">tid</span></a>;<br/>
+&nbsp;&nbsp;<a name="get_mode"><span class="id" title="projection">get_mode</span></a>: <a class="idref" href="HJ.Phasers.Regmode.html#regmode"><span class="id" title="inductive">regmode</span></a><br/>
+}.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  Register has two pre-conditions: (i) task <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#get_task"><span class="id" title="projection">get_task</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#r"><span class="id" title="variable">r</span></a></span> must be
+  unknown to phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>, and (ii) the mode in registry <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#r"><span class="id" title="variable">r</span></a></span> cannot escalate the
+  capabilities of the issuer.
+
+</div>
+<div class="code">
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="RegisterPre"><span class="id" title="inductive">RegisterPre</span></a> <span class="id" title="var">r</span> <span class="id" title="var">t</span> <span class="id" title="var">ph</span> : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<a name="register_pre"><span class="id" title="constructor">register_pre</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#611abc97cba304de784fa909dbdea1fa"><span class="id" title="notation">~</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.In"><span class="id" title="definition">Map_TID.In</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#get_task"><span class="id" title="projection">get_task</span></a> <span class="id" title="var">r</span>) <span class="id" title="var">ph</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <span class="id" title="var">t</span> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <span class="id" title="var">ph</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#get_mode"><span class="id" title="projection">get_mode</span></a> <span class="id" title="var">r</span> <a class="idref" href="HJ.Phasers.Regmode.html#5155dfebf813586d53b1cb2f7573d969"><span class="id" title="notation">&lt;=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#mode"><span class="id" title="projection">mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#RegisterPre"><span class="id" title="inductive">RegisterPre</span></a> <span class="id" title="var">r</span> <span class="id" title="var">t</span> <span class="id" title="var">ph</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  Operationally, register adds task <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#get_task"><span class="id" title="projection">get_task</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#r"><span class="id" title="variable">r</span></a></span>  to the phaser, assigning new taskview
+  that is a copy of the issuer's taskview with the mode set to <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#get_mode"><span class="id" title="projection">get_mode</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#r"><span class="id" title="variable">r</span></a></span>.
+  
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="register"><span class="id" title="definition">register</span></a> (<span class="id" title="var">r</span>:<a class="idref" href="HJ.Phasers.Phaser.html#registry"><span class="id" title="record">registry</span></a>) (<span class="id" title="var">t</span>:<a class="idref" href="HJ.Vars.html#tid"><span class="id" title="definition">tid</span></a>) (<span class="id" title="var">ph</span>:<a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a>) : <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> := <br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <a class="idref" href="HJ.Vars.html#Map_TID.find"><span class="id" title="definition">find</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> <span class="id" title="var">v</span> =&gt; <a class="idref" href="HJ.Vars.html#Map_TID.add"><span class="id" title="definition">add</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#get_task"><span class="id" title="projection">get_task</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#r"><span class="id" title="variable">r</span></a>) (<a class="idref" href="HJ.Phasers.Taskview.html#set_mode"><span class="id" title="definition">set_mode</span></a> <span class="id" title="var">v</span> (<a class="idref" href="HJ.Phasers.Phaser.html#get_mode"><span class="id" title="projection">get_mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#r"><span class="id" title="variable">r</span></a>)) <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a><br/>
+&nbsp;&nbsp;| <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#None"><span class="id" title="constructor">None</span></a> =&gt; <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="register_op"><span class="id" title="definition">register_op</span></a> <span class="id" title="var">r</span> <span class="id" title="var">t</span> := <a class="idref" href="HJ.Phasers.Phaser.html#mk_op"><span class="id" title="constructor">mk_op</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#RegisterPre"><span class="id" title="inductive">RegisterPre</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a>) (<a class="idref" href="HJ.Phasers.Phaser.html#register"><span class="id" title="definition">register</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a>).<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HJ.Phasers.Phaser.html#Defs"><span class="id" title="section">Defs</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab5"></a><h1 class="section">Operational semantics</h1>
+
+<div class="paragraph"> </div>
+
+ The operational semantics defines a closed set of the possible operations:
+  signal, wait, drop (that deregisters the issuer),
+  and register (that adds a new task to the phaser). 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="op"><span class="id" title="inductive">op</span></a> := <a name="SIGNAL"><span class="id" title="constructor">SIGNAL</span></a> | <a name="WAIT"><span class="id" title="constructor">WAIT</span></a> | <a name="DROP"><span class="id" title="constructor">DROP</span></a> | <a name="REGISTER"><span class="id" title="constructor">REGISTER</span></a> : <a class="idref" href="HJ.Phasers.Phaser.html#registry"><span class="id" title="record">registry</span></a> -&gt; <a class="idref" href="HJ.Phasers.Phaser.html#op"><span class="id" title="inductive">op</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Function <span class="inlinecode"><span class="id" title="tactic">eval</span></span> interprets operation <span class="inlinecode"><a class="idref" href="HJ.Common.html#o"><span class="id" title="variable">o</span></a></span> as its operation specification <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#Op"><span class="id" title="record">Op</span></a></span>. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="get_impl"><span class="id" title="definition">get_impl</span></a> <span class="id" title="var">o</span> :=<br/>
+<span class="id" title="keyword">match</span> <a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <span class="id" title="keyword">with</span><br/>
+| <a class="idref" href="HJ.Phasers.Phaser.html#SIGNAL"><span class="id" title="constructor">SIGNAL</span></a> =&gt; <a class="idref" href="HJ.Phasers.Phaser.html#signal_op"><span class="id" title="definition">signal_op</span></a><br/>
+| <a class="idref" href="HJ.Phasers.Phaser.html#WAIT"><span class="id" title="constructor">WAIT</span></a> =&gt; <a class="idref" href="HJ.Phasers.Phaser.html#wait_op"><span class="id" title="definition">wait_op</span></a><br/>
+| <a class="idref" href="HJ.Phasers.Phaser.html#DROP"><span class="id" title="constructor">DROP</span></a> =&gt; <a class="idref" href="HJ.Phasers.Phaser.html#drop_op"><span class="id" title="definition">drop_op</span></a><br/>
+| <a class="idref" href="HJ.Phasers.Phaser.html#REGISTER"><span class="id" title="constructor">REGISTER</span></a> <span class="id" title="var">r</span> =&gt; <a class="idref" href="HJ.Phasers.Phaser.html#register_op"><span class="id" title="definition">register_op</span></a> <span class="id" title="var">r</span><br/>
+<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  Relation <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#Reduces"><span class="id" title="inductive">Reduces</span></a></span> defines the operational semantics.
+
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="Reduces"><span class="id" title="inductive">Reduces</span></a> <span class="id" title="var">ph</span> <span class="id" title="var">t</span> <span class="id" title="var">o</span> : <a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a> -&gt; <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<a name="ph_reduces"><span class="id" title="constructor">ph_reduces</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#can_run"><span class="id" title="projection">can_run</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#get_impl"><span class="id" title="definition">get_impl</span></a> <span class="id" title="var">o</span> <span class="id" title="var">t</span>) <span class="id" title="var">ph</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#Reduces"><span class="id" title="inductive">Reduces</span></a> <span class="id" title="var">ph</span> <span class="id" title="var">t</span> <span class="id" title="var">o</span> (<a class="idref" href="HJ.Phasers.Phaser.html#run"><span class="id" title="projection">run</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#get_impl"><span class="id" title="definition">get_impl</span></a> <span class="id" title="var">o</span> <span class="id" title="var">t</span>) <span class="id" title="var">ph</span>).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Relation <span class="inlinecode"><span class="id" title="var">SReducess</span></span> simply omits the task and operation of relation <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#Reduces"><span class="id" title="inductive">Reduces</span></a></span>. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="SReduces"><span class="id" title="inductive">SReduces</span></a> (<span class="id" title="var">ph1</span>:<a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a>) (<span class="id" title="var">ph2</span>:<a class="idref" href="HJ.Phasers.Phaser.html#phaser"><span class="id" title="definition">phaser</span></a>) : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<a name="ph_s_reduces"><span class="id" title="constructor">ph_s_reduces</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">o</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#Reduces"><span class="id" title="inductive">Reduces</span></a> <span class="id" title="var">ph1</span> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <span class="id" title="var">ph2</span> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#SReduces"><span class="id" title="inductive">SReduces</span></a> <span class="id" title="var">ph1</span> <span class="id" title="var">ph2</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Finally, we declare a function that converts a <span class="inlinecode"><span class="id" title="var">Phaser.op</span></span> to a <span class="inlinecode"><span class="id" title="var">Taskview.op</span></span>. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="as_tv_op"><span class="id" title="definition">as_tv_op</span></a> (<span class="id" title="var">o</span>:<a class="idref" href="HJ.Phasers.Phaser.html#op"><span class="id" title="inductive">op</span></a>) :=<br/>
+<span class="id" title="keyword">match</span> <a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <span class="id" title="keyword">with</span><br/>
+| <a class="idref" href="HJ.Phasers.Phaser.html#SIGNAL"><span class="id" title="constructor">SIGNAL</span></a> =&gt; <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#SIGNAL"><span class="id" title="constructor">Taskview.SIGNAL</span></a><br/>
+| <a class="idref" href="HJ.Phasers.Phaser.html#WAIT"><span class="id" title="constructor">WAIT</span></a> =&gt;  <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#WAIT"><span class="id" title="constructor">Taskview.WAIT</span></a><br/>
+| <span class="id" title="var">_</span> =&gt; <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#None"><span class="id" title="constructor">None</span></a><br/>
+<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="Facts"><span class="id" title="section">Facts</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="as_tv_op_inv_signal"><span class="id" title="lemma">as_tv_op_inv_signal</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">o</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#as_tv_op"><span class="id" title="definition">as_tv_op</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#SIGNAL"><span class="id" title="constructor">Taskview.SIGNAL</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#SIGNAL"><span class="id" title="constructor">SIGNAL</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="as_tv_op_inv_wait"><span class="id" title="lemma">as_tv_op_inv_wait</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">o</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#as_tv_op"><span class="id" title="definition">as_tv_op</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#WAIT"><span class="id" title="constructor">Taskview.WAIT</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#WAIT"><span class="id" title="constructor">WAIT</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="ph_reduces_spec"><span class="id" title="lemma">ph_reduces_spec</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span> <span class="id" title="var">o</span> <span class="id" title="var">ph&acute;</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#Reduces"><span class="id" title="inductive">Reduces</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph&acute;"><span class="id" title="variable">ph&acute;</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#ph&acute;"><span class="id" title="variable">ph&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#run"><span class="id" title="projection">run</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#get_impl"><span class="id" title="definition">get_impl</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a>) <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="ph_update_rw"><span class="id" title="lemma">ph_update_rw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">f</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#update"><span class="id" title="definition">update</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.add"><span class="id" title="definition">Map_TID.add</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a>) <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="ph_signal_rw"><span class="id" title="lemma">ph_signal_rw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#signal"><span class="id" title="definition">signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.add"><span class="id" title="definition">Map_TID.add</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#signal"><span class="id" title="definition">Taskview.signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a>) <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="ph_wait_rw"><span class="id" title="lemma">ph_wait_rw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#wait"><span class="id" title="definition">wait</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.add"><span class="id" title="definition">Map_TID.add</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#wait"><span class="id" title="definition">Taskview.wait</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a>) <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="ph_drop_rw"><span class="id" title="lemma">ph_drop_rw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#drop"><span class="id" title="definition">drop</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.remove"><span class="id" title="definition">Map_TID.remove</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="ph_register_rw"><span class="id" title="lemma">ph_register_rw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">r</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#register"><span class="id" title="definition">register</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.add"><span class="id" title="definition">Map_TID.add</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#get_task"><span class="id" title="projection">get_task</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#r"><span class="id" title="variable">r</span></a>) (<a class="idref" href="HJ.Phasers.Taskview.html#set_mode"><span class="id" title="definition">set_mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#get_mode"><span class="id" title="projection">get_mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#r"><span class="id" title="variable">r</span></a>)) <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="ph_register_mapsto_neq"><span class="id" title="lemma">ph_register_mapsto_neq</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">t&acute;</span> <span class="id" title="var">t&acute;&acute;</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#t&acute;&acute;"><span class="id" title="variable">t&acute;&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;&acute;"><span class="id" title="variable">t&acute;&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="HJ.Phasers.Phaser.html#register"><span class="id" title="definition">register</span></a> {| <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">get_task</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">:=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">t&acute;</span></a><a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">get_mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">:=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">r</span></a> |} <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;&acute;"><span class="id" title="variable">t&acute;&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="ph_register_in_1"><span class="id" title="lemma">ph_register_in_1</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t&acute;</span> <span class="id" title="var">r</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.In"><span class="id" title="definition">Map_TID.In</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#register"><span class="id" title="definition">register</span></a> {| <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">get_task</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">:=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">t&acute;</span></a><a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">get_mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">:=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">r</span></a> |} <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.In"><span class="id" title="definition">Map_TID.In</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="ph_register_mapsto_eq"><span class="id" title="lemma">ph_register_mapsto_eq</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t&acute;</span> <span class="id" title="var">v</span> <span class="id" title="var">r</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.In"><span class="id" title="definition">Map_TID.In</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#register"><span class="id" title="definition">register</span></a> {| <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">get_task</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">:=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">t&acute;</span></a><a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">get_mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">:=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">r</span></a> |} <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">exists</span></a> <span class="id" title="var">v&acute;</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">,</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#set_mode"><span class="id" title="definition">Taskview.set_mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#r"><span class="id" title="variable">r</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="ph_register_inv_mapsto"><span class="id" title="lemma">ph_register_inv_mapsto</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span> <span class="id" title="var">v</span> <span class="id" title="var">r</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#register"><span class="id" title="definition">register</span></a> {| <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">get_task</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">:=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">y</span></a><a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">get_mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">:=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#mk_registry"><span class="id" title="constructor">r</span></a> |} <a class="idref" href="HJ.Phasers.Phaser.html#z"><span class="id" title="variable">z</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#7a45dffb109c3069e5c675be68643e60"><span class="id" title="notation">\/</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#7a45dffb109c3069e5c675be68643e60"><span class="id" title="notation">(</span></a><a class="idref" href="HJ.Phasers.Phaser.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">exists</span></a> <span class="id" title="var">v&acute;</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">,</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#z"><span class="id" title="variable">z</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#set_mode"><span class="id" title="definition">set_mode</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#r"><span class="id" title="variable">r</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#7a45dffb109c3069e5c675be68643e60"><span class="id" title="notation">)</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="ph_in"><span class="id" title="lemma">ph_in</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span> <span class="id" title="var">o</span> <span class="id" title="var">ph&acute;</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#Reduces"><span class="id" title="inductive">Reduces</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph&acute;"><span class="id" title="variable">ph&acute;</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.In"><span class="id" title="definition">Map_TID.In</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="drop_mapsto_inv"><span class="id" title="lemma">drop_mapsto_inv</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span> <span class="id" title="var">t&acute;</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#drop"><span class="id" title="definition">drop</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="update_mapsto_eq"><span class="id" title="lemma">update_mapsto_eq</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">f</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#update"><span class="id" title="definition">update</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">exists</span></a> <span class="id" title="var">v&acute;</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">,</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="update_mapsto_neq"><span class="id" title="lemma">update_mapsto_neq</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">t&acute;</span> <span class="id" title="var">f</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#update"><span class="id" title="definition">update</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="update_mapsto_spec"><span class="id" title="lemma">update_mapsto_spec</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span> <span class="id" title="var">f</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a>) (<a class="idref" href="HJ.Phasers.Phaser.html#update"><span class="id" title="definition">update</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="signal_mapsto_eq"><span class="id" title="lemma">signal_mapsto_eq</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#signal"><span class="id" title="definition">signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">exists</span></a> <span class="id" title="var">v&acute;</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">,</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#signal"><span class="id" title="definition">Taskview.signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="try_signal_mapsto_eq"><span class="id" title="lemma">try_signal_mapsto_eq</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#try_signal"><span class="id" title="definition">try_signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">exists</span></a> <span class="id" title="var">v&acute;</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">,</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#try_signal"><span class="id" title="definition">Taskview.try_signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="signal_mapsto_neq"><span class="id" title="lemma">signal_mapsto_neq</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">t&acute;</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#signal"><span class="id" title="definition">signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="try_signal_mapsto_neq"><span class="id" title="lemma">try_signal_mapsto_neq</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">t&acute;</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#try_signal"><span class="id" title="definition">try_signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="signal_mapsto_inv"><span class="id" title="lemma">signal_mapsto_inv</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span>  <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">t&acute;</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#signal"><span class="id" title="definition">signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">exists</span></a> <span class="id" title="var">v&acute;</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">,</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">(</span></a><a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#signal"><span class="id" title="definition">Taskview.signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">+</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="try_signal_mapsto_inv"><span class="id" title="lemma">try_signal_mapsto_inv</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span>  <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">t&acute;</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#try_signal"><span class="id" title="definition">try_signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">exists</span></a> <span class="id" title="var">v&acute;</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">,</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">(</span></a><a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#try_signal"><span class="id" title="definition">Taskview.try_signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">+</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="signal_mapsto_spec"><span class="id" title="lemma">signal_mapsto_spec</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#signal"><span class="id" title="definition">Taskview.signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a>) (<a class="idref" href="HJ.Phasers.Phaser.html#signal"><span class="id" title="definition">signal</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="wait_mapsto_eq"><span class="id" title="lemma">wait_mapsto_eq</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#wait"><span class="id" title="definition">wait</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">exists</span></a> <span class="id" title="var">v&acute;</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">,</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#wait"><span class="id" title="definition">Taskview.wait</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="wait_mapsto_spec"><span class="id" title="lemma">wait_mapsto_spec</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#wait"><span class="id" title="definition">Taskview.wait</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a>) (<a class="idref" href="HJ.Phasers.Phaser.html#wait"><span class="id" title="definition">wait</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>).<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="wait_mapsto_neq"><span class="id" title="lemma">wait_mapsto_neq</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">t&acute;</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#wait"><span class="id" title="definition">wait</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="wait_mapsto_inv"><span class="id" title="lemma">wait_mapsto_inv</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span>  <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">t&acute;</span> <span class="id" title="var">ph</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#wait"><span class="id" title="definition">wait</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">exists</span></a> <span class="id" title="var">v&acute;</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">,</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">(</span></a><a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#wait"><span class="id" title="definition">Taskview.wait</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v&acute;"><span class="id" title="variable">v&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#84eb6d2849dbf3581b1c0c05add5f2d8"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">+</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="make_mapsto"><span class="id" title="lemma">make_mapsto</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">t&acute;</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> (<a class="idref" href="HJ.Phasers.Phaser.html#make"><span class="id" title="definition">make</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a>) -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">/\</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Taskview.html#make"><span class="id" title="definition">Taskview.make</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+    The importance of function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#as_tv_op"><span class="id" title="definition">as_tv_op</span></a></span> is captured by the following two properties.
+    If the phaser operation is convertible to a taskview operation, then
+    then resulting taskview update is <span class="inlinecode"><span class="id" title="var">Taskview.Semantics.eval</span></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#o&acute;"><span class="id" title="variable">o&acute;</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.v"><span class="id" title="variable">v</span></a></span>.
+  
+</div>
+<div class="code">
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="ph_to_tv_correct"><span class="id" title="lemma">ph_to_tv_correct</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span> <span class="id" title="var">o</span> <span class="id" title="var">o&acute;</span> <span class="id" title="var">ph&acute;</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#Reduces"><span class="id" title="inductive">Reduces</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph&acute;"><span class="id" title="variable">ph&acute;</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#as_tv_op"><span class="id" title="definition">as_tv_op</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o&acute;"><span class="id" title="variable">o&acute;</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#ph&acute;"><span class="id" title="variable">ph&acute;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Vars.html#Map_TID.add"><span class="id" title="definition">Map_TID.add</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#eval"><span class="id" title="definition">Taskview.eval</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o&acute;"><span class="id" title="variable">o&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a>) <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+    The second property states that if the phaser-operation is convertible to
+    a taskview-operation, then the taskview reduces with the resulting operation.
+  
+</div>
+<div class="code">
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="ph_reduces_to_tv_reduce"><span class="id" title="lemma">ph_reduces_to_tv_reduce</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">ph</span> <span class="id" title="var">t</span> <span class="id" title="var">o</span> <span class="id" title="var">o&acute;</span> <span class="id" title="var">ph&acute;</span> <span class="id" title="var">v</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#Reduces"><span class="id" title="inductive">Reduces</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph&acute;"><span class="id" title="variable">ph&acute;</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Phaser.html#as_tv_op"><span class="id" title="definition">as_tv_op</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o"><span class="id" title="variable">o</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o&acute;"><span class="id" title="variable">o&acute;</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Vars.html#Map_TID.MapsTo"><span class="id" title="definition">Map_TID.MapsTo</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Taskview.html#Reduces"><span class="id" title="inductive">Taskview.Reduces</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o&acute;"><span class="id" title="variable">o&acute;</span></a> (<a class="idref" href="HJ.Phasers.Taskview.html#eval"><span class="id" title="definition">Taskview.eval</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#o&acute;"><span class="id" title="variable">o&acute;</span></a> <a class="idref" href="HJ.Phasers.Phaser.html#v"><span class="id" title="variable">v</span></a>).<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HJ.Phasers.Phaser.html#Facts"><span class="id" title="section">Facts</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

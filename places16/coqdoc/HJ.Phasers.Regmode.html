@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>HJ.Phasers.Regmode</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library HJ.Phasers.Regmode</h1>
+
+<div class="code">
+</div>
+
+<div class="doc">
+<a name="lab6"></a><h1 class="section">Regmode : Registration modes</h1>
+
+<div class="paragraph"> </div>
+
+
+<div class="paragraph"> </div>
+
+  There are three registration modes:
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a></span> for tasks that do not wait for others and produce signals;
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#WAIT_ONLY"><span class="id" title="constructor">WAIT_ONLY</span></a></span> for tasks that wait for others and do not produce signals;
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a></span> for tasks that wait for others and produce signals.
+
+</li>
+</ul>
+
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="regmode"><span class="id" title="inductive">regmode</span></a> := <a name="SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a> | <a name="WAIT_ONLY"><span class="id" title="constructor">WAIT_ONLY</span></a> | <a name="SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  The relation <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#r_le"><span class="id" title="inductive">r_le</span></a></span>, notation &lt;=, establishes an ordering among registration
+  modes. This relation plays a crutial role in the registration of tasks.
+  Tasks can only register tasks being spawned. Registration must follow the
+  Capability rule that states that the registration mode of the spawned task
+  cannot be greater than the spawner.
+
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="r_le"><span class="id" title="inductive">r_le</span></a> : <a class="idref" href="HJ.Phasers.Regmode.html#regmode"><span class="id" title="inductive">regmode</span></a> -&gt; <a class="idref" href="HJ.Phasers.Regmode.html#regmode"><span class="id" title="inductive">regmode</span></a> -&gt; <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;| <a name="r_le_so"><span class="id" title="constructor">r_le_so</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#r_le"><span class="id" title="inductive">r_le</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a><br/>
+&nbsp;&nbsp;| <a name="r_le_wo"><span class="id" title="constructor">r_le_wo</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#r_le"><span class="id" title="inductive">r_le</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WAIT_ONLY"><span class="id" title="constructor">WAIT_ONLY</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WAIT_ONLY"><span class="id" title="constructor">WAIT_ONLY</span></a><br/>
+&nbsp;&nbsp;| <a name="r_le_sw"><span class="id" title="constructor">r_le_sw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">m</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#r_le"><span class="id" title="inductive">r_le</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Module</span> <a name="Notations"><span class="id" title="module">Notations</span></a>.<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Infix</span> <a name="5155dfebf813586d53b1cb2f7573d969"><span class="id" title="notation">&quot;</span></a>&lt;=" := (<a class="idref" href="HJ.Phasers.Regmode.html#Notations.r_le"><span class="id" title="inductive">r_le</span></a>) : <span class="id" title="var">reg_scope</span>.<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HJ.Phasers.Regmode.html#Notations"><span class="id" title="module">Notations</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+  Two important notions used throught the formalization are wait-/signal-capabilities.
+
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="WaitCap"><span class="id" title="inductive">WaitCap</span></a> : <a class="idref" href="HJ.Phasers.Regmode.html#regmode"><span class="id" title="inductive">regmode</span></a> -&gt; <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;| <a name="wait_cap_sw"><span class="id" title="constructor">wait_cap_sw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#WaitCap"><span class="id" title="inductive">WaitCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a><br/>
+&nbsp;&nbsp;| <a name="wait_cap_wo"><span class="id" title="constructor">wait_cap_wo</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#WaitCap"><span class="id" title="inductive">WaitCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WAIT_ONLY"><span class="id" title="constructor">WAIT_ONLY</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Inductive</span> <a name="SignalCap"><span class="id" title="inductive">SignalCap</span></a> : <a class="idref" href="HJ.Phasers.Regmode.html#regmode"><span class="id" title="inductive">regmode</span></a> -&gt; <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;| <a name="signal_cap_sw"><span class="id" title="constructor">signal_cap_sw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#SignalCap"><span class="id" title="inductive">SignalCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a><br/>
+&nbsp;&nbsp;| <a name="signal_cap_so"><span class="id" title="constructor">signal_cap_so</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#SignalCap"><span class="id" title="inductive">SignalCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="Facts"><span class="id" title="section">Facts</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+The equality of registration mode is decidable. 
+</div>
+<div class="code">
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="regmode_eq_dec"><span class="id" title="lemma">regmode_eq_dec</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> (<span class="id" title="var">m1</span> <span class="id" title="var">m2</span>:<a class="idref" href="HJ.Phasers.Regmode.html#regmode"><span class="id" title="inductive">regmode</span></a>),<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#m1"><span class="id" title="variable">m1</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#m2"><span class="id" title="variable">m2</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">+</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#m1"><span class="id" title="variable">m1</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#m2"><span class="id" title="variable">m2</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Checking for the wait capability is a decidable property. 
+</div>
+<div class="code">
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="wait_cap_dec"><span class="id" title="lemma">wait_cap_dec</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WaitCap"><span class="id" title="inductive">WaitCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">+</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#611abc97cba304de784fa909dbdea1fa"><span class="id" title="notation">~</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WaitCap"><span class="id" title="inductive">WaitCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="neq_so_to_wait_cap"><span class="id" title="lemma">neq_so_to_wait_cap</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#WaitCap"><span class="id" title="inductive">WaitCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="wait_cap_to_neq_so"><span class="id" title="lemma">wait_cap_to_neq_so</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#WaitCap"><span class="id" title="inductive">WaitCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="wait_cap_rw"><span class="id" title="lemma">wait_cap_rw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#WaitCap"><span class="id" title="inductive">WaitCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#df1ced36fc33ce188051218bca314374"><span class="id" title="notation">&lt;-&gt;</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="not_wait_cap_to_so"><span class="id" title="lemma">not_wait_cap_to_so</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#611abc97cba304de784fa909dbdea1fa"><span class="id" title="notation">~</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WaitCap"><span class="id" title="inductive">WaitCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="so_to_not_wait_cap"><span class="id" title="lemma">so_to_not_wait_cap</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#611abc97cba304de784fa909dbdea1fa"><span class="id" title="notation">~</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WaitCap"><span class="id" title="inductive">WaitCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="wait_cap_so_dec"><span class="id" title="lemma">wait_cap_so_dec</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WaitCap"><span class="id" title="inductive">WaitCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">+</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_ONLY"><span class="id" title="constructor">SIGNAL_ONLY</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="signal_cap_dec"><span class="id" title="lemma">signal_cap_dec</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SignalCap"><span class="id" title="inductive">SignalCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">+</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#611abc97cba304de784fa909dbdea1fa"><span class="id" title="notation">~</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SignalCap"><span class="id" title="inductive">SignalCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="neq_wo_to_signal_cap"><span class="id" title="lemma">neq_wo_to_signal_cap</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WAIT_ONLY"><span class="id" title="constructor">WAIT_ONLY</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#SignalCap"><span class="id" title="inductive">SignalCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="signal_cap_to_neq_wo"><span class="id" title="lemma">signal_cap_to_neq_wo</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#SignalCap"><span class="id" title="inductive">SignalCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WAIT_ONLY"><span class="id" title="constructor">WAIT_ONLY</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="signal_cap_rw"><span class="id" title="lemma">signal_cap_rw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#SignalCap"><span class="id" title="inductive">SignalCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#df1ced36fc33ce188051218bca314374"><span class="id" title="notation">&lt;-&gt;</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#32263a1c8b01baecdff9deb038955bc9"><span class="id" title="notation">&lt;&gt;</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WAIT_ONLY"><span class="id" title="constructor">WAIT_ONLY</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="not_signal_cap_to_wo"><span class="id" title="lemma">not_signal_cap_to_wo</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#611abc97cba304de784fa909dbdea1fa"><span class="id" title="notation">~</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SignalCap"><span class="id" title="inductive">SignalCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WAIT_ONLY"><span class="id" title="constructor">WAIT_ONLY</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="signal_cap_wo_dec"><span class="id" title="lemma">signal_cap_wo_dec</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SignalCap"><span class="id" title="inductive">SignalCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">+</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">{</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#WAIT_ONLY"><span class="id" title="constructor">WAIT_ONLY</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Specif.html#5bf2050e90b21ebc82dc5463d1ba338e"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="signal_cap_and_wait_cap_to_sw"><span class="id" title="lemma">signal_cap_and_wait_cap_to_sw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#SignalCap"><span class="id" title="inductive">SignalCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#WaitCap"><span class="id" title="inductive">WaitCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a>.<br/>
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Lemma</span> <a name="signal_cap_wait_cap_to_sw"><span class="id" title="lemma">signal_cap_wait_cap_to_sw</span></a>:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">forall</span> <span class="id" title="var">r</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#WaitCap"><span class="id" title="inductive">WaitCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#SignalCap"><span class="id" title="inductive">SignalCap</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> -&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a>.<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HJ.Phasers.Regmode.html#Facts"><span class="id" title="section">Facts</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>
