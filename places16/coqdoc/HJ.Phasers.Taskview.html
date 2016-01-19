@@ -45,7 +45,7 @@
 
 <div class="doc">
   When creating a phaser, the creator is the only task registered in that phaser.
-  Value <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#make"><span class="id" title="definition">make</span></a></span> represents the first taskview that is initialized in <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a></span> mode
+  Value <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#make"><span class="id" title="definition">make</span></a></span> represents the first taskview that is initialized in <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#SIGNAL_WAIT"><span class="id" title="constructor">SIGNAL_WAIT</span></a></span> mode
   and accounts for zero signals and zero waits.
  
 </div>
@@ -136,8 +136,8 @@ We define the mutators of a taskview. These are only used internally.
   The operational semantics not only defines a closed set of operations that
   can operate on a value (here a taskview), but also defines the preconditions of
   each operation.
-  Contrary to <span class="inlinecode"><span class="id" title="tactic">eval</span></span>, relation <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#Reduces"><span class="id" title="inductive">Reduces</span></a></span> defines a precondition
-  to <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#wait"><span class="id" title="definition">wait</span></a></span>, called <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#WaitPre"><span class="id" title="inductive">WaitPre</span></a></span>: in order to issue a wait, the wait phase must be
+  Contrary to <span class="inlinecode"><span class="id" title="tactic">eval</span></span>, relation <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#Reduces"><span class="id" title="inductive">Reduces</span></a></span> defines a precondition
+  to <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#wait"><span class="id" title="definition">wait</span></a></span>, called <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#WaitPre"><span class="id" title="inductive">WaitPre</span></a></span>: in order to issue a wait, the wait phase must be
   behind (smaller than) the signal phase. We define <span class="inlinecode"><span class="id" title="var">CanWait</span></span> so it can be reused
   in other developments.
   
@@ -344,14 +344,14 @@ The initial taskview accounts for zero waits.
 </div>
 
 <div class="doc">
-<a name="lab6"></a><h1 class="section">Small-step operational semantics</h1>
+<a name="lab2"></a><h1 class="section">Small-step operational semantics</h1>
 
 <div class="paragraph"> </div>
 
 
 <div class="paragraph"> </div>
 
-  The operational semantics of taskviews defines a closed set of operations <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#op"><span class="id" title="inductive">op</span></a></span>
+  The operational semantics of taskviews defines a closed set of operations <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#op"><span class="id" title="inductive">op</span></a></span>
   that can change taskviews, signal and  wait.
   
 </div>
@@ -364,7 +364,7 @@ The initial taskview accounts for zero waits.
 </div>
 
 <div class="doc">
-  Function <span class="inlinecode"><span class="id" title="tactic">eval</span></span> interprets the given operation <span class="inlinecode"><a class="idref" href="HJ.Common.html#o"><span class="id" title="variable">o</span></a></span> as the appropriate function.
+  Function <span class="inlinecode"><span class="id" title="tactic">eval</span></span> interprets the given operation <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#o"><span class="id" title="variable">o</span></a></span> as the appropriate function.
   
 </div>
 <div class="code">
@@ -391,7 +391,7 @@ The initial taskview accounts for zero waits.
 </div>
 
 <div class="doc">
-  A trivial property we choose to highlight is that <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#Reduces"><span class="id" title="inductive">Reduces</span></a></span>
+  A trivial property we choose to highlight is that <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#Reduces"><span class="id" title="inductive">Reduces</span></a></span>
   performs an <span class="inlinecode"><span class="id" title="tactic">eval</span></span> on the right-hand side.
   
 </div>

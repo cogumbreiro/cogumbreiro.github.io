@@ -39,7 +39,7 @@ into phasers.
 </div>
 
 <div class="doc">
-Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#make"><span class="id" title="definition">make</span></a></span> creates an empty phasermap. 
+Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#make"><span class="id" title="definition">make</span></a></span> creates an empty phasermap. 
 </div>
 <div class="code">
 
@@ -67,7 +67,7 @@ Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.htm
 
 <div class="doc">
   Function <span class="inlinecode"><span class="id" title="var">new_phaser</span></span> places a new empty phaser in the phasermap.
-  The pre-condition is that <span class="inlinecode"><a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a></span> is not in phasermap <span class="inlinecode"><a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a></span>. 
+  The pre-condition is that <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#p"><span class="id" title="variable">p</span></a></span> is not in phasermap <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#m"><span class="id" title="variable">m</span></a></span>. 
 </div>
 <div class="code">
 
@@ -87,7 +87,7 @@ Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.htm
 </div>
 
 <div class="doc">
-  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#update"><span class="id" title="definition">update</span></a></span> mutates the phaser associated to <span class="inlinecode"><a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a></span> by applying
+  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#update"><span class="id" title="definition">update</span></a></span> mutates the phaser associated to <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#p"><span class="id" title="variable">p</span></a></span> by applying
   parameter <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#f"><span class="id" title="variable">f</span></a></span> to the phaser.
  
 </div>
@@ -104,8 +104,8 @@ Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.htm
 </div>
 
 <div class="doc">
-  Signal applies the phaser-signal to the phaser associated with <span class="inlinecode"><a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a></span>.
-  The pre-condition is that <span class="inlinecode"><a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a></span> must be in the phasermap and
+  Signal applies the phaser-signal to the phaser associated with <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#p"><span class="id" title="variable">p</span></a></span>.
+  The pre-condition is that <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#p"><span class="id" title="variable">p</span></a></span> must be in the phasermap and
   we must meet the pre-conditions of the phaser-signal.
   
 </div>
@@ -221,7 +221,7 @@ Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.ht
   Finally, we define async. To be able to spawn a task we must ensure
   that the spawned task name is unknown in all phasers, so we need to
   define a task membership for phasermaps.
-  Predicate <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#In"><span class="id" title="inductive">In</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a></span> holds when task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> is registered in a phaser of <span class="inlinecode"><a class="idref" href="HJ.Phasers.Welformedness.html#m"><span class="id" title="variable">m</span></a></span>. 
+  Predicate <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#In"><span class="id" title="inductive">In</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#m"><span class="id" title="variable">m</span></a></span> holds when task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> is registered in a phaser of <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#m"><span class="id" title="variable">m</span></a></span>. 
 </div>
 <div class="code">
 
@@ -256,8 +256,8 @@ The parameter of a phased async is list of pairs, each of which
 <div class="paragraph"> </div>
 
   Async phased register a new task in a list of <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#phased"><span class="id" title="record">phased</span></a></span>.
-  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#async_1"><span class="id" title="definition">async_1</span></a></span> registers task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> with phaser named by <span class="inlinecode"><a class="idref" href="HJ.Phasers.Welformedness.html#p"><span class="id" title="variable">p</span></a></span> according
-  to mode <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#r"><span class="id" title="variable">r</span></a></span>.
+  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#async_1"><span class="id" title="definition">async_1</span></a></span> registers task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> with phaser named by <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#p"><span class="id" title="variable">p</span></a></span> according
+  to mode <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a></span>.
   
 </div>
 <div class="code">
@@ -276,8 +276,8 @@ The parameter of a phased async is list of pairs, each of which
 </div>
 
 <div class="doc">
-  Predicate <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#PhasedPre"><span class="id" title="inductive">PhasedPre</span></a></span> ensures that task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> can register task <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a></span>
-  using the phased object <span class="inlinecode"><a class="idref" href="HJ.Phasers.Welformedness.html#ps"><span class="id" title="variable">ps</span></a></span>.
+  Predicate <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#PhasedPre"><span class="id" title="inductive">PhasedPre</span></a></span> ensures that task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> can register task <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a></span>
+  using the phased object <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#ps"><span class="id" title="variable">ps</span></a></span>.
    
 </div>
 <div class="code">
@@ -296,9 +296,9 @@ The parameter of a phased async is list of pairs, each of which
 
 <div class="doc">
   The pre-condition of executing an async are three:
-  (i) all phased pairs in <span class="inlinecode"><a class="idref" href="HJ.Phasers.Welformedness.html#ps"><span class="id" title="variable">ps</span></a></span> must meet the preconditions of <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#PhasedPre"><span class="id" title="inductive">PhasedPre</span></a></span>,
-  (ii) the phaser names in <span class="inlinecode"><a class="idref" href="HJ.Phasers.Welformedness.html#ps"><span class="id" title="variable">ps</span></a></span> cannot be appear multiple times in <span class="inlinecode"><a class="idref" href="HJ.Phasers.Welformedness.html#ps"><span class="id" title="variable">ps</span></a></span>,
-  (iii) the spawned task <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a></span> cannot be known in the phasermap.
+  (i) all phased pairs in <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#ps"><span class="id" title="variable">ps</span></a></span> must meet the preconditions of <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#PhasedPre"><span class="id" title="inductive">PhasedPre</span></a></span>,
+  (ii) the phaser names in <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#ps"><span class="id" title="variable">ps</span></a></span> cannot be appear multiple times in <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#ps"><span class="id" title="variable">ps</span></a></span>,
+  (iii) the spawned task <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#t&acute;"><span class="id" title="variable">t&acute;</span></a></span> cannot be known in the phasermap.
   
 </div>
 <div class="code">
@@ -356,7 +356,7 @@ Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.ht
 </div>
 
 <div class="doc">
-In closing, we define the <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#Reduces"><span class="id" title="inductive">Reduces</span></a></span> relation. 
+In closing, we define the <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#Reduces"><span class="id" title="inductive">Reduces</span></a></span> relation. 
 </div>
 <div class="code">
 

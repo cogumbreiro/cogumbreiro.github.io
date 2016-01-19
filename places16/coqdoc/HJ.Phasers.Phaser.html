@@ -58,7 +58,7 @@
 </div>
 
 <div class="doc">
-  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#make"><span class="id" title="definition">make</span></a></span> creates a new phaser and registers task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> with it.
+  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#make"><span class="id" title="definition">make</span></a></span> creates a new phaser and registers task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> with it.
   Task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> becomes registered with the initial taskview <span class="inlinecode"><span class="id" title="var">Taskview.make</span></span>.
 
 </div>
@@ -71,16 +71,16 @@
 </div>
 
 <div class="doc">
-<a name="lab1"></a><h1 class="section">Signal</h1>
+<a name="lab3"></a><h1 class="section">Signal</h1>
 
 <div class="paragraph"> </div>
 
 
 <div class="paragraph"> </div>
 
-  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#update"><span class="id" title="definition">update</span></a></span> targets a phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span> and is used internally to mutate
+  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#update"><span class="id" title="definition">update</span></a></span> targets a phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span> and is used internally to mutate
   the taskview associated with task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> using function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#f"><span class="id" title="variable">f</span></a></span> to mutate.
-  If task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> is not registered in <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>, then the phaser is left unchanged.
+  If task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> is not registered in <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>, then the phaser is left unchanged.
 
 </div>
 <div class="code">
@@ -138,7 +138,7 @@ For the signal to take any effect the task must be registered with the phaser.
 </div>
 
 <div class="doc">
-  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#try_signal"><span class="id" title="definition">try_signal</span></a></span> can be called without a pre-condition. It is crucial for
+  Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#try_signal"><span class="id" title="definition">try_signal</span></a></span> can be called without a pre-condition. It is crucial for
   the definition of an instruction that signals all phasers.
   
 </div>
@@ -162,14 +162,14 @@ We define <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html
 </div>
 
 <div class="doc">
-<a name="lab2"></a><h1 class="section">Wait</h1>
+<a name="lab4"></a><h1 class="section">Wait</h1>
 
 <div class="paragraph"> </div>
 
 
 <div class="paragraph"> </div>
 
-  Predicate <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#Await"><span class="id" title="inductive">Await</span></a></span> holds when all tasks registered in phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span> 
+  Predicate <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#Await"><span class="id" title="inductive">Await</span></a></span> holds when all tasks registered in phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span> 
   with a signal capability have a signal phase of at least <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#n"><span class="id" title="variable">n</span></a></span>.
   By only awaiting tasks with a signal capability, predicate <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#Await"><span class="id" title="inductive">Await</span></a></span>
   <i>disregards</i> any task registered with a <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#WAIT_ONLY"><span class="id" title="constructor">WAIT_ONLY</span></a></span> mode, regardless
@@ -222,9 +222,9 @@ We define <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html
 </div>
 
 <div class="doc">
-  Wait consists of thee pre-conditions: (i) task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> is registered in phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>,
+  Wait consists of thee pre-conditions: (i) task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> is registered in phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>,
   (ii) task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> has signalled as per <span class="inlinecode"><span class="id" title="var">Taskview.WaitPre</span></span>,
-  and (iii) task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> must be able to synchronize with the other members through phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>.
+  and (iii) task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> must be able to synchronize with the other members through phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>.
   
 </div>
 <div class="code">
@@ -283,7 +283,7 @@ Operationally, wait applies <span class="inlinecode"><span class="id" title="var
 </div>
 
 <div class="doc">
-<a name="lab3"></a><h1 class="section">Drop</h1>
+<a name="lab5"></a><h1 class="section">Drop</h1>
 
 <div class="paragraph"> </div>
 
@@ -292,7 +292,7 @@ Operationally, wait applies <span class="inlinecode"><span class="id" title="var
 
   Function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#drop"><span class="id" title="definition">drop</span></a></span> removes the taskview associated with the given task.
   The pre-condition to issue a <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#drop"><span class="id" title="definition">drop</span></a></span> is that task <span class="inlinecode"><a class="idref" href="HJ.Vars.html#FID.t"><span class="id" title="definition">t</span></a></span> must be registered
-  in phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>.
+  in phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>.
   
 </div>
 <div class="code">
@@ -313,7 +313,7 @@ Operationally, wait applies <span class="inlinecode"><span class="id" title="var
 </div>
 
 <div class="doc">
-<a name="lab4"></a><h1 class="section">Register</h1>
+<a name="lab6"></a><h1 class="section">Register</h1>
 
 <div class="paragraph"> </div>
 
@@ -336,8 +336,8 @@ Operationally, wait applies <span class="inlinecode"><span class="id" title="var
 </div>
 
 <div class="doc">
-  Register has two pre-conditions: (i) task <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#get_task"><span class="id" title="projection">get_task</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#r"><span class="id" title="variable">r</span></a></span> must be
-  unknown to phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>, and (ii) the mode in registry <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#r"><span class="id" title="variable">r</span></a></span> cannot escalate the
+  Register has two pre-conditions: (i) task <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#get_task"><span class="id" title="projection">get_task</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a></span> must be
+  unknown to phaser <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#ph"><span class="id" title="variable">ph</span></a></span>, and (ii) the mode in registry <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a></span> cannot escalate the
   capabilities of the issuer.
 
 </div>
@@ -358,8 +358,8 @@ Operationally, wait applies <span class="inlinecode"><span class="id" title="var
 </div>
 
 <div class="doc">
-  Operationally, register adds task <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#get_task"><span class="id" title="projection">get_task</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#r"><span class="id" title="variable">r</span></a></span>  to the phaser, assigning new taskview
-  that is a copy of the issuer's taskview with the mode set to <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#get_mode"><span class="id" title="projection">get_mode</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#r"><span class="id" title="variable">r</span></a></span>.
+  Operationally, register adds task <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#get_task"><span class="id" title="projection">get_task</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a></span>  to the phaser, assigning new taskview
+  that is a copy of the issuer's taskview with the mode set to <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#get_mode"><span class="id" title="projection">get_mode</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.Regmode.html#r"><span class="id" title="variable">r</span></a></span>.
   
 </div>
 <div class="code">
@@ -381,7 +381,7 @@ Operationally, wait applies <span class="inlinecode"><span class="id" title="var
 </div>
 
 <div class="doc">
-<a name="lab5"></a><h1 class="section">Operational semantics</h1>
+<a name="lab7"></a><h1 class="section">Operational semantics</h1>
 
 <div class="paragraph"> </div>
 
@@ -398,7 +398,7 @@ Operationally, wait applies <span class="inlinecode"><span class="id" title="var
 </div>
 
 <div class="doc">
-Function <span class="inlinecode"><span class="id" title="tactic">eval</span></span> interprets operation <span class="inlinecode"><a class="idref" href="HJ.Common.html#o"><span class="id" title="variable">o</span></a></span> as its operation specification <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#Op"><span class="id" title="record">Op</span></a></span>. 
+Function <span class="inlinecode"><span class="id" title="tactic">eval</span></span> interprets operation <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#o"><span class="id" title="variable">o</span></a></span> as its operation specification <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#Op"><span class="id" title="record">Op</span></a></span>. 
 </div>
 <div class="code">
 
@@ -415,7 +415,7 @@ Function <span class="inlinecode"><span class="id" title="tactic">eval</span></s
 </div>
 
 <div class="doc">
-  Relation <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#Reduces"><span class="id" title="inductive">Reduces</span></a></span> defines the operational semantics.
+  Relation <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#Reduces"><span class="id" title="inductive">Reduces</span></a></span> defines the operational semantics.
 
 </div>
 <div class="code">
@@ -430,7 +430,7 @@ Function <span class="inlinecode"><span class="id" title="tactic">eval</span></s
 </div>
 
 <div class="doc">
-Relation <span class="inlinecode"><span class="id" title="var">SReducess</span></span> simply omits the task and operation of relation <span class="inlinecode"><a class="idref" href="HJ.Phasers.Taskview.html#Reduces"><span class="id" title="inductive">Reduces</span></a></span>. 
+Relation <span class="inlinecode"><span class="id" title="var">SReducess</span></span> simply omits the task and operation of relation <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phasermap.html#Reduces"><span class="id" title="inductive">Reduces</span></a></span>. 
 </div>
 <div class="code">
 
@@ -651,7 +651,7 @@ Finally, we declare a function that converts a <span class="inlinecode"><span cl
 <div class="doc">
     The importance of function <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#as_tv_op"><span class="id" title="definition">as_tv_op</span></a></span> is captured by the following two properties.
     If the phaser operation is convertible to a taskview operation, then
-    then resulting taskview update is <span class="inlinecode"><span class="id" title="var">Taskview.Semantics.eval</span></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#o&acute;"><span class="id" title="variable">o&acute;</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.v"><span class="id" title="variable">v</span></a></span>.
+    then resulting taskview update is <span class="inlinecode"><span class="id" title="var">Taskview.Semantics.eval</span></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.Phaser.html#o&acute;"><span class="id" title="variable">o&acute;</span></a></span> <span class="inlinecode"><a class="idref" href="HJ.Phasers.PhaseOrdering.Phaser.html#Facts.EX2.v"><span class="id" title="variable">v</span></a></span>.
   
 </div>
 <div class="code">

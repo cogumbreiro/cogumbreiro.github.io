@@ -13,15 +13,16 @@ clean:
 
 ### PLACES'16 ###
 
-PLACES16:=src/Common.v\
-  src/Phasers/PhaseOrdering/Phaser.v\
-  src/Phasers/PhaseOrdering/Taskview.v\
-  src/Phasers/Welformedness.v\
+PLACES16:= \
+  src/Phasers/Regmode.v\
+  src/Phasers/Taskview.v\
   src/Phasers/Phaser.v\
   src/Phasers/Phasermap.v\
-  src/Phasers/Taskview.v\
-  src/Phasers/Regmode.v\
   src/Phasers/Lang.v\
+  src/Phasers/Welformedness.v\
+  src/Phasers/PhaseOrdering/Taskview.v\
+  src/Phasers/PhaseOrdering/Phaser.v\
+  src/Common.v\
   src/Vars.v
 
 PLACES16_DIR = places16/coqdoc
