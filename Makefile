@@ -1,4 +1,4 @@
-all: build do-places16
+all: build
 
 build:
 	make -C _js
