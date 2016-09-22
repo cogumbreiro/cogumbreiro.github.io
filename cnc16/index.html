@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Awesome Presentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      /* Fonts */
+      
+	    @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+	    @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+      @import url(https://fonts.googleapis.com/css?family=Oswald:300);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Open Sans';
+      }
+      h1 {
+        font-family: 'Oswald';
+      }
+      h2, h3,
+      .note, .note a {
+        font-family: 'Open Sans Condensed';
+      }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      /* Color */
+
+      .remark-slide-content {
+        background: #fdf6e3;
+        color: #002b36;
+      }
+
+      .remark-slide-content h2,
+      .remark-slide-content h3,
+      a {
+        color: #657b83;
+      }
+
+      .note, .note a, a:hover, .highlight
+      {
+        color: #dc322f;
+      }
+
+      .remark-slide-content h1,
+      .alert{
+        color: #2aa198;
+      }
+
+      /* Structure */
+
+      .foo img { width: 95%; }
+      .af img { width: 45%; }
+      .remark-slide-content h1 {
+        font-size: 40pt;
+        font-weight: 700;
+      }
+      .remark-slide-content h2,
+      .remark-slide-content h3 {
+        font-size: 27pt;
+      }
+      .remark-slide-content li {
+        padding-bottom: 20pt;
+        list-style-type: square;
+      }
+
+      .remark-code,
+      .remark-slide-content {
+        font-size: 24pt;
+        padding: 0pt 45pt 0pt 45pt;
+      }
+      .remark-slide-number {
+      	font-size: 20pt;
+      }
+            
+      .note, .note a {
+        font-size:18pt;
+      }
+
+      .img-50 img {
+        width: 50%;
+      }
+
+      .img-30 img {
+        width: 30%;
+      }
+
+      .img-100 img {
+        width: 100%;
+      }
+
+      .img-80 img {
+        width: 80%;
+      }
+      
+      .img-60 img {
+        width: 60%;
+      }
+
+      .img-20 img {
+        width: 20%;
+      }
+
+      .img-15 img {
+        width: 20%;
+      }
+
+      .img-10 img {
+        width: 10%;
+      }
+
+     a {text-decoration: underline; }
+
+     a:hover { text-shadow: none; border: none; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Abstract Graph Semantics for CnC
+
+### Reasoning about optimization techniques
+
+.author[ .alert[Tiago Cogumbreiro], Kath Knobe, Zoran Budimli&cacute;, Vivek Sarkar]
+
+
+---
+
+# Problem statement
+
+* **Objective:** Develop & verify compiler techniques for CnC
+* **Scope:** Application-specific optimization techniques
+* **Approach:** Formalize and verify the techniques, leverage existing work
+* **Outcome:** Propose a compilation technique for CnC
+
+---
+
+# Methodology (related work)
+
+We follow the approach set forth by (Knobe & Budimli&cacute; CPC'13).
+
+1. Compile the CnC spec to an application-specific IR
+2. Analyze and transform the IR to optimize the application's execution
+
+---
+
+# Redundant dependencies (CPC'13)
+
+.center.img-60[
+  ![Example](original-zoom.svg)
+]
+
+---
+
+# No redundant dependencies (CPC'13)
+
+.center.img-80[
+  ![Example](transformation.svg)
+]
+
+
+---
+
+class: center, middle
+
+# How do we assess the correctness of a graph transformation?
+
+---
+
+# Contributions
+
+1. A theory of abstract graph semantics for CnC;
+2. A simulator of these semantics;
+3. A tool that optimizes a CnC spec: identifies data/control requirements 
+   that are known to be ready when the step executes.
+
+
+---
+
+# Ideas behind the formalization
+
+**(I)** Define a CnC graph.
+
+**(II)** Define how the graph is "executed":
+
+* the external behavior of a step instance 
+* the conditions to produce/consume data/control instances 
+
+---
+
+# I. Define an abstract CnC graph
+
+Bi-partite directed graph $G$ that models the producer-consumer relations
+of *runtime instances*.
+
+* nodes $c$ for **computation**: step instances
+* nodes $i$ for **information**: control and data instances
+* requires edges: $(i, c)$ computation $c$ requires information $i$ to run
+* can-produce edges: $(c, i)$ computation $c$ can produce information $i$
+
+---
+
+# Example of an abstract CnC graph
+
+.center.img-80[
+  ![Example](original2.svg)
+]
+
+---
+
+# II. Define how the graph is "executed"
+
+**Operational semantics:** .highlight[a set of rules that defines how set of operations transform a state.]
+
+*Operations:* external behavior of a computation: e.g., $c$ produces $i$
+
+*State:* the set of available information $I$ for a computation $c$;
+    monotonically increasing
+
+---
+
+# Specification of the abstract CnC semantics (English)
+
+Given a set of available information $I$, for computation $c$ produces $i$
+
+**Pre-conditions:**
+
+1. the information required for $c$ is available:
+  $\forall i': (i', c) \in G \implies i' \in I$
+2. computation $c$ can produce $i$ :  $(c, i) \in G$
+3. information $i$ has not been produced: $i \notin I$
+
+**Post-condition:**
+
+1. information $i$ is available (produced):  $I \cup \{ i \}$
+
+
+---
+
+# Specification of the abstract CnC semantics (Math)
+
+Given a graph $G$, let the reduction relation: $$I_1 \rightarrow^{c,i} I_2$$
+
+For a set of information $I_1$, computation $c$ produces $i$, resulting in $I_2$, defined as:
+
+$$
+\frac{
+  \forall i': (i', c) \in G \implies i' \in I
+  \qquad
+  (c, i) \in G
+  \qquad
+  i \notin P
+}{
+    I \rightarrow^{c, i} I \cup \{ i \}
+}
+$$
+
+---
+
+# Claim 1 
+
+## If we preserve the connectivity of the graph, then the semantics are preserved.
+
+Let $G$ and $G'$ have the same reachability relation.
+
+If $I_1 \rightarrow^{c, i} I_2$ in G, then there exists an $I_3$ *s.t.* $I_1 \rightarrow^* I_3 \rightarrow^{c,i} I_2$.
+
+---
+
+# Transitive Reduction
+
+[The Transitive Reduction of a Directed Graph](http://epubs.siam.org/doi/abs/10.1137/0201008). (Aho et al, 1972) 
+
+* Creates the smallest graph that maintains the same reachability relation.
+* Complexity: O($n^3$) time, where $n$ is the number of nodes.
+
+---
+
+# Implementation
+
+* Given a CnC spec, generate the dynamic graph (using II)
+* Given the dynamic graph, perform Transitive Reduction
+* Return reduced graph + removed edges
+
+---
+class: middle, center
+# Extending the abstract semantics
+## How much can we use this level of abstraction?
+
+---
+
+# Example: Speculative execution
+
+* Step instance attributes: data-ready, control-ready
+* Data instance attributes: speculative-available
+* If data-ready, then execute + mark as speculative ready <br/>
+  .note[Allows executing data-ready, but not control-ready!]
+* Asynchronous Checkpoint/Restart for  CnC [Vrvilo '13]
+
+---
+
+# Example: Allowing data-ready execution
+
+Theoretically,
+* Attributes can be represented as predicates over nodes
+
+.highlight[Speculative execution:]
+
+$$
+\frac{
+  \forall i': (i', c) \in G \color{red}{\land \mathrm{DataReady}(i)} \implies i' \in I
+  \quad
+  (c, i) \in G
+  \quad
+  i \notin P
+}{
+    I \rightarrow^{c, i} I \cup \{ i \}
+}
+$$
+
+---
+
+# Future work
+
+* Speculative execution
+* Garbage collection of "dead" nodes
+
+---
+
+class: center, middle
+
+# Abstract Graph Semantics for CnC
+
+### Reasoning about optimization techniques
+
+.author[ .alert[Tiago Cogumbreiro], Kath Knobe, Zoran Budimli&cacute;, Vivek Sarkar]
+
+    </textarea>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+        ratio: '16:9',
+        highlightStyle: 'solarized-dark',
+        highlightLanguage: 'ocaml',
+        navigation: {
+            touch: false,
+            scroll: false
+        }
+      });
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          inlineMath: [['$','$'], ['\\(','\\)']]
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
