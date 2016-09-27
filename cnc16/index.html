@@ -217,7 +217,7 @@ env::(center:{1..NH+1},{1..NW+1});
 
 1. For each `env` fragment, evaluate the expression and generate step instances.
 2. For each step instance, generate "can-produce" edges.
-3. For each control/data instance, generate "requires" edges.
+3. For each control/data instance, generate "can-consume" edges.
 4. Identify redundant dependencies.
 
 ---
@@ -254,7 +254,7 @@ of *runtime instances*.
 
 * nodes $c$ for **computation**: step instances
 * nodes $i$ for **information**: control and data instances
-* requires edges: $(i, c)$ computation $c$ requires information $i$ to run
+* can-consume edges: $(i, c)$ computation $c$ requires information $i$ to run
 * can-produce edges: $(c, i)$ computation $c$ can produce information $i$
 
 ---
