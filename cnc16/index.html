@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Awesome Presentation</title>
+    <title>Abstract Graph Semantics for CnC</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style type="text/css">
       /* Fonts */
@@ -280,7 +280,8 @@ of *runtime instances*.
 
 # Specification of the abstract CnC semantics (English)
 
-Given a set of available information $I$, for computation $c$ produces $i$
+Given a set of available information $I$, for computation $c$ produces $i$, yield
+$I \cup \{ i \}$.
 
 **Pre-conditions:**
 
@@ -288,11 +289,6 @@ Given a set of available information $I$, for computation $c$ produces $i$
   $\forall i': (i', c) \in G \implies i' \in I$
 2. computation $c$ can produce $i$ :  $(c, i) \in G$
 3. information $i$ has not been produced: $i \notin I$
-
-**Post-condition:**
-
-1. information $i$ is available (produced):  $I \cup \{ i \}$
-
 
 ---
 
