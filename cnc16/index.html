@@ -207,18 +207,18 @@ env::(center:{1..NH+1},{1..NW+1});
 
 ---
 
+.center.img-80[
+  ![Example](../assets/cnc16/transformation.svg)
+]
+
+---
+
 # Algorithm
 
 1. For each `env` fragment, evaluate the expression and generate step instances.
 2. For each step instance, generate "can-produce" edges.
 3. For each control/data instance, generate "requires" edges.
 4. Identify redundant dependencies.
-
----
-
-.center.img-80[
-  ![Example](../assets/cnc16/transformation.svg)
-]
 
 ---
 
