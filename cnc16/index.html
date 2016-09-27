@@ -171,11 +171,68 @@ class: center, middle
 
 # Contributions
 
-1. A theory of abstract graph semantics for CnC;
-2. A simulator of these semantics;
-3. A tool that optimizes a CnC spec: identifies data/control requirements 
-   that are known to be ready when the step executes.
+1. A tool that optimizes a CnC spec: identifies data/control requirements 
+   that are known to be ready when the step executes;
+2. A theory of abstract graph semantics for CnC.
 
+---
+
+class: middle, center
+
+# A tool that optimizes a CnC spec
+
+---
+
+# Tool
+
+* Given a CnC spec, generate the dynamic graph
+* Given the dynamic graph, identify *all* redundant dependencies
+* Return reduced graph
+
+---
+
+# Example
+
+```
+[int A];
+(single_corner:i,j) -> [A:i,j];
+[A:i,j-1] -> (top:i,j) -> [A:i,j];
+[A:i-1,j] -> (left:i,j) -> [A:i,j];
+[A:i-1,j-1], [A:i-1,j], [A:i,j-1] -> (center:i,j) -> [A:i,j];
+env::(single_corner:0,0);
+env::(top:0,{1 .. NW+1});
+env::(left:{1..NH+1},0);
+env::(center:{1..NH+1},{1..NW+1});
+```
+
+---
+
+# Algorithm
+
+1. For each `env` fragment, evaluate the expression and generate step instances.
+2. For each step instance, generate "can-produce" edges.
+3. For each control/data instance, generate "requires" edges.
+4. Identify redundant dependencies.
+
+---
+
+.center.img-80[
+  ![Example](../assets/cnc16/transformation.svg)
+]
+
+---
+
+class: middle, center
+
+# A theory of abstract graph semantics for CnC
+
+---
+
+# Related work
+
+* Concurrent Collections (Zoran et al, 2010)
+* Formalizes the internal execution of a step
+* "What can a step do?" versus "How can steps interact?"
 
 ---
 
@@ -251,7 +308,7 @@ $$
   \qquad
   (c, i) \in G
   \qquad
-  i \notin P
+  i \notin I
 }{
     I \rightarrow^{c, i} I \cup \{ i \}
 }
@@ -263,9 +320,12 @@ $$
 
 ## If we preserve the connectivity of the graph, then the semantics are preserved.
 
+Let $\rightarrow^*$ be the reflexive, transitive closure of $\rightarrow^{c, i}$ for some $c$ and $i$.
+
 Let $G$ and $G'$ have the same reachability relation.
 
 If $I_1 \rightarrow^{c, i} I_2$ in G, then there exists an $I_3$ *s.t.* $I_1 \rightarrow^* I_3 \rightarrow^{c,i} I_2$.
+
 
 ---
 
@@ -275,14 +335,6 @@ If $I_1 \rightarrow^{c, i} I_2$ in G, then there exists an $I_3$ *s.t.* $I_1 \ri
 
 * Creates the smallest graph that maintains the same reachability relation.
 * Complexity: O($n^3$) time, where $n$ is the number of nodes.
-
----
-
-# Implementation
-
-* Given a CnC spec, generate the dynamic graph (using II)
-* Given the dynamic graph, perform Transitive Reduction
-* Return reduced graph + removed edges
 
 ---
 class: middle, center
@@ -314,7 +366,7 @@ $$
   \quad
   (c, i) \in G
   \quad
-  i \notin P
+  i \notin I
 }{
     I \rightarrow^{c, i} I \cup \{ i \}
 }
