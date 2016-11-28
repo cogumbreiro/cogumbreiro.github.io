@@ -10,22 +10,25 @@ layout: page
 </figure>
 
 Interests:
-* concurrency theory and parallel programming
-* deadlock detection, prevention, and avoidance
-* formalization of synchronization mechanisms
-* tools for runtime verification
-* certified algorithms
-* research guided by the [Coq] proof assistant
+
+ * concurrency theory and parallel programming
+ * deadlock detection, prevention, and avoidance
+ * formalization of synchronization mechanisms
+ * tools for runtime verification
+ * certified algorithms
+ * research guided by the [Coq] proof assistant
 
 Experience:
-* (current) postdoctoral researcher at [Rice University], collaborating with [Vivek Sarkar]. 
-* (2015) research assistant at [Imperial College London], collaborating with [Nobuko Yoshida]
-* (2012) visiting scholar at [Rice University], collaborating with [Vivek Sarkar]
+
+ * (current) postdoctoral researcher at [Rice University], collaborating with [Vivek Sarkar]. 
+ * (2015) research assistant at [Imperial College London], collaborating with [Nobuko Yoshida]
+ * (2012) visiting scholar at [Rice University], collaborating with [Vivek Sarkar]
 
 Eductation:
-* (2015) Ph.D. from [ULisboa], advised by [Francisco Martins] (thesis: [Programming Multicores Safely])
-* (2009) M.Sc. from [ULisboa], advised by [Francisco Martins]
-* (2007) B.Sc. from [Universidade dos Açores]
+
+ * (2015) Ph.D. from [ULisboa], advised by [Francisco Martins] (thesis: [Programming Multicores Safely])
+ * (2009) M.Sc. from [ULisboa], advised by [Francisco Martins]
+ * (2007) B.Sc. from [Universidade dos Açores]
 
 ## Publications
 
