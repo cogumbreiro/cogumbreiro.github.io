@@ -1,37 +1,34 @@
 ---
 layout: page
-# description: "A responsive Jekyll theme with editorial tendencies by designer Michael Rose."
-#tags: [Jekyll, theme, responsive, blog, template]
+type: grid
+# description: "Tiago Cogumbreiro is a postdoc researcher at Rice University interested in ."
 ---
-
+<!--
 <figure class="image-pull-right">
 <img src="{{ site.url }}/images/qrcode.png" alt="v-Card" class=".image-pull-right" width="128" />
 <figcaption>My v-Card as a QR Code.</figcaption>
 </figure>
+-->
 
-Interests:
+#### Interests
 
- * concurrency theory and parallel programming
- * deadlock detection, prevention, and avoidance
- * formalization of synchronization mechanisms
- * tools for runtime verification
- * certified algorithms
- * research guided by the [Coq] proof assistant
+ * Concurrency theory and parallel programming
+ * Tools for runtime verification
+ * Research guided by the [Coq] proof assistant
 
-Experience:
+#### Experience
 
- * (current) postdoctoral researcher at [Rice University], collaborating with [Vivek Sarkar]. 
- * (2015) research assistant at [Imperial College London], collaborating with [Nobuko Yoshida]
- * (2012) visiting scholar at [Rice University], collaborating with [Vivek Sarkar]
+ * (Current) Postdoctoral researcher at [Rice University], collaborating with [Vivek Sarkar]
+ * (2015) Research assistant at [Imperial College London], collaborating with [Nobuko Yoshida]
+ * (2012) Visiting scholar at [Rice University], collaborating with [Vivek Sarkar]
 
-Eductation:
+#### Eductation
 
- * (2015) Ph.D. from [ULisboa], advised by [Francisco Martins] (thesis: [Programming Multicores Safely])
- * (2009) M.Sc. from [ULisboa], advised by [Francisco Martins]
+ * (2015) Ph.D. from [ULisboa] ([thesis](https://bitbucket.org/cogumbreiro/armus/downloads/cogumbreiro-phd-thesis.pdf)); advised by [Francisco Martins] 
+ * (2009) M.Sc. from [ULisboa] ([thesis](assets/cogumbreiro-msc-thesis.pdf)); advised by [Francisco Martins]
  * (2007) B.Sc. from [Universidade dos Açores]
 
-## Publications
-
+# Publications
 <ul>
 {% include publications.html url="publications.html" %}
 </ul>
