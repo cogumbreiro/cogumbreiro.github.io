@@ -17,12 +17,14 @@ programming interface, and a runtime verification tool, called
 [Armus]. Recently, he has been interested in using [Coq] and [Why3] to
 produce certified algorithms.
 
-Past experience, includes being a research assistant at [Imperial
-College London], where he worked with [Nobuko Yoshida], and a
-visiting scholar at [Rice University], where he was supervised by
-[Vivek Sarkar]. Tiago received his Ph.D., March '15, at [ULisboa],
-where he was advised by [Francisco Martins], and his B.Sc. at
-[Universidade dos Açores].
+Experience:
+* (2015) research assistant at [Imperial College London], collaborating with [Nobuko Yoshida]
+* (2012) visiting scholar at [Rice University], collaborating with [Vivek Sarkar]
+
+Eductation:
+* (2015) Ph.D. from [ULisboa], advised by [Francisco Martins]
+* (2009) M.Sc. from [ULisboa], advised by [Francisco Martins]
+* (2007) B.Sc. from [Universidade dos Açores]
 
 ## Publications
 
