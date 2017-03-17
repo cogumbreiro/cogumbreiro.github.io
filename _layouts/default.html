@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+</head>
+
+
+<body>
+    <main>
+        <header class="site-header">
+            <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1> 
+            {% comment %} 
+            <nav class="site-nav site-title">
+                <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">JLAMP'17 Artifact</a>
+                <a href="{{ site.baseurl }}/dev.html" class="{% if page.url == '/dev.html' %}active{% endif %}">Developer Notes</a>
+            </nav>
+            {% endcomment %}
+        </header>
+        {{ content }}
+    </main>
+</body>
+</html>

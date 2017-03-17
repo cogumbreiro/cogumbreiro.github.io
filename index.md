@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 type: grid
 # description: "Tiago Cogumbreiro is a postdoc researcher at Rice University interested in ."
 ---
