@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: default
 type: grid
-# description: "Tiago Cogumbreiro is a postdoc researcher at Rice University interested in ."
+# description: "Tiago Cogumbreiro is a postdoc researcher at Rice University interested in concurrency theory, parallel programming, and runtime verification."
 ---
 <!--
 <figure class="image-pull-right">
@@ -18,15 +18,15 @@ type: grid
 
 #### Experience
 
- * (Current) Postdoctoral researcher at [Rice University], collaborating with [Vivek Sarkar]
- * (2015) Research assistant at [Imperial College London], collaborating with [Nobuko Yoshida]
+ * **(2015--Current)** Postdoctoral researcher at [Rice University], collaborating with [Vivek Sarkar]
+ * (2014) Research assistant at [Imperial College London], collaborating with [Nobuko Yoshida]
  * (2012) Visiting scholar at [Rice University], collaborating with [Vivek Sarkar]
 
 #### Eductation
 
- * (2015) Ph.D. from [ULisboa] ([thesis](https://bitbucket.org/cogumbreiro/armus/downloads/cogumbreiro-phd-thesis.pdf)); advised by [Francisco Martins] 
- * (2009) M.Sc. from [ULisboa] ([thesis](assets/cogumbreiro-msc-thesis.pdf)); advised by [Francisco Martins]
- * (2007) B.Sc. from [Universidade dos Açores]
+ * (2015) Ph.D. [ULisboa], advised by [Francisco Martins], [ [PDF](https://bitbucket.org/cogumbreiro/armus/downloads/cogumbreiro-phd-thesis.pdf) ]
+ * (2009) M.Sc. [ULisboa], advised by [Francisco Martins] [ [PDF](assets/cogumbreiro-msc-thesis.pdf) ]
+ * (2007) B.Sc. [Universidade dos Açores]
 
 # Publications
 <ul>

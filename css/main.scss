@@ -1,0 +1,34 @@
+---
+# The scss file which include files from _sass/
+---
+
+@charset "utf-8";
+
+$base-font-family: Arsenal, Helvetica, Arial, sans-serif;
+$base-font-size:   2.5vmin;
+$small-font-size:  0.875rem;
+$base-line-height: 1.5;
+$code-font-family: 'Droid Sans Mono', 'Courier New',Consolas,monopace;
+$base-width: 50em;
+
+
+$text-color:   #333;
+$link-color:   #0074d9;
+$meta-color:   #a0a0a0;
+$border-color: #ddd;
+
+@import "color";
+@import "base";
+@import "layout";
+@import "sandbox";
+
+
+#graph_out {
+    background: #FFF;
+    width: 100%;
+    height: 24em;
+    overflow: auto;
+    border-radius: 3px;
+    border: 1px solid $border-color;
+}
+
