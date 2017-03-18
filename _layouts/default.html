@@ -4,8 +4,7 @@
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arsenal|Droid+Sans+Mono" rel="stylesheet">
 
   <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
 </head>
@@ -15,12 +14,14 @@
     <main>
         <header class="site-header">
             <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1> 
-            {% comment %} 
-            <nav class="site-nav site-title">
-                <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">JLAMP'17 Artifact</a>
-                <a href="{{ site.baseurl }}/dev.html" class="{% if page.url == '/dev.html' %}active{% endif %}">Developer Notes</a>
-            </nav>
-            {% endcomment %}
+            Contact: <a href="mailto:cogumbreiro@rice.edu">cogumbreiro@rice.edu</a>
+            Publications: <a href="http://dblp.dagstuhl.de/pers/hd/c/Cogumbreiro:Tiago">@DBLP</a>
+            <a href="https://scholar.google.com/citations?user=4uTAp_gAAAAJ">@Google Scholar</a>
+            Code: <a href="https://github.com/cogumbreiro/">@GitHub<a>
+            <a href="https://bitbucket.com/cogumbreiro/">@Bitbucket</a>
+            <a href="https://gitlab.com/cogumbreiro/">@Gitlab</a>
+            
+            
         </header>
         {{ content }}
     </main>
