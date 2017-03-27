@@ -2,7 +2,7 @@ all: build
 
 build:
 	make -C _js
-	make -C _less
+#	make -C _less
 	make -C _bibliography
 
 clean:
