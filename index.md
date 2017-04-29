@@ -25,7 +25,7 @@ type: grid
 #### Eductation
 
  * (2015) Ph.D. [ULisboa], advised by [Francisco Martins], [ [PDF](https://bitbucket.org/cogumbreiro/armus/downloads/cogumbreiro-phd-thesis.pdf) ]
- * (2009) M.Sc. [ULisboa], advised by [Francisco Martins] [ [PDF](assets/cogumbreiro-msc-thesis.pdf) ]
+ * (2009) M.Sc. [ULisboa], advised by [Francisco Martins], [ [PDF](assets/cogumbreiro-msc-thesis.pdf) ]
  * (2007) B.Sc. [Universidade dos Açores]
 
 # Publications
