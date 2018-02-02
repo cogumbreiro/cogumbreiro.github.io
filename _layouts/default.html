@@ -11,19 +11,28 @@
 
 
 <body>
+    <header class="site-header">
+        <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1> 
+    </header>
+    <address>
+      <ul>
+        <li>Contact: <a href="mailto:cogumbreiro@rice.edu">cogumbreiro@rice.edu</a></li>
+        <li>Publications:
+        <ul class="pubs-links">
+          <li><a href="http://dblp.dagstuhl.de/pers/hd/c/Cogumbreiro:Tiago">@DBLP</a></li>
+          <li><a href="https://scholar.google.com/citations?user=4uTAp_gAAAAJ">@Google Scholar</a></li>
+        </ul>
+        <li>
+        Code:
+        <ul class="code-links">
+          <li><a href="https://github.com/cogumbreiro/">@GitHub<a></li>
+          <li><a href="https://bitbucket.com/cogumbreiro/">@Bitbucket</a></li>
+          <li><a href="https://gitlab.com/cogumbreiro/">@Gitlab</a></li>
+        </ul>
+        </li>
+      </ul>
+    </address>
     <main>
-        <header class="site-header">
-            <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1> 
-            Contact: <a href="mailto:cogumbreiro@rice.edu">cogumbreiro@rice.edu</a> |
-            Publications: <a href="http://dblp.dagstuhl.de/pers/hd/c/Cogumbreiro:Tiago">@DBLP</a>
-            <a href="https://scholar.google.com/citations?user=4uTAp_gAAAAJ">@Google Scholar</a>
-            | 
-            Code: <a href="https://github.com/cogumbreiro/">@GitHub<a>
-            <a href="https://bitbucket.com/cogumbreiro/">@Bitbucket</a>
-            <a href="https://gitlab.com/cogumbreiro/">@Gitlab</a>
-            
-            
-        </header>
         {{ content }}
     </main>
 </body>
