@@ -1,0 +1,56 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "name contact"
+        "content content";
+}
+
+header.site-header {
+    margin: 0;
+    margin-left: 2em;
+}
+
+header {
+  grid-area: name;
+}
+address {
+  grid-area: contact;
+}
+main {
+  grid-area: content;
+}
+
+/* main component */
+
+main {
+  display: grid;
+  grid-template-areas:
+    "cv"
+    "pubs";
+  padding: 0;
+}
+
+#cv {
+  grid-area: cv;
+}
+
+#pubs {
+  grid-area: pubs;
+}
+
+#cv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "interests xp edu";
+}
+#interests {
+  grid-area: interests;
+}
+#experience {
+  grid-area: xp;
+}
+#education{
+  grid-area: edu;
+}
+
