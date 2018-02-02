@@ -13,6 +13,7 @@ header.site-header {
 
 header {
   grid-area: name;
+  margin-left: auto !important;
 }
 address {
   grid-area: contact;
