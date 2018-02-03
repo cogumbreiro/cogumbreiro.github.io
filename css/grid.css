@@ -1,50 +1,55 @@
-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "name contact"
-        "content content";
+header.site-header {
+  margin: 0;
+  margin-left: 3em;
+}
+address > ul {
+  margin-top: 1em;
+  padding-left: 0em;
 }
 
-header.site-header {
-    margin: 0;
-    margin-left: 2em;
+#pubs ul {
+  padding-left: 1em;
 }
+
+#pubs li {
+  padding-bottom: 1em;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 30em;
+    grid-column-gap: 2em;
+    grid-template-areas:
+        "name address"
+        "pubs cv ";
+}
+
 
 header {
   grid-area: name;
-  margin-left: auto !important;
 }
 address {
-  grid-area: contact;
-}
-main {
-  grid-area: content;
-}
-
-/* main component */
-
-main {
-  display: grid;
-  grid-template-areas:
-    "cv"
-    "pubs";
-  padding: 0;
+  grid-area: address;
 }
 
 #cv {
-  grid-area: cv;
+  grid-area: cv;  
+}
+
+#cv {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "interests" "xp"  "edu";
+  align-content: start;
 }
 
 #pubs {
   grid-area: pubs;
+  max-width: 40em;
+  margin-left: 3em;
 }
 
-#cv {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "interests xp edu";
-}
 #interests {
   grid-area: interests;
 }
