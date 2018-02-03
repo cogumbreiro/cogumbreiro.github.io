@@ -44,4 +44,10 @@ address ul {
     list-style: none;
 }
 
-
+#interests ul, #experience ul, #education ul {
+    padding-left: .6em;
+    list-style: none;
+}
+#interests li, #experience li, #education li {
+    padding-bottom: .5em;
+}

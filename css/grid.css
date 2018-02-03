@@ -1,62 +1,66 @@
-header.site-header {
-  margin: 0;
-  margin-left: 3em;
-}
-address > ul {
-  margin-top: 1em;
-  padding-left: 0em;
-}
+@supports (display: grid) {
+  @media (min-width: 60em) {
+    body {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
 
-#pubs ul {
-  padding-left: 1em;
-}
+    header.site-header {
+      margin: 0;
+      margin-left: 3em;
+    }
 
-#pubs li {
-  padding-bottom: 1em;
-}
+    address > ul {
+      margin-top: 1em;
+      padding-left: 0em;
+    }
 
-body {
-    display: grid;
-    grid-template-columns: 1fr 30em;
-    grid-column-gap: 2em;
-    grid-template-areas:
-        "name address"
-        "pubs cv ";
-}
+    #pubs ul {
+      padding-left: 1em;
+    }
 
+    #pubs li {
+      padding-bottom: 1em;
+    }
 
-header {
-  grid-area: name;
-}
-address {
-  grid-area: address;
-}
+    body {
+        display: grid;
+        grid-template-columns: 1fr 30em;
+        grid-column-gap: 2em;
+        grid-template-areas:
+            "name address"
+            "pubs cv ";
+    }
 
-#cv {
-  grid-area: cv;  
-}
+    header {
+      grid-area: name;
+    }
 
-#cv {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "interests" "xp"  "edu";
-  align-content: start;
-}
+    address {
+      grid-area: address;
+    }
 
-#pubs {
-  grid-area: pubs;
-  max-width: 40em;
-  margin-left: 3em;
-}
+    #cv {
+      grid-area: cv;  
+    }
 
-#interests {
-  grid-area: interests;
-}
-#experience {
-  grid-area: xp;
-}
-#education{
-  grid-area: edu;
-}
+    #pubs {
+      grid-area: pubs;
+      max-width: 40em;
+      margin-left: 3em;
+    }
 
+    #interests {
+      grid-area: interests;
+    }
+ 
+    #experience {
+      grid-area: xp;
+    }
+ 
+    #education{
+      grid-area: edu;
+    }
+  }
+}
