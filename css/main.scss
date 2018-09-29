@@ -1,25 +1,13 @@
 ---
-# The scss file which include files from _sass/
 ---
 
 @charset "utf-8";
 
-$base-font-family: Arsenal, Helvetica, Arial, sans-serif;
-$base-font-size:   2.5vmin;
-$small-font-size:  0.875rem;
-$base-line-height: 1.5;
-$code-font-family: 'Droid Sans Mono', 'Courier New',Consolas,monopace;
-$base-width: 50em;
-
-
 $text-color:   #333;
-$link-color:   #0074d9;
 $meta-color:   #a0a0a0;
 $border-color: #ddd;
 
 @import "color";
-@import "base";
-@import "layout";
 @import "sandbox";
 
 
@@ -30,24 +18,4 @@ $border-color: #ddd;
     overflow: auto;
     border-radius: 3px;
     border: 1px solid $border-color;
-}
-
-ul.code-links,
-ul.pubs-links {
-    padding: 0;
-}
-.code-links,
-.pubs-links,
-ul.code-links li,
-ul.pubs-links li, { display: inline-block; }
-address ul {
-    list-style: none;
-}
-
-#interests ul, #experience ul, #education ul {
-    padding-left: .6em;
-    list-style: none;
-}
-#interests li, #experience li, #education li {
-    padding-bottom: .5em;
 }
