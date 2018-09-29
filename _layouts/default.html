@@ -10,45 +10,38 @@
 
 
 <body>
-    <section class="hero is-medium is-info">
-            <div class="hero-head">
-                    <nav class="navbar">
-                        <div class="container is-active">
-                            <div id="navbarMenu" class="navbar-menu is-active">
-                                <div class="navbar-start">
-                                    <a class="navbar-item" href="mailto:tiago.cogumbreiro@umb.edu"><strong>Email me</strong></a>
-                                    <a class="navbar-item" href="http://dblp.dagstuhl.de/pers/hd/c/Cogumbreiro:Tiago">Publications@DBLP</a>
-                                    <a class="navbar-item" href="https://scholar.google.com/citations?user=4uTAp_gAAAAJ">Publications@Google Scholar</a>
-                                    <a class="navbar-item" href="https://github.com/cogumbreiro/">Code@GitHub</a>
-                                    <a class="navbar-item" href="https://bitbucket.com/cogumbreiro/">Code@Bitbucket</a>
-                                    <a class="navbar-item" href="https://gitlab.com/cogumbreiro/">Code@Gitlab</a>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                <div class="hero-body has-text-centered">
-            <div class="container media" style="width:70em">
-              <figure class="media-left">
+    <section class="hero is-medium is-primary">
+        <div class="hero-body has-text-centered">
+            <div class="container media" style="max-width:70em">
+              <figure class="media-left" style="margin-right:3em">
                 <img src="{{site.baseurl}}/assets/portrait-256.jpg" alt="Tiago Cogumbreiro" />
               </figure>
               <div class="media-content">
                 <h1 class="title">
-                  Tiago researches data-driven techniques to write safer code at scale,
-                  <br>by developing debugging tools, proving software correctness, and learning specification.
+                  Tiago is an assistant professor at UMass Boston who researches
+                  data-driven techniques to write safer code at scale,
+                  by developing debugging tools, proving software correctness, and learning specification.
                 </h1>
                 <h2 class="subtitle" style="padding-top:1em">
                   Tiago's expertise include: debugging parallel programs in high-performance computing (mitigate deadlocks & data-races),
                   and leveraging machine learning techniques to aid debugging (mine specifications to identify bugs at scale).
                 </h2>
                 <h1 class="title" style="padding-top:1em">
-                        Tiago is looking for self-motivated Ph.D. students
+                        <a href="mailto:tiago.cogumbreiro@umb.edu">Tiago is looking for self-motivated Ph.D. students
                         who are interested in improving the quality of our software.
-                              </h1>
+                    </a></h1>
                     </div>
             </div>
         </div>
       </section>
+      <div class="container has-text-centered" style="margin:1em">
+                    <a class=" button" href="mailto:tiago.cogumbreiro@umb.edu"><strong>Email me</strong></a>
+                    <a class=" button" href="http://dblp.dagstuhl.de/pers/hd/c/Cogumbreiro:Tiago">Publications@DBLP</a>
+                    <a class=" button" href="https://scholar.google.com/citations?user=4uTAp_gAAAAJ">Publications@Google Scholar</a>
+                    <a class=" button" href="https://github.com/cogumbreiro/">Code@GitHub</a>
+                    <a class=" button" href="https://bitbucket.com/cogumbreiro/">Code@Bitbucket</a>
+                    <a class=" button" href="https://gitlab.com/cogumbreiro/">Code@Gitlab</a>
+        </div>
 
     {{ content }}
 </body>
