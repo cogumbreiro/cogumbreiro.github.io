@@ -2,49 +2,76 @@
 layout: default
 type: grid
 ---
+
+
 <section class="hero is-medium is-primary">
-    <div class="hero-body has-text-centered">
+    <div class=" tabs is-toggle is-toggle-rounded is-centered" style="margin-top:1em">
+        <ul>
+          <li>
+            <a href="mailto:tiago.cogumbreiro@umb.edu">
+              <span class="icon is-small"><i class="fas fa-envelope"></i></span>
+              <span>Email</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://gitlab.com/users/cogumbreiro/projects">
+              <span class="icon is-small"><i class="fas fa-download"></i></span>
+              <span>Software</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    
+  <div class="hero-body has-text-centered" style="padding-top:4em; padding-bottom:4em;">
         <div class="container media" style="max-width:70em">
           <figure class="image media-image" style="margin-right:3em">
             <img class="is-rounded" src="{{site.baseurl}}/assets/portrait-256.jpg" alt="Tiago Cogumbreiro" />
           </figure>
           <div class="media-content">
             <h1>
-              Tiago is an assistant professor at UMass Boston who researches
-              data-driven techniques to write safer code at scale,
-              by developing debugging tools, proving software correctness, and learning specifications.
+              Tiago is an assistant professor at UMass Boston who helps
+              programmers write software with fewer bugs.
             </h1>
             <h1 style="padding-top:1em">
-              Tiago's expertise include: <strong>improving the quality
-              assurance of parallel programs</strong> by mitigating
-              deadlocks & data-races, <strong>finding bugs in
-              the wild</strong>
-              by leveraging machine-learning to mine specifications.
+              Tiago develops tools that localize errors, proves the correctness
+              of algorithms, and mines how we write code to identify anomalies.
             </h1>
             <h1 style="padding-top:1em">
-                    <a href="mailto:tiago.cogumbreiro@umb.edu">Tiago is looking for self-motivated Ph.D. students
+                    <a href="mailto:tiago.cogumbreiro@umb.edu">Tiago is looking for self-motivated students
                     who are interested in improving the quality of our software.
                 </a></h1>
                 </div>
         </div>
     </div>
   </section>
-  <div class="container has-text-centered" style="margin:1em">
-                <a class=" button" href="mailto:tiago.cogumbreiro@umb.edu"><strong>Email me</strong></a>
-                <a class=" button" href="http://dblp.dagstuhl.de/pers/hd/c/Cogumbreiro:Tiago">Publications@DBLP</a>
-                <a class=" button" href="https://scholar.google.com/citations?user=4uTAp_gAAAAJ">Publications@Google Scholar</a>
-                <a class=" button" href="https://github.com/cogumbreiro/">Code@GitHub</a>
-                <a class=" button" href="https://bitbucket.com/cogumbreiro/">Code@Bitbucket</a>
-                <a class=" button" href="https://gitlab.com/cogumbreiro/">Code@Gitlab</a>
-    </div>
 
 
 <div class="content">
 <div class="columns">
 
   <div class="column is-6 is-offset-1 is-centered">
-    <section id="pubs" class="card-content section">
-    <h2>Publications</h2>
+    <section id="pubs" class="section" style="padding:0">
+        <div class="tabs is-centered">
+            <ul>
+              <li class="is-active">
+                  <a>
+                    <span>Publications</span>
+                  </a>
+                </li>
+              <li>
+                <a href="http://dblp.dagstuhl.de/pers/hd/c/Cogumbreiro:Tiago">
+                  <span>@DBLP</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://scholar.google.com/citations?user=4uTAp_gAAAAJ">
+                  <span>@Scholar</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+    
+
     <ul>
     {% include publications.html url="publications.html" %}
     </ul>
