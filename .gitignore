@@ -9,3 +9,4 @@ Gemfile.lock
 *~
 /hj-coq
 /.sass-cache
+/.jekyll-cache

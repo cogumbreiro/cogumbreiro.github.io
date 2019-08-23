@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<section class="hero is-medium">
+  <div class="tabs is-toggle is-toggle-rounded is-centered"
+    style="margin-left: 1em; margin-top:1em; margin-bottom: 1em;">
+    <!--
+    <h1 style="line-height: 36.5px"><a href="{{ site.url}}/">Tiago Cogumbreiro</a></h1>
+    -->
+    <ul>
+      <li><a href="{{ site.url }}/"><span>Tiago Cogumbreiro</span></a></li>
+      <li>
+        <a href="mailto:tiago.cogumbreiro@umb.edu">
+          <span class="icon is-small"><i class="fas fa-envelope"></i></span>
+          <span>Email @umb.edu</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section> <!--Hero-->
+
+  <div class="container">
+    <!-- START ARTICLE FEED -->
+    <section class="articles">
+      <div class="column is-8 is-offset-2">
+          <!-- START ARTICLE -->
+          <div class="card article">
+              <div class="card-content">
+                <div class="content article-body">
+              {{ content }}
+                </div>
+              </div>
+          </div>
+      </div>
+    </section>
+  </div>
