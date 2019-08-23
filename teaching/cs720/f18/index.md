@@ -6,6 +6,8 @@ layout: single
 # CS 720: Logical Foundations of Computer Science
 ## Fall 2018
 
+**[(Download all slides)](all.zip)**
+
 # Course information
 * Room: M-1-0208
 * Schedule: Tuesdays & Thursdays 12:30noon to 1:45pm
@@ -20,7 +22,6 @@ layout: single
 * Software Foundations. Volume 1 and 2. Benjamin Pierce et al. 2018.<br/>
   [`softwarefoundations.cis.upenn.edu`](https://softwarefoundations.cis.upenn.edu/)
 
-* **[Download all course slides](cs720-slides.zip)**
 
 # Course description
 
