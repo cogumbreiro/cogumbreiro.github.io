@@ -7,7 +7,79 @@ layout: single
 # CS 450: Structure of Higher Level Languages
 ## Spring 2019
 
-**[(Download all slides)](all.zip)**
+* **[Lecture video recording login page](https://echo360.org/section/a3b69236-600f-447d-80ef-57d04a21c0e0/public)**
+* **[Download all slides](all.zip)**
+
+
+
+# Course Schedule
+
+Week 1:
+* 01/29 01. [Values, conditionals, function calls [PDF]](lecture01.pdf)
+* 01/31 02. [Definitions, function definition, booleans [PDF]](lecture02.pdf)
+
+Week 2:
+* 02/05 03. [Data structures [PDF]](lecture03.pdf)
+* 02/07 04. [Nested definitions, tail calls, activation frames](lecture04.pdf)
+
+Week 3:
+* 02/12     (school closure)
+* 02/14 05. [Structs, first-class funcs, currying](lecture05.pdf) [(Video)](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-02-14T17:30:00.000_2019-02-14T18:47:00.000/classroom?focus=Video)
+
+Week 4:
+* 02/19 06. [Functional patterns (lists), tail call optimization [PDF]](lecture06.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-02-19T17:30:00.000_2019-02-19T18:47:00.000/classroom)
+* 02/21 07. [Delayed evaluation [PDF]](lecture07.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-02-21T17:30:00.000_2019-02-21T18:47:00.000/classroom)
+
+Week 5:
+* 02/26 08. [Streams [PDF]](lecture08.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-02-21T17:30:00.000_2019-02-21T18:47:00.000/classroom)
+* 02/28 09. [Evaluating expressions [PDF]](lecture09.pdf)  [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-02-28T17:30:00.000_2019-02-28T18:47:00.000/classroom)
+
+Week 6:
+* 03/05 10. [Implementing the λ-Racket [PDF]](lecture10.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-03-05T17:30:00.000_2019-03-05T18:47:00.000/classroom)
+* 03/07 11. [Lexical scopes, function closures [PDF]](lecture11.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-03-05T17:30:00.000_2019-03-05T18:47:00.000/classroom)
+
+Week 7:
+* 03/12 (Spring break)
+* 03/14 (Spring break)
+
+Week 8:
+* 03/19 12. [Implementing the λ<sub>E</sub>-calculus with environments [PDF]](lecture12.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-03-19T17:30:00.000_2019-03-19T18:47:00.000/classroom)
+* 03/21 13. [Shared mutable state and immutability [PDF]](lecture13.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-03-21T17:30:00.000_2019-03-21T18:47:00.000/classroom)
+
+Week 8:
+* 03/26 14. [Mutable environment semantics and frames [PDF]](lecture14.pdf)
+* 03/28 15. [Mutable environment semantics and frames [PDF]](lecture15.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-03-26T17:30:00.000_2019-03-26T18:47:00.000/classroom)
+
+Week 9:
+* 04/02 16. [Garbage collection [PDF]](lecture16.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-04-02T17:30:00.000_2019-04-02T18:47:00.000/classroom)
+* 04/04 17. [Monads [PDF]](lecture17.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-04-04T17:30:00.000_2019-04-04T18:47:00.000/classroom)
+
+Week 10:
+* 04/09 18. [Exceptions [PDF]](lecture18.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-04-09T17:30:00.000_2019-04-09T18:47:00.000/classroom)
+* 04/11 19. [Continuations [PDF]](lecture19.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-04-11T17:30:00.000_2019-04-11T18:47:00.000/classroom)
+
+Week 11:
+* 04/16 20. [What is a PhD? / Pattern matching [PDF]](lecture20.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-04-16T17:30:00.000_2019-04-16T18:47:00.000/classroom)
+* 04/18 21. [Pattern matching & Dynamic dispatching [PDF]](lecture21.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-04-18T17:30:00.000_2019-04-18T18:47:00.000/classroom)
+
+Week 12:
+* 04/23 22. [Macros [PDF]](lecture22.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-04-23T17:30:00.000_2019-04-23T18:47:00.000/classroom)
+* 04/24 23. [Intro to OOP [PDF]](lecture23.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-04-25T17:30:00.000_2019-04-25T18:47:00.000/classroom)
+
+Week 13:
+* 04/30 24. [Inheritance [PDF]](lecture24.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-04-30T17:30:00.000_2019-04-30T18:47:00.000/classroom)
+* 05/02 25. [Deconstructing JavaScript (I) [PDF]](lecture25.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-05-02T17:30:00.000_2019-05-02T18:47:00.000/classroom)
+
+Week 14:
+* 05/07 26. [Deconstructing JavaScript (II) [PDF]](lecture26.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-05-07T17:30:00.000_2019-05-07T18:47:00.000/classroom)
+* 05/09 27. [Semester Wrap Up & Parallelism [PDF]](lecture27.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-05-09T17:30:00.000_2019-05-09T18:47:00.000/classroom)
+
+Week 18:
+* 05/14 28. Conclusion [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-05-14T17:30:00.000_2019-05-14T18:47:00.000/classroom)
+
+
+# Syllabus
+
 
 ## Instructor contact
 * Email: Tiago.Cogumbreiro@umb.edu
@@ -138,77 +210,4 @@ and Cheating, to the University Statement on Plagiarism and the Documentation of
 Written Work, and to the Code of Student Conduct as delineated in the catalog of
 Undergraduate Programs, pp.  44-45, and 48-52.  [The Code is available online.](https://www.umb.edu/life_on_campus/policies/community/code)
 
-# Schedule
-
-Week 1:
-                              HW1
-* 01/29 01. [Values, conditionals, function calls [PDF]](lecture01.pdf)
-* 01/31 02. [Definitions, function definition, booleans [PDF]](lecture02.pdf)
-
-Week 2:
-* 02/05 03. [Data structures [PDF]](lecture03.pdf)
-                              HW2
-* 02/07 04. [Nested definitions, tail calls, activation frames](lecture04.pdf)
-
-Week 3:
-* 02/12     (school closure)
-* 02/14 05. (HW1 deadline) [Structs, first-class funcs, currying](lecture05.pdf)
-
-Week 4:
-* 02/19 06. [Functional patterns (lists), tail call optimization](lecture06.pdf)
-                              HW3
-* 02/21 07. [Delayed evaluation [PDF]](lecture07.pdf)
-
-Week 5:
-* 02/26 08. [Streams [PDF]](lecture08.pdf) (HW2 deadline)
-* 02/28 09. [Evaluating expressions [PDF]](lecture09.pdf) (Calc-Racket)
-
-Week 6:
-                              HW4
-* 03/05 10. [Implementing the λ-Racket [PDF]](lecture10.pdf)
-* 03/07 11. (HW3 deadline) [Lexical scopes, function closures [PDF]](lecture11.pdf)
-
-Week 7:
-* 03/12 (Spring break)
-* 03/14 (Spring break)
-
-Week 8:
-* 03/19 12. [Implementing the λ<sub>E</sub>-calculus with environments [PDF]](lecture12.pdf), closures
-                            HW5
-* 03/21 13. [Shared mutable state and immutability [PDF]](lecture13.pdf)
-
-Week 8:
-* 03/26 14. (HW4 deadline) [Mutable environment semantics and frames [PDF]](lecture14.pdf)
-* 03/28 15. [Mutable environment semantics and frames [PDF]](lecture14.pdf)
-                            HW6
-
-Week 9:
-* 04/02 16. [Garbage collection [PDF]](lecture16.pdf)
-* 04/04 17. (HW5 deadline) [Monads [PDF]](lecture17.pdf)
-
-Week 10:
-* 04/09 18. [Exceptions [PDF]](lecture18.pdf)
-                            HW7
-* 04/11 19. [Continuations [PDF]](lecture19.pdf)
-
-Week 11:
-* 04/16 20. (HW6 deadline) [What is a PhD? / Pattern matching [PDF]](lecture20.pdf)
-* 04/18 21. [Pattern matching & Dynamic dispatching [PDF]](lecture21.pdf)
-
-Week 12:
-                            HW8
-* 04/23 22. [Macros [PDF]](lecture22.pdf)
-* 04/24 23. [Intro to OOP [PDF]](lecture23.pdf)
-
-Week 13:
-* 04/30 24. [Inheritance [PDF]](lecture24.pdf)
-                            HW9
-* 05/02 25. [Deconstructing JavaScript (I) [PDF]](lecture25.pdf)
-
-Week 14:
-* 05/07 26. [Deconstructing JavaScript (II) [PDF]](lecture26.pdf)
-* 05/09 27. [Semester Wrap Up & Parallelism [PDF]](lecture27.pdf)
-
-Week 18:
-* 05/14 28. victory lap (HW7, HW8 deadline)
 
