@@ -34,7 +34,7 @@ Week 4:
 Week 5:
 
 * [Lecture 9 [PDF]](lecture9.pdf), Oct  2 (Tue): Inductively defined propositions (`IndProp.v`).
-* [Lecture 10 [PDF](lecture10.pdf), Oct  4 (Thu): Inductively defined propositions and proof objects (`IndProp.v`, `ProofObjects.v`) **Homework 5 due:** `Logic.v`
+* [Lecture 10 [PDF]](lecture10.pdf), Oct  4 (Thu): Inductively defined propositions and proof objects (`IndProp.v`, `ProofObjects.v`) **Homework 5 due:** `Logic.v`
 
 Week 6:
 

@@ -20,11 +20,11 @@ Week 1:
 
 Week 2:
 * 02/05 03. [Data structures [PDF]](lecture03.pdf)
-* 02/07 04. [Nested definitions, tail calls, activation frames](lecture04.pdf)
+* 02/07 04. [Nested definitions, tail calls, activation frames [PDF]](lecture04.pdf)
 
 Week 3:
 * 02/12     (school closure)
-* 02/14 05. [Structs, first-class funcs, currying](lecture05.pdf) [(Video)](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-02-14T17:30:00.000_2019-02-14T18:47:00.000/classroom?focus=Video)
+* 02/14 05. [Structs, first-class funcs, currying [PDF]](lecture05.pdf) [(Video)](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-02-14T17:30:00.000_2019-02-14T18:47:00.000/classroom?focus=Video)
 
 Week 4:
 * 02/19 06. [Functional patterns (lists), tail call optimization [PDF]](lecture06.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-02-19T17:30:00.000_2019-02-19T18:47:00.000/classroom)
