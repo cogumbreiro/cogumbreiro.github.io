@@ -1,11 +1,12 @@
 ---
 author: Tiago Cogumbreiro
-title: CS 450 - Structure of Higher Level Languages - Fall 2018
+semester: Spring 2019
+title: "CS 450: Structure of Higher Level Languages"
 layout: single
 ---
 
-# CS 450: Structure of Higher Level Languages
-## Spring 2019
+# {{ page.title }}
+## {{ page.semester }}
 
 * **[Lecture video recording login page](https://echo360.org/section/a3b69236-600f-447d-80ef-57d04a21c0e0/public)**
 * **[Download all slides](all.zip)**
