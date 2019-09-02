@@ -18,11 +18,11 @@ layout: single
 # Course information
 * **Location:** `W02-0158`, Wheatley
 * **Schedule:** Tuesdays & Thursdays 5:30pm to 6:45pm
-* **Office hours:** Tuesdays & Thursdays 3:30pm to 5:00pm
 
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
 * **Office:** `S-3-183`, Science Center
+* **Office hours:** Tuesdays & Thursdays 3:30pm to 5:00pm
 
 ## Class Schedule
 
