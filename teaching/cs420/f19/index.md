@@ -13,7 +13,9 @@ layout: single
 <a class="button is-large is-link" href="https://piazza.com/umb/fall2019/cs420/home">Forum</a>
 <a class="button is-large is-link" href="https://umb.umassonline.net/webapps/blackboard/content/listContentEditable.jsp?content_id=_3274098_1&course_id=_62251_1&mode=reset">Homework submission</a>
 <a class="button is-large is-link" href="https://www.estalee.com/">Attendance (ZS40HJD)</a>
+<a class="button is-large is-link" href="https://echo360.org/section/4014960b-8e39-4409-bbce-503fed3244ee/home">Video Recordings</a>
 </div>
+
 
 # Course information
 * **Location:** `W02-0158`, Wheatley
@@ -28,11 +30,10 @@ layout: single
 
 **Note:** Any lecture titles in future dates are considered tentative.
 
-
-| Date       | # | Lecture      | Section | Slides | Homework |
-|:-----------|-:|:-------------|:-------------|---|---|
-| Tu, Sep 03 | 1 | Deterministic Finite Automata | § 1.1  | [PDF](lecture01.pdf) | [HW1](hw1.pdf) |
-| Th, Sep 05 | 2 | DFA operations | § 1.1 | PDF |
+| Date       | # | Lecture      | Section | Slides | <acronym title="Homework">HW</acronym> |
+|:-----------|-:|:-------------|:-------------|---|
+| Tu, Sep 03 | 1 | Deterministic Finite Automata | § 1.1  | [PDF](lecture01.pdf)  | [HW1](hw1.pdf) |
+| Th, Sep 05 | 2 | DFA operations | § 1.1 | [PDF](lecture02.pdf) |
 | Tu, Sep 10 | 3 | Nondeterministic Finite Automata | § 1.2 | PDF |
 | Th, Sep 12 | 4 | NFA operations; NFA ⇔ DFA | § 1.2 | PDF |
 | Tu, Sep 17 | 5 | Regular expressions | § 1.3 | PDF |
