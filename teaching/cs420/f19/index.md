@@ -29,9 +29,9 @@ layout: single
 **Note:** Any lecture titles in future dates are considered tentative.
 
 
-| Date       | # | Lecture      | Section | Slides |
-|:-----------|-:|:-------------|:-------------|---|
-| Tu, Sep 03 | 1 | Deterministic Finite Automata | § 1.1  | [PDF](lecture01.pdf) |
+| Date       | # | Lecture      | Section | Slides | Homework |
+|:-----------|-:|:-------------|:-------------|---|---|
+| Tu, Sep 03 | 1 | Deterministic Finite Automata | § 1.1  | [PDF](lecture01.pdf) | [HW1](hw1.pdf) |
 | Th, Sep 05 | 2 | DFA operations | § 1.1 | PDF |
 | Tu, Sep 10 | 3 | Nondeterministic Finite Automata | § 1.2 | PDF |
 | Th, Sep 12 | 4 | NFA operations; NFA ⇔ DFA | § 1.2 | PDF |
