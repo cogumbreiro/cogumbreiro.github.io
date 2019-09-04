@@ -11,7 +11,7 @@ layout: single
 <div class="buttons is-centered">
 <a class="button is-large is-link" href="syllabus.pdf">Syllabus</a>
 <a class="button is-large is-link" href="https://piazza.com/umb/fall2019/cs420/home">Forum</a>
-<a class="button is-large is-link" href="https://umb.umassonline.net/webapps/blackboard/execute/launcher?type=Course&id=_62251_1&url=">Homework submission</a>
+<a class="button is-large is-link" href="https://umb.umassonline.net/webapps/blackboard/content/listContentEditable.jsp?content_id=_3274098_1&course_id=_62251_1&mode=reset">Homework submission</a>
 <a class="button is-large is-link" href="https://www.estalee.com/">Attendance (ZS40HJD)</a>
 </div>
 
