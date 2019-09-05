@@ -3,6 +3,8 @@ author: Tiago Cogumbreiro
 semester: Fall 2019
 title: "CS 420: Introduction to the Theory of Computation"
 layout: single
+video1: https://echo360.org/lesson/G_c85315a8-ceeb-4b53-808a-02f74851bd02_4014960b-8e39-4409-bbce-503fed3244ee_2019-09-03T17:30:00.000_2019-09-03T18:47:00.000/classroom#sortDirection=desc
+video2: 
 ---
 
 # {{ page.title }}
@@ -30,35 +32,35 @@ layout: single
 
 **Note:** Any lecture titles in future dates are considered tentative.
 
-| Date       | # | Lecture      | Section | Slides | <acronym title="Homework">HW</acronym> |
+| Date       | # | Lecture      | Section | Material | <acronym title="Homework">HW</acronym> |
 |:-----------|-:|:-------------|:-------------|---|
-| Tu, Sep 03 | 1 | Deterministic Finite Automata | § 1.1  | [PDF](lecture01.pdf)  | [HW1](hw1.pdf) |
-| Th, Sep 05 | 2 | DFA operations | § 1.1 | [PDF](lecture02.pdf) |
-| Tu, Sep 10 | 3 | Nondeterministic Finite Automata | § 1.2 | PDF |
-| Th, Sep 12 | 4 | NFA operations; NFA ⇔ DFA | § 1.2 | PDF |
-| Tu, Sep 17 | 5 | Regular expressions | § 1.3 | PDF |
-| Th, Sep 19 | 6 | Pumping lemma; Non-regular languages | § 1.4 | PDF|
-| Tu, Sep 24 | 7 | Context-free grammars | § 2.1 | PDF |
-| Th, Sep 26 | 8 | Chomsky Normal Form | § 2.1 | PDF |
+| Tu, Sep 03 | 1 | Deterministic Finite Automata | § 1.1  | {% include_relative links.html slides-url="lecture01.pdf" recording-url=page.video1 %} | [HW1](hw1.pdf) |
+| Th, Sep 05 | 2 | DFA operations | § 1.1 | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 %} |
+| Tu, Sep 10 | 3 | Nondeterministic Finite Automata | § 1.2 | {% include_relative links.html %} |
+| Th, Sep 12 | 4 | NFA operations; NFA ⇔ DFA | § 1.2 | {% include_relative links.html %} |
+| Tu, Sep 17 | 5 | Regular expressions | § 1.3 | {% include_relative links.html %} |
+| Th, Sep 19 | 6 | Pumping lemma; Non-regular languages | § 1.4 | {% include_relative links.html %}|
+| Tu, Sep 24 | 7 | Context-free grammars | § 2.1 | {% include_relative links.html %} |
+| Th, Sep 26 | 8 | Chomsky Normal Form | § 2.1 | {% include_relative links.html %} |
 | Tu, Oct 01 | | (Module 1 recap)
 | Th, Oct 03 | | (Minit-test 1)
-| Tu, Oct 08 | 9 | Pushdown Atomata | § 2.2 | PDF |
-| Th, Oct 10 | 10 | PDA ⇔ CFG | § 2.2 | PDF |
-| Tu, Oct 15 | 11 | Pumping lemma; Non-context-free Languages | § 2.2 | PDF |
-| Th, Oct 17 | 12 | Turing Machines | § 3.1 | PDF |
-| Tu, Oct 22 | 13 | Variants of Turing Machines | § 3.2 | PDF |
-| Th, Oct 24 | 14|  Acceptance, emptiness and equality tests | § 4.1 | PDF |
-| Tu, Oct 29 | 15 | Countable and uncountable sets | § 4.2 | PDF |
-| Th, Oct 31 | 16 | TM Acceptance | § 4.2 | PDF |
+| Tu, Oct 08 | 9 | Pushdown Atomata | § 2.2 | {% include_relative links.html %} |
+| Th, Oct 10 | 10 | PDA ⇔ CFG | § 2.2 | {% include_relative links.html %} |
+| Tu, Oct 15 | 11 | Pumping lemma; Non-context-free Languages | § 2.2 | {% include_relative links.html %} |
+| Th, Oct 17 | 12 | Turing Machines | § 3.1 | {% include_relative links.html %} |
+| Tu, Oct 22 | 13 | Variants of Turing Machines | § 3.2 | {% include_relative links.html %} |
+| Th, Oct 24 | 14|  Acceptance, emptiness and equality tests | § 4.1 | {% include_relative links.html %} |
+| Tu, Oct 29 | 15 | Countable and uncountable sets | § 4.2 | {% include_relative links.html %} |
+| Th, Oct 31 | 16 | TM Acceptance | § 4.2 | {% include_relative links.html %} |
 | Tu, Nov 05 | | (Module 2 recap) | |
 | Th, Nov 07 | | (Mini-Test 2) | |
-| Tu, Nov 12 | 17 |  Undecidable problems | § 5.1 | PDF |
-| Th, Nov 14 | 18 | Reduction via Computation Histories | § 5.1 | PDF |
-| Tu, Nov 19 | 19 | Mapping reducibility | § 5.3 | PDF |
-| Th, Nov 21 | 20 | Mapping reducibility | § 5.3 | PDF |
-| Tu, Nov 26 | 21 | Measuring complexity | § 7.1 | PDF |
+| Tu, Nov 12 | 17 |  Undecidable problems | § 5.1 | {% include_relative links.html %} |
+| Th, Nov 14 | 18 | Reduction via Computation Histories | § 5.1 | {% include_relative links.html %} |
+| Tu, Nov 19 | 19 | Mapping reducibility | § 5.3 | {% include_relative links.html %} |
+| Th, Nov 21 | 20 | Mapping reducibility | § 5.3 | {% include_relative links.html %} |
+| Tu, Nov 26 | 21 | Measuring complexity | § 7.1 | {% include_relative links.html %} |
 | Th, Nov 28 | | (Thanksgiving recess)        | |
-| Tu, Dec 03 | 22 | The Class P | § 7.2  | PDF |
-| Th, Dec 05 | 23 | The Class NP/ NP Completeness | § 7.3 | PDF |
+| Tu, Dec 03 | 22 | The Class P | § 7.2  | {% include_relative links.html %} |
+| Th, Dec 05 | 23 | The Class NP/ NP Completeness | § 7.3 | {% include_relative links.html %} |
 | Tu, Dec 10 | | (Module 3 recap) | |
 | Th, Dec 12 | | (Mini-Test 3) | |
