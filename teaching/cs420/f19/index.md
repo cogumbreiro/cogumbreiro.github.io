@@ -4,7 +4,8 @@ semester: Fall 2019
 title: "CS 420: Introduction to the Theory of Computation"
 layout: single
 video1: https://echo360.org/lesson/G_c85315a8-ceeb-4b53-808a-02f74851bd02_4014960b-8e39-4409-bbce-503fed3244ee_2019-09-03T17:30:00.000_2019-09-03T18:47:00.000/classroom#sortDirection=desc
-video2: 
+video2: https://echo360.org/lesson/G_c85315a8-ceeb-4b53-808a-02f74851bd02_4014960b-8e39-4409-bbce-503fed3244ee_2019-09-05T17:30:00.000_2019-09-05T18:47:00.000/classroom#sortDirection=desc
+video3: 
 ---
 
 # {{ page.title }}
