@@ -3,8 +3,8 @@ author: Tiago Cogumbreiro
 semester: Fall 2019
 title: "CS 420: Introduction to the Theory of Computation"
 layout: single
-video1: https://echo360.org/lesson/G_c85315a8-ceeb-4b53-808a-02f74851bd02_4014960b-8e39-4409-bbce-503fed3244ee_2019-09-03T17:30:00.000_2019-09-03T18:47:00.000/classroom#sortDirection=desc
-video2: https://echo360.org/lesson/G_c85315a8-ceeb-4b53-808a-02f74851bd02_4014960b-8e39-4409-bbce-503fed3244ee_2019-09-05T17:30:00.000_2019-09-05T18:47:00.000/classroom#sortDirection=desc
+video1: https://echo360.org/media/3fc6131e-60e6-4092-aeb3-6821114b276b/public
+video2: https://echo360.org/media/cf5c78f0-0f52-4cd8-bf67-189e25437e70/public
 video3: 
 ---
 
@@ -16,7 +16,7 @@ video3:
 <a class="button is-large is-link" href="https://piazza.com/umb/fall2019/cs420/home">Forum</a>
 <a class="button is-large is-link" href="https://umb.umassonline.net/webapps/blackboard/content/listContentEditable.jsp?content_id=_3274098_1&course_id=_62251_1&mode=reset">Homework submission</a>
 <a class="button is-large is-link" href="https://www.estalee.com/">Attendance (ZS40HJD)</a>
-<a class="button is-large is-link" href="https://echo360.org/section/4014960b-8e39-4409-bbce-503fed3244ee/home">Video Recordings</a>
+<a class="button is-large is-link" href="https://echo360.org/section/c4732671-9a09-4122-ae27-47103529a0cb/public">Video Recordings</a>
 </div>
 
 
