@@ -36,7 +36,7 @@ video3:
 | Date       | # | Lecture      | Section | Material | <acronym title="Homework">HW</acronym> |
 |:-----------|-:|:-------------|:-------------|---|
 | Tu, Sep 03 | 1 | Deterministic Finite Automata | § 1.1  | {% include_relative links.html slides-url="lecture01.pdf" recording-url=page.video1 %} | [HW1](hw1.pdf) |
-| Th, Sep 05 | 2 | DFA operations | § 1.1 | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 %} | [HW2](hw2.pdf) |
+| Th, Sep 05 | 2 | DFA operations | § 1.1 | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 %} | |
 | Tu, Sep 10 | 3 | Nondeterministic Finite Automata | § 1.2 | {% include_relative links.html %} |
 | Th, Sep 12 | 4 | NFA operations; NFA ⇔ DFA | § 1.2 | {% include_relative links.html %} |
 | Tu, Sep 17 | 5 | Regular expressions | § 1.3 | {% include_relative links.html %} |
