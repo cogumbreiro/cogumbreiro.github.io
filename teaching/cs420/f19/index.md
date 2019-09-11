@@ -5,7 +5,7 @@ title: "CS 420: Introduction to the Theory of Computation"
 layout: single
 video1: https://echo360.org/media/3fc6131e-60e6-4092-aeb3-6821114b276b/public
 video2: https://echo360.org/media/cf5c78f0-0f52-4cd8-bf67-189e25437e70/public
-video3: 
+video3: https://echo360.org/media/428a8801-30f2-465d-ba84-d8706724eaaa/public
 ---
 
 # {{ page.title }}
@@ -37,7 +37,7 @@ video3:
 |:-----------|-:|:-------------|:-------------|---|
 | Tu, Sep 03 | 1 | Deterministic Finite Automata | § 1.1  | {% include_relative links.html slides-url="lecture01.pdf" recording-url=page.video1 %} | [HW1](hw1.pdf) |
 | Th, Sep 05 | 2 | DFA operations | § 1.1 | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 %} | |
-| Tu, Sep 10 | 3 | Nondeterministic Finite Automata | § 1.2 | {% include_relative links.html %} |
+| Tu, Sep 10 | 3 | Nondeterministic Finite Automata | § 1.2 | {% include_relative links.html slides-url="lecture03.pdf" recording-url=page.video3 %} | [HW2](hw2.pdf) |
 | Th, Sep 12 | 4 | NFA operations; NFA ⇔ DFA | § 1.2 | {% include_relative links.html %} |
 | Tu, Sep 17 | 5 | Regular expressions | § 1.3 | {% include_relative links.html %} |
 | Th, Sep 19 | 6 | Pumping lemma; Non-regular languages | § 1.4 | {% include_relative links.html %}|
