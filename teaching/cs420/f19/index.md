@@ -6,6 +6,7 @@ layout: single
 video1: https://echo360.org/media/3fc6131e-60e6-4092-aeb3-6821114b276b/public
 video2: https://echo360.org/media/cf5c78f0-0f52-4cd8-bf67-189e25437e70/public
 video3: https://echo360.org/media/428a8801-30f2-465d-ba84-d8706724eaaa/public
+video4: https://echo360.org/media/ab2fd8b4-e488-47d6-a17a-ce15bd6403c2/public
 ---
 
 # {{ page.title }}
@@ -38,7 +39,7 @@ video3: https://echo360.org/media/428a8801-30f2-465d-ba84-d8706724eaaa/public
 | Tu, Sep 03 | 1 | Deterministic Finite Automata | § 1.1  | {% include_relative links.html slides-url="lecture01.pdf" recording-url=page.video1 %} | [HW1](hw1.pdf) |
 | Th, Sep 05 | 2 | DFA operations | § 1.1 | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 %} | |
 | Tu, Sep 10 | 3 | Nondeterministic Finite Automata; NFA ⇔ DFA | § 1.2 | {% include_relative links.html slides-url="lecture03.pdf" recording-url=page.video3 %} | [HW2](hw2.pdf) |
-| Th, Sep 12 | 4 | NFA operations | § 1.2 | {% include_relative links.html slides-url="lecture04.pdf" %} |
+| Th, Sep 12 | 4 | NFA operations | § 1.2 | {% include_relative links.html slides-url="lecture04.pdf" recording-url=page.video4 %} |
 | Tu, Sep 17 | 5 | Regular expressions | § 1.3 | {% include_relative links.html %} |
 | Th, Sep 19 | 6 | Pumping lemma; Non-regular languages | § 1.4 | {% include_relative links.html %}|
 | Tu, Sep 24 | 7 | Context-free grammars | § 2.1 | {% include_relative links.html %} |
