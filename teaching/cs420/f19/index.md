@@ -41,7 +41,7 @@ video5: https://echo360.org/media/f4d1b893-932e-49ff-aac6-7db3a1fa2216/public
 | Th, Sep 05 | 2 | DFA operations | § 1.1 | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 %} | |
 | Tu, Sep 10 | 3 | Nondeterministic Finite Automata; NFA ⇔ DFA | § 1.2 | {% include_relative links.html slides-url="lecture03.pdf" recording-url=page.video3 %} | [HW2](hw2.pdf) |
 | Th, Sep 12 | 4 | NFA operations | § 1.2 | {% include_relative links.html slides-url="lecture04.pdf" recording-url=page.video4 %} |
-| Tu, Sep 17 | 5 | Regular expressions | § 1.3 | {% include_relative links.html slides-url="lecture05.pdf" recording-url=page.video5 %} |
+| Tu, Sep 17 | 5 | Regular expressions | § 1.3 | {% include_relative links.html slides-url="lecture05.pdf" recording-url=page.video5 %} | [HW3](hw3.pdf) |
 | Th, Sep 19 | 6 | Pumping lemma; Non-regular languages | § 1.4 | {% include_relative links.html %}|
 | Tu, Sep 24 | 7 | Context-free grammars | § 2.1 | {% include_relative links.html %} |
 | Th, Sep 26 | 8 | Chomsky Normal Form | § 2.1 | {% include_relative links.html %} |
