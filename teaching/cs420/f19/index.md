@@ -38,12 +38,12 @@ video6: https://echo360.org/media/7ea30802-29d0-4340-ba68-0b8582946fd8/public
 
 | Date       | # | Lecture      | Section | Material | <acronym title="Homework">HW</acronym> |
 |:-----------|-:|:-------------|:-------------|---|
-| Tu, Sep 03 | 1 | Deterministic Finite Automata | § 1.1  | {% include_relative links.html slides-url="lecture01.pdf" recording-url=page.video1 %} | [HW1](hw1.pdf) |
-| Th, Sep 05 | 2 | DFA operations | § 1.1 | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 %} | |
-| Tu, Sep 10 | 3 | Nondeterministic Finite Automata; NFA ⇔ DFA | § 1.2 | {% include_relative links.html slides-url="lecture03.pdf" recording-url=page.video3 %} | [HW2](hw2.pdf) |
-| Th, Sep 12 | 4 | NFA operations | § 1.2 | {% include_relative links.html slides-url="lecture04.pdf" recording-url=page.video4 %} |
-| Tu, Sep 17 | 5 | Regular expressions | § 1.3 | {% include_relative links.html slides-url="lecture05.pdf" recording-url=page.video5 %} | [HW3](hw3.pdf) |
-| Th, Sep 19 | 6 | Pumping lemma; Non-regular languages | § 1.4 | {% include_relative links.html slides-url="lecture06.pdf" recording-url=page.video6 %}|
+| Tu, Sep 03 | 1 | [Deterministic Finite Automata](lecture01.html) | § 1.1  | {% include_relative links.html slides-url="lecture01.pdf" recording-url=page.video1 %} | [HW1](hw1.pdf) |
+| Th, Sep 05 | 2 | [DFA operations](lecture02.html) | § 1.1 | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 %} | |
+| Tu, Sep 10 | 3 | [Nondeterministic Finite Automata; NFA ⇔ DFA](lecture03.html) | § 1.2 | {% include_relative links.html slides-url="lecture03.pdf" recording-url=page.video3 %} | [HW2](hw2.pdf) |
+| Th, Sep 12 | 4 | [NFA operations](lecture04.html) | § 1.2 | {% include_relative links.html slides-url="lecture04.pdf" recording-url=page.video4 %} |
+| Tu, Sep 17 | 5 | [Regular expressions](lecture05.html) | § 1.3 | {% include_relative links.html slides-url="lecture05.pdf" recording-url=page.video5 %} | [HW3](hw3.pdf) |
+| Th, Sep 19 | 6 | [Pumping lemma; Non-regular languages](lecture06.html) | § 1.4 | {% include_relative links.html slides-url="lecture06.pdf" recording-url=page.video6 %}|
 | Tu, Sep 24 | 7 | Context-free grammars | § 2.1 | {% include_relative links.html %} |
 | Th, Sep 26 | 8 | Chomsky Normal Form | § 2.1 | {% include_relative links.html %} |
 | Tu, Oct 01 | | (Module 1 recap)
