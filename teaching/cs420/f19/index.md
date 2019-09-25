@@ -45,7 +45,7 @@ video7: https://echo360.org/media/a00ccbb4-1b24-4cdf-9041-b133698a0883/public
 | Th, Sep 12 | 4 | [NFA operations](lecture04.html) | § 1.2 | {% include_relative links.html slides-url="lecture04.pdf" recording-url=page.video4 %} |
 | Tu, Sep 17 | 5 | [Regular expressions](lecture05.html) | § 1.3 | {% include_relative links.html slides-url="lecture05.pdf" recording-url=page.video5 %} | [HW3](hw3.pdf) |
 | Th, Sep 19 | 6 | [Pumping lemma; Non-regular languages](lecture06.html) | § 1.4 | {% include_relative links.html slides-url="lecture06.pdf" recording-url=page.video6 %}|
-| Tu, Sep 24 | 7 | [Context-free grammars](lecture07.html) | § 2.1 | {% include_relative links.html slides-url="lecture07.pdf" recording-url=page.video7 %} |
+| Tu, Sep 24 | 7 | [Context-free grammars](lecture07.html) | § 2.1 | {% include_relative links.html slides-url="lecture07.pdf" recording-url=page.video7 %} | [HW4](hw4.pdf)
 | Th, Sep 26 | 8 | Chomsky Normal Form | § 2.1 | {% include_relative links.html %} |
 | Tu, Oct 01 | | (Module 1 recap)
 | Th, Oct 03 | | (Minit-test 1)
