@@ -10,6 +10,7 @@ video4: https://echo360.org/media/ab2fd8b4-e488-47d6-a17a-ce15bd6403c2/public
 video5: https://echo360.org/media/f4d1b893-932e-49ff-aac6-7db3a1fa2216/public
 video6: https://echo360.org/media/7ea30802-29d0-4340-ba68-0b8582946fd8/public
 video7: https://echo360.org/media/a00ccbb4-1b24-4cdf-9041-b133698a0883/public
+video8: https://echo360.org/media/46208eef-a98e-4f23-9cea-7f47d727aa46/public
 ---
 
 # {{ page.title }}
@@ -46,7 +47,7 @@ video7: https://echo360.org/media/a00ccbb4-1b24-4cdf-9041-b133698a0883/public
 | Tu, Sep 17 | 5 | [Regular expressions](lecture05.html) | § 1.3 | {% include_relative links.html slides-url="lecture05.pdf" recording-url=page.video5 %} | [HW3](hw3.pdf) |
 | Th, Sep 19 | 6 | [Pumping lemma; Non-regular languages](lecture06.html) | § 1.4 | {% include_relative links.html slides-url="lecture06.pdf" recording-url=page.video6 %}|
 | Tu, Sep 24 | 7 | [Context-free grammars](lecture07.html) | § 2.1 | {% include_relative links.html slides-url="lecture07.pdf" recording-url=page.video7 %} | [HW4](hw4.pdf)
-| Th, Sep 26 | 8 | Chomsky Normal Form | § 2.1 | {% include_relative links.html %} |
+| Th, Sep 26 | 8 | [Chomsky Normal Form](lecture08.html) | § 2.1 | {% include_relative links.html slides-url="lecture08.pdf" recording-url=page.video8 %} |
 | Tu, Oct 01 | | (Module 1 recap)
 | Th, Oct 03 | | (Minit-test 1)
 | Tu, Oct 08 | 9 | Pushdown Atomata | § 2.2 | {% include_relative links.html %} |
