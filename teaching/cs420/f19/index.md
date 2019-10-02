@@ -49,7 +49,7 @@ module1: https://echo360.org/media/c6c27e65-480e-4f90-9f84-367dd3d39010/public
 | Th, Sep 19 | 6 | [Pumping lemma; Non-regular languages](lecture06.html) | § 1.4 | {% include_relative links.html slides-url="lecture06.pdf" recording-url=page.video6 %}|
 | Tu, Sep 24 | 7 | [Context-free grammars](lecture07.html) | § 2.1 | {% include_relative links.html slides-url="lecture07.pdf" recording-url=page.video7 %} | [HW4](hw4.pdf)
 | Th, Sep 26 | 8 | [Chomsky Normal Form](lecture08.html) | § 2.1 | {% include_relative links.html slides-url="lecture08.pdf" recording-url=page.video8 %} |
-| Tu, Oct 01 | | [(Module 1 recap)](module-1.html) | {% include_relative links.html slides-url="module-1.pdf" recording-url=page.module1 %}
+| Tu, Oct 01 | | [(Module 1 recap)](module-1.html) | | {% include_relative links.html slides-url="module-1.pdf" recording-url=page.module1 %}
 | Th, Oct 03 | | (Minit-test 1)
 | Tu, Oct 08 | 9 | Pushdown Atomata | § 2.2 | {% include_relative links.html %} |
 | Th, Oct 10 | 10 | PDA ⇔ CFG | § 2.2 | {% include_relative links.html %} |
