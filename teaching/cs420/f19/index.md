@@ -33,7 +33,7 @@ module1: https://echo360.org/media/c6c27e65-480e-4f90-9f84-367dd3d39010/public
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
 * **Office:** `S-3-183`, Science Center
-* **Office hours:** Tuesdays & Thursdays 3:30pm to 5:00pm
+* **Office hours:** Tuesdays & Thursdays 2:30pm to 4:00pm
 
 ## Class Schedule
 
