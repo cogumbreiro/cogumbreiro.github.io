@@ -11,6 +11,7 @@ video5: https://echo360.org/media/f4d1b893-932e-49ff-aac6-7db3a1fa2216/public
 video6: https://echo360.org/media/7ea30802-29d0-4340-ba68-0b8582946fd8/public
 video7: https://echo360.org/media/a00ccbb4-1b24-4cdf-9041-b133698a0883/public
 video8: https://echo360.org/media/46208eef-a98e-4f23-9cea-7f47d727aa46/public
+video9: https://echo360.org/media/5d87087a-f85e-4a73-9c9a-760c22746da8/public
 module1: https://echo360.org/media/c6c27e65-480e-4f90-9f84-367dd3d39010/public
 ---
 
@@ -51,7 +52,7 @@ module1: https://echo360.org/media/c6c27e65-480e-4f90-9f84-367dd3d39010/public
 | Th, Sep 26 | 8 | [Chomsky Normal Form](lecture08.html) | § 2.1 | {% include_relative links.html slides-url="lecture08.pdf" recording-url=page.video8 %} |
 | Tu, Oct 01 | | [(Module 1 recap)](module-1.html) | | {% include_relative links.html slides-url="module-1.pdf" recording-url=page.module1 %}
 | Th, Oct 03 | | (Minit-test 1)
-| Tu, Oct 08 | 9 | Pushdown Atomata | § 2.2 | {% include_relative links.html %} |
+| Tu, Oct 08 | 9 | [Pushdown Atomata](lecture09.html) | § 2.2 | {% include_relative links.html slides-url="lecture09.pdf" recording-url=page.video9 %} |
 | Th, Oct 10 | 10 | PDA ⇔ CFG | § 2.2 | {% include_relative links.html %} |
 | Tu, Oct 15 | 11 | Pumping lemma; Non-context-free Languages | § 2.2 | {% include_relative links.html %} |
 | Th, Oct 17 | 12 | Turing Machines | § 3.1 | {% include_relative links.html %} |
