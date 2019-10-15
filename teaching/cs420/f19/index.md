@@ -13,6 +13,7 @@ video7: https://echo360.org/media/a00ccbb4-1b24-4cdf-9041-b133698a0883/public
 video8: https://echo360.org/media/46208eef-a98e-4f23-9cea-7f47d727aa46/public
 video9: https://echo360.org/media/5d87087a-f85e-4a73-9c9a-760c22746da8/public
 module1: https://echo360.org/media/c6c27e65-480e-4f90-9f84-367dd3d39010/public
+video10: https://echo360.org/media/60e1ce62-99ef-478f-a6b0-4b1fbd2c10a5/public
 ---
 
 # {{ page.title }}
@@ -53,7 +54,7 @@ module1: https://echo360.org/media/c6c27e65-480e-4f90-9f84-367dd3d39010/public
 | Tu, Oct 01 | | [(Module 1 recap)](module-1.html) | | {% include_relative links.html slides-url="module-1.pdf" recording-url=page.module1 %}
 | Th, Oct 03 | | (Minit-test 1)
 | Tu, Oct 08 | 9 | [Pushdown Atomata](lecture09.html) | § 2.2 | {% include_relative links.html slides-url="lecture09.pdf" recording-url=page.video9 %} |
-| Th, Oct 10 | 10 | PDA ⇔ CFG | § 2.2 | {% include_relative links.html %} |
+| Th, Oct 10 | 10 | [PDA ⇔ CFG](lecture10.html) | § 2.2 | {% include_relative links.html slides-url="lecture10.pdf" recording-url=page.video10 %} |
 | Tu, Oct 15 | 11 | Pumping lemma; Non-context-free Languages | § 2.2 | {% include_relative links.html %} |
 | Th, Oct 17 | 12 | Turing Machines | § 3.1 | {% include_relative links.html %} |
 | Tu, Oct 22 | 13 | Variants of Turing Machines | § 3.2 | {% include_relative links.html %} |
