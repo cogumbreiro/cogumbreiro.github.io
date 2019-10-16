@@ -59,18 +59,18 @@ video11: https://echo360.org/media/afc5897a-5cfd-4f50-ad1a-1abdf6810c10/public
 | Tu, Oct 15 | 11 | [Pumping lemma; Non-context-free Languages](lecture11.html) | § 2.2 | {% include_relative links.html slides-url="lecture11.pdf" recording-url=page.video11 %} |
 | Th, Oct 17 | 12 | Turing Machines | § 3.1 | {% include_relative links.html %} |
 | Tu, Oct 22 | 13 | Variants of Turing Machines | § 3.2 | {% include_relative links.html %} |
-| Th, Oct 24 | 14|  Acceptance, emptiness and equality tests | § 4.1 | {% include_relative links.html %} |
-| Tu, Oct 29 | 15 | Countable and uncountable sets | § 4.2 | {% include_relative links.html %} |
-| Th, Oct 31 | 16 | TM Acceptance | § 4.2 | {% include_relative links.html %} |
+| Th, Oct 24 | 14 | Functional Programming in Coq | [§ LF.1](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html)  | {% include_relative links.html %} |
+| Tu, Oct 29 | 15 | Proofs by induction | [§ LF.2](https://softwarefoundations.cis.upenn.edu/lf-current/Induction.html)  | {% include_relative links.html %} |
+| Th, Oct 31 | 16 | Logic in Coq | [§ LF.5](https://softwarefoundations.cis.upenn.edu/lf-current/Logic.html) | {% include_relative links.html %} |
 | Tu, Nov 05 | | (Module 2 recap) | |
 | Th, Nov 07 | | (Mini-Test 2) | |
-| Tu, Nov 12 | 17 |  Undecidable problems | § 5.1 | {% include_relative links.html %} |
-| Th, Nov 14 | 18 | Reduction via Computation Histories | § 5.1 | {% include_relative links.html %} |
-| Tu, Nov 19 | 19 | Mapping reducibility | § 5.3 | {% include_relative links.html %} |
-| Th, Nov 21 | 20 | Mapping reducibility | § 5.3 | {% include_relative links.html %} |
-| Tu, Nov 26 | 21 | Measuring complexity | § 7.1 | {% include_relative links.html %} |
+| Tu, Nov 12 | 17 | Acceptance, emptiness and equality tests | § 4.1 | {% include_relative links.html %} |
+| Th, Nov 14 | 18 | Countable and uncountable sets | § 4.2 | {% include_relative links.html %} |
+| Tu, Nov 19 | 19 | TM Acceptance | § 4.2  | {% include_relative links.html %} |
+| Th, Nov 21 | 20 |  Undecidable problems |  § 5.1 | {% include_relative links.html %} |
+| Tu, Nov 26 | 21 | Reduction via Computation Histories |§ 5.1 | {% include_relative links.html %} |
 | Th, Nov 28 | | (Thanksgiving recess)        | |
-| Tu, Dec 03 | 22 | The Class P | § 7.2  | {% include_relative links.html %} |
-| Th, Dec 05 | 23 | The Class NP/ NP Completeness | § 7.3 | {% include_relative links.html %} |
+| Tu, Dec 03 | 22 | Mapping reducibility | § 5.3  | {% include_relative links.html %} |
+| Th, Dec 05 | 23 | Mapping reducibility |  § 5.3 | {% include_relative links.html %} |
 | Tu, Dec 10 | | (Module 3 recap) | |
 | Th, Dec 12 | | (Mini-Test 3) | |
