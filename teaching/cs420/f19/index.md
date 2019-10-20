@@ -15,6 +15,8 @@ video9: https://echo360.org/media/5d87087a-f85e-4a73-9c9a-760c22746da8/public
 module1: https://echo360.org/media/c6c27e65-480e-4f90-9f84-367dd3d39010/public
 video10: https://echo360.org/media/60e1ce62-99ef-478f-a6b0-4b1fbd2c10a5/public
 video11: https://echo360.org/media/afc5897a-5cfd-4f50-ad1a-1abdf6810c10/public
+video12: https://echo360.org/media/882b9751-9ec4-4878-b815-37c02c75bb49/public
+
 ---
 
 # {{ page.title }}
@@ -57,7 +59,7 @@ video11: https://echo360.org/media/afc5897a-5cfd-4f50-ad1a-1abdf6810c10/public
 | Tu, Oct 08 | 9 | [Pushdown Atomata](lecture09.html) | § 2.2 | {% include_relative links.html slides-url="lecture09.pdf" recording-url=page.video9 %} | [HW5](hw5.pdf) |
 | Th, Oct 10 | 10 | [PDA ⇔ CFG](lecture10.html) | § 2.2 | {% include_relative links.html slides-url="lecture10.pdf" recording-url=page.video10 %} |
 | Tu, Oct 15 | 11 | [Pumping lemma; Non-context-free Languages](lecture11.html) | § 2.2 | {% include_relative links.html slides-url="lecture11.pdf" recording-url=page.video11 %} |
-| Th, Oct 17 | 12 | Turing Machines | § 3.1 | {% include_relative links.html %} |
+| Th, Oct 17 | 12 | [Turing Machines](lecture12.html) | § 3.1 | {% include_relative links.html slides-url="lecture12.pdf" recording-url=page.video12 %} |
 | Tu, Oct 22 | 13 | Variants of Turing Machines | § 3.2 | {% include_relative links.html %} |
 | Th, Oct 24 | 14 | Functional Programming in Coq | [§ LF.1](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html)  | {% include_relative links.html %} |
 | Tu, Oct 29 | 15 | Proofs by induction | [§ LF.2](https://softwarefoundations.cis.upenn.edu/lf-current/Induction.html)  | {% include_relative links.html %} |
