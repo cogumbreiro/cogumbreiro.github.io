@@ -37,7 +37,7 @@ video12: https://echo360.org/media/882b9751-9ec4-4878-b815-37c02c75bb49/public
 
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
-* **Office:** `S-3-183`, Science Center
+* **Office:** Room `0201-16`, 3<sup>rd</sup> floor, McCormack`, Science Center
 * **Office hours:** Tuesdays & Thursdays 2:30pm to 4:00pm
 
 ## Class Schedule
