@@ -16,6 +16,8 @@ module1: https://echo360.org/media/c6c27e65-480e-4f90-9f84-367dd3d39010/public
 video10: https://echo360.org/media/60e1ce62-99ef-478f-a6b0-4b1fbd2c10a5/public
 video11: https://echo360.org/media/afc5897a-5cfd-4f50-ad1a-1abdf6810c10/public
 video12: https://echo360.org/media/882b9751-9ec4-4878-b815-37c02c75bb49/public
+video13: https://echo360.org/media/18449864-736f-4e50-9e38-f1b97332196b/public
+video14: https://echo360.org/media/9e6af315-63b1-4ecf-8d52-f34e8731794e/public
 
 ---
 
@@ -32,12 +34,12 @@ video12: https://echo360.org/media/882b9751-9ec4-4878-b815-37c02c75bb49/public
 
 
 # Course information
-* **Location:** `W02-0158`, Wheatley
+* **Location:** Room W02-0158, 2<sup>nd</sup> floor, Wheatley
 * **Schedule:** Tuesdays & Thursdays 5:30pm to 6:45pm
 
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
-* **Office:** Room `0201-16`, 3<sup>rd</sup> floor, McCormack`, Science Center
+* **Office:** Room 0201-16, 3<sup>rd</sup> floor, McCormack
 * **Office hours:** Tuesdays & Thursdays 2:30pm to 4:00pm
 
 ## Class Schedule
@@ -60,8 +62,8 @@ video12: https://echo360.org/media/882b9751-9ec4-4878-b815-37c02c75bb49/public
 | Th, Oct 10 | 10 | [PDA ⇔ CFG](lecture10.html) | § 2.2 | {% include_relative links.html slides-url="lecture10.pdf" recording-url=page.video10 %} |
 | Tu, Oct 15 | 11 | [Pumping lemma; Non-context-free Languages](lecture11.html) | § 2.2 | {% include_relative links.html slides-url="lecture11.pdf" recording-url=page.video11 %} |
 | Th, Oct 17 | 12 | [Turing Machines](lecture12.html) | § 3.1 | {% include_relative links.html slides-url="lecture12.pdf" recording-url=page.video12 %} | [HW6](hw6.pdf)
-| Tu, Oct 22 | 13 | Variants of Turing Machines | § 3.2 | {% include_relative links.html %} |
-| Th, Oct 24 | 14 | Functional Programming in Coq | [§ LF.1](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html)  | {% include_relative links.html %} |
+| Tu, Oct 22 | 13 | [Variants of Turing Machines](lecture13.html) | § 3.2 | {% include_relative links.html slides-url="lecture13.pdf" recording-url=page.video13 %} | [lf.zip](https://piazza.com/class_profile/get_resource/k02r6uf6if147e/k23el06j9sg1ip) |
+| Th, Oct 24 | 14 | [Functional Programming in Coq](lecture14.html) | [§ LF.1](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html)  | {% include_relative links.html slides-url="lecture14.pdf" recording-url=page.video14 %} | [ex.v](lecture14.v) |
 | Tu, Oct 29 | 15 | Proofs by induction | [§ LF.2](https://softwarefoundations.cis.upenn.edu/lf-current/Induction.html)  | {% include_relative links.html %} |
 | Th, Oct 31 | 16 | Logic in Coq | [§ LF.5](https://softwarefoundations.cis.upenn.edu/lf-current/Logic.html) | {% include_relative links.html %} |
 | Tu, Nov 05 | | (Module 2 recap) | |
