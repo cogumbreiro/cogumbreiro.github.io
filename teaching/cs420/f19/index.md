@@ -19,6 +19,7 @@ video12: https://echo360.org/media/882b9751-9ec4-4878-b815-37c02c75bb49/public
 video13: https://echo360.org/media/18449864-736f-4e50-9e38-f1b97332196b/public
 video14: https://echo360.org/media/9e6af315-63b1-4ecf-8d52-f34e8731794e/public
 video15: https://echo360.org/media/da096d82-1b1f-4e1d-8d6c-b6888adb5335/public
+video16: https://echo360.org/media/bccdcc31-4290-4f71-bedd-b8b7dbbef1c6/public
 ---
 
 # {{ page.title }}
@@ -65,7 +66,7 @@ video15: https://echo360.org/media/da096d82-1b1f-4e1d-8d6c-b6888adb5335/public
 | Tu, Oct 22 | 13 | [Variants of Turing Machines](lecture13.html) | § 3.2 | {% include_relative links.html slides-url="lecture13.pdf" recording-url=page.video13 %} | [lf.zip](https://piazza.com/class_profile/get_resource/k02r6uf6if147e/k23el06j9sg1ip) |
 | Th, Oct 24 | 14 | [Functional Programming in Coq](lecture14.html) | [§ LF.1](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html)  (`Basics.v`) | {% include_relative links.html slides-url="lecture14.pdf" recording-url=page.video14 %} | [ex.v](lecture14.v) |
 | Tu, Oct 29 | 15 | [Proofs by induction](lecture15.html) (`Induction.v`) | [§ LF.2](https://softwarefoundations.cis.upenn.edu/lf-current/Induction.html)  | {% include_relative links.html slides-url="lecture15.pdf" recording-url=page.video15 %} | [ex.v](lecture15.v) |
-| Th, Oct 31 | 16 | More tactics (`Tactics.v`) | [§ LF.5](https://softwarefoundations.cis.upenn.edu/lf-current/Tactics.html) | {% include_relative links.html %} |
+| Th, Oct 31 | 16 | [More tactics (`Tactics.v`)](lecture16.html) | [§ LF.5](https://softwarefoundations.cis.upenn.edu/lf-current/Tactics.html) | {% include_relative links.html slides-url="lecture16.pdf" recording-url=page.video16 %} |
 | Tu, Nov 05 | | (Module 2 recap) | |
 | Th, Nov 07 | | (Mini-Test 2) | |
 | Tu, Nov 12 | 17 | Acceptance, emptiness and equality tests | § 4.1 | {% include_relative links.html %} |
