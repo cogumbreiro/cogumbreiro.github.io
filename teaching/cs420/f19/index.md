@@ -64,7 +64,7 @@ video16: https://echo360.org/media/bccdcc31-4290-4f71-bedd-b8b7dbbef1c6/public
 | Tu, Oct 15 | 11 | [Pumping lemma; Non-context-free Languages](lecture11.html) | § 2.2 | {% include_relative links.html slides-url="lecture11.pdf" recording-url=page.video11 %} |
 | Th, Oct 17 | 12 | [Turing Machines](lecture12.html) | § 3.1 | {% include_relative links.html slides-url="lecture12.pdf" recording-url=page.video12 %} | [HW6](hw6.pdf)
 | Tu, Oct 22 | 13 | [Variants of Turing Machines](lecture13.html) | § 3.2 | {% include_relative links.html slides-url="lecture13.pdf" recording-url=page.video13 %} | [lf.zip](https://piazza.com/class_profile/get_resource/k02r6uf6if147e/k23el06j9sg1ip) |
-| Th, Oct 24 | 14 | [Functional Programming in Coq](lecture14.html) | [§ LF.1](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html)  (`Basics.v`) | {% include_relative links.html slides-url="lecture14.pdf" recording-url=page.video14 %} | [ex.v](lecture14.v) |
+| Th, Oct 24 | 14 | [Functional Programming in Coq](lecture14.html) (`Basics.v`) | [§ LF.1](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html)  | {% include_relative links.html slides-url="lecture14.pdf" recording-url=page.video14 %} | [ex.v](lecture14.v) |
 | Tu, Oct 29 | 15 | [Proofs by induction](lecture15.html) (`Induction.v`) | [§ LF.2](https://softwarefoundations.cis.upenn.edu/lf-current/Induction.html)  | {% include_relative links.html slides-url="lecture15.pdf" recording-url=page.video15 %} | [ex.v](lecture15.v) |
 | Th, Oct 31 | 16 | [More tactics (`Tactics.v`)](lecture16.html) | [§ LF.5](https://softwarefoundations.cis.upenn.edu/lf-current/Tactics.html) | {% include_relative links.html slides-url="lecture16.pdf" recording-url=page.video16 %} |
 | Tu, Nov 05 | | (Module 2 recap) | |
