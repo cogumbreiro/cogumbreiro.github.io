@@ -68,7 +68,7 @@ module2: https://echo360.org/media/efadc769-ff74-4460-9c2d-fde21e4c3e9c/public
 | Th, Oct 24 | 14 | [Functional Programming in Coq](lecture14.html) (`Basics.v`) | [§ LF.1](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html)  | {% include_relative links.html slides-url="lecture14.pdf" recording-url=page.video14 %} | [ex.v](lecture14.v) |
 | Tu, Oct 29 | 15 | [Proofs by induction](lecture15.html) (`Induction.v`) | [§ LF.2](https://softwarefoundations.cis.upenn.edu/lf-current/Induction.html)  | {% include_relative links.html slides-url="lecture15.pdf" recording-url=page.video15 %} | [ex.v](lecture15.v) |
 | Th, Oct 31 | 16 | [More tactics (`Tactics.v`)](lecture16.html) | [§ LF.5](https://softwarefoundations.cis.upenn.edu/lf-current/Tactics.html) | {% include_relative links.html slides-url="lecture16.pdf" recording-url=page.video16 %} |
-| Tu, Nov 05 | | [(Module 2 recap)](module2.html) |  {% include_relative links.html slides-url="module-2.pdf" recording-url=page.module2 %} | [ex.v](module2.v) |
+| Tu, Nov 05 | | [(Module 2 recap)](module-2.html) | |  {% include_relative links.html slides-url="module-2.pdf" recording-url=page.module2 %} | [ex.v](module2.v) |
 | Th, Nov 07 | | (Mini-Test 2) | |
 | Tu, Nov 12 | 17 | Acceptance, emptiness and equality tests | § 4.1 | {% include_relative links.html %} |
 | Th, Nov 14 | 18 | Countable and uncountable sets | § 4.2 | {% include_relative links.html %} |
