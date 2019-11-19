@@ -21,6 +21,8 @@ video14: https://echo360.org/media/9e6af315-63b1-4ecf-8d52-f34e8731794e/public
 video15: https://echo360.org/media/da096d82-1b1f-4e1d-8d6c-b6888adb5335/public
 video16: https://echo360.org/media/bccdcc31-4290-4f71-bedd-b8b7dbbef1c6/public
 module2: https://echo360.org/media/efadc769-ff74-4460-9c2d-fde21e4c3e9c/public
+video17: https://echo360.org/media/636a5ca2-4364-4384-966d-6b30e0c1c42c/public
+video18: https://echo360.org/media/6d26c362-ee93-491c-a35a-f09f90b28a61/public
 ---
 
 # {{ page.title }}
@@ -70,10 +72,10 @@ module2: https://echo360.org/media/efadc769-ff74-4460-9c2d-fde21e4c3e9c/public
 | Th, Oct 31 | 16 | [More tactics (`Tactics.v`)](lecture16.html) | [§ LF.5](https://softwarefoundations.cis.upenn.edu/lf-current/Tactics.html) | {% include_relative links.html slides-url="lecture16.pdf" recording-url=page.video16 %} |
 | Tu, Nov 05 | | [(Module 2 recap)](module-2.html) | |  {% include_relative links.html slides-url="module-2.pdf" recording-url=page.module2 %} | [ex.v](module2.v) |
 | Th, Nov 07 | | (Mini-Test 2) | |
-| Tu, Nov 12 | 17 | Acceptance, emptiness and equality tests | § 4.1 | {% include_relative links.html %} |
-| Th, Nov 14 | 18 | Countable and uncountable sets | § 4.2 | {% include_relative links.html %} |
+| Tu, Nov 12 | 17 | [Acceptance, emptiness and equality tests](lecture17.html) | § 4.1 | {% include_relative links.html slides-url="lecture17.pdf" recording-url=page.video17 %} |
+| Th, Nov 14 | 18 | [Countable and uncountable sets](lecture18.html) | § 4.2 | {% include_relative links.html slides-url="lecture18.pdf" recording-url=page.video18 %} |
 | Tu, Nov 19 | 19 | TM Acceptance | § 4.2  | {% include_relative links.html %} |
-| Th, Nov 21 | 20 |  Undecidable problems |  § 5.1 | {% include_relative links.html %} |
+| Th, Nov 21 | 20 | Undecidable problems |  § 5.1 | {% include_relative links.html %} |
 | Tu, Nov 26 | 21 | Reduction via Computation Histories |§ 5.1 | {% include_relative links.html %} |
 | Th, Nov 28 | | (Thanksgiving recess)        | |
 | Tu, Dec 03 | 22 | Mapping reducibility | § 5.3  | {% include_relative links.html %} |
