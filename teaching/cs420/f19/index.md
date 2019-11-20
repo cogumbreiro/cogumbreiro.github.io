@@ -23,6 +23,8 @@ video16: https://echo360.org/media/bccdcc31-4290-4f71-bedd-b8b7dbbef1c6/public
 module2: https://echo360.org/media/efadc769-ff74-4460-9c2d-fde21e4c3e9c/public
 video17: https://echo360.org/media/636a5ca2-4364-4384-966d-6b30e0c1c42c/public
 video18: https://echo360.org/media/6d26c362-ee93-491c-a35a-f09f90b28a61/public
+video19: https://echo360.org/media/70a3b825-ff35-4130-bc78-4bd6fc66a712/public
+
 ---
 
 # {{ page.title }}
@@ -74,7 +76,7 @@ video18: https://echo360.org/media/6d26c362-ee93-491c-a35a-f09f90b28a61/public
 | Th, Nov 07 | | (Mini-Test 2) | |
 | Tu, Nov 12 | 17 | [Acceptance, emptiness and equality tests](lecture17.html) | § 4.1 | {% include_relative links.html slides-url="lecture17.pdf" recording-url=page.video17 %} |
 | Th, Nov 14 | 18 | [Countable and uncountable sets](lecture18.html) | § 4.2 | {% include_relative links.html slides-url="lecture18.pdf" recording-url=page.video18 %} |
-| Tu, Nov 19 | 19 | TM Acceptance | § 4.2  | {% include_relative links.html %} |
+| Tu, Nov 19 | 19 | [TM Acceptance](lecture19.html) | § 4.2  | {% include_relative links.html slides-url="lecture19.pdf" recording-url=page.video19 %} |
 | Th, Nov 21 | 20 | Undecidable problems |  § 5.1 | {% include_relative links.html %} |
 | Tu, Nov 26 | 21 | Reduction via Computation Histories |§ 5.1 | {% include_relative links.html %} |
 | Th, Nov 28 | | (Thanksgiving recess)        | |
