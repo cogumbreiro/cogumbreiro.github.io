@@ -24,6 +24,7 @@ module2: https://echo360.org/media/efadc769-ff74-4460-9c2d-fde21e4c3e9c/public
 video17: https://echo360.org/media/636a5ca2-4364-4384-966d-6b30e0c1c42c/public
 video18: https://echo360.org/media/6d26c362-ee93-491c-a35a-f09f90b28a61/public
 video19: https://echo360.org/media/70a3b825-ff35-4130-bc78-4bd6fc66a712/public
+video20: https://echo360.org/media/c8cf0afd-13c1-4f50-8732-d2c15f779b14/public
 
 ---
 
