@@ -141,7 +141,7 @@ Attendance (out of 24) <input type="number" name="participation" min="0" max="24
 | Th, Nov 21 | 20 | [Decidability](lecture20.html) |  § 4.2 | {% include_relative links.html slides-url="lecture20.pdf" recording-url=page.video20 %} | [HW7](hw7.pdf) |
 | Tu, Nov 26 | 21 | [Undecidable problems](lecture21.html) | § 4.2 | {% include_relative links.html slides-url="lecture21.pdf" recording-url=page.video21 %} |
 | Th, Nov 28 | | (Thanksgiving recess)        | |
-| Tu, Dec 03 | 22 | Mapping reducibility | § 5.1  | {% include_relative links.html %} |
-| Th, Dec 05 | 23 | Mapping reducibility |  § 5.3 | {% include_relative links.html %} |
+| Tu, Dec 03 | | (Class cancelled) |  |  |
+| Th, Dec 05 | 22 | Mapping reducibility |  § 5.3 | {% include_relative links.html %} |
 | Tu, Dec 10 | | (Module 3 recap) | |
 | Th, Dec 12 | | (Mini-Test 3) | |
