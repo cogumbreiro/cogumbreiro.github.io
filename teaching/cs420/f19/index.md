@@ -41,6 +41,65 @@ video21: https://echo360.org/media/05d398ae-537a-4fd7-98dc-3d99d44da859/public
 </div>
 
 
+# Final Grade Calculator
+<script type="text/javascript">
+function fix(grade, min, max) {
+    if (grade < min) return min;
+    if (grade > max) return max;
+    return grade;
+}
+function calc(test1, test2, project1, test3, part) {
+    // make sure grades are within bound
+    test1 = fix(test1, 0, 100);
+    test2 = fix(test2, 0, 80);
+    project1 = fix(project1, 0, 35);
+    test3 = fix(test3, 0, 100);
+    part = fix(part, 0, 100);
+    return test1*.32 + (test2 + project1)*.32 + test3 *.32 + part *.04;
+}
+function letter(grade) {
+    let grades = [
+      [89, 'A'],
+      [85, 'A-'],
+      [81, 'B+'],
+      [74, 'B'],
+      [70, 'B-'],
+      [66, 'C+'],
+      [59, 'C'],
+      [55, 'C-'],
+      [44, 'D'],
+      [40, 'D-'],
+    ];
+    const result = grades.find(pair => {
+      const [cutoff, _] = pair;
+      return grade >= cutoff;
+    });
+    if (result != undefined) {
+      const [_, letter] = result;
+      return letter;
+    }
+    return 'F';
+}
+function updateGrade() {
+  const project1 = parseInt(document.getElementById("project1").value) * 2.692307692;
+  const test1 = parseInt(document.getElementById("test1").value);
+  const test2 = parseInt(document.getElementById("test2").value);
+  const test3 = parseInt(document.getElementById("test3").value);
+  const part = (parseInt(document.getElementById("participation").value) / 24) * 100;
+  document.getElementById("final-grade").innerHTML = "Final grade: " + letter(calc(test1, test2, project1, test3, part));
+  return false;
+}
+</script>
+
+**Disclaimer: THE GRADE CALCULATOR IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND AND MIGHT PRODUCE INCORRECT RESULTS; THE CALCULATOR IGNORES YOUR HOMEWORK SUBMISSIONS.**
+
+Test 1 (out of 100): <input type="number" name="test1" min="0" max="100" id="test1" onchange="updateGrade()" value="0" ><br/>
+Project 1 (out of 13 exercises): <input type="number" name="project1" min="0" max="35" value="0" onchange="updateGrade()" id="project1"><br/>
+Test 2 (out of 80): <input type="number" name="test2" min="0" max="80" id="test2" value="0" onchange="updateGrade()"> <br/>
+Test 3 (out of 100): <input type="number" name="test3" min="0" max="100" id="test3" value="0" onchange="updateGrade()"><br/>
+Attendance (out of 24) <input type="number" name="participation" min="0" max="24" id="participation" value="0" onchange="updateGrade()"><br/>
+<div id="final-grade" onload="updateGrade()">(Edit values to update final grade)</div>
+
 # Course information
 * **Location:** Room W02-0158, 2<sup>nd</sup> floor, Wheatley
 * **Schedule:** Tuesdays & Thursdays 5:30pm to 6:45pm
