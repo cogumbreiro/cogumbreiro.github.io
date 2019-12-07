@@ -26,6 +26,7 @@ video18: https://echo360.org/media/6d26c362-ee93-491c-a35a-f09f90b28a61/public
 video19: https://echo360.org/media/70a3b825-ff35-4130-bc78-4bd6fc66a712/public
 video20: https://echo360.org/media/c8cf0afd-13c1-4f50-8732-d2c15f779b14/public
 video21: https://echo360.org/media/05d398ae-537a-4fd7-98dc-3d99d44da859/public
+video22: https://echo360.org/media/db7d50d5-986a-4bdb-a65a-b73c9c5a30d9/public
 
 ---
 
@@ -94,7 +95,7 @@ function updateGrade() {
 **Disclaimer: THE GRADE CALCULATOR IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND AND MIGHT PRODUCE INCORRECT RESULTS; THE CALCULATOR IGNORES YOUR HOMEWORK SUBMISSIONS.**
 
 Test 1 (out of 100): <input type="number" name="test1" min="0" max="100" id="test1" onchange="updateGrade()" value="0" ><br/>
-Project 1 (out of 13 exercises): <input type="number" name="project1" min="0" max="35" value="0" onchange="updateGrade()" id="project1"><br/>
+Project 1 (out of 13 exercises): <input type="number" name="project1" min="0" max="13" value="0" onchange="updateGrade()" id="project1"><br/>
 Test 2 (out of 80): <input type="number" name="test2" min="0" max="80" id="test2" value="0" onchange="updateGrade()"> <br/>
 Test 3 (out of 100): <input type="number" name="test3" min="0" max="100" id="test3" value="0" onchange="updateGrade()"><br/>
 Attendance (out of 24) <input type="number" name="participation" min="0" max="24" id="participation" value="0" onchange="updateGrade()"><br/>
@@ -142,6 +143,6 @@ Attendance (out of 24) <input type="number" name="participation" min="0" max="24
 | Tu, Nov 26 | 21 | [Undecidable problems](lecture21.html) | § 4.2 | {% include_relative links.html slides-url="lecture21.pdf" recording-url=page.video21 %} |
 | Th, Nov 28 | | (Thanksgiving recess)        | |
 | Tu, Dec 03 | | (Class cancelled) |  |  |
-| Th, Dec 05 | 22 | Mapping reducibility |  § 5.3 | {% include_relative links.html %} |
+| Th, Dec 05 | 22 | [Mapping reducibility](lecture22.html) |  § 5.3 | {% include_relative links.html slides-url="lecture22.pdf" recording-url=page.video22 %} |
 | Tu, Dec 10 | | (Module 3 recap) | |
 | Th, Dec 12 | | (Mini-Test 3) | |
