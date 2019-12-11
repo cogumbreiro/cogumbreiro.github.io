@@ -27,6 +27,7 @@ video19: https://echo360.org/media/70a3b825-ff35-4130-bc78-4bd6fc66a712/public
 video20: https://echo360.org/media/c8cf0afd-13c1-4f50-8732-d2c15f779b14/public
 video21: https://echo360.org/media/05d398ae-537a-4fd7-98dc-3d99d44da859/public
 video22: https://echo360.org/media/db7d50d5-986a-4bdb-a65a-b73c9c5a30d9/public
+module3: https://echo360.org/media/70f99b63-f26c-4b4a-b986-3306a5793811/public
 
 ---
 
@@ -145,5 +146,5 @@ Attendance (out of 24) <input type="number" name="participation" min="0" max="24
 | Th, Nov 28 | | (Thanksgiving recess)        | |
 | Tu, Dec 03 | | (Class cancelled) |  |  |
 | Th, Dec 05 | 22 | [Mapping reducibility](lecture22.html) |  § 5.3 | {% include_relative links.html slides-url="lecture22.pdf" recording-url=page.video22 %} |
-| Tu, Dec 10 | | [(Module 3 recap)](module-3.html) | {% include_relative links.html slides-url="lecture23.pdf" %} |
+| Tu, Dec 10 | | [(Module 3 recap)](module-3.html) | {% include_relative links.html slides-url="module3.pdf" recording-url=page.module3 %} |
 | Th, Dec 12 | | (Mini-Test 3) | |
