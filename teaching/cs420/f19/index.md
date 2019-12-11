@@ -146,5 +146,5 @@ Attendance (out of 24) <input type="number" name="participation" min="0" max="24
 | Th, Nov 28 | | (Thanksgiving recess)        | |
 | Tu, Dec 03 | | (Class cancelled) |  |  |
 | Th, Dec 05 | 22 | [Mapping reducibility](lecture22.html) |  § 5.3 | {% include_relative links.html slides-url="lecture22.pdf" recording-url=page.video22 %} |
-| Tu, Dec 10 | | [(Module 3 recap)](module-3.html) | {% include_relative links.html slides-url="module3.pdf" recording-url=page.module3 %} |
+| Tu, Dec 10 | | [(Module 3 recap)](module-3.html) | | {% include_relative links.html slides-url="module3.pdf" recording-url=page.module3 %} |
 | Th, Dec 12 | | (Mini-Test 3) | |
