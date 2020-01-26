@@ -1,6 +1,6 @@
 ---
 author: Tiago Cogumbreiro
-semester: Fall 2020
+semester: Spring 2020
 title: "CS 450: Structure of Higher Level Languages"
 layout: single
 ---
