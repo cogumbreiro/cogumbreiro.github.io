@@ -38,7 +38,7 @@ layout: single
 | Date       | #  | Lecture      |            |
 |:-----------|---:|:-------------|:-----------|
 |            |    | **☙ Module 1: Logical Foundations ☙** |
-| Mo, Jan 27 |  1 | Course overview; data types; pattern matching  |
+| Mo, Jan 27 |  1 | [Course overview; data types; pattern matching](lecture01.html)  | {% include_relative links.html slides-url="lecture01.pdf" %} |
 | We, Jan 29 |  2 | Proof by case analysis; induction |
 | Mo, Feb  3 |  3 | Induction principle; lists  |
 | We, Feb  5 |  4 | Polymorphism; higher-order functions |
