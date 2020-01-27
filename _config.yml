@@ -5,33 +5,6 @@ url: https://cogumbreiro.github.io/
 office:
   location: "Room 0201-16, 3<sup>rd</sup> floor, McCormack"
   hours: "1:00pm to 2:00pm, Monday, Wednesday, Friday"
-# Owner/author information
-owner:
-  name:           Tiago Cogumbreiro
-  avatar:         bio-photo.jpg
-  bio:            # "Describe your self."
-  email:          cogumbreiro@gatech.edu
-  bitbucket: cogumbreiro
-  dblp: /c/Cogumbreiro:Tiago.html
-  gscholar: 4uTAp_gAAAAJ
-  github: cogumbreiro
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus: https://plus.google.com/+TiagoCogumbreiro
-
-# Analytics and webmaster tools stuff goes here
-google_analytics:   
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:        
-
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About
-    url: about/
-#  - title: Code
-#    url: https://bitbucket.org/cogumbreiro/
-#    external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Lisbon
