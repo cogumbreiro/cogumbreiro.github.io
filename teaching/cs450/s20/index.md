@@ -5,8 +5,8 @@ title: "CS 450: Structure of Higher Level Languages"
 layout: single
 ---
 
-# {{ page.title }}
-## {{ page.semester }}
+<h1 class="has-text-centered">{{ page.title }}</h1>
+<h2 class="has-text-centered" style="padding-bottom:1em;">{{ page.semester }}</h2>
 
 <div class="buttons is-centered">
 <a class="button is-large is-link" href="syllabus.pdf">Syllabus</a>
