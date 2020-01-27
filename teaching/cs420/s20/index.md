@@ -12,12 +12,7 @@ layout: single
 <a class="button is-large is-link" href="syllabus.pdf">Syllabus</a>
 <a class="button is-large is-link" href="https://piazza.com/class/k5ubsxch57r196">Forum</a>
 <a class="button is-large is-link" href="https://www.gradescope.com/courses/81793">Homework submission</a>
-
-{% comment %}
-<a class="button is-large is-link" href="https://www.estalee.com/">Attendance (ZS40HJD)</a>
-<a class="button is-large is-link" href="https://echo360.org/section/c4732671-9a09-4122-ae27-47103529a0cb/public">Video Recordings</a>
-{% endcomment %}
-
+<a class="button is-large is-link" href="https://www.estalee.com/">Attendance</a>
 </div>
 
 # Course information
