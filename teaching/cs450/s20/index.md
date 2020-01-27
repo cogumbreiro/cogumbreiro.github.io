@@ -22,8 +22,8 @@ layout: single
 
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
-* **Office:** Room M03-0201-16, 3<sup>rd</sup> floor, McCormack
-* **Office hours:** 1:00pm to 2:00pm, Monday, Wednesday, Friday
+* **Office:** {{ site.office.location }}
+* **Office hours:** {{ site.office.hours }}
 
 ## Class Schedule
 

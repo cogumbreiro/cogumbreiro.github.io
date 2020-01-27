@@ -2,6 +2,9 @@ title:            Tiago Cogumbreiro
 # tagline:          A short tagline
 # description:      Describe your website.
 url: https://cogumbreiro.github.io/
+office:
+  location: "Room 0201-16, 3<sup>rd</sup> floor, McCormack"
+  hours: "Monday, Wednesday, Friday: 1:00pm to 2:00pm"
 # Owner/author information
 owner:
   name:           Tiago Cogumbreiro
