@@ -74,16 +74,16 @@ layout: single
 | Mo, Apr 13 | 30 | Refactoring errors; monads |
 | We, Apr 15 | 31 | Type-directed monads; dynamic binding |
 | Fr, Apr 17 | 32 | Monadic continuations |
-| Mo, Apr 20 | 33 | (School closure) |
+| Mo, Apr 20 |    | (School closure) |
 |            |    | **☙ Module 7: Abstraction ☙**
-| We, Apr 22 | 34 | What is a PhD? |
-| Fr, Apr 24 | 35 | Pattern-matching |
-| Mo, Apr 27 | 36 | Generic methods |
-| We, Apr 29 | 37 | Macros |
+| We, Apr 22 | 33 | What is a PhD? |
+| Fr, Apr 24 | 34 | Pattern-matching |
+| Mo, Apr 27 | 35 | Generic methods |
+| We, Apr 29 | 36 | Macros |
 |            |    | **☙ Module 8: Object Oriented Programming ☙** |
-| Fr, May  1 | 38 | LambdaJS; object method; Class inheritance |
-| Mo, May  4 | 39 | SimpleJS; translating LambdaJS to SimpleJS |
-| We, May  6 | 40 | Translating SimpleJS to LambdaJS |
-| Fr, May  8 | 41 | The essence of JavaScript |
-| Mo, May 11 | 42 | Parallelism with asynchronous evaluation |
-| We, May 13 | 43 | Victory Lap |
+| Fr, May  1 | 37 | LambdaJS; object method; Class inheritance |
+| Mo, May  4 | 38 | SimpleJS; translating LambdaJS to SimpleJS |
+| We, May  6 | 49 | Translating SimpleJS to LambdaJS |
+| Fr, May  8 | 40 | The essence of JavaScript |
+| Mo, May 11 | 41 | Parallelism with asynchronous evaluation |
+| We, May 13 | 42 | Victory Lap |
