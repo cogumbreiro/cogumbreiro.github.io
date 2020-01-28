@@ -33,7 +33,7 @@ layout: single
 | Date       | #  | Lecture      |   |
 |:-----------|---:|:-------------|---|
 |            |    | **☙ Module 1: Basic Functional Programming ☙** |
-| Mo, Jan 27 |  1 | [Course overview; arithmetic operations](lecture01.html) | {% include_relative links.html slides-url="lecture01.pdf" %} |
+| Mo, Jan 27 |  1 | [Course overview; arithmetic operations](lecture01.html) | {% include_relative links.html slides-url="lecture01.pdf" file-url="lecture01-examples.zip" %} |
 | We, Jan 29 |  2 | Function calls; boolean logic  |
 | Fr, Jan 31 |  3 | Function declarations; function definitions |
 | Mo, Feb  3 |  4 | Pairs; lists |
