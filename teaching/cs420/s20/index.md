@@ -17,7 +17,7 @@ layout: single
 
 # Course information
 
-* **Location:** Room M01-0207, 1<sup>st</sup> floor, McCormack
+* **Location:** (Y01-1100) Room 1100, 1<sup>st</sup> floor, University Hall
 * **Schedule:** 4:00pm to 5:15pm, Monday, Wednesday
 
 # Instructor contact
