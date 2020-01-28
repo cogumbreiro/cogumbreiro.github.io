@@ -37,7 +37,7 @@ layout: single
 | Date       | #  | Lecture      |            |
 |:-----------|---:|:-------------|:-----------|
 |            |    | **☙ Module 1: Logical Foundations ☙** |
-| Mo, Jan 27 |  1 | [Course overview; data types; pattern matching](lecture01.html)  | {% include_relative links.html slides-url="lecture01.pdf" file-url="lecture01.v" %} |
+| Mo, Jan 27 |  1 | [Course overview; data types; pattern matching](lecture01.html) (`Basic.v`) | {% include_relative links.html slides-url="lecture01.pdf" file-url="lecture01.v" %} |
 | We, Jan 29 |  2 | Proof by case analysis; induction (`Basic.v`, `Induction.v`) |
 | Mo, Feb  3 |  3 | Induction principle; lists (`Induction.v`,`List.v`)  |
 | We, Feb  5 |  4 | Polymorphism; higher-order functions (`Poly.v`)|
