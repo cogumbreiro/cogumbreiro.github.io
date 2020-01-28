@@ -18,12 +18,16 @@ layout: single
 # Course information
 
 * **Location:** Room M01-0207, 1<sup>st</sup> floor, McCormack
-* **Schedule:** 4:00pm to 5:15pm, Monday, Wednesday, Friday
+* **Schedule:** 4:00pm to 5:15pm, Monday, Wednesday
 
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
 * **Office:** {{ site.office.location }}
 * **Office hours:** {{ site.office.hours }}
+
+# Resources
+
+* [Logic Foundations exercises](lf.tgz)
 
 ## Class Schedule
 
@@ -33,12 +37,12 @@ layout: single
 | Date       | #  | Lecture      |            |
 |:-----------|---:|:-------------|:-----------|
 |            |    | **☙ Module 1: Logical Foundations ☙** |
-| Mo, Jan 27 |  1 | [Course overview; data types; pattern matching](lecture01.html)  | {% include_relative links.html slides-url="lecture01.pdf" %} |
-| We, Jan 29 |  2 | Proof by case analysis; induction |
-| Mo, Feb  3 |  3 | Induction principle; lists  |
-| We, Feb  5 |  4 | Polymorphism; higher-order functions |
-| Mo, Feb 10 |  5 | Constructor injectivity, explosion principle |
-| We, Feb 12 |  6 | Tactics |
+| Mo, Jan 27 |  1 | [Course overview; data types; pattern matching](lecture01.html)  | {% include_relative links.html slides-url="lecture01.pdf" file-url="lecture01.v" %} |
+| We, Jan 29 |  2 | Proof by case analysis; induction (`Basic.v`, `Induction.v`) |
+| Mo, Feb  3 |  3 | Induction principle; lists (`Induction.v`,`List.v`)  |
+| We, Feb  5 |  4 | Polymorphism; higher-order functions (`Poly.v`)|
+| Mo, Feb 10 |  5 | Constructor injectivity, explosion principle (`Tactics.v`) |
+| We, Feb 12 |  6 | Tactics (`Tactics.v`)|
 | Mo, Feb 17 |    | President's Day (Holiday) |
 |            |    | **☙ Module 2: Regular Languages ☙** |
 | We, Feb 19 |  7 | Formal languages **(Mini-test 1)** |
