@@ -37,8 +37,8 @@ layout: single
 | Date       | #  | Lecture      |            |
 |:-----------|---:|:-------------|:-----------|
 |            |    | **☙ Module 1: Logical Foundations ☙** |
-| Mo, Jan 27 |  1 | [Course overview; data types; pattern matching](lecture01.html) (`Basic.v`) | {% include_relative links.html slides-url="lecture01.pdf" file-url="lecture01.v" %} |
-| We, Jan 29 |  2 | Proof by case analysis; induction (`Basic.v`, `Induction.v`) |
+| Mo, Jan 27 |  1 | [Course overview; data types; pattern matching](lecture01.html) [(`Basic.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html#lab18) | {% include_relative links.html slides-url="lecture01.pdf" file-url="lecture01.v" %} |
+| We, Jan 29 |  2 | Proof by case analysis/rewriting [(`Basic.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html#lab18) |
 | Mo, Feb  3 |  3 | Induction principle; lists (`Induction.v`,`List.v`)  |
 | We, Feb  5 |  4 | Polymorphism; higher-order functions (`Poly.v`)|
 | Mo, Feb 10 |  5 | Constructor injectivity, explosion principle (`Tactics.v`) |
