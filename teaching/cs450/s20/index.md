@@ -17,7 +17,7 @@ layout: single
 
 # Course information
 
-* **Location:** Room M01-0409, 1<sup>st</sup> floor, McCormack
+* **Location:** (M01-0409) Room 0409, 1<sup>st</sup> floor, McCormack
 * **Schedule:** 3:00pm to 3:50pm, Monday, Wednesday, Friday
 
 # Instructor contact
