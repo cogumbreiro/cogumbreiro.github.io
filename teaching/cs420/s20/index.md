@@ -3,6 +3,7 @@ author: Tiago Cogumbreiro
 semester: Spring 2020
 title: "CS 420: Introduction to the Theory of Computation"
 layout: single
+video2: https://echo360.org/media/28f68251-2762-48b5-836c-b056b50ce793/public
 ---
 
 <h1 class="has-text-centered">{{ page.title }}</h1>
@@ -38,7 +39,7 @@ layout: single
 |:-----------|---:|:-------------|:-----------|
 |            |    | **☙ Module 1: Logical Foundations ☙** |
 | Mo, Jan 27 |  1 | [Course overview; data types; pattern matching](lecture01.html) [(`Basic.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html#lab18) | {% include_relative links.html slides-url="lecture01.pdf" file-url="lecture01.v" %} |
-| We, Jan 29 |  2 | Proof by case analysis/rewriting [(`Basic.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html#lab18) |
+| We, Jan 29 |  2 | [Proof by case analysis/rewriting](lecture02.html) [(`Basic.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html#lab18) | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 file-url="lecture02.v" %}
 | Mo, Feb  3 |  3 | Induction principle; lists (`Induction.v`,`List.v`)  |
 | We, Feb  5 |  4 | Polymorphism; higher-order functions (`Poly.v`)|
 | Mo, Feb 10 |  5 | Constructor injectivity, explosion principle (`Tactics.v`) |
