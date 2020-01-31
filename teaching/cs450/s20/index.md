@@ -26,6 +26,11 @@ video2: https://echo360.org/media/96f75398-4060-4d4d-857c-ca1bc15282db/public
 * **Office:** {{ site.office.location }}
 * **Office hours:** {{ site.office.hours }}
 
+# Teaching assistants contact
+* Abdelrahman Obyat, Dennis Liew
+* **Office:** (M03-0201-33) Room 0201-33, 3<sup>rd</sup> floor, McCormack
+* **Office hours:** 5:15pm to 7:00pm, Tuesday, Thursday
+
 ## Class Schedule
 
 **Note:** Any lecture titles in future dates are considered tentative.
