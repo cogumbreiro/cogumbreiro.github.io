@@ -26,6 +26,11 @@ video2: https://echo360.org/media/28f68251-2762-48b5-836c-b056b50ce793/public
 * **Office:** {{ site.office.location }}
 * **Office hours:** {{ site.office.hours }}
 
+# Teaching assistants contact
+* Son Nam Nguyen
+* **Office:** (M03-0152) Room 0152, 3<sup>rd</sup> floor, McCormack
+* **Office hours:** 1:30pm to 2:30pm, Monday, Wednesday
+
 # Resources
 
 * [Logic Foundations exercises](lf.tgz)
