@@ -4,6 +4,7 @@ semester: Spring 2020
 title: "CS 420: Introduction to the Theory of Computation"
 layout: single
 video2: https://echo360.org/media/28f68251-2762-48b5-836c-b056b50ce793/public
+video3: https://echo360.org/media/20cf88a8-c051-4a7c-bbde-33b7cb89b43c/public
 ---
 
 <h1 class="has-text-centered">{{ page.title }}</h1>
@@ -44,9 +45,9 @@ video2: https://echo360.org/media/28f68251-2762-48b5-836c-b056b50ce793/public
 |:-----------|---:|:-------------|:-----------|
 |            |    | **☙ Module 1: Logical Foundations ☙** |
 | Mo, Jan 27 |  1 | [Course overview; Coq intro](lecture01.html) [(`Basic.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html#lab18) | {% include_relative links.html slides-url="lecture01.pdf" file-url="lecture01.v" %} |
-| We, Jan 29 |  2 | [Pattern matching; reflexivity](lecture02.html) [(`Basic.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html#lab18) | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 file-url="lecture02.v" %}
-| Mo, Feb  3 |  3 | Induction principle; lists (`Induction.v`,`List.v`)  |
-| We, Feb  5 |  4 | Polymorphism; higher-order functions (`Poly.v`)|
+| We, Jan 29 |  2 | [Pattern matching; reflexivity](lecture02.html) [(`Basic.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html) | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 file-url="lecture02.v" %} |
+| Mo, Feb  3 |  3 | [Proofs by induction](lecture03.html) [(`Induction.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Induction.html)  | {% include_relative links.html slides-url="lecture03.pdf" recording-url=page.video3 file-url="lecture03.v" %} |
+| We, Feb  5 |  4 | Polymorphism; higher-order functions (`List.v`, `Poly.v`)|
 | Mo, Feb 10 |  5 | Constructor injectivity, explosion principle (`Tactics.v`) |
 | We, Feb 12 |  6 | Tactics (`Tactics.v`)|
 | Mo, Feb 17 |    | President's Day (Holiday) |
