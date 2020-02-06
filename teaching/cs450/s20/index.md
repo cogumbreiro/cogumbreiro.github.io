@@ -6,6 +6,7 @@ layout: single
 video2: https://echo360.org/media/96f75398-4060-4d4d-857c-ca1bc15282db/public
 video3: https://echo360.org/media/4a56f9ea-37a2-453e-912e-ff5764d9eee6/public
 video4: https://echo360.org/media/2625074b-6f3f-4742-827a-3249d5b01ad3/public
+video5: https://echo360.org/media/ba0817ce-f3e6-4994-b953-1a0570cee1b4/public
 ---
 
 <h1 class="has-text-centered">{{ page.title }}</h1>
@@ -45,7 +46,7 @@ video4: https://echo360.org/media/2625074b-6f3f-4742-827a-3249d5b01ad3/public
 | We, Jan 29 |  2 | [Function calls; boolean logic](lecture02.html)  | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 file-url="lecture02-exercises.zip" %} |
 | Fr, Jan 31 |  3 | [Function declarations; function definitions](lecture03.html) | {% include_relative links.html slides-url="lecture03.pdf" recording-url=page.video3 file-url="lecture03-exercises.zip" %} |
 | Mo, Feb  3 |  4 | [Pairs; lists](lecture04.html) | {% include_relative links.html slides-url="lecture04.pdf" recording-url=page.video4 file-url="lecture04-exercises.zip" %} |
-| We, Feb  5 |  5 | Lists; quoting |
+| We, Feb  5 |  5 | [Lists; quoting](lecture05.html) | {% include_relative links.html slides-url="lecture05.pdf" recording-url=page.video5 file-url="lecture05-exercises.zip" %} |
 |            |    | **☙ Module 2: Advanced Functional Programming ☙** |
 | Fr, Feb  7 |  6 | Nested definitions; caching |
 | Mo, Feb 10 |  7 | Tail-call optimizations; structs |
