@@ -48,7 +48,7 @@ video5: https://echo360.org/media/ba0817ce-f3e6-4994-b953-1a0570cee1b4/public
 | Mo, Feb  3 |  4 | [Pairs; lists](lecture04.html) | {% include_relative links.html slides-url="lecture04.pdf" recording-url=page.video4 file-url="lecture04-exercises.zip" %} |
 | We, Feb  5 |  5 | [Lists; quoting](lecture05.html) | {% include_relative links.html slides-url="lecture05.pdf" recording-url=page.video5 file-url="lecture05-exercises.zip" %} |
 |            |    | **☙ Module 2: Advanced Functional Programming ☙** |
-| Fr, Feb  7 |  6 | Nested definitions; caching |
+| Fr, Feb  7 |  6 | [Nested definitions; caching](lecture06.html) | {% include_relative links.html slides-url="lecture06.pdf" recording-url=page.video6 file-url="lecture06-exercises.zip" %} |
 | Mo, Feb 10 |  7 | Tail-call optimizations; structs |
 | We, Feb 12 |  8 | Functions as values (closures) |
 | Fr, Feb 14 |  9 | Functional patterns: find; map |
