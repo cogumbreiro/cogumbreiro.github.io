@@ -49,7 +49,7 @@ video4: https://echo360.org/media/eb2ef42d-3f1d-42d7-badd-2800d985ace2/public
 | We, Jan 29 |  2 | [Pattern matching; reflexivity](lecture02.html) [(`Basic.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html) | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 file-url="lecture02.v" %} |
 | Mo, Feb  3 |  3 | [Proofs by induction](lecture03.html) [(`Induction.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Induction.html)  | {% include_relative links.html slides-url="lecture03.pdf" recording-url=page.video3 file-url="lecture03.v" %} |
 | We, Feb  5 |  4 | [Manipulating theorems; data-structures](lecture04.html) (`List.v`) | {% include_relative links.html slides-url="lecture04.pdf" recording-url=page.video4 file-url="lecture04.v" %} |
-| Mo, Feb 10 |  5 | Polymorphism; Constructor injectivity, explosion principle (`Poly.v`, `Tactics.v`) | 
+| Mo, Feb 10 |  5 | [Polymorphism; Constructor injectivity, explosion principle](lecture05.html) (`Poly.v`, `Tactics.v`) | {% include_relative links.html slides-url="lecture05.pdf" recording-url=page.video5 file-url="lecture05.v" %} |
 | We, Feb 12 |  6 | Tactics (`Tactics.v`)|
 | Mo, Feb 17 |    | President's Day (Holiday) |
 |            |    | **☙ Module 2: Regular Languages ☙** |
