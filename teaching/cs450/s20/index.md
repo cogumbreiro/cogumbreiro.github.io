@@ -42,26 +42,26 @@ video6: https://echo360.org/media/34f2d5d0-7dd1-4ddc-a31e-b7a438ff3e06/public
 
 | Date       | #  | Lecture      |   |
 |:-----------|---:|:-------------|---|
-|            |    | **☙ Module 1: Basic Functional Programming ☙** |
+|            |    | {% include_relative sect-title.html num=1 title="Basic Functional Programming" %} |
 | Mo, Jan 27 |  1 | [Course overview; arithmetic operations](lecture01.html) | {% include_relative links.html slides-url="lecture01.pdf" file-url="lecture01-examples.zip" %} |
 | We, Jan 29 |  2 | [Function calls; boolean logic](lecture02.html)  | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 file-url="lecture02-exercises.zip" %} |
 | Fr, Jan 31 |  3 | [Function declarations; function definitions](lecture03.html) | {% include_relative links.html slides-url="lecture03.pdf" recording-url=page.video3 file-url="lecture03-exercises.zip" %} |
 | Mo, Feb  3 |  4 | [Pairs; lists](lecture04.html) | {% include_relative links.html slides-url="lecture04.pdf" recording-url=page.video4 file-url="lecture04-exercises.zip" %} |
 | We, Feb  5 |  5 | [Lists; quoting](lecture05.html) | {% include_relative links.html slides-url="lecture05.pdf" recording-url=page.video5 file-url="lecture05-exercises.zip" %} |
-|            |    | **☙ Module 2: Advanced Functional Programming ☙** |
+|            |    | {% include_relative sect-title.html num=1 title="Advanced Functional Programming" %} |
 | Fr, Feb  7 |  6 | [Nested definitions; caching](lecture06.html) | {% include_relative links.html slides-url="lecture06.pdf" recording-url=page.video6 file-url="lecture06-exercises.zip" %} |
 | Mo, Feb 10 |  7 | Tail-call optimizations; structs |
 | We, Feb 12 |  8 | Functions as values (closures) |
 | Fr, Feb 14 |  9 | Functional patterns: find; map |
 | Mo, Feb 17 |    | (School closure) |
 | We, Feb 19 | 10 | Functional patterns: scan; reduce |
-|            |    | **☙ Module 3: Lazy evaluation ☙** |
+|            |    | {% include_relative sect-title.html num=3 title="Lazy evaluation" %} |
 | Fr, Feb 21 | 11 | Functional Patterns: thunks; promises |
 | Mo, Feb 24 | 12 | Streams |
 | We, Feb 26 | 13 | Stream operators |
 | Fr, Feb 28 | 14 | Evaluating expressions|
 | Mo, Mar  2 | 15 | Variable argument functions; Formal methods |
-|            |    | **☙ Module 4: Lambda calculus ☙** |
+|            |    | {% include_relative sect-title.html num=4 title="Lambda calculus" %} |
 | We, Mar  4 | 16 | Spec lambda calculus |
 | Fr, Mar  6 | 17 | Lexical/dynamic scoping |
 | Mo, Mar  9 | 18 | Church encoding |
@@ -70,14 +70,14 @@ video6: https://echo360.org/media/34f2d5d0-7dd1-4ddc-a31e-b7a438ff3e06/public
 | Mo, Mar 16 |    | (School closure) |
 | We, Mar 18 |    | (School closure) |
 | Fr, Mar 20 |    | (School closure) |
-|            |    | **☙ Module 5: Mutable lambda calculus ☙**
+|            |    | {% include_relative sect-title.html num=5 title="Mutable lambda calculus" %} |
 | Mo, Mar 23 | 21 | Spec immutable lambda with defs |
 | We, Mar 25 | 22 | Implement lambda with defs |
 | Fr, Mar 27 | 23 | Spec mut-lambda with defs |
 | Mo, Mar 30 | 24 | Implement mut-lambda with defs |
 | We, Apr  1 | 25 | Exercises
 | Fr, Apr  3 | 26 | Why study programming languages? |
-|            |    | **☙ Module 6: Monads and side effects☙** |
+|            |    | {% include_relative sect-title.html num=6 title="Monads and side effects" %} |
 | Mo, Apr  6 | 27 | Garbage collection |
 | We, Apr  8 | 28 | Mark and sweep; sets; refactoring evaluation |
 | Fr, Apr 10 | 29 | Effectful operations |
@@ -85,12 +85,12 @@ video6: https://echo360.org/media/34f2d5d0-7dd1-4ddc-a31e-b7a438ff3e06/public
 | We, Apr 15 | 31 | Type-directed monads; dynamic binding |
 | Fr, Apr 17 | 32 | Monadic continuations |
 | Mo, Apr 20 |    | (School closure) |
-|            |    | **☙ Module 7: Abstraction ☙**
+|            |    | {% include_relative sect-title.html num=7 title="Abstraction" %} |
 | We, Apr 22 | 33 | What is a PhD? |
 | Fr, Apr 24 | 34 | Pattern-matching |
 | Mo, Apr 27 | 35 | Generic methods |
 | We, Apr 29 | 36 | Macros |
-|            |    | **☙ Module 8: Object Oriented Programming ☙** |
+|            |    | {% include_relative sect-title.html num=8 title="Object Oriented Programming" %} |
 | Fr, May  1 | 37 | LambdaJS; object method; Class inheritance |
 | Mo, May  4 | 38 | SimpleJS; translating LambdaJS to SimpleJS |
 | We, May  6 | 49 | Translating SimpleJS to LambdaJS |
