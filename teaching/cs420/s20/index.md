@@ -6,6 +6,7 @@ layout: single
 video2: https://echo360.org/media/28f68251-2762-48b5-836c-b056b50ce793/public
 video3: https://echo360.org/media/20cf88a8-c051-4a7c-bbde-33b7cb89b43c/public
 video4: https://echo360.org/media/eb2ef42d-3f1d-42d7-badd-2800d985ace2/public
+video5: https://echo360.org/media/72cef3f3-2ec2-43dc-8c1e-ff312e583c30/public
 ---
 
 <h1 class="has-text-centered">{{ page.title }}</h1>
