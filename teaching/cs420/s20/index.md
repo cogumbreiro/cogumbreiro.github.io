@@ -36,6 +36,7 @@ video5: https://echo360.org/media/72cef3f3-2ec2-43dc-8c1e-ff312e583c30/public
 
 # Resources
 
+* [The Turing library](https://gitlab.com/cogumbreiro/turing)
 * [Logic Foundations exercises](lf.tgz)
 
 ## Class Schedule
