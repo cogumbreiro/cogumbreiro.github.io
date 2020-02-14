@@ -9,6 +9,7 @@ video4: https://echo360.org/media/2625074b-6f3f-4742-827a-3249d5b01ad3/public
 video5: https://echo360.org/media/ba0817ce-f3e6-4994-b953-1a0570cee1b4/public
 video6: https://echo360.org/media/34f2d5d0-7dd1-4ddc-a31e-b7a438ff3e06/public
 video7: https://echo360.org/media/93c0e04b-5412-4e7f-9b70-4ad2a11ad379/public
+video8: https://echo360.org/media/7d9d9336-24f1-4f12-91d1-1678201e67a6/public
 ---
 
 <h1 class="has-text-centered">{{ page.title }}</h1>
