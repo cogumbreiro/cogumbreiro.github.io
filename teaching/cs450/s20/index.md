@@ -51,9 +51,9 @@ video7: https://echo360.org/media/93c0e04b-5412-4e7f-9b70-4ad2a11ad379/public
 | We, Feb  5 |  5 | [Lists; quoting](lecture05.html) | {% include_relative links.html slides-url="lecture05.pdf" recording-url=page.video5 file-url="lecture05-exercises.zip" %} |
 |            |    | {% include_relative sect-title.html num=1 title="Advanced Functional Programming" %} |
 | Fr, Feb  7 |  6 | [Nested definitions; caching](lecture06.html) | {% include_relative links.html slides-url="lecture06.pdf" recording-url=page.video6 file-url="lecture06-exercises.zip" %} |
-| Mo, Feb 10 |  7 | [Tail-call optimizations; structs](lecture07.html) | {% include_relative links.html slides-url="lecture07.pdf" recording-url=page.video7 file-url="lecture07-exercises.zip" %} |
-| We, Feb 12 |  8 | Functions as values (closures) |
-| Fr, Feb 14 |  9 | Functional patterns: find; map |
+| Mo, Feb 10 |  7 | [Tail-call optimization; structs](lecture07.html) | {% include_relative links.html slides-url="lecture07.pdf" recording-url=page.video7 file-url="lecture07-exercises.zip" %} |
+| We, Feb 12 |  8 | [Functions as values (closures)](lecture08.html) | {% include_relative links.html slides-url="lecture08.pdf" recording-url=page.video8 file-url="lecture08-exercises.zip" %} |
+| Fr, Feb 14 |  9 | Currying; Functional patterns: find; map |
 | Mo, Feb 17 |    | (School closure) |
 | We, Feb 19 | 10 | Functional patterns: scan; reduce |
 |            |    | {% include_relative sect-title.html num=3 title="Lazy evaluation" %} |
