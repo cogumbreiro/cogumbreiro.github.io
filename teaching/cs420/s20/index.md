@@ -8,6 +8,85 @@ video3: https://echo360.org/media/20cf88a8-c051-4a7c-bbde-33b7cb89b43c/public
 video4: https://echo360.org/media/eb2ef42d-3f1d-42d7-badd-2800d985ace2/public
 video5: https://echo360.org/media/72cef3f3-2ec2-43dc-8c1e-ff312e583c30/public
 video6: https://echo360.org/media/0cc14e1a-7f61-4a18-9cf0-2e694000bfa0/public
+data:
+  - module: Logical Foundations
+  - lecture: Course overview; Coq intro
+    date: Mo, Jan 27
+    published: true
+  - lecture: Pattern matching; reflexivity
+    date: We, Jan 29
+    video: https://echo360.org/media/28f68251-2762-48b5-836c-b056b50ce793/public
+  - lecture: Proofs by induction
+    date: Mo, Feb  3
+    video: https://echo360.org/media/20cf88a8-c051-4a7c-bbde-33b7cb89b43c/public
+  - lecture: Manipulating theorems; data-structures
+    date: We, Feb  5
+    video: https://echo360.org/media/eb2ef42d-3f1d-42d7-badd-2800d985ace2/public
+  - lecture: Polymorphism; Constructor injectivity, explosion principle
+    date: Mo, Feb 10
+    video: https://echo360.org/media/72cef3f3-2ec2-43dc-8c1e-ff312e583c30/public
+  - lecture: Tactics
+    date: We, Feb 12
+    video: https://echo360.org/media/0cc14e1a-7f61-4a18-9cf0-2e694000bfa0/public
+  - closure: true
+    date: Mo, Feb 17
+################################################################################
+  - module: Regular Languages
+  - lecture: Formal languages
+    date: We, Feb 19
+  - lecture: The Kleen star, language equivalence
+    date: Mo, Feb 24
+  - lecture: Regular expressions
+    date: We, Feb 26
+  - lecture: Nondeterministic Finite Automata
+    date: Mo, Mar  2
+  - lecture: NFA operations; NFA ⇔ REGEX
+    date: We, Mar  4
+  - lecture: Pumping lemma; Non-regular languages
+    date: Mo, Mar  9
+  - lecture: Deterministic Finite Automata; NFA ⇔ DFA
+    date: We, Mar 11
+  - closure: true
+    date: Mo, Mar 16
+  - closure: true
+    date: We, Mar 18
+################################################################################
+  - module: Context-free Languages
+  - lecture: Context-free grammars <b>(Mini-test 2)</b>
+    date: Mo, Mar 23
+  - lecture: Pushdown Atomata
+    date: We, Mar 25
+  - lecture: PDA ⇔ CFG
+    date: Mo, Mar 30
+  - lecture: Pumping lemma; Non-context-free Languages
+    date: We, Apr  1
+  - lecture: Turing Machines
+    date: Mo, Apr  6
+  - lecture: Variants of Turing Machines
+    date: We, Apr  8
+  - lecture: Acceptance, emptiness and equality tests
+    date: Mo, Apr 13
+  - lecture: TM Acceptance
+    date: We, Apr 15
+  - closure: true
+    date: Mo, Apr 20
+################################################################################
+  - module: Decidability
+  - lecture: Acceptance, emptiness and equality tests <b>(Mini-test 3)</b>
+    date: We, Apr 22
+  - lecture: Undecidable problems
+    date: Mo, Apr 27
+  - lecture: Reduction via Computation Histories
+    date: We, Apr 29
+  - lecture: Mapping reducibility
+    date: Mo, May  4
+  - lecture: Mapping reducibility
+    date: We, May  6
+  - lecture: Mapping reducibility <b>(Mini-test 4)</b>
+    date: We, May 11
+  - lecture: Course conclusion
+    date: We, May 13
+
 ---
 
 <h1 class="has-text-centered">{{ page.title }}</h1>
@@ -45,41 +124,63 @@ video6: https://echo360.org/media/0cc14e1a-7f61-4a18-9cf0-2e694000bfa0/public
 **Note:** Any lecture titles in future dates are considered tentative.
 
 
-| Date       | #  | Lecture      |            |
-|:-----------|---:|:-------------|:-----------|
-|            |    | **☙ Module 1: Logical Foundations ☙** |
-| Mo, Jan 27 |  1 | [Course overview; Coq intro](lecture01.html) [(`Basic.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html#lab18) | {% include_relative links.html slides-url="lecture01.pdf" file-url="lecture01.v" %} |
-| We, Jan 29 |  2 | [Pattern matching; reflexivity](lecture02.html) [(`Basic.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html) | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 file-url="lecture02.v" %} |
-| Mo, Feb  3 |  3 | [Proofs by induction](lecture03.html) [(`Induction.v`)](https://softwarefoundations.cis.upenn.edu/lf-current/Induction.html)  | {% include_relative links.html slides-url="lecture03.pdf" recording-url=page.video3 file-url="lecture03.v" %} |
-| We, Feb  5 |  4 | [Manipulating theorems; data-structures](lecture04.html) (`List.v`) | {% include_relative links.html slides-url="lecture04.pdf" recording-url=page.video4 file-url="lecture04.v" %} |
-| Mo, Feb 10 |  5 | [Polymorphism; Constructor injectivity, explosion principle](lecture05.html) (`Poly.v`, `Tactics.v`) | {% include_relative links.html slides-url="lecture05.pdf" recording-url=page.video5 file-url="lecture05.v" %} |
-| We, Feb 12 |  6 | [Tactics](lecture06.html) (`Tactics.v`)| {% include_relative links.html slides-url="lecture06.pdf" recording-url=page.video6 file-url="lecture06.v" %} |
-| Mo, Feb 17 |    | President's Day (Holiday) |
-|            |    | **☙ Module 2: Regular Languages ☙** |
-| We, Feb 19 |  7 | Formal languages **(Mini-test 1)** |
-| Mo, Feb 24 |  8 | The Kleen star, language equivalence |
-| We, Feb 26 |  9 | Regular expressions |
-| Mo, Mar  2 | 10 | Nondeterministic Finite Automata |
-| We, Mar  4 | 11 | NFA operations; NFA ⇔ REGEX |
-| Mo, Mar  9 | 12 | Pumping lemma; Non-regular languages |
-| We, Mar 11 | 13 | Deterministic Finite Automata; NFA ⇔ DFA  |
-| Mo, Mar 16 |    | Spring Break |
-| We, Mar 18 |    | Spring Break |
-|            |    | **☙ Module 3: Context-free Languages ☙** |
-| Mo, Mar 23 | 14 | Context-free grammars **(Mini-test 2)** |
-| We, Mar 25 | 15 | Pushdown Atomata |
-| Mo, Mar 30 | 16 | PDA ⇔ CFG |
-| We, Apr  1 | 17 | Pumping lemma; Non-context-free Languages |
-| Mo, Apr  6 | 18 | Turing Machines |
-| We, Apr  8 | 19 | Variants of Turing Machines |
-| Mo, Apr 13 | 20 | Acceptance, emptiness and equality tests |
-| We, Apr 15 | 21 | TM Acceptance |
-| Mo, Apr 20 |    |  Patriot's Day (Holiday) | |
-|            |    | **☙ Module 4: Decidability ☙** |
-| We, Apr 22 | 22 | Acceptance, emptiness and equality tests **(Mini-test 3)** |
-| Mo, Apr 27 | 23 | Undecidable problems |
-| We, Apr 29 | 24 | Reduction via Computation Histories |
-| Mo, May  4 | 25 | Mapping reducibility |
-| We, May  6 | 26 | Mapping reducibility |
-| Mo, May 11 | 27 | Mapping reducibility **(Mini-test 4)** |
-| We, May 13 | 28 | Course wrap up  |
+{% assign l_num = 0 %}
+{% assign m_num = 0 %}
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>#</th>
+      <th>Lecture</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+{% for r in page.data %}
+<tr>
+{% if r.module %}
+  {% assign m_num = m_num | plus: 1 %}
+  <td></td>
+  <td></td>
+  <td><b>☙ Module {{m_num}}: {{ r.module }} ❧</b></td>
+  <td></td>
+{% elsif r.closure %}
+  <td>{{r.date}}</td>
+  <td></td>
+  <td class="has-text-grey-light">(School closure)</td>
+  <td></td>
+{% else %}
+  {% if r.published %}
+    {% assign is_pub = true %}
+  {% elsif r.video %}
+    {% assign is_pub = true %}
+  {% else %}
+    {% assign is_pub = false %}
+  {% endif %}
+  {% assign l_num = l_num | plus: 1 %}
+  {% capture num %}{% if l_num < 10 %}0{% endif %}{{ l_num }}{% endcapture %}
+  <td>{{ r.date }}</td>
+  <td>{{ num }}</td>
+  <td>
+  {% if is_pub %}
+    <a href="lecture{{num}}.html">{{ r.lecture }}</a>
+  {% else %}
+    {{ r.lecture }}
+  {% endif %}
+  </td>
+  <td>
+    {% if is_pub %}
+      {% capture s_url %}lecture{{ num }}.pdf{% endcapture %}
+      {% if r.skip_exercises %}
+        {% assign f_url = nil %}
+      {% else %}
+        {% capture f_url %}lecture{{ num }}-exercises.zip{% endcapture %}
+      {% endif %}
+      <span class="buttons has-addons">{% include button.html url=s_url title="Download lecture slides" icon="book" %}{% include button.html url=r.video icon="file-video" title="Video recording" %}{% include button.html url=f_url icon="box" title="Class exercises" %}</span>
+    {% endif %}
+  </td>
+{% endif %}
+</tr>
+{% endfor %}
+  </tbody>
+</table>
