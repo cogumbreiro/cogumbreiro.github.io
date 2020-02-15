@@ -10,6 +10,177 @@ video5: https://echo360.org/media/ba0817ce-f3e6-4994-b953-1a0570cee1b4/public
 video6: https://echo360.org/media/34f2d5d0-7dd1-4ddc-a31e-b7a438ff3e06/public
 video7: https://echo360.org/media/93c0e04b-5412-4e7f-9b70-4ad2a11ad379/public
 video8: https://echo360.org/media/7d9d9336-24f1-4f12-91d1-1678201e67a6/public
+
+data:
+  - module:
+      title: Basic Functional Programming
+  - lecture:
+      date: Mo, Jan 27
+      title: Course overview; arithmetic operations
+      published: true
+  - lecture:
+      date: We, Jan 29
+      title: Function calls; boolean logic
+      video: https://echo360.org/media/96f75398-4060-4d4d-857c-ca1bc15282db/public
+  - lecture:
+      date: Fr, Jan 31
+      title: Function declarations; function definitions
+      video: https://echo360.org/media/4a56f9ea-37a2-453e-912e-ff5764d9eee6/public
+  - lecture:
+      date: Mo, Feb  3
+      title: Pairs; lists
+      video: https://echo360.org/media/2625074b-6f3f-4742-827a-3249d5b01ad3/public
+  - lecture:
+      date: We, Feb  5
+      title: Lists; quoting
+      video: https://echo360.org/media/ba0817ce-f3e6-4994-b953-1a0570cee1b4/public
+################################################################################
+  - module:
+      title: Advanced Functional Programming
+  - lecture:
+      date: Fr, Feb  7
+      title: Nested definitions; caching
+      video: https://echo360.org/media/34f2d5d0-7dd1-4ddc-a31e-b7a438ff3e06/public
+  - lecture:
+      date: Mo, Feb 10
+      title: Tail-call optimization; structs
+      video: https://echo360.org/media/93c0e04b-5412-4e7f-9b70-4ad2a11ad379/public
+  - lecture:
+      date: We, Feb 12
+      title: Functions as values (closures)
+      video: https://echo360.org/media/7d9d9336-24f1-4f12-91d1-1678201e67a6/public
+  - lecture:
+      date: Fr, Feb 14
+      skip_exercises: true
+      title: "Currying; Functional patterns: find; map"
+      video: https://echo360.org/media/f6a4bc29-31c0-4ed1-8a07-580c187764da/public
+  - closure:
+      date: Mo, Feb 17
+  - lecture:
+      date: We, Feb 19
+      title: "Functional patterns: scan; reduce"
+################################################################################
+  - module:
+      title: Lazy evaluation
+  - lecture:
+      title: "Functional Patterns: thunks; promises"
+      date: Fr, Feb 21
+  - lecture:
+      title: Streams
+      date: Mo, Feb 24
+  - lecture:
+      title: Stream operators
+      date: We, Feb 26
+  - lecture:
+      title: Evaluating expressions
+      date: Fr, Feb 28
+  - lecture:
+      title: Variable argument functions; Formal methods
+      date: Mo, Mar  2
+################################################################################
+  - module:
+      title: Lambda calculus
+  - lecture:
+      title: Spec lambda calculus
+      date: We, Mar  4
+  - lecture:
+      title: Lexical/dynamic scoping
+      date: Fr, Mar  6
+  - lecture:
+      title: Church encoding
+      date: Mo, Mar  9
+  - lecture:
+      title: Spec lambda calculus with environments
+      date: We, Mar 11
+  - lecture:
+      title: Implement lambda with environments
+      date: Fr, Mar 13
+  - closure:
+      date: Mo, Mar 16
+  - closure:
+      date: We, Mar 18
+  - closure:
+      date: Fr, Mar 20
+################################################################################
+  - module:
+      title: Mutable lambda calculus
+  - lecture:
+      date: Mo, Mar 23
+      title: Spec immutable lambda with defs
+  - lecture:
+      date: We, Mar 25
+      title: Implement lambda with defs
+  - lecture:
+      date: Fr, Mar 27
+      title: Spec mut-lambda with defs
+  - lecture:
+      date: Mo, Mar 30
+      title: Implement mut-lambda with defs
+  - lecture:
+      date: We, Apr  1
+      title: Exercises
+  - lecture:
+      date: Fr, Apr  3
+      title: Why study programming languages?
+################################################################################
+  - module:
+      title: Monads and side effects
+  - lecture:
+      title: Garbage collection
+      date: Mo, Apr  6
+  - lecture:
+      title: Mark and sweep; sets; refactoring evaluation
+      date: We, Apr  8
+  - lecture:
+      title: Effectful operations
+      date: Fr, Apr 10
+  - lecture:
+      title: Refactoring errors; monads
+      date: Mo, Apr 13
+  - lecture:
+      date: We, Apr 15
+      title: Type-directed monads; dynamic binding
+  - lecture:
+      date: Fr, Apr 17
+      title: Monadic continuations
+  - closure:
+      date: Mo, Apr 20
+################################################################################
+  - module:
+      title: Abstraction
+  - lecture:
+      title: What is a PhD?
+      date: We, Apr 22
+  - lecture:
+      date: Fr, Apr 24
+      title: Pattern-matching
+  - lecture:
+      date: Mo, Apr 27
+      title: Generic methods
+  - lecture:
+      date: We, Apr 29
+      title: Macros
+################################################################################
+  - module:
+      title: Object Oriented Programming
+  - lecture:
+      title: LambdaJS; object method; Class inheritance
+      date: Fr, May  1
+  - lecture:
+      date: Mo, May  4
+      title: SimpleJS; translating LambdaJS to SimpleJS
+  - lecture:
+      date: We, May  6
+      title: Translating SimpleJS to LambdaJS
+  - lecture:
+      date: Fr, May  8
+      title: The essence of JavaScript
+  - lecture:
+      date: Mo, May 11
+      title: Parallelism with asynchronous evaluation
+  - lecture:
+      date: We, May 13
+      title: Victory lap
 ---
 
 <h1 class="has-text-centered">{{ page.title }}</h1>
@@ -41,61 +212,63 @@ video8: https://echo360.org/media/7d9d9336-24f1-4f12-91d1-1678201e67a6/public
 
 **Note:** Any lecture titles in future dates are considered tentative.
 
-
-| Date       | #  | Lecture      |   |
-|:-----------|---:|:-------------|---|
-|            |    | {% include_relative sect-title.html num=1 title="Basic Functional Programming" %} |
-| Mo, Jan 27 |  1 | [Course overview; arithmetic operations](lecture01.html) | {% include_relative links.html slides-url="lecture01.pdf" file-url="lecture01-examples.zip" %} |
-| We, Jan 29 |  2 | [Function calls; boolean logic](lecture02.html)  | {% include_relative links.html slides-url="lecture02.pdf" recording-url=page.video2 file-url="lecture02-exercises.zip" %} |
-| Fr, Jan 31 |  3 | [Function declarations; function definitions](lecture03.html) | {% include_relative links.html slides-url="lecture03.pdf" recording-url=page.video3 file-url="lecture03-exercises.zip" %} |
-| Mo, Feb  3 |  4 | [Pairs; lists](lecture04.html) | {% include_relative links.html slides-url="lecture04.pdf" recording-url=page.video4 file-url="lecture04-exercises.zip" %} |
-| We, Feb  5 |  5 | [Lists; quoting](lecture05.html) | {% include_relative links.html slides-url="lecture05.pdf" recording-url=page.video5 file-url="lecture05-exercises.zip" %} |
-|            |    | {% include_relative sect-title.html num=1 title="Advanced Functional Programming" %} |
-| Fr, Feb  7 |  6 | [Nested definitions; caching](lecture06.html) | {% include_relative links.html slides-url="lecture06.pdf" recording-url=page.video6 file-url="lecture06-exercises.zip" %} |
-| Mo, Feb 10 |  7 | [Tail-call optimization; structs](lecture07.html) | {% include_relative links.html slides-url="lecture07.pdf" recording-url=page.video7 file-url="lecture07-exercises.zip" %} |
-| We, Feb 12 |  8 | [Functions as values (closures)](lecture08.html) | {% include_relative links.html slides-url="lecture08.pdf" recording-url=page.video8 file-url="lecture08-exercises.zip" %} |
-| Fr, Feb 14 |  9 | Currying; Functional patterns: find; map |
-| Mo, Feb 17 |    | (School closure) |
-| We, Feb 19 | 10 | Functional patterns: scan; reduce |
-|            |    | {% include_relative sect-title.html num=3 title="Lazy evaluation" %} |
-| Fr, Feb 21 | 11 | Functional Patterns: thunks; promises |
-| Mo, Feb 24 | 12 | Streams |
-| We, Feb 26 | 13 | Stream operators |
-| Fr, Feb 28 | 14 | Evaluating expressions|
-| Mo, Mar  2 | 15 | Variable argument functions; Formal methods |
-|            |    | {% include_relative sect-title.html num=4 title="Lambda calculus" %} |
-| We, Mar  4 | 16 | Spec lambda calculus |
-| Fr, Mar  6 | 17 | Lexical/dynamic scoping |
-| Mo, Mar  9 | 18 | Church encoding |
-| We, Mar 11 | 19 | Spec lambda calculus with environments |
-| Fr, Mar 13 | 20 | Implement lambda with environments |
-| Mo, Mar 16 |    | (School closure) |
-| We, Mar 18 |    | (School closure) |
-| Fr, Mar 20 |    | (School closure) |
-|            |    | {% include_relative sect-title.html num=5 title="Mutable lambda calculus" %} |
-| Mo, Mar 23 | 21 | Spec immutable lambda with defs |
-| We, Mar 25 | 22 | Implement lambda with defs |
-| Fr, Mar 27 | 23 | Spec mut-lambda with defs |
-| Mo, Mar 30 | 24 | Implement mut-lambda with defs |
-| We, Apr  1 | 25 | Exercises
-| Fr, Apr  3 | 26 | Why study programming languages? |
-|            |    | {% include_relative sect-title.html num=6 title="Monads and side effects" %} |
-| Mo, Apr  6 | 27 | Garbage collection |
-| We, Apr  8 | 28 | Mark and sweep; sets; refactoring evaluation |
-| Fr, Apr 10 | 29 | Effectful operations |
-| Mo, Apr 13 | 30 | Refactoring errors; monads |
-| We, Apr 15 | 31 | Type-directed monads; dynamic binding |
-| Fr, Apr 17 | 32 | Monadic continuations |
-| Mo, Apr 20 |    | (School closure) |
-|            |    | {% include_relative sect-title.html num=7 title="Abstraction" %} |
-| We, Apr 22 | 33 | What is a PhD? |
-| Fr, Apr 24 | 34 | Pattern-matching |
-| Mo, Apr 27 | 35 | Generic methods |
-| We, Apr 29 | 36 | Macros |
-|            |    | {% include_relative sect-title.html num=8 title="Object Oriented Programming" %} |
-| Fr, May  1 | 37 | LambdaJS; object method; Class inheritance |
-| Mo, May  4 | 38 | SimpleJS; translating LambdaJS to SimpleJS |
-| We, May  6 | 49 | Translating SimpleJS to LambdaJS |
-| Fr, May  8 | 40 | The essence of JavaScript |
-| Mo, May 11 | 41 | Parallelism with asynchronous evaluation |
-| We, May 13 | 42 | Victory Lap |
+{% assign l_num = 0 %}
+{% assign m_num = 0 %}
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>#</th>
+      <th>Lecture</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+{% for r in page.data %}
+<tr>
+{% if r.module %}
+  {% assign m_num = m_num | plus: 1 %}
+  <td></td>
+  <td></td>
+  <td><b>☙ Module {{m_num}}: {{ r.module.title }} ❧</b></td>
+  <td></td>
+{% elsif r.closure %}
+  <td>{{r.closure.date}}</td>
+  <td></td>
+  <td class="has-text-grey-light">(School closure)</td>
+  <td></td>
+{% else %}
+  {% if r.lecture.published %}
+    {% assign is_pub = true %}
+  {% elsif r.lecture.video %}
+    {% assign is_pub = true %}
+  {% else %}
+    {% assign is_pub = false %}
+  {% endif %}
+  {% assign l_num = l_num | plus: 1 %}
+  {% capture num %}{% if l_num < 10 %}0{% endif %}{{ l_num }}{% endcapture %}
+  <td>{{ r.lecture.date }}</td>
+  <td>{{ num }}</td>
+  <td>
+  {% if is_pub %}
+    <a href="lecture{{num}}.html">{{ r.lecture.title }}</a>
+  {% else %}
+    {{ r.lecture.title }}
+  {% endif %}
+  </td>
+  <td>
+    {% if is_pub %}
+      {% capture s_url %}lecture{{ num }}.pdf{% endcapture %}
+      {% if r.lecture.skip_exercises %}
+        {% assign f_url = nil %}
+      {% else %}
+        {% capture f_url %}lecture{{ num }}-exercises.zip{% endcapture %}
+      {% endif %}
+      <span class="buttons has-addons">{% include button.html url=s_url title="Download lecture slides" icon="book" %}{% include button.html url=r.lecture.video icon="file-video" title="Video recording" %}{% include button.html url=f_url icon="box" title="Class exercises" %}</span>
+    {% endif %}
+  </td>
+{% endif %}
+</tr>
+{% endfor %}
+  </tbody>
+</table>
