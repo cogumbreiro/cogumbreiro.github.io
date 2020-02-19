@@ -39,13 +39,13 @@ data:
   - lecture: Functions as values (closures)
     date: We, Feb 12
     video: https://echo360.org/media/7d9d9336-24f1-4f12-91d1-1678201e67a6/public
-  - lecture: "Currying; Functional patterns: find; map"
+  - lecture: "Dynamically-created funcs, storing funcs in lists, currying"
     date: Fr, Feb 14
     skip_exercises: true
     video: https://echo360.org/media/f6a4bc29-31c0-4ed1-8a07-580c187764da/public
   - closure: true
     date: Mo, Feb 17
-  - lecture: "Functional patterns: scan; reduce"
+  - lecture: "Currying, find-one, find-many"
     date: We, Feb 19
 ################################################################################
   - module: Lazy evaluation

@@ -25,7 +25,7 @@ data:
   - lecture: Polymorphism; Constructor injectivity, explosion principle
     date: Mo, Feb 10
     video: https://echo360.org/media/72cef3f3-2ec2-43dc-8c1e-ff312e583c30/public
-  - lecture: Tactics
+  - lecture: Logical Connectives
     date: We, Feb 12
     video: https://echo360.org/media/0cc14e1a-7f61-4a18-9cf0-2e694000bfa0/public
   - closure: true
