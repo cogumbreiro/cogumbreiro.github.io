@@ -45,15 +45,16 @@ data:
     video: https://echo360.org/media/f6a4bc29-31c0-4ed1-8a07-580c187764da/public
   - closure: true
     date: Mo, Feb 17
-  - lecture: "Currying, find-one, find-many"
+  - lecture: "Function evaluation, abstract syntactic trees"
     date: We, Feb 19
+    video: https://echo360.org/media/76c95755-9f51-485d-8f91-c5e7839f9ed3/public
+  - lecture: "Currying, exists, map"
+    date: Fr, Feb 21
 ################################################################################
   - module: Lazy evaluation
   - lecture: "Functional Patterns: thunks; promises"
-    date: Fr, Feb 21
-  - lecture: Streams
     date: Mo, Feb 24
-  - lecture: Stream operators
+  - lecture: "Streams, stream operators"
     date: We, Feb 26
   - lecture: Evaluating expressions
     date: Fr, Feb 28

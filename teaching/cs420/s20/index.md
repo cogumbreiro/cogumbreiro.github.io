@@ -31,10 +31,11 @@ data:
   - closure: true
     date: Mo, Feb 17
 ################################################################################
-  - module: Regular Languages
-  - lecture: Formal languages
+  - lecture: Mini-test 1 recap
     date: We, Feb 19
-  - lecture: The Kleen star, language equivalence
+    video: https://echo360.org/media/8e83d814-050b-4a8e-bdd3-99da20acbf2b/public
+  - module: Regular Languages
+  - lecture: Formal languages, Kleene star, language equivalence
     date: Mo, Feb 24
   - lecture: Regular expressions
     date: We, Feb 26
