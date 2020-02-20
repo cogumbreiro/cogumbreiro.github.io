@@ -175,7 +175,7 @@ data:
       {% if r.skip_exercises %}
         {% assign f_url = nil %}
       {% else %}
-        {% capture f_url %}lecture{{ num }}-exercises.zip{% endcapture %}
+        {% capture f_url %}lecture{{ num }}.v{% endcapture %}
       {% endif %}
       <span class="buttons has-addons">{% include button.html url=s_url title="Download lecture slides" icon="book" %}{% include button.html url=r.video icon="file-video" title="Video recording" %}{% include button.html url=f_url icon="box" title="Class exercises" %}</span>
     {% endif %}
