@@ -48,6 +48,7 @@ data:
   - lecture: "Function evaluation, abstract syntactic trees"
     date: We, Feb 19
     video: https://echo360.org/media/76c95755-9f51-485d-8f91-c5e7839f9ed3/public
+    skip_exercises: true
   - lecture: "Currying, exists, map"
     date: Fr, Feb 21
 ################################################################################
