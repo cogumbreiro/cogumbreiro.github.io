@@ -51,6 +51,7 @@ data:
     skip_exercises: true
   - lecture: "Currying, exists, map"
     date: Fr, Feb 21
+    video: https://echo360.org/media/fa74a55f-61ed-4be6-8f19-642e486e3f5e/public
 ################################################################################
   - module: Lazy evaluation
   - lecture: "Functional Patterns: thunks; promises"
