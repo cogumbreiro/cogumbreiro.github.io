@@ -39,7 +39,7 @@ data:
     date: Mo, Feb 24
   - lecture: Regular expressions
     date: We, Feb 26
-  - lecture: Nondeterministic Finite Automata
+  - lecture: Nondeterministic Finite Automata <b>(Mini-Test 1)</b>
     date: Mo, Mar  2
   - lecture: NFA operations; NFA ⇔ REGEX
     date: We, Mar  4
