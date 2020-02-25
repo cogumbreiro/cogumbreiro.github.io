@@ -35,18 +35,18 @@ data:
     date: We, Feb 19
     video: https://echo360.org/media/8e83d814-050b-4a8e-bdd3-99da20acbf2b/public
   - module: Regular Languages
-  - lecture: Formal languages, Kleene star, language equivalence
+  - lecture: Formal languages
     date: Mo, Feb 24
     video: https://echo360.org/media/eafbe08d-649e-4e52-bdb0-6c9b3139b4f9/public
-  - lecture: Regular expressions
+  - lecture: Kleene star, language equivalence
     date: We, Feb 26
-  - lecture: Nondeterministic Finite Automata <b>(Mini-Test 1)</b>
+  - lecture: Regular expressions <b>(Mini-Test 1)</b>
     date: Mo, Mar  2
-  - lecture: NFA operations; NFA ⇔ REGEX
+  - lecture: Nondeterministic Finite Automata
     date: We, Mar  4
-  - lecture: Pumping lemma; Non-regular languages
+  - lecture: NFA ⇔ REGEX, Deterministic Finite Automata; NFA ⇔ DFA
     date: Mo, Mar  9
-  - lecture: Deterministic Finite Automata; NFA ⇔ DFA
+  - lecture: Pumping lemma; Non-regular languages
     date: We, Mar 11
   - closure: true
     date: Mo, Mar 16
