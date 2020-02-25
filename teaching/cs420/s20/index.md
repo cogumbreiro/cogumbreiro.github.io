@@ -37,6 +37,7 @@ data:
   - module: Regular Languages
   - lecture: Formal languages, Kleene star, language equivalence
     date: Mo, Feb 24
+    video: https://echo360.org/media/eafbe08d-649e-4e52-bdb0-6c9b3139b4f9/public
   - lecture: Regular expressions
     date: We, Feb 26
   - lecture: Nondeterministic Finite Automata <b>(Mini-Test 1)</b>
