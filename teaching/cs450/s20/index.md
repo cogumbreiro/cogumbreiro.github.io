@@ -52,27 +52,28 @@ data:
   - lecture: "Currying, exists, map"
     date: Fr, Feb 21
     video: https://echo360.org/media/fa74a55f-61ed-4be6-8f19-642e486e3f5e/public
+  - lecture: "Tail-call optimization,filter"
+    date: Mo, Feb 24
+    video: https://echo360.org/media/8a82ff77-4c6f-4724-b31f-81af862d41cd/public
 ################################################################################
   - module: Lazy evaluation
-  - lecture: "Functional Patterns: thunks; promises"
-    date: Mo, Feb 24
-  - lecture: "Streams, stream operators"
+  - lecture: "Reduction, thunks"
     date: We, Feb 26
-  - lecture: Evaluating expressions
+  - lecture: "Promises; Streams, stream operators"
     date: Fr, Feb 28
-  - lecture: Variable argument functions; Formal methods
+  - lecture: Evaluating expressions
     date: Mo, Mar  2
+  - lecture: Variable argument functions; Formal methods
+    date: We, Mar  4
 ################################################################################
   - module: Lambda calculus
   - lecture: Spec lambda calculus
-    date: We, Mar  4
-  - lecture: Lexical/dynamic scoping
     date: Fr, Mar  6
-  - lecture: Church encoding
+  - lecture: Lexical/dynamic scoping
     date: Mo, Mar  9
   - lecture: Spec lambda calculus with environments
     date: We, Mar 11
-  - lecture: Implement lambda with environments
+  - lecture: Implement lambda with environments; Church encoding
     date: Fr, Mar 13
   - closure: true
     date: Mo, Mar 16
