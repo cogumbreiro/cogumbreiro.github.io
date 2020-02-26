@@ -55,43 +55,43 @@ data:
   - lecture: "Tail-call optimization,filter"
     date: Mo, Feb 24
     video: https://echo360.org/media/8a82ff77-4c6f-4724-b31f-81af862d41cd/public
+  - lecture: "Reduction"
+    date: We, Feb 26
 ################################################################################
   - module: Lazy evaluation
-  - lecture: "Reduction, thunks"
-    date: We, Feb 26
-  - lecture: "Promises; Streams, stream operators"
+  - lecture: "Thunks and promises"
     date: Fr, Feb 28
-  - lecture: Evaluating expressions
+  - lecture: "Streams"
     date: Mo, Mar  2
-  - lecture: Variable argument functions; Formal methods
+  - lecture: Evaluating expressions; Variable argument functions
     date: We, Mar  4
 ################################################################################
-  - module: Lambda calculus
-  - lecture: Spec lambda calculus
+  - module: Formal methods; Lambda calculus
+  - lecture: "Language λ<sub>S</sub>: slow function calls"
     date: Fr, Mar  6
   - lecture: Lexical/dynamic scoping
     date: Mo, Mar  9
-  - lecture: Spec lambda calculus with environments
+  - lecture: "Language λ<sub>E</sub>: fast function calls"
     date: We, Mar 11
-  - lecture: Implement lambda with environments; Church encoding
+  - lecture: Implementing Language λ<sub>E</sub>; Church encoding
     date: Fr, Mar 13
   - closure: true
     date: Mo, Mar 16
   - closure: true
     date: We, Mar 18
-  - closure:
-      date: Fr, Mar 20
+  - closure: true
+    date: Fr, Mar 20
 ################################################################################
   - module: Mutable lambda calculus
-  - lecture: Spec immutable lambda with defs
+  - lecture: "Language λ<sub>F</sub>: adding definitions incorrectly"
     date: Mo, Mar 23
-  - lecture: Implement lambda with defs
+  - lecture: Implementing λ<sub>F</sub>
     date: We, Mar 25
-  - lecture: Spec mut-lambda with defs
+  - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
     date: Fr, Mar 27
-  - lecture: Implement mut-lambda with defs
+  - lecture: Implementing λ<sub>D</sub>
     date: Mo, Mar 30
-  - lecture: Exercises
+  - lecture: Implementing λ<sub>D</sub>
     date: We, Apr  1
   - lecture: Why study programming languages?
     date: Fr, Apr  3
@@ -188,7 +188,7 @@ data:
   <td><b>☙ Module {{m_num}}: {{ r.module }} ❧</b></td>
   <td></td>
 {% elsif r.closure %}
-  <td>{{r.date}}</td>
+  <td class="has-text-grey-light">{{r.date}}</td>
   <td></td>
   <td class="has-text-grey-light">(School closure)</td>
   <td></td>

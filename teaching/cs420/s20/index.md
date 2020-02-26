@@ -147,7 +147,7 @@ data:
   <td><b>☙ Module {{m_num}}: {{ r.module }} ❧</b></td>
   <td></td>
 {% elsif r.closure %}
-  <td>{{r.date}}</td>
+  <td class="has-text-grey-light">{{r.date}}</td>
   <td></td>
   <td class="has-text-grey-light">(School closure)</td>
   <td></td>
