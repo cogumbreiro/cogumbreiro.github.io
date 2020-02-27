@@ -57,6 +57,7 @@ data:
     video: https://echo360.org/media/8a82ff77-4c6f-4724-b31f-81af862d41cd/public
   - lecture: "Reduction"
     date: We, Feb 26
+    video: https://echo360.org/media/46d8d6a7-82e3-4ca1-aa08-0e74220a7835/public
 ################################################################################
   - module: Lazy evaluation
   - lecture: "Thunks and promises"
