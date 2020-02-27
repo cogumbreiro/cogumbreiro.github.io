@@ -40,6 +40,7 @@ data:
     video: https://echo360.org/media/eafbe08d-649e-4e52-bdb0-6c9b3139b4f9/public
   - lecture: Kleene star, language equivalence
     date: We, Feb 26
+    video: https://echo360.org/media/561be86a-fd93-4308-a959-fbe3c2cf8c90/public
   - lecture: Regular expressions <b>(Mini-Test 1)</b>
     date: Mo, Mar  2
   - lecture: Nondeterministic Finite Automata
