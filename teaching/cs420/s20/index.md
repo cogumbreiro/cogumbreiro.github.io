@@ -43,6 +43,7 @@ data:
     video: https://echo360.org/media/561be86a-fd93-4308-a959-fbe3c2cf8c90/public
   - lecture: Regular expressions <b>(Mini-Test 1)</b>
     date: Mo, Mar  2
+    video: https://echo360.org/media/97f0ee1d-7cde-4e35-b5a7-ce12ce28c306/public
   - lecture: Nondeterministic Finite Automata
     date: We, Mar  4
   - lecture: NFA ⇔ REGEX, Deterministic Finite Automata; NFA ⇔ DFA
