@@ -65,6 +65,7 @@ data:
     video: https://echo360.org/media/cc838272-0681-4c4e-95b0-855763dfe4d1/public
   - lecture: "Streams"
     date: Mo, Mar  2
+    video: https://echo360.org/media/9c3e116a-2cec-489a-9ee4-d8de85bcfbca/public
   - lecture: Evaluating expressions; Variable argument functions
     date: We, Mar  4
 ################################################################################
