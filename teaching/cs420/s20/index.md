@@ -3,11 +3,7 @@ author: Tiago Cogumbreiro
 semester: Spring 2020
 title: "CS 420: Introduction to the Theory of Computation"
 layout: single
-video2: https://echo360.org/media/28f68251-2762-48b5-836c-b056b50ce793/public
-video3: https://echo360.org/media/20cf88a8-c051-4a7c-bbde-33b7cb89b43c/public
-video4: https://echo360.org/media/eb2ef42d-3f1d-42d7-badd-2800d985ace2/public
-video5: https://echo360.org/media/72cef3f3-2ec2-43dc-8c1e-ff312e583c30/public
-video6: https://echo360.org/media/0cc14e1a-7f61-4a18-9cf0-2e694000bfa0/public
+
 data:
   - module: Logical Foundations
   - lecture: Course overview; Coq intro
@@ -44,7 +40,7 @@ data:
   - lecture: Regular expressions <b>(Mini-Test 1)</b>
     date: Mo, Mar  2
     video: https://echo360.org/media/97f0ee1d-7cde-4e35-b5a7-ce12ce28c306/public
-  - lecture: Nondeterministic Finite Automata
+  - lecture: REGEX & Nondeterministic Finite Automata
     date: We, Mar  4
   - lecture: NFA ⇔ REGEX, Deterministic Finite Automata; NFA ⇔ DFA
     date: Mo, Mar  9
@@ -56,11 +52,11 @@ data:
     date: We, Mar 18
 ################################################################################
   - module: Context-free Languages
-  - lecture: Context-free grammars <b>(Mini-test 2)</b>
+  - lecture: Context-free grammars
     date: Mo, Mar 23
   - lecture: Pushdown Atomata
     date: We, Mar 25
-  - lecture: PDA ⇔ CFG
+  - lecture: PDA ⇔ CFG <b>(Mini-test 2)</b>
     date: Mo, Mar 30
   - lecture: Pumping lemma; Non-context-free Languages
     date: We, Apr  1
