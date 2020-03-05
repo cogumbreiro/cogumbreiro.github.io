@@ -68,6 +68,7 @@ data:
     video: https://echo360.org/media/9c3e116a-2cec-489a-9ee4-d8de85bcfbca/public
   - lecture: Evaluating expressions; Variable argument functions
     date: We, Mar  4
+    video: https://echo360.org/media/ee6840bc-5959-434c-987a-6b2bd73616df/public
 ################################################################################
   - module: Formal methods; Lambda calculus
   - lecture: "Language λ<sub>S</sub>: slow function calls"

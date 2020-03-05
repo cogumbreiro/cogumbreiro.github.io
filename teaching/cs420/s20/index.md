@@ -42,6 +42,7 @@ data:
     video: https://echo360.org/media/97f0ee1d-7cde-4e35-b5a7-ce12ce28c306/public
   - lecture: REGEX & Nondeterministic Finite Automata
     date: We, Mar  4
+    video: https://echo360.org/media/0f6e834b-29b9-46c7-b93b-b4edc04d56e4/public
   - lecture: NFA ⇔ REGEX, Deterministic Finite Automata; NFA ⇔ DFA
     date: Mo, Mar  9
   - lecture: Pumping lemma; Non-regular languages
