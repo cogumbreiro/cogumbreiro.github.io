@@ -3,13 +3,6 @@ author: Tiago Cogumbreiro
 semester: Spring 2020
 title: "CS 450: Structure of Higher Level Languages"
 layout: single
-video2: https://echo360.org/media/96f75398-4060-4d4d-857c-ca1bc15282db/public
-video3: https://echo360.org/media/4a56f9ea-37a2-453e-912e-ff5764d9eee6/public
-video4: https://echo360.org/media/2625074b-6f3f-4742-827a-3249d5b01ad3/public
-video5: https://echo360.org/media/ba0817ce-f3e6-4994-b953-1a0570cee1b4/public
-video6: https://echo360.org/media/34f2d5d0-7dd1-4ddc-a31e-b7a438ff3e06/public
-video7: https://echo360.org/media/93c0e04b-5412-4e7f-9b70-4ad2a11ad379/public
-video8: https://echo360.org/media/7d9d9336-24f1-4f12-91d1-1678201e67a6/public
 
 data:
   - module: Basic Functional Programming
@@ -73,6 +66,7 @@ data:
   - module: Formal methods; Lambda calculus
   - lecture: "Language λ<sub>S</sub>: slow function calls"
     date: Fr, Mar  6
+    video: https://echo360.org/media/a81cd27c-a37d-49e5-bebe-8fe2148af332/public
   - lecture: Lexical/dynamic scoping
     date: Mo, Mar  9
   - lecture: "Language λ<sub>E</sub>: fast function calls"
