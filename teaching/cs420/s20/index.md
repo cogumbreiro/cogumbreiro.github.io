@@ -39,13 +39,16 @@ data:
     video: https://echo360.org/media/561be86a-fd93-4308-a959-fbe3c2cf8c90/public
   - lecture: Regular expressions <b>(Mini-Test 1)</b>
     date: Mo, Mar  2
+    skip_exercises: true
     video: https://echo360.org/media/97f0ee1d-7cde-4e35-b5a7-ce12ce28c306/public
   - lecture: REGEX & Nondeterministic Finite Automata
     date: We, Mar  4
     video: https://echo360.org/media/0f6e834b-29b9-46c7-b93b-b4edc04d56e4/public
-  - lecture: NFA ⇔ REGEX, Deterministic Finite Automata; NFA ⇔ DFA
+  - lecture: NFA ⇔ REGEX
     date: Mo, Mar  9
-  - lecture: Pumping lemma; Non-regular languages
+    video: https://echo360.org/media/459e0291-c7b4-4638-99a3-a032fb082df9/public
+    skip_exercises: true
+  - lecture: Deterministic Finite Automata; NFA ⇔ DFA; Mini-test 2 recap
     date: We, Mar 11
   - closure: true
     date: Mo, Mar 16
@@ -53,13 +56,13 @@ data:
     date: We, Mar 18
 ################################################################################
   - module: Context-free Languages
-  - lecture: Context-free grammars
+  - lecture: Pumping lemma; Non-regular languages
     date: Mo, Mar 23
-  - lecture: Pushdown Atomata
+  - lecture: Context-free grammars
     date: We, Mar 25
-  - lecture: PDA ⇔ CFG <b>(Mini-test 2)</b>
+  - lecture: Pushdown Atomata <b>(Mini-test 2)</b>
     date: Mo, Mar 30
-  - lecture: Pumping lemma; Non-context-free Languages
+  - lecture: PDA ⇔ CFG; Pumping lemma; Non-context-free Languages
     date: We, Apr  1
   - lecture: Turing Machines
     date: Mo, Apr  6

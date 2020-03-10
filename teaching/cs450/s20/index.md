@@ -66,9 +66,11 @@ data:
   - module: Formal methods; Lambda calculus
   - lecture: "Language λ<sub>S</sub>: slow function calls"
     date: Fr, Mar  6
+    skip_exercises: true
     video: https://echo360.org/media/a81cd27c-a37d-49e5-bebe-8fe2148af332/public
   - lecture: Lexical/dynamic scoping
     date: Mo, Mar  9
+    video: https://echo360.org/media/5a17d202-bcf7-494d-920e-d9682f6ba14d/public
   - lecture: "Language λ<sub>E</sub>: fast function calls"
     date: We, Mar 11
   - lecture: Implementing Language λ<sub>E</sub>; Church encoding
