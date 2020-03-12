@@ -73,7 +73,8 @@ data:
     video: https://echo360.org/media/5a17d202-bcf7-494d-920e-d9682f6ba14d/public
   - lecture: "Language λ<sub>E</sub>: fast function calls"
     date: We, Mar 11
-  - lecture: Implementing Language λ<sub>E</sub>; Church encoding
+    video: https://echo360.org/media/712a228e-7253-40f8-aef1-99166c892865/public
+  - closure: true
     date: Fr, Mar 13
   - closure: true
     date: Mo, Mar 16
@@ -81,19 +82,19 @@ data:
     date: We, Mar 18
   - closure: true
     date: Fr, Mar 20
+  - lecture: Implementing Language λ<sub>E</sub>; Church encoding
+    date: Mo, Mar 23
 ################################################################################
   - module: Mutable lambda calculus
   - lecture: "Language λ<sub>F</sub>: adding definitions incorrectly"
-    date: Mo, Mar 23
-  - lecture: Implementing λ<sub>F</sub>
     date: We, Mar 25
-  - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
+  - lecture: Implementing λ<sub>F</sub>
     date: Fr, Mar 27
-  - lecture: Implementing λ<sub>D</sub>
+  - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
     date: Mo, Mar 30
   - lecture: Implementing λ<sub>D</sub>
     date: We, Apr  1
-  - lecture: Why study programming languages?
+  - lecture: Implementing λ<sub>D</sub> / Why study programming languages?
     date: Fr, Apr  3
 ################################################################################
   - module: Monads and side effects

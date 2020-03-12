@@ -48,15 +48,16 @@ data:
     date: Mo, Mar  9
     video: https://echo360.org/media/459e0291-c7b4-4638-99a3-a032fb082df9/public
     skip_exercises: true
-  - lecture: Deterministic Finite Automata; NFA ⇔ DFA; Mini-test 2 recap
+  - lecture: Deterministic Finite Automata; NFA ⇔ DFA
     date: We, Mar 11
+    video: https://echo360.org/media/db41f2e1-c6b7-4664-ba60-30b1048bb247/public
   - closure: true
     date: Mo, Mar 16
   - closure: true
     date: We, Mar 18
 ################################################################################
   - module: Context-free Languages
-  - lecture: Pumping lemma; Non-regular languages
+  - lecture: Pumping lemma; Non-regular languages; Mini-test 2 recap
     date: Mo, Mar 23
   - lecture: Context-free grammars
     date: We, Mar 25
