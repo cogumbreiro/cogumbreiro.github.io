@@ -74,6 +74,7 @@ data:
   - lecture: "Language λ<sub>E</sub>: fast function calls"
     date: We, Mar 11
     video: https://echo360.org/media/712a228e-7253-40f8-aef1-99166c892865/public
+    skip_exercises: true
   - closure: true
     date: Fr, Mar 13
   - closure: true

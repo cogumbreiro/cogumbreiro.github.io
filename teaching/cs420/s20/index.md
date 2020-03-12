@@ -51,6 +51,7 @@ data:
   - lecture: Deterministic Finite Automata; NFA ⇔ DFA
     date: We, Mar 11
     video: https://echo360.org/media/db41f2e1-c6b7-4664-ba60-30b1048bb247/public
+    skip_exercises: true
   - closure: true
     date: Mo, Mar 16
   - closure: true
