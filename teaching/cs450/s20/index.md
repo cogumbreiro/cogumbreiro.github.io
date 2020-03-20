@@ -211,6 +211,8 @@ data:
     {% assign is_pub = true %}
   {% elsif r.video %}
     {% assign is_pub = true %}
+  {% elsif r.multi_video %}
+    {% assign is_pub = true %}
   {% else %}
     {% assign is_pub = false %}
   {% endif %}
