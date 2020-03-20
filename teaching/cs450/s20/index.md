@@ -96,7 +96,7 @@ data:
     - title: Implementing <code>s:eval</code>
       url: https://echo360.org/media/aa735eef-47c8-46a6-a003-8536ac9bc2d0/public
     - title: Implementing <code>e:eval</code>
-      uril: https://echo360.org/media/19ac3ecb-a533-483f-87a6-bb0d76901911/public
+      url: https://echo360.org/media/19ac3ecb-a533-483f-87a6-bb0d76901911/public
 ################################################################################
   - module: Mutable lambda calculus
   - lecture: "Language λ<sub>F</sub>: adding definitions incorrectly"
