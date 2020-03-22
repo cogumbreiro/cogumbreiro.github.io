@@ -60,6 +60,17 @@ data:
   - module: Context-free Languages
   - lecture: Pumping lemma; Non-regular languages; Mini-test 2 recap
     date: Mo, Mar 23
+    multi_video:
+    - title: Introducing non-regular languages
+      url: https://echo360.org/media/5ecab953-af20-4c6b-8653-7566fda75621/public
+    - title: An intuition of the Pumping lemma
+      url: https://echo360.org/media/7e3311d7-f26a-4b19-9472-a70063c329ab/public
+    - title: The Pumping lemma, formally
+      url: https://echo360.org/media/331e5760-9fcf-4882-883c-53d89c2d636c/public
+    - title: Proving that a language is not regular
+      url: https://echo360.org/media/6a7d3468-bbe4-4ff9-a0d5-0e4492f08ac8/public
+    - title: Proving that a language is not regular in Coq
+      url: https://echo360.org/media/7f8da469-b9d9-4f22-8572-048d97ee80f0/public
   - lecture: Context-free grammars
     date: We, Mar 25
   - lecture: Pushdown Atomata <b>(Mini-test 2)</b>
@@ -122,8 +133,10 @@ data:
 
 # Resources
 
-* [The Turing library](https://gitlab.com/cogumbreiro/turing)
+* [CS420 Supplementary Material: The Turing library (Coq)](https://gitlab.com/cogumbreiro/turing)
+* [CS420 Supplementary Material: NFA/DFA/REGEX algorithms (Python)](https://gitlab.com/cogumbreiro/)
 * [Logic Foundations exercises](lf.tgz)
+karukuri/)
 
 ## Class Schedule
 
@@ -160,6 +173,8 @@ data:
     {% assign is_pub = true %}
   {% elsif r.video %}
     {% assign is_pub = true %}
+  {% elsif r.multi_video %}
+    {% assign is_pub = true %}
   {% else %}
     {% assign is_pub = false %}
   {% endif %}
@@ -180,13 +195,28 @@ data:
       {% if r.skip_exercises %}
         {% assign f_url = nil %}
       {% else %}
-        {% capture f_url %}lecture{{ num }}.v{% endcapture %}
+        {% capture f_url %}lecture{{ num }}-exercises.zip{% endcapture %}
       {% endif %}
       <span class="buttons has-addons">{% include button.html url=s_url title="Download lecture slides" icon="book" %}{% include button.html url=r.video icon="file-video" title="Video recording" %}{% include button.html url=f_url icon="box" title="Class exercises" %}</span>
     {% endif %}
   </td>
 {% endif %}
 </tr>
+{% if r.multi_video %}
+    {% for v in r.multi_video %}
+<tr>
+  <td></td>
+  <td></td>
+    <td>
+        <a href="{{ v.url }}">
+        <span class="icon is-small"><i class="fas fa-file-video"></i></span>
+        {{ v.title }}
+        </a>
+    </td>
+</tr>
+    {% endfor %}
+{% endif %}
+
 {% endfor %}
   </tbody>
 </table>
