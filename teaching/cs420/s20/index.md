@@ -67,10 +67,12 @@ data:
       url: https://echo360.org/media/7e3311d7-f26a-4b19-9472-a70063c329ab/public
     - title: The Pumping lemma, formally
       url: https://echo360.org/media/331e5760-9fcf-4882-883c-53d89c2d636c/public
-    - title: Proving that a language is not regular
+    - title: The Pumping language (exercises)
       url: https://echo360.org/media/6a7d3468-bbe4-4ff9-a0d5-0e4492f08ac8/public
+    - title: Proving that a language is not regular
+      url: https://echo360.org/media/6470bc8c-6bb2-4959-9c5d-b75a6a3e6b6a/public
     - title: Proving that a language is not regular in Coq
-      url: https://echo360.org/media/7f8da469-b9d9-4f22-8572-048d97ee80f0/public
+      url: https://echo360.org/media/6470bc8c-6bb2-4959-9c5d-b75a6a3e6b6a/public
   - lecture: Context-free grammars
     date: We, Mar 25
   - lecture: Pushdown Atomata <b>(Mini-test 2)</b>
