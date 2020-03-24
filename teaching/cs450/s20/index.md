@@ -168,13 +168,14 @@ data:
 
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
-* **Office:** {{ site.office.location }}
+* **Office:** <del>{{ site.office.location }}</del> #cs450 (Discord)
 * **Office hours:** {{ site.office.hours }}
 
 # Teaching assistants contact
+
 * Abdelrahman Obyat, Dennis Liew
-* **Office:** (M03-0201-33) Room 0201-33, 3<sup>rd</sup> floor, McCormack
-* **Office hours:** 5:15pm to 7:00pm, Tuesday, Thursday
+* **Office:** <del>(M03-0201-33) Room 0201-33, 3<sup>rd</sup> floor, McCormack</del> #cs450 (Discord)
+* **Office hours:** 2:00pm to 4:00pm and 5:15pm to 7:00pm, Tuesday, Thursday
 
 ## Class Schedule
 
