@@ -101,6 +101,19 @@ data:
   - module: Mutable lambda calculus
   - lecture: "Language λ<sub>F</sub>: adding definitions incorrectly"
     date: We, Mar 25
+    multi_video:
+    - title: Overview
+      url: https://echo360.org/media/29b4275c-4ad2-43fc-80d8-d7b7b2d9cbaa/public
+    - title: Inductive definitions
+      url: https://echo360.org/media/d2d0fd45-80f5-4246-b127-bbb3cfa3299e/public
+    - title: Syntax
+      url: https://echo360.org/media/5cbd64c5-8c4c-4f0d-a7ad-26d8265abf0e/public
+    - title: Semantics
+      url: https://echo360.org/media/91491fc1-c090-4a9e-b86d-67a09555159c/public
+    - title: Example 1
+      url: https://echo360.org/media/4caf81cc-6770-4192-ab9e-3a63a1ef4878/public
+    - title: Example 2
+      url: https://echo360.org/media/2c2c880e-d15f-494c-9cce-0822f28a185a/public
   - lecture: Implementing λ<sub>F</sub>
     date: Fr, Mar 27
   - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
