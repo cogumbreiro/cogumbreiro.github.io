@@ -116,6 +116,17 @@ data:
       url: https://echo360.org/media/2c2c880e-d15f-494c-9cce-0822f28a185a/public
   - lecture: Implementing λ<sub>F</sub>
     date: Fr, Mar 27
+    multi_video:
+    - title: How do we represent mutability?
+      url: https://echo360.org/media/30ed5564-c608-42e4-a434-fc51d8191700/public
+    - title: The heap API
+      url: https://echo360.org/media/3f55f6f8-c0db-4463-9dc8-da19cb19043e/public
+    - title: Heap API usage
+      url: https://echo360.org/media/0baaf736-186c-48bb-bde5-772ee978cedb/public
+    - title: Code review Heap API
+      url: https://echo360.org/media/dbb499bd-38d0-4196-817f-c411250a9faa/public
+    - title: Contracts
+      url: https://echo360.org/media/2600a04f-5a2b-4c1d-bb24-28cc8cd2bd6e/public
   - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
     date: Mo, Mar 30
   - lecture: Implementing λ<sub>D</sub>
