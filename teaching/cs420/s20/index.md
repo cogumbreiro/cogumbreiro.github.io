@@ -75,6 +75,17 @@ data:
       url: https://echo360.org/media/6470bc8c-6bb2-4959-9c5d-b75a6a3e6b6a/public
   - lecture: Context-free grammars
     date: We, Mar 25
+    multi_video:
+    - title: Grammar motivation
+      url: https://echo360.org/media/9e63e788-5d19-4012-9a35-33fd9babbefb/public
+    - title: Intuition of a grammar
+      url: https://echo360.org/media/d7860ccf-2ec4-46f9-8398-089999465ef1/public
+    - title: Derivation examples
+      url: https://echo360.org/media/ae87dc0a-5d0d-4c60-9f76-358a5fd07ff6/public
+    - title: Parse trees
+      url: https://echo360.org/media/c7adb8ef-1462-4c8e-8812-c21c5318d516/public
+    - title: Formalizing grammars
+      url: https://echo360.org/media/38c9d0f6-8287-4489-9019-244cdbb357c0/public
   - lecture: Pushdown Atomata <b>(Mini-test 2)</b>
     date: Mo, Mar 30
   - lecture: PDA ⇔ CFG; Pumping lemma; Non-context-free Languages
