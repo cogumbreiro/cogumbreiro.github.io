@@ -72,7 +72,7 @@ data:
     - title: Proving that a language is not regular
       url: https://echo360.org/media/6470bc8c-6bb2-4959-9c5d-b75a6a3e6b6a/public
     - title: Proving that a language is not regular in Coq
-      url: https://echo360.org/media/6470bc8c-6bb2-4959-9c5d-b75a6a3e6b6a/public
+      url: https://echo360.org/media/7f8da469-b9d9-4f22-8572-048d97ee80f0/public
   - lecture: Context-free grammars
     date: We, Mar 25
     multi_video:
