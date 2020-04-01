@@ -60,56 +60,80 @@ data:
   - module: Context-free Languages
   - lecture: Pumping lemma; Non-regular languages; Mini-test 2 recap
     date: Mo, Mar 23
-    multi_video:
+    attachments:
     - title: Introducing non-regular languages
       url: https://echo360.org/media/5ecab953-af20-4c6b-8653-7566fda75621/public
+      type: video
     - title: An intuition of the Pumping lemma
       url: https://echo360.org/media/7e3311d7-f26a-4b19-9472-a70063c329ab/public
+      type: video
     - title: The Pumping lemma, formally
       url: https://echo360.org/media/331e5760-9fcf-4882-883c-53d89c2d636c/public
+      type: video
     - title: The Pumping language (exercises)
       url: https://echo360.org/media/6a7d3468-bbe4-4ff9-a0d5-0e4492f08ac8/public
+      type: video
     - title: Proving that a language is not regular
       url: https://echo360.org/media/6470bc8c-6bb2-4959-9c5d-b75a6a3e6b6a/public
+      type: video
     - title: Proving that a language is not regular in Coq
       url: https://echo360.org/media/7f8da469-b9d9-4f22-8572-048d97ee80f0/public
+      type: video
   - lecture: Context-free grammars
     date: We, Mar 25
-    multi_video:
+    attachments:
     - title: Grammar motivation
       url: https://echo360.org/media/9e63e788-5d19-4012-9a35-33fd9babbefb/public
+      type: video
     - title: Intuition of a grammar
       url: https://echo360.org/media/d7860ccf-2ec4-46f9-8398-089999465ef1/public
+      type: video
     - title: Derivation examples
       url: https://echo360.org/media/ae87dc0a-5d0d-4c60-9f76-358a5fd07ff6/public
+      type: video
     - title: Parse trees
       url: https://echo360.org/media/c7adb8ef-1462-4c8e-8812-c21c5318d516/public
+      type: video
     - title: Formalizing grammars
       url: https://echo360.org/media/38c9d0f6-8287-4489-9019-244cdbb357c0/public
+      type: video
   - lecture: Pushdown Atomata
     date: Mo, Mar 30
     skip_exercises: true
-    multi_video:
+    attachments:
     - title: PDA Intuition
       url: https://echo360.org/media/04e724ce-ecf8-4a4d-bde7-2275175b8211/public
+      type: video
     - title: Transition exercises
       url: https://echo360.org/media/5d648656-4407-4c88-9008-81ede3d9af48/public
+      type: video
     - title: Simplifying the notation
       url: https://echo360.org/media/074785ad-5ca4-42f6-b155-209f872e0051/public
+      type: video
     - title: Transition exercises (2)
       url: https://echo360.org/media/92336071-96da-4912-b822-0cbfbfd05f18/public
+      type: video
     - title: PDA Accepting example
       url: https://echo360.org/media/905ad6d3-2b57-4dac-b2e6-94f41fb00097/public
+      type: video
     - title: Formalizing PDA
       url: https://echo360.org/media/429ade4a-d6eb-448d-94d7-8e61d1f5affd/public
+      type: video
     - title: Example PDAs
       url: https://echo360.org/media/8771c861-f0f3-4d34-b9f2-791e94c9b729/public
+      type: video
     - title: Formalize acceptance
       url: https://echo360.org/media/fbd8b6b7-bfa9-4450-b8de-48465798020b/public
+      type: video
     - title: Example 2.16
       url: https://echo360.org/media/ac7f513a-e5b8-4e87-81d9-34b691f4a535/public
+      type: video
     - title: Example 2.16 (2)
       url: https://echo360.org/media/34f36457-442e-47b6-9149-e7a708bea6af/public
+      type: video
+    - title: QA session
+      url: lecture16-qa.zip
+      type: audio
   - lecture: PDA ⇔ CFG; Pumping lemma; Non-context-free Languages
     date: We, Apr  1
   - lecture: Turing Machines
@@ -237,14 +261,14 @@ karukuri/)
   </td>
 {% endif %}
 </tr>
-{% if r.multi_video %}
-    {% for v in r.multi_video %}
+{% if r.attachments %}
+    {% for v in r.attachments %}
 <tr>
   <td></td>
   <td></td>
     <td>
         <a href="{{ v.url }}">
-        <span class="icon is-small"><i class="fas fa-file-video"></i></span>
+        <span class="icon is-small"><i class="fas fa-file-{{v.type}}"></i></span>
         {{ v.title }}
         </a>
     </td>
