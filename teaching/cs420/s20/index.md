@@ -3,7 +3,7 @@ author: Tiago Cogumbreiro
 semester: Spring 2020
 title: "CS 420: Introduction to the Theory of Computation"
 layout: single
-
+ext: .v
 data:
   - module: Logical Foundations
   - lecture: Course overview; Coq intro
@@ -86,8 +86,30 @@ data:
       url: https://echo360.org/media/c7adb8ef-1462-4c8e-8812-c21c5318d516/public
     - title: Formalizing grammars
       url: https://echo360.org/media/38c9d0f6-8287-4489-9019-244cdbb357c0/public
-  - lecture: Pushdown Atomata <b>(Mini-test 2)</b>
+  - lecture: Pushdown Atomata
     date: Mo, Mar 30
+    skip_exercises: true
+    multi_video:
+    - title: PDA Intuition
+      url: https://echo360.org/media/04e724ce-ecf8-4a4d-bde7-2275175b8211/public
+    - title: Transition exercises
+      url: https://echo360.org/media/5d648656-4407-4c88-9008-81ede3d9af48/public
+    - title: Simplifying the notation
+      url: https://echo360.org/media/074785ad-5ca4-42f6-b155-209f872e0051/public
+    - title: Transition exercises (2)
+      url: https://echo360.org/media/92336071-96da-4912-b822-0cbfbfd05f18/public
+    - title: PDA Accepting example
+      url: https://echo360.org/media/905ad6d3-2b57-4dac-b2e6-94f41fb00097/public
+    - title: Formalizing PDA
+      url: https://echo360.org/media/429ade4a-d6eb-448d-94d7-8e61d1f5affd/public
+    - title: Example PDAs
+      url: https://echo360.org/media/8771c861-f0f3-4d34-b9f2-791e94c9b729/public
+    - title: Formalize acceptance
+      url: https://echo360.org/media/fbd8b6b7-bfa9-4450-b8de-48465798020b/public
+    - title: Example 2.16
+      url: https://echo360.org/media/ac7f513a-e5b8-4e87-81d9-34b691f4a535/public
+    - title: Example 2.16 (2)
+      url: https://echo360.org/media/34f36457-442e-47b6-9149-e7a708bea6af/public
   - lecture: PDA ⇔ CFG; Pumping lemma; Non-context-free Languages
     date: We, Apr  1
   - lecture: Turing Machines
@@ -208,7 +230,7 @@ karukuri/)
       {% if r.skip_exercises %}
         {% assign f_url = nil %}
       {% else %}
-        {% capture f_url %}lecture{{ num }}-exercises.zip{% endcapture %}
+        {% capture f_url %}lecture{{ num }}-exercises.{{ page.ext }}{% endcapture %}
       {% endif %}
       <span class="buttons has-addons">{% include button.html url=s_url title="Download lecture slides" icon="book" %}{% include button.html url=r.video icon="file-video" title="Video recording" %}{% include button.html url=f_url icon="box" title="Class exercises" %}</span>
     {% endif %}
