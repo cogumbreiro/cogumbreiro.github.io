@@ -232,7 +232,7 @@ karukuri/)
     {% assign is_pub = true %}
   {% elsif r.video %}
     {% assign is_pub = true %}
-  {% elsif r.multi_video %}
+  {% elsif r.attachments %}
     {% assign is_pub = true %}
   {% else %}
     {% assign is_pub = false %}
