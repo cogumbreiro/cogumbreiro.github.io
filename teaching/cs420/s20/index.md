@@ -3,7 +3,7 @@ author: Tiago Cogumbreiro
 semester: Spring 2020
 title: "CS 420: Introduction to the Theory of Computation"
 layout: single
-ext: .v
+exercises_ext: .v
 data:
   - module: Logical Foundations
   - lecture: Course overview; Coq intro
@@ -254,7 +254,7 @@ karukuri/)
       {% if r.skip_exercises %}
         {% assign f_url = nil %}
       {% else %}
-        {% capture f_url %}lecture{{ num }}-exercises.{{ page.ext }}{% endcapture %}
+        {% capture f_url %}lecture{{ num }}-exercises.{{ page.exercises_ext }}{% endcapture %}
       {% endif %}
       <span class="buttons has-addons">{% include button.html url=s_url title="Download lecture slides" icon="book" %}{% include button.html url=r.video icon="file-video" title="Video recording" %}{% include button.html url=f_url icon="box" title="Class exercises" %}</span>
     {% endif %}

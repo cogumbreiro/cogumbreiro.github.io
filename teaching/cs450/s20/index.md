@@ -3,6 +3,7 @@ author: Tiago Cogumbreiro
 semester: Spring 2020
 title: "CS 450: Structure of Higher Level Languages"
 layout: single
+exercises_ext: .zip
 
 data:
   - module: Basic Functional Programming
@@ -101,36 +102,76 @@ data:
   - module: Mutable lambda calculus
   - lecture: "Language λ<sub>F</sub>: adding definitions incorrectly"
     date: We, Mar 25
-    multi_video:
+    attachments:
     - title: Overview
       url: https://echo360.org/media/29b4275c-4ad2-43fc-80d8-d7b7b2d9cbaa/public
+      type: video
     - title: Inductive definitions
       url: https://echo360.org/media/d2d0fd45-80f5-4246-b127-bbb3cfa3299e/public
+      type: video
     - title: Syntax
       url: https://echo360.org/media/5cbd64c5-8c4c-4f0d-a7ad-26d8265abf0e/public
+      type: video
     - title: Semantics
       url: https://echo360.org/media/91491fc1-c090-4a9e-b86d-67a09555159c/public
+      type: video
     - title: Example 1
       url: https://echo360.org/media/4caf81cc-6770-4192-ab9e-3a63a1ef4878/public
+      type: video
     - title: Example 2
       url: https://echo360.org/media/2c2c880e-d15f-494c-9cce-0822f28a185a/public
+      type: video
   - lecture: Implementing λ<sub>F</sub>
     date: Fr, Mar 27
-    multi_video:
+    attachments:
     - title: How do we represent mutability?
       url: https://echo360.org/media/30ed5564-c608-42e4-a434-fc51d8191700/public
+      type: video
     - title: The heap API
       url: https://echo360.org/media/3f55f6f8-c0db-4463-9dc8-da19cb19043e/public
+      type: video
     - title: Heap API usage
       url: https://echo360.org/media/0baaf736-186c-48bb-bde5-772ee978cedb/public
+      type: video
     - title: Code review Heap API
       url: https://echo360.org/media/dbb499bd-38d0-4196-817f-c411250a9faa/public
+      type: video
     - title: Contracts
       url: https://echo360.org/media/2600a04f-5a2b-4c1d-bb24-28cc8cd2bd6e/public
+      type: video
   - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
     date: Mo, Mar 30
+    attachments:
+    - title: Overview
+      url: https://echo360.org/media/78f38625-ff7c-4cd1-8423-284b00379a9e/public
+      type: video
+    - title: Lambda-D
+      url: https://echo360.org/media/87497cdf-aa0b-4134-87c9-3068b1a8f2f2/public
+      type: video
+    - title:  Operations on environments
+      url: https://echo360.org/media/9d8e2e46-3e89-461d-ae7c-9c7a83cc1cac/public
+      type: video
+    - title: Making heap operations explicit
+      url: https://echo360.org/media/7322ad2a-9941-4229-8834-bbe602f8ca60/public
+      type: video
+    - title: Examples
+      url: https://echo360.org/media/39e27058-6f28-4d8b-8993-f210287ebe96/public
+      type: video
+    - title: QA session
+      url: lecture23-qa.zip
+      type: audio
   - lecture: Implementing λ<sub>D</sub>
     date: We, Apr  1
+    attachments:
+    - title: Overview
+      url: https://echo360.org/media/1e5863cd-92c3-4174-9d2f-5ba04c57b1d7/public
+      type: video
+    - title:  Visualizing the environment
+      url: https://echo360.org/media/20f7b18d-aa5d-4a20-bca4-3ce76870cd43/public
+      type: video
+    - title: Implementing frames (live coding)
+      url: https://echo360.org/media/21e6f351-ded6-4295-9ca7-bec8517c08eb/public
+      type: video
   - lecture: Implementing λ<sub>D</sub> / Why study programming languages?
     date: Fr, Apr  3
 ################################################################################
@@ -236,7 +277,7 @@ data:
     {% assign is_pub = true %}
   {% elsif r.video %}
     {% assign is_pub = true %}
-  {% elsif r.multi_video %}
+  {% elsif r.attachments %}
     {% assign is_pub = true %}
   {% else %}
     {% assign is_pub = false %}
@@ -258,21 +299,21 @@ data:
       {% if r.skip_exercises %}
         {% assign f_url = nil %}
       {% else %}
-        {% capture f_url %}lecture{{ num }}-exercises.zip{% endcapture %}
+        {% capture f_url %}lecture{{ num }}-exercises.{{ page.exercises_ext }}{% endcapture %}
       {% endif %}
       <span class="buttons has-addons">{% include button.html url=s_url title="Download lecture slides" icon="book" %}{% include button.html url=r.video icon="file-video" title="Video recording" %}{% include button.html url=f_url icon="box" title="Class exercises" %}</span>
     {% endif %}
   </td>
 {% endif %}
 </tr>
-{% if r.multi_video %}
-    {% for v in r.multi_video %}
+{% if r.attachments %}
+    {% for v in r.attachments %}
 <tr>
   <td></td>
   <td></td>
     <td>
         <a href="{{ v.url }}">
-        <span class="icon is-small"><i class="fas fa-file-video"></i></span>
+        <span class="icon is-small"><i class="fas fa-file-{{v.type}}"></i></span>
         {{ v.title }}
         </a>
     </td>
