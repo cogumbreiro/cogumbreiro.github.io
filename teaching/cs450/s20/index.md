@@ -87,17 +87,22 @@ data:
   - lecture: Implementing Language λ<sub>E</sub>; Church encoding
     date: Mo, Mar 23
     skip_exercises: true
-    multi_video:
+    attachments:
     - title: Implementing Language λ<sub>E</sub>
       url: https://echo360.org/media/63c71856-092a-4baa-875f-ac0d0a31edb3/public
+      type: video
     - title: Implementing environments
       url: https://echo360.org/media/095d7465-c797-4fff-9044-95db40edb00c/public
+      type: video
     - title: Implementing <code>s:subst</code>
       url: https://echo360.org/media/9f8b2b73-9d31-4a8c-a04d-507a1a81aa4b/public
+      type: video
     - title: Implementing <code>s:eval</code>
       url: https://echo360.org/media/aa735eef-47c8-46a6-a003-8536ac9bc2d0/public
+      type: video
     - title: Implementing <code>e:eval</code>
       url: https://echo360.org/media/19ac3ecb-a533-483f-87a6-bb0d76901911/public
+      type: video
 ################################################################################
   - module: Mutable lambda calculus
   - lecture: "Language λ<sub>F</sub>: adding definitions incorrectly"
