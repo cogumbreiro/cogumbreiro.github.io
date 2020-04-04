@@ -179,6 +179,19 @@ data:
       type: video
   - lecture: Implementing λ<sub>D</sub> / Why study programming languages?
     date: Fr, Apr  3
+    attachments:
+    - title: Overview
+      url: https://echo360.org/media/fec8e838-c178-4561-b978-f073ff1b0452/public
+      type: video
+    - title: Why CS450
+      url: https://echo360.org/media/9672ce9e-06e9-41aa-ae3c-11deffd1158a/public
+      type: video
+    - title:  Implementing the environment (overview)
+      url: https://echo360.org/media/74fefb0a-1dc1-4b4c-add4-20d553918e1c/public
+      type: video
+    - title: Implementing the environment (live coding)
+      url: https://echo360.org/media/be4d7cd3-7e35-451e-84f8-6efb5fd58086/public
+      type: video
 ################################################################################
   - module: Monads and side effects
   - lecture: Garbage collection
