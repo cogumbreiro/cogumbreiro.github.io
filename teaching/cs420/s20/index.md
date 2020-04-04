@@ -134,9 +134,41 @@ data:
     - title: QA session
       url: lecture16-qa.zip
       type: audio
-  - lecture: PDA ⇔ CFG; Pumping lemma; Non-context-free Languages
+  - lecture: PDA ⇔ CFG
     date: We, Apr  1
-  - lecture: Turing Machines
+    skip_exercises: true
+    attachments:
+    - title: Overview
+      url: https://echo360.org/media/20934c33-b1bc-4c7e-8058-e015b55788c8/public
+      type: video
+    - title: Exercises 1
+      url: https://echo360.org/media/9831f0b5-0a1a-4f78-b07d-9bd94255f6c3/public
+      type: video
+    - title: Exercise 2
+      url: https://echo360.org/media/93c6301d-dbde-4b08-b99a-2ecbc4b5d8ab/public
+      type: video
+    - title: Context Free Language
+      url: https://echo360.org/media/99e4a013-9905-4761-91a2-0601fdb9319f/public
+      type: video
+    - title: Convert CFG to PDA (intuition)
+      url: https://echo360.org/media/96be2a43-5d5b-455c-a119-983d91d99c95/public
+      type: video
+    - title:  Convert CFG to PDA (translation rules)
+      url: https://echo360.org/media/802e8f7c-cbd8-4caa-a231-57fa5b64d5ed/public
+      type: video
+    - title:  Convert CFG to PDA (exercise)
+      url: https://echo360.org/media/b2eb436f-0437-4a38-9001-5cdd3306eb22/public
+      type: video
+    - title: PDA to CFG (overview)
+      url: https://echo360.org/media/b694ffaa-a142-4936-a5b3-782124bd8127/public
+      type: video
+    - title: Simplifying a PDA
+      url: https://echo360.org/media/6d84ecf4-ba94-40f9-a9fe-32372b80e1b5/public
+      type: video
+    - title: Convert PDA to CFG
+      url: https://echo360.org/media/1011e08e-0b44-4085-8b5a-6dc8915d8efb/public
+      type: video
+  - lecture: Pumping lemma; Non-context-free Languages; Turing Machines
     date: Mo, Apr  6
   - lecture: Variants of Turing Machines
     date: We, Apr  8
