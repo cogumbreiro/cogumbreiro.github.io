@@ -87,81 +87,20 @@ data:
   - lecture: Implementing Language λ<sub>E</sub>; Church encoding
     date: Mo, Mar 23
     skip_exercises: true
-    attachments:
-    - title: Implementing Language λ<sub>E</sub>
-      url: https://echo360.org/media/63c71856-092a-4baa-875f-ac0d0a31edb3/public
-      type: video
-    - title: Implementing environments
-      url: https://echo360.org/media/095d7465-c797-4fff-9044-95db40edb00c/public
-      type: video
-    - title: Implementing <code>s:subst</code>
-      url: https://echo360.org/media/9f8b2b73-9d31-4a8c-a04d-507a1a81aa4b/public
-      type: video
-    - title: Implementing <code>s:eval</code>
-      url: https://echo360.org/media/aa735eef-47c8-46a6-a003-8536ac9bc2d0/public
-      type: video
-    - title: Implementing <code>e:eval</code>
-      url: https://echo360.org/media/19ac3ecb-a533-483f-87a6-bb0d76901911/public
-      type: video
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQewCKcwrDwkhKoKOY8lZwPI
+
 ################################################################################
   - module: Mutable lambda calculus
   - lecture: "Language λ<sub>F</sub>: adding definitions incorrectly"
     date: We, Mar 25
-    attachments:
-    - title: Overview
-      url: https://echo360.org/media/29b4275c-4ad2-43fc-80d8-d7b7b2d9cbaa/public
-      type: video
-    - title: Inductive definitions
-      url: https://echo360.org/media/d2d0fd45-80f5-4246-b127-bbb3cfa3299e/public
-      type: video
-    - title: Syntax
-      url: https://echo360.org/media/5cbd64c5-8c4c-4f0d-a7ad-26d8265abf0e/public
-      type: video
-    - title: Semantics
-      url: https://echo360.org/media/91491fc1-c090-4a9e-b86d-67a09555159c/public
-      type: video
-    - title: Example 1
-      url: https://echo360.org/media/4caf81cc-6770-4192-ab9e-3a63a1ef4878/public
-      type: video
-    - title: Example 2
-      url: https://echo360.org/media/2c2c880e-d15f-494c-9cce-0822f28a185a/public
-      type: video
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfUjMbGSWTYi-mMTdlC1eV2
   - lecture: Implementing λ<sub>F</sub>
     date: Fr, Mar 27
-    attachments:
-    - title: How do we represent mutability?
-      url: https://echo360.org/media/30ed5564-c608-42e4-a434-fc51d8191700/public
-      type: video
-    - title: The heap API
-      url: https://echo360.org/media/3f55f6f8-c0db-4463-9dc8-da19cb19043e/public
-      type: video
-    - title: Heap API usage
-      url: https://echo360.org/media/0baaf736-186c-48bb-bde5-772ee978cedb/public
-      type: video
-    - title: Code review Heap API
-      url: https://echo360.org/media/dbb499bd-38d0-4196-817f-c411250a9faa/public
-      type: video
-    - title: Contracts
-      url: https://echo360.org/media/2600a04f-5a2b-4c1d-bb24-28cc8cd2bd6e/public
-      type: video
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQe_8UTx25C2srKf0wjTiSbG
   - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
     date: Mo, Mar 30
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQehC-CGR1I7ZB-OeIOSTSSn
     attachments:
-    - title: Overview
-      url: https://echo360.org/media/78f38625-ff7c-4cd1-8423-284b00379a9e/public
-      type: video
-    - title: Lambda-D
-      url: https://echo360.org/media/87497cdf-aa0b-4134-87c9-3068b1a8f2f2/public
-      type: video
-    - title:  Operations on environments
-      url: https://echo360.org/media/9d8e2e46-3e89-461d-ae7c-9c7a83cc1cac/public
-      type: video
-    - title: Making heap operations explicit
-      url: https://echo360.org/media/7322ad2a-9941-4229-8834-bbe602f8ca60/public
-      type: video
-    - title: Examples
-      url: https://echo360.org/media/39e27058-6f28-4d8b-8993-f210287ebe96/public
-      type: video
     - title: QA session
       url: lecture23-qa.zip
       type: audio
