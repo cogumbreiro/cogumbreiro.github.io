@@ -167,31 +167,10 @@ data:
       type: audio
   - lecture: Implementing λ<sub>D</sub>
     date: We, Apr  1
-    attachments:
-    - title: Overview
-      url: https://echo360.org/media/1e5863cd-92c3-4174-9d2f-5ba04c57b1d7/public
-      type: video
-    - title:  Visualizing the environment
-      url: https://echo360.org/media/20f7b18d-aa5d-4a20-bca4-3ce76870cd43/public
-      type: video
-    - title: Implementing frames (live coding)
-      url: https://echo360.org/media/21e6f351-ded6-4295-9ca7-bec8517c08eb/public
-      type: video
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfY_lDiGkvf04svbNFS85E5
   - lecture: Implementing λ<sub>D</sub> / Why study programming languages?
     date: Fr, Apr  3
-    attachments:
-    - title: Overview
-      url: https://echo360.org/media/fec8e838-c178-4561-b978-f073ff1b0452/public
-      type: video
-    - title: Why CS450
-      url: https://echo360.org/media/9672ce9e-06e9-41aa-ae3c-11deffd1158a/public
-      type: video
-    - title:  Implementing the environment (overview)
-      url: https://echo360.org/media/74fefb0a-1dc1-4b4c-add4-20d553918e1c/public
-      type: video
-    - title: Implementing the environment (live coding)
-      url: https://echo360.org/media/be4d7cd3-7e35-451e-84f8-6efb5fd58086/public
-      type: video
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQeAB5T5zW3fyxJC3dyqYKLj
 ################################################################################
   - module: Monads and side effects
   - lecture: Garbage collection
