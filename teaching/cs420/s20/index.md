@@ -170,6 +170,7 @@ data:
       type: video
   - lecture: Pumping lemma; Non-context-free Languages; Turing Machines
     date: Mo, Apr  6
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQf-IHcWs3CKbD14mPBEz4lH
   - lecture: Variants of Turing Machines
     date: We, Apr  8
   - lecture: Acceptance, emptiness and equality tests
