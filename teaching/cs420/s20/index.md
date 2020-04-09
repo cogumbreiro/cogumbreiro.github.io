@@ -173,6 +173,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQf-IHcWs3CKbD14mPBEz4lH
   - lecture: Variants of Turing Machines
     date: We, Apr  8
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcndM6CcWeMCrI7U2yy8v7T
   - lecture: Acceptance, emptiness and equality tests
     date: Mo, Apr 13
   - lecture: TM Acceptance
