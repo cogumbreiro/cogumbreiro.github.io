@@ -60,114 +60,22 @@ data:
   - module: Context-free Languages
   - lecture: Pumping lemma; Non-regular languages; Mini-test 2 recap
     date: Mo, Mar 23
-    attachments:
-    - title: Introducing non-regular languages
-      url: https://echo360.org/media/5ecab953-af20-4c6b-8653-7566fda75621/public
-      type: video
-    - title: An intuition of the Pumping lemma
-      url: https://echo360.org/media/7e3311d7-f26a-4b19-9472-a70063c329ab/public
-      type: video
-    - title: The Pumping lemma, formally
-      url: https://echo360.org/media/331e5760-9fcf-4882-883c-53d89c2d636c/public
-      type: video
-    - title: The Pumping language (exercises)
-      url: https://echo360.org/media/6a7d3468-bbe4-4ff9-a0d5-0e4492f08ac8/public
-      type: video
-    - title: Proving that a language is not regular
-      url: https://echo360.org/media/6470bc8c-6bb2-4959-9c5d-b75a6a3e6b6a/public
-      type: video
-    - title: Proving that a language is not regular in Coq
-      url: https://echo360.org/media/7f8da469-b9d9-4f22-8572-048d97ee80f0/public
-      type: video
+    videos: https://www.youtube.com/playlist?list=PL_fXogTdDGQdpggDhmLSxKxxXGOT-42rM
   - lecture: Context-free grammars
     date: We, Mar 25
-    attachments:
-    - title: Grammar motivation
-      url: https://echo360.org/media/9e63e788-5d19-4012-9a35-33fd9babbefb/public
-      type: video
-    - title: Intuition of a grammar
-      url: https://echo360.org/media/d7860ccf-2ec4-46f9-8398-089999465ef1/public
-      type: video
-    - title: Derivation examples
-      url: https://echo360.org/media/ae87dc0a-5d0d-4c60-9f76-358a5fd07ff6/public
-      type: video
-    - title: Parse trees
-      url: https://echo360.org/media/c7adb8ef-1462-4c8e-8812-c21c5318d516/public
-      type: video
-    - title: Formalizing grammars
-      url: https://echo360.org/media/38c9d0f6-8287-4489-9019-244cdbb357c0/public
-      type: video
+    videos: https://www.youtube.com/playlist?list=PL_fXogTdDGQd18LP9rmraukUE3h_M9NsF
   - lecture: Pushdown Atomata
     date: Mo, Mar 30
     skip_exercises: true
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQc-aMjMYzo2UUgO-6F384op
     attachments:
-    - title: PDA Intuition
-      url: https://echo360.org/media/04e724ce-ecf8-4a4d-bde7-2275175b8211/public
-      type: video
-    - title: Transition exercises
-      url: https://echo360.org/media/5d648656-4407-4c88-9008-81ede3d9af48/public
-      type: video
-    - title: Simplifying the notation
-      url: https://echo360.org/media/074785ad-5ca4-42f6-b155-209f872e0051/public
-      type: video
-    - title: Transition exercises (2)
-      url: https://echo360.org/media/92336071-96da-4912-b822-0cbfbfd05f18/public
-      type: video
-    - title: PDA Accepting example
-      url: https://echo360.org/media/905ad6d3-2b57-4dac-b2e6-94f41fb00097/public
-      type: video
-    - title: Formalizing PDA
-      url: https://echo360.org/media/429ade4a-d6eb-448d-94d7-8e61d1f5affd/public
-      type: video
-    - title: Example PDAs
-      url: https://echo360.org/media/8771c861-f0f3-4d34-b9f2-791e94c9b729/public
-      type: video
-    - title: Formalize acceptance
-      url: https://echo360.org/media/fbd8b6b7-bfa9-4450-b8de-48465798020b/public
-      type: video
-    - title: Example 2.16
-      url: https://echo360.org/media/ac7f513a-e5b8-4e87-81d9-34b691f4a535/public
-      type: video
-    - title: Example 2.16 (2)
-      url: https://echo360.org/media/34f36457-442e-47b6-9149-e7a708bea6af/public
-      type: video
     - title: QA session
       url: lecture16-qa.zip
       type: audio
   - lecture: PDA ⇔ CFG
     date: We, Apr  1
     skip_exercises: true
-    attachments:
-    - title: Overview
-      url: https://echo360.org/media/20934c33-b1bc-4c7e-8058-e015b55788c8/public
-      type: video
-    - title: Exercises 1
-      url: https://echo360.org/media/9831f0b5-0a1a-4f78-b07d-9bd94255f6c3/public
-      type: video
-    - title: Exercise 2
-      url: https://echo360.org/media/93c6301d-dbde-4b08-b99a-2ecbc4b5d8ab/public
-      type: video
-    - title: Context Free Language
-      url: https://echo360.org/media/99e4a013-9905-4761-91a2-0601fdb9319f/public
-      type: video
-    - title: Convert CFG to PDA (intuition)
-      url: https://echo360.org/media/96be2a43-5d5b-455c-a119-983d91d99c95/public
-      type: video
-    - title:  Convert CFG to PDA (translation rules)
-      url: https://echo360.org/media/802e8f7c-cbd8-4caa-a231-57fa5b64d5ed/public
-      type: video
-    - title:  Convert CFG to PDA (exercise)
-      url: https://echo360.org/media/b2eb436f-0437-4a38-9001-5cdd3306eb22/public
-      type: video
-    - title: PDA to CFG (overview)
-      url: https://echo360.org/media/b694ffaa-a142-4936-a5b3-782124bd8127/public
-      type: video
-    - title: Simplifying a PDA
-      url: https://echo360.org/media/6d84ecf4-ba94-40f9-a9fe-32372b80e1b5/public
-      type: video
-    - title: Convert PDA to CFG
-      url: https://echo360.org/media/1011e08e-0b44-4085-8b5a-6dc8915d8efb/public
-      type: video
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQduvsc5EQLFgSBy4RyFZJFm
   - lecture: Pumping lemma; Non-context-free Languages; Turing Machines
     date: Mo, Apr  6
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQf-IHcWs3CKbD14mPBEz4lH
