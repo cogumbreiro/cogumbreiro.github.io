@@ -115,7 +115,7 @@ data:
   - lecture: Garbage collection
     date: Mo, Apr  6
     skip_exercises: true
-    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQeAB5T5zW3fyxJC3dyqYKLj
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdttBtWGvgEcEhwYwNCand4
   - lecture: Mark and sweep; sets; refactoring evaluation
     date: We, Apr  8
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQe4XwZKfZkMuaqcSLQc67M1
