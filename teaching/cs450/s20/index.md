@@ -114,8 +114,11 @@ data:
   - module: Monads and side effects
   - lecture: Garbage collection
     date: Mo, Apr  6
+    skip_exercises: true
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQeAB5T5zW3fyxJC3dyqYKLj
   - lecture: Mark and sweep; sets; refactoring evaluation
     date: We, Apr  8
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQe4XwZKfZkMuaqcSLQc67M1
   - lecture: Effectful operations
     date: Fr, Apr 10
   - lecture: Refactoring errors; monads
