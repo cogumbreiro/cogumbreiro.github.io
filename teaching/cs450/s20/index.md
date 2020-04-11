@@ -121,6 +121,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQe4XwZKfZkMuaqcSLQc67M1
   - lecture: Effectful operations
     date: Fr, Apr 10
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcvqbeepDj_FE3GF8q6AOfQ
   - lecture: Refactoring errors; monads
     date: Mo, Apr 13
   - lecture: Type-directed monads; dynamic binding
