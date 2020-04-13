@@ -60,17 +60,17 @@ data:
   - module: Context-free Languages
   - lecture: Pumping lemma; Non-regular languages; Mini-test 2 recap
     date: Mo, Mar 23
-    videos: https://www.youtube.com/playlist?list=PL_fXogTdDGQdpggDhmLSxKxxXGOT-42rM
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdpggDhmLSxKxxXGOT-42rM
   - lecture: Context-free grammars
     date: We, Mar 25
-    videos: https://www.youtube.com/playlist?list=PL_fXogTdDGQd18LP9rmraukUE3h_M9NsF
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQd18LP9rmraukUE3h_M9NsF
   - lecture: Pushdown Atomata
     date: Mo, Mar 30
     skip_exercises: true
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQc-aMjMYzo2UUgO-6F384op
     attachments:
     - title: QA session
-      url: lecture16-qa.zip
+      url: https://piazza.com/class_profile/get_resource/k5ubsxch57r196/p1e5qskinc6o2je31k2hol3khi22
       type: audio
   - lecture: PDA ⇔ CFG
     date: We, Apr  1
@@ -84,6 +84,10 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcndM6CcWeMCrI7U2yy8v7T
   - lecture: Acceptance, emptiness and equality tests
     date: Mo, Apr 13
+    attachments:
+    - title: QA session
+      url: https://piazza.com/class_profile/get_resource/k5ubsxch57r196/p1e5qskinc18sm1o4m1hq1gkpnh921
+      type: audio
   - lecture: TM Acceptance
     date: We, Apr 15
   - closure: true

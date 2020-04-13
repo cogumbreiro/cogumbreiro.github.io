@@ -102,7 +102,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQehC-CGR1I7ZB-OeIOSTSSn
     attachments:
     - title: QA session
-      url: lecture23-qa.zip
+      url: https://piazza.com/class_profile/get_resource/k5ubs34raz3ao/k8yw8a3sd52rg
       type: audio
   - lecture: Implementing λ<sub>D</sub>
     date: We, Apr  1
@@ -116,6 +116,10 @@ data:
     date: Mo, Apr  6
     skip_exercises: true
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdttBtWGvgEcEhwYwNCand4
+    attachments:
+    - url: https://piazza.com/class_profile/get_resource/k5ubs34raz3ao/k8yw746fyd812x
+      type: audio
+      title: QA session
   - lecture: Mark and sweep; sets; refactoring evaluation
     date: We, Apr  8
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQe4XwZKfZkMuaqcSLQc67M1
@@ -124,6 +128,10 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcvqbeepDj_FE3GF8q6AOfQ
   - lecture: Refactoring errors; monads
     date: Mo, Apr 13
+    attachments:
+    - type: audio
+      url: https://piazza.com/class_profile/get_resource/k5ubs34raz3ao/k8yw746fyd812x
+      title: QA session
   - lecture: Type-directed monads; dynamic binding
     date: We, Apr 15
   - lecture: Monadic continuations
