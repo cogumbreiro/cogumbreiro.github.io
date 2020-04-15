@@ -86,7 +86,7 @@ data:
     date: Mo, Apr 13
     attachments:
     - title: QA session
-      url: https://piazza.com/class_profile/get_resource/k5ubsxch57r196/p1e5qskinc18sm1o4m1hq1gkpnh921
+      url: https://piazza.com/class_profile/get_resource/k5ubsxch57r196/k8z35whga1r7ik
       type: audio
   - lecture: TM Acceptance
     date: We, Apr 15
