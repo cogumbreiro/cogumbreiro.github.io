@@ -128,12 +128,14 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcvqbeepDj_FE3GF8q6AOfQ
   - lecture: Refactoring errors; monads
     date: Mo, Apr 13
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQelnFtnkYuQMHo8MQyWlnok
     attachments:
     - type: audio
       url: https://piazza.com/class_profile/get_resource/k5ubs34raz3ao/k8yw746fyd812x
       title: QA session
-  - lecture: Type-directed monads; dynamic binding
+  - lecture: Dynamic dispatching
     date: We, Apr 15
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfSL_szJZyFdC-N8uEhZW4R
   - lecture: Monadic continuations
     date: Fr, Apr 17
   - closure: true
