@@ -136,14 +136,16 @@ data:
   - lecture: Dynamic dispatching
     date: We, Apr 15
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfSL_szJZyFdC-N8uEhZW4R
-  - lecture: Monadic continuations
+  - lecture: Dynamic binding
     date: Fr, Apr 17
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcZ8gHqAMj7dRu7Oxikh3-i
   - closure: true
     date: Mo, Apr 20
+  - lecture: Monadic continuations / What is a PhD?
+    date: We, Apr 22
+    x-video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfEbmesFy8rKYjJOVfsE1C2
 ################################################################################
   - module: Abstraction
-  - lecture: What is a PhD?
-    date: We, Apr 22
   - lecture: Pattern-matching
     date: Fr, Apr 24
   - lecture: Generic methods
