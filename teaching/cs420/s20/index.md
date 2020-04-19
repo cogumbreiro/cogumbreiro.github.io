@@ -84,27 +84,40 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcndM6CcWeMCrI7U2yy8v7T
   - lecture: Acceptance, emptiness and equality tests
     date: Mo, Apr 13
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcNF7kueuPukQ747ymJpzvX
+    skip_exercises: true
     attachments:
     - title: QA session
       url: https://piazza.com/class_profile/get_resource/k5ubsxch57r196/k8z35whga1r7ik
       type: audio
+    - title: Lecture 17 of Fall'19
+      url: https://echo360.org/media/636a5ca2-4364-4384-966d-6b30e0c1c42c/public
+      type: video
+    - title: Lecture 18 of Fall'19
+      url: https://echo360.org/media/6d26c362-ee93-491c-a35a-f09f90b28a61/public
+      type: video
   - lecture: TM Acceptance
     date: We, Apr 15
+    video: https://echo360.org/media/70a3b825-ff35-4130-bc78-4bd6fc66a712/public
+    skip_exercises: true
   - closure: true
     date: Mo, Apr 20
 ################################################################################
   - module: Decidability
-  - lecture: Acceptance, emptiness and equality tests <b>(Mini-test 3)</b>
+  - lecture: Acceptance, emptiness and equality tests
     date: We, Apr 22
+    video: https://echo360.org/media/c8cf0afd-13c1-4f50-8732-d2c15f779b14/public
   - lecture: Undecidable problems
     date: Mo, Apr 27
+    x-video: https://echo360.org/media/05d398ae-537a-4fd7-98dc-3d99d44da859/public
   - lecture: Reduction via Computation Histories
     date: We, Apr 29
+    x-video: https://echo360.org/media/db7d50d5-986a-4bdb-a65a-b73c9c5a30d9/public
   - lecture: Mapping reducibility
     date: Mo, May  4
   - lecture: Mapping reducibility
     date: We, May  6
-  - lecture: Mapping reducibility <b>(Mini-test 4)</b>
+  - lecture: Mapping reducibility
     date: We, May 11
   - lecture: Course conclusion
     date: We, May 13
@@ -139,9 +152,8 @@ data:
 # Resources
 
 * [CS420 Supplementary Material: The Turing library (Coq)](https://gitlab.com/cogumbreiro/turing)
-* [CS420 Supplementary Material: NFA/DFA/REGEX algorithms (Python)](https://gitlab.com/cogumbreiro/)
+* [CS420 Supplementary Material: NFA/DFA/REGEX algorithms (Python)](https://gitlab.com/cogumbreiro/karakuri/)
 * [Logic Foundations exercises](lf.tgz)
-karukuri/)
 
 ## Class Schedule
 
