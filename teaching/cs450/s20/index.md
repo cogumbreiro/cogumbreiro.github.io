@@ -120,6 +120,9 @@ data:
     - url: https://piazza.com/class_profile/get_resource/k5ubs34raz3ao/k8yw746fyd812x
       type: audio
       title: QA session
+    - url: https://echo360.org/media/fff40bda-a689-4115-b60b-3adbc55066ea/public
+      type: video
+      title: Spring 2019 classroom recording
   - lecture: Mark and sweep; sets; refactoring evaluation
     date: We, Apr  8
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQe4XwZKfZkMuaqcSLQc67M1

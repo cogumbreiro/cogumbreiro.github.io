@@ -96,7 +96,7 @@ data:
     - title: Lecture 18 of Fall'19
       url: https://echo360.org/media/6d26c362-ee93-491c-a35a-f09f90b28a61/public
       type: video
-  - lecture: TM Acceptance
+  - lecture: Undecidability
     date: We, Apr 15
     video: https://echo360.org/media/70a3b825-ff35-4130-bc78-4bd6fc66a712/public
     skip_exercises: true
@@ -104,13 +104,13 @@ data:
     date: Mo, Apr 20
 ################################################################################
   - module: Decidability
-  - lecture: Acceptance, emptiness and equality tests
+  - lecture: Undecidable problems
     date: We, Apr 22
     video: https://echo360.org/media/c8cf0afd-13c1-4f50-8732-d2c15f779b14/public
   - lecture: Undecidable problems
     date: Mo, Apr 27
     x-video: https://echo360.org/media/05d398ae-537a-4fd7-98dc-3d99d44da859/public
-  - lecture: Reduction via Computation Histories
+  - lecture: Undecidability and unrecognizability
     date: We, Apr 29
     x-video: https://echo360.org/media/db7d50d5-986a-4bdb-a65a-b73c9c5a30d9/public
   - lecture: Mapping reducibility
