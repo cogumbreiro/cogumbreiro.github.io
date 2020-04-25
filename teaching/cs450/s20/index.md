@@ -144,9 +144,9 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcZ8gHqAMj7dRu7Oxikh3-i
   - closure: true
     date: Mo, Apr 20
-  - lecture: Monadic continuations / What is a PhD?
+  - lecture: Monadic continuations
     date: We, Apr 22
-    x-video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfEbmesFy8rKYjJOVfsE1C2
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfEbmesFy8rKYjJOVfsE1C2
 ################################################################################
   - module: Abstraction
   - lecture: Pattern-matching
