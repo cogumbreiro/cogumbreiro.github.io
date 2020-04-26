@@ -149,8 +149,10 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfEbmesFy8rKYjJOVfsE1C2
 ################################################################################
   - module: Abstraction
-  - lecture: Pattern-matching
+  - lecture: PhD in CS/Pattern-matching
     date: Fr, Apr 24
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdz0J_47wFJNEvTv2KySoIF
+    skip_exercises: true
   - lecture: Generic methods
     date: Mo, Apr 27
   - lecture: Macros
