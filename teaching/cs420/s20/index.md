@@ -106,7 +106,7 @@ data:
   - module: Decidability
   - lecture: Undecidable problems
     date: We, Apr 22
-    video: https://echo360.org/media/c8cf0afd-13c1-4f50-8732-d2c15f779b14/public
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdVik5Vv5fpJ9S7bYtC0xQT
   - lecture: Undecidable problems
     date: Mo, Apr 27
     x-video: https://echo360.org/media/05d398ae-537a-4fd7-98dc-3d99d44da859/public
