@@ -107,6 +107,10 @@ data:
   - lecture: Undecidable problems
     date: We, Apr 22
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdVik5Vv5fpJ9S7bYtC0xQT
+    attachments:
+    - title: What is a PhD in CS? (Fall '19)
+      url: https://echo360.org/media/b16d2cb1-ad05-45e0-852a-7fbec06672a0/public
+      type: video
   - lecture: Undecidable problems
     date: Mo, Apr 27
     x-video: https://echo360.org/media/05d398ae-537a-4fd7-98dc-3d99d44da859/public

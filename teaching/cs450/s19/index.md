@@ -60,7 +60,7 @@ Week 10:
 * 04/11 19. [Continuations [PDF]](lecture19.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-04-11T17:30:00.000_2019-04-11T18:47:00.000/classroom)
 
 Week 11:
-* 04/16 20. [What is a PhD? / Pattern matching [PDF]](lecture20.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-04-16T17:30:00.000_2019-04-16T18:47:00.000/classroom)
+* 04/16 20. [What is a PhD? / Pattern matching [PDF]](lecture20.pdf) [[VIDEO]](https://echo360.org/media/b16d2cb1-ad05-45e0-852a-7fbec06672a0/public)
 * 04/18 21. [Pattern matching & Dynamic dispatching [PDF]](lecture21.pdf) [[VIDEO]](https://echo360.org/lesson/G_b1d62b3e-d2c1-4796-bd61-06590576d2ad_5f0f45a6-8229-4a4e-80fe-dbc5c547a7c5_2019-04-18T17:30:00.000_2019-04-18T18:47:00.000/classroom)
 
 Week 12:
@@ -210,5 +210,3 @@ Students are required to adhere to the University Policy on Academic Standards
 and Cheating, to the University Statement on Plagiarism and the Documentation of
 Written Work, and to the Code of Student Conduct as delineated in the catalog of
 Undergraduate Programs, pp.  44-45, and 48-52.  [The Code is available online.](https://www.umb.edu/life_on_campus/policies/community/code)
-
-
