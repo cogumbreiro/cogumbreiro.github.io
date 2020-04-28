@@ -147,6 +147,10 @@ data:
   - lecture: Monadic continuations
     date: We, Apr 22
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfEbmesFy8rKYjJOVfsE1C2
+    attachments:
+    - title: QA session
+      url: https://piazza.com/class_profile/get_resource/k5ubs34raz3ao/k9iwdp1spe419y
+      type: audio
 ################################################################################
   - module: Abstraction
   - lecture: PhD in CS/Pattern-matching
@@ -155,6 +159,11 @@ data:
     skip_exercises: true
   - lecture: Generic methods
     date: Mo, Apr 27
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdhBPzx4ljP7MX_wgV5ghZP
+    attachments:
+    - title: QA session
+      url: https://piazza.com/class_profile/get_resource/k5ubs34raz3ao/k9iwc2v28si17
+      type: audio
   - lecture: Macros
     date: We, Apr 29
 ################################################################################
