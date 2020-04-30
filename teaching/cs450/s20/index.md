@@ -166,6 +166,7 @@ data:
       type: audio
   - lecture: Macros
     date: We, Apr 29
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdR8irboLKGczTkXieEO0Xr
 ################################################################################
   - module: Object Oriented Programming
   - lecture: LambdaJS; object method; Class inheritance
