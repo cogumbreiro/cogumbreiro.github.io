@@ -171,6 +171,8 @@ data:
   - module: Object Oriented Programming
   - lecture: LambdaJS; object method; Class inheritance
     date: Fr, May  1
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdpBuFRKYEuU1g7eTVnmzQh
+    skip_exercises: true
   - lecture: SimpleJS; translating LambdaJS to SimpleJS
     date: Mo, May  4
   - lecture: Translating SimpleJS to LambdaJS
