@@ -98,7 +98,11 @@ data:
       type: video
   - lecture: Undecidability
     date: We, Apr 15
-    video: https://echo360.org/media/70a3b825-ff35-4130-bc78-4bd6fc66a712/public
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdVik5Vv5fpJ9S7bYtC0xQT
+    attachments:
+    - title: What is a PhD in CS? (Fall '19)
+      url: https://echo360.org/media/b16d2cb1-ad05-45e0-852a-7fbec06672a0/public
+      type: video
     skip_exercises: true
   - closure: true
     date: Mo, Apr 20
@@ -106,21 +110,22 @@ data:
   - module: Decidability
   - lecture: Undecidable problems
     date: We, Apr 22
-    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdVik5Vv5fpJ9S7bYtC0xQT
-    attachments:
-    - title: What is a PhD in CS? (Fall '19)
-      url: https://echo360.org/media/b16d2cb1-ad05-45e0-852a-7fbec06672a0/public
-      type: video
+    video: https://echo360.org/media/c8cf0afd-13c1-4f50-8732-d2c15f779b14/public
+    skip_exercises: true
   - lecture: Undecidable problems
     date: Mo, Apr 27
-    x-video: https://echo360.org/media/05d398ae-537a-4fd7-98dc-3d99d44da859/public
+    video: https://echo360.org/media/05d398ae-537a-4fd7-98dc-3d99d44da859/public
+    skip_exercises: true
   - lecture: Undecidability and unrecognizability
     date: We, Apr 29
-    x-video: https://echo360.org/media/db7d50d5-986a-4bdb-a65a-b73c9c5a30d9/public
+    video: https://echo360.org/media/db7d50d5-986a-4bdb-a65a-b73c9c5a30d9/public
+    skip_exercises: true
   - lecture: Mapping reducibility
     date: Mo, May  4
+    x-video: https://echo360.org/media/db7d50d5-986a-4bdb-a65a-b73c9c5a30d9/public
   - lecture: Mapping reducibility
     date: We, May  6
+    x-video: https://echo360.org/media/70f99b63-f26c-4b4a-b986-3306a5793811/public
   - lecture: Mapping reducibility
     date: We, May 11
   - lecture: Course conclusion
