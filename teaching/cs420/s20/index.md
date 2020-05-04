@@ -132,12 +132,12 @@ data:
   - lecture: Mapping reducibility
     date: Mo, May  4
     x-video: https://echo360.org/media/db7d50d5-986a-4bdb-a65a-b73c9c5a30d9/public
-  - lecture: Mapping reducibility
+  - lecture: QA session
     date: We, May  6
     x-video: https://echo360.org/media/70f99b63-f26c-4b4a-b986-3306a5793811/public
-  - lecture: Mapping reducibility
+  - lecture: QA session
     date: We, May 11
-  - lecture: Course conclusion
+  - lecture: QA session
     date: We, May 13
 
 ---
