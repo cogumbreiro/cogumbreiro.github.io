@@ -79,9 +79,11 @@ data:
   - lecture: Pumping lemma; Non-context-free Languages; Turing Machines
     date: Mo, Apr  6
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQf-IHcWs3CKbD14mPBEz4lH
+    skip_exercises: true
   - lecture: Variants of Turing Machines
     date: We, Apr  8
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcndM6CcWeMCrI7U2yy8v7T
+    skip_exercises: true
   - lecture: Acceptance, emptiness and equality tests
     date: Mo, Apr 13
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcNF7kueuPukQ747ymJpzvX
@@ -103,7 +105,7 @@ data:
     - title: What is a PhD in CS? (Fall '19)
       url: https://echo360.org/media/b16d2cb1-ad05-45e0-852a-7fbec06672a0/public
       type: video
-    skip_exercises: true
+
   - closure: true
     date: Mo, Apr 20
 ################################################################################
@@ -120,10 +122,13 @@ data:
     date: Mo, Apr 27
     video: https://echo360.org/media/05d398ae-537a-4fd7-98dc-3d99d44da859/public
     skip_exercises: true
-  - lecture: Undecidability and unrecognizability
+  - lecture: Mapping reducibility
     date: We, Apr 29
     video: https://echo360.org/media/db7d50d5-986a-4bdb-a65a-b73c9c5a30d9/public
-    skip_exercises: true
+    attachments:
+    - type: video
+      title: Homework 8 tutorial
+      url: https://www.youtube.com/playlist?list=PL_fXogTdDGQegtKOg9Z5MxENMrA-IYKwA
   - lecture: Mapping reducibility
     date: Mo, May  4
     x-video: https://echo360.org/media/db7d50d5-986a-4bdb-a65a-b73c9c5a30d9/public
@@ -225,7 +230,7 @@ data:
       {% if r.skip_exercises %}
         {% assign f_url = nil %}
       {% else %}
-        {% capture f_url %}lecture{{ num }}-exercises{{ page.exercises_ext }}{% endcapture %}
+        {% capture f_url %}lecture{{ num }}{{ page.exercises_ext }}{% endcapture %}
       {% endif %}
       <span class="buttons has-addons">{% include button.html url=s_url title="Download lecture slides" icon="book" %}{% include button.html url=r.video icon="file-video" title="Video recording" %}{% include button.html url=f_url icon="box" title="Class exercises" %}</span>
     {% endif %}
