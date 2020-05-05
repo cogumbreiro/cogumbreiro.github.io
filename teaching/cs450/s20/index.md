@@ -169,12 +169,14 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdR8irboLKGczTkXieEO0Xr
 ################################################################################
   - module: Object Oriented Programming
-  - lecture: LambdaJS; object method; Class inheritance
+  - lecture: LambdaJS
     date: Fr, May  1
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdpBuFRKYEuU1g7eTVnmzQh
     skip_exercises: true
-  - lecture: SimpleJS; translating LambdaJS to SimpleJS
+  - lecture: JavaScript method and class inheritance
     date: Mo, May  4
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQe2k9jWTEZPLOOiwAoNv48C
+    skip_exercises: true
   - lecture: Translating SimpleJS to LambdaJS
     date: We, May  6
   - lecture: The essence of JavaScript
