@@ -179,6 +179,8 @@ data:
     skip_exercises: true
   - lecture: Translating SimpleJS to LambdaJS
     date: We, May  6
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQeuQUuvII-IE_KS5lH4HKPO
+    skip_exercises: true
   - lecture: The essence of JavaScript
     date: Fr, May  8
   - lecture: Parallelism with asynchronous evaluation
