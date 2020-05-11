@@ -183,7 +183,9 @@ data:
     skip_exercises: true
   - lecture: The essence of JavaScript
     date: Fr, May  8
-  - lecture: Parallelism with asynchronous evaluation
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcyYSUo1KB5hVXStOmcGw2k
+    skip_exercises: true
+  - lecture: QA Session
     date: Mo, May 11
   - lecture: Victory lap
     date: We, May 13
