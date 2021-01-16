@@ -1,6 +1,6 @@
 ---
 author: Tiago Cogumbreiro
-semester: Spring 2020
+semester: Spring 2021
 title: "CS 450: Structure of Higher Level Languages"
 layout: single
 exercises_ext: .zip
@@ -126,26 +126,25 @@ data:
 
 <div class="buttons is-centered">
 <a class="button is-large is-link" href="syllabus.pdf">Syllabus</a>
-<a class="button is-large is-link" href="https://piazza.com/class/k5ubs34raz3ao">Forum</a>
-<a class="button is-large is-link" href="https://www.gradescope.com/courses/85523">Homework submission</a>
-<a class="button is-large is-link" href="https://www.estalee.com/">Attendance</a>
+<a class="button is-large is-link" href="https://piazza.com/class/k5ubs34raz3ao">Announcements</a>
+<a class="button is-large is-link" href="https://www.gradescope.com/courses/226255">Homework submission</a>
 </div>
+
+**Past editions:** [**Spring '20**](../s20/), [**Spring '19**](../s19/)
 
 # Course information
 
-* **Location:** *(remote)*
 * **Schedule:** 3:00pm to 3:50pm, Monday, Wednesday, Friday
 
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
-* **Office:** <del>{{ site.office.location }}</del> #cs450 (Discord)
 * **Office hours:** {{ site.office.hours }}
 
 # Teaching assistants contact
 
 * TBD
-* **Office:** #cs450 (Discord)
 * **Office hours:** TBD
+
 
 ## Class Schedule
 
