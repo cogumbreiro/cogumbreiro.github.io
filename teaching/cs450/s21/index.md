@@ -126,7 +126,7 @@ data:
 
 <div class="buttons is-centered">
 <a class="button is-large is-link" href="syllabus.pdf">Syllabus</a>
-<a class="button is-large is-link" href="https://piazza.com/class/k5ubs34raz3ao">Announcements</a>
+<a class="button is-large is-link" href="https://gitlab.com/cogumbreiro/cs450-s21-qa">Announcements and QA</a>
 <a class="button is-large is-link" href="https://www.gradescope.com/courses/226255">Homework submission</a>
 </div>
 
