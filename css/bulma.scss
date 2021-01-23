@@ -11,3 +11,12 @@ $primary: hsl(217, 71%, 53%);
 @import 'bulma/components/all';
 @import 'bulma/grid/all';
 @import 'bulma/layout/all';
+
+#abstract {
+    background-image: url({{site.baseurl}}/assets/PIA19948.jpg) ;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+    background-color: #999;
+}
