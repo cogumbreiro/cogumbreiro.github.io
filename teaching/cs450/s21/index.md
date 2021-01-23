@@ -8,11 +8,14 @@ exercises_ext: .zip
 data:
   - module: Basic Functional Programming
   - lecture: Course overview; arithmetic operations
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcC-fUjlR8wkix5sFYTRMpJ
     date: Mo, Jan 25
   - lecture: Function calls; boolean logic
     date: We, Jan 27
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcfFeQF0LXvuk41H-ok1d5A
   - lecture: Function declarations; function definitions
     date: Fr, Jan 29
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQd04D3iyBHcF_ytGQx611GF
   - lecture: Pairs; lists
     date: Mo, Feb  1
   - lecture: Lists; quoting
