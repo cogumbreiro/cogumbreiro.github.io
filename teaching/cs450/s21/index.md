@@ -18,9 +18,10 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQd04D3iyBHcF_ytGQx611GF
   - lecture: Pairs; lists
     date: Mo, Feb  1
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcLpJZUOxLEbGg4BB21p2rB
   - lecture: Lists; quoting
     date: We, Feb  3
-
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcS388JYOEMgEbiEdjvbkRe
 ################################################################################
   - module: Advanced Functional Programming
   - lecture: Nested definitions; caching
