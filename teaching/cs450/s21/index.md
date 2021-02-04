@@ -26,6 +26,7 @@ data:
   - module: Advanced Functional Programming
   - lecture: Nested definitions; caching
     date: Fr, Feb  5
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQd1FspNSp8tkA4ZG3J3qRnW
   - lecture: Tail-call optimization; structs
     date: Mo, Feb 8
   - lecture: Functions as values (closures)
