@@ -29,6 +29,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQd1FspNSp8tkA4ZG3J3qRnW
   - lecture: Tail-call optimization; structs
     date: Mo, Feb 8
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQeOhwS1IQ0larZLSKopENsX
   - lecture: Functions as values (closures)
     date: We, Feb 10
   - lecture: "Dynamically-created funcs, storing funcs in lists, currying"
