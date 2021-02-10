@@ -32,6 +32,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQeOhwS1IQ0larZLSKopENsX
   - lecture: Functions as values (closures)
     date: We, Feb 10
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQe0wRffLM3aIlY8oRhwylOd
   - lecture: "Dynamically-created funcs, storing funcs in lists, currying"
     date: Fr, Feb 12
   - lecture: "Function evaluation, abstract syntactic trees"
