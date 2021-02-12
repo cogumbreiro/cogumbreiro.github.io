@@ -36,9 +36,9 @@ data:
   - lecture: "Dynamically-created funcs, storing funcs in lists, currying"
     date: Fr, Feb 12
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcJ-sQf20OiEAfFHD765xS0
-  - lecture: "Function evaluation, abstract syntactic trees"
-    date: Mo, Feb 15
   - closure: true
+    date: Mo, Feb 15
+  - lecture: "Function evaluation, abstract syntactic trees"
     date: We, Feb 17
   - lecture: "Currying, exists, map"
     date: Fr, Feb 19
