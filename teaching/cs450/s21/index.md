@@ -40,6 +40,7 @@ data:
     date: Mo, Feb 15
   - lecture: "Function evaluation, abstract syntactic trees"
     date: We, Feb 17
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdhMYgIwpCZ2v0q872ZgWsz
   - lecture: "Currying, exists, map"
     date: Fr, Feb 19
   - lecture: "Tail-call optimization,filter"
