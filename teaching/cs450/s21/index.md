@@ -43,6 +43,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdhMYgIwpCZ2v0q872ZgWsz
   - lecture: "Currying, exists, map"
     date: Fr, Feb 19
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQc90Yd5Oq3GlgDA9slA19ep
   - lecture: "Tail-call optimization,filter"
     date: Mo, Feb 22
   - lecture: "Reduction"
