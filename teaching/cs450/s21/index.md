@@ -45,6 +45,7 @@ data:
     date: Fr, Feb 19
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQc90Yd5Oq3GlgDA9slA19ep
   - lecture: "Tail-call optimization,filter"
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQf5LBXF1W9cP4cDgLpJez8q
     date: Mo, Feb 22
   - lecture: "Reduction"
     date: We, Feb 24
