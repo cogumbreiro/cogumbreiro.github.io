@@ -49,6 +49,7 @@ data:
     date: Mo, Feb 22
   - lecture: "Reduction"
     date: We, Feb 24
+    https://www.youtube.com/playlist?list=PL_fXogTdDGQcShjT6W2IWchSVnFUlJeh3
 
 ################################################################################
   - module: Lazy evaluation
