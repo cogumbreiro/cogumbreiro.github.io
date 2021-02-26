@@ -55,6 +55,7 @@ data:
   - module: Lazy evaluation
   - lecture: "Thunks and promises"
     date: Fr, Feb 26
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcFtA6HPUbdfmxoQqGREEsM
   - lecture: "Streams"
     date: Mo, Mar  1
   - lecture: Evaluating expressions; Variable argument functions
