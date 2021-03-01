@@ -58,6 +58,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcFtA6HPUbdfmxoQqGREEsM
   - lecture: "Streams"
     date: Mo, Mar  1
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfl-FSg1LqHV8xdZvirioUA
   - lecture: Evaluating expressions; Variable argument functions
     date: We, Mar  3
 
