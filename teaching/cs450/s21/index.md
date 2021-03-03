@@ -61,6 +61,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfl-FSg1LqHV8xdZvirioUA
   - lecture: Evaluating expressions; Variable argument functions
     date: We, Mar  3
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdPlyMPlJboAp0njO5pNj-x
 
 ################################################################################
   - module: Formal methods; Lambda calculus
