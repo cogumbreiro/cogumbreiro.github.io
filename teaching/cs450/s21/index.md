@@ -56,6 +56,7 @@ data:
   - lecture: "Thunks and promises"
     date: Fr, Feb 26
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcFtA6HPUbdfmxoQqGREEsM
+    skip_exercises: true
   - lecture: "Streams"
     date: Mo, Mar  1
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfl-FSg1LqHV8xdZvirioUA
@@ -67,6 +68,7 @@ data:
   - module: Formal methods; Lambda calculus
   - lecture: "Language λ<sub>S</sub>: slow function calls"
     date: Fr, Mar  5
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQd6v3DqSR5y_9OVAfizO7Ep
   - lecture: Lexical/dynamic scoping
     date: Mo, Mar  8
   - lecture: "Language λ<sub>E</sub>: fast function calls"
