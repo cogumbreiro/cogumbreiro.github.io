@@ -70,7 +70,9 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQd6v3DqSR5y_9OVAfizO7Ep
     skip_exercises: true
   - lecture: Lexical/dynamic scoping
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdvh8XIINRgTkyKbRGmOc00
     date: Mo, Mar  8
+    skip_exercises: true
   - lecture: "Language λ<sub>E</sub>: fast function calls"
     date: We, Mar 10
   - lecture: Implementing Language λ<sub>E</sub>; Church encoding
