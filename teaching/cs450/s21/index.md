@@ -75,6 +75,7 @@ data:
     skip_exercises: true
   - lecture: "Language λ<sub>E</sub>: fast function calls"
     date: We, Mar 10
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQf8xJjEW0XuW6zZHsT4rW7p
   - lecture: Implementing Language λ<sub>E</sub>; Church encoding
     date: Fr, Mar 12
   - closure: true
