@@ -91,6 +91,8 @@ data:
   - module: Mutable lambda calculus
   - lecture: "Language λ<sub>F</sub>: adding definitions incorrectly"
     date: Mo, Mar 22
+    skip_exercises: true
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQeLaImQiUG3nVgnBHNnkxLv
   - lecture: Implementing λ<sub>F</sub>
     date: We, Mar 24
   - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
