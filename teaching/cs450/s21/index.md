@@ -95,6 +95,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQeLaImQiUG3nVgnBHNnkxLv
   - lecture: Implementing λ<sub>F</sub>
     date: We, Mar 24
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQeBWqoLFiTjNqYknD2yUSNV
   - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
     date: Fr, Mar 26
   - lecture: Implementing λ<sub>D</sub>
