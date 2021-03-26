@@ -98,6 +98,8 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQeBWqoLFiTjNqYknD2yUSNV
   - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
     date: Fr, Mar 26
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQe3bXtYRKjfqznSg4Axzz5l
+    skip_exercises: true
   - lecture: Implementing λ<sub>D</sub>
     date: Mo, Mar 29
   - lecture: Implementing λ<sub>D</sub> / Why study programming languages?
