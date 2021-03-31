@@ -105,6 +105,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQe10iVKTxPmGkmt1wYl2X41
   - lecture: Implementing λ<sub>D</sub> / Why study programming languages?
     date: We, Mar 31
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQf4Im83nmkOgUv9Q00nJQEW
 
 ################################################################################
   - module: Monads and side effects
