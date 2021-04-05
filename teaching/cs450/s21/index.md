@@ -115,6 +115,7 @@ data:
     skip_exercises: true
   - lecture: Mark and sweep; sets; refactoring evaluation
     date: Mo, Apr  5
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQc0rrjZFhRX4EEp_n0KM8pL
   - lecture: Effectful operations
     date: We, Apr  7
   - lecture: Refactoring errors; monads
