@@ -175,8 +175,8 @@ data:
 
 # Teaching assistants contact
 
-* TBD
-* **Office hours:** TBD
+* Dennis Liew
+* **Office hours:** 2:00pm to 3:00pm, Tuesday, Thursday
 
 
 ## Class Schedule
