@@ -118,6 +118,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQc0rrjZFhRX4EEp_n0KM8pL
   - lecture: Effectful operations
     date: We, Apr  7
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdJ9yPnyZDeCrfVlLYhCZ55
   - lecture: Refactoring errors; monads
     date: Fr, Apr  9
   - lecture: Dynamic dispatching
