@@ -121,6 +121,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQdJ9yPnyZDeCrfVlLYhCZ55
   - lecture: Refactoring errors; monads
     date: Fr, Apr  9
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcPgMjyTxAtKiZHoigBvVWa
   - lecture: Dynamic dispatching
     date: Mo, Apr 12
   - lecture: Dynamic binding
