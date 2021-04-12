@@ -124,6 +124,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQcPgMjyTxAtKiZHoigBvVWa
   - lecture: Dynamic dispatching
     date: Mo, Apr 12
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQd_6V71P5LABL2OFGT7PW0V
   - lecture: Dynamic binding
     date: We, Apr 14
   - lecture: Monadic continuations
