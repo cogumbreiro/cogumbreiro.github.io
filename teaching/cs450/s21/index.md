@@ -127,6 +127,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQd_6V71P5LABL2OFGT7PW0V
   - lecture: Dynamic binding
     date: We, Apr 14
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQf9-EXkvHluPpG2oTs_NWZx
   - lecture: Monadic continuations
     date: Fr, Apr 16
 
