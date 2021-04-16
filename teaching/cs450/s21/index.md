@@ -130,6 +130,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQf9-EXkvHluPpG2oTs_NWZx
   - lecture: Monadic continuations
     date: Fr, Apr 16
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfj5-jLAxtR8-NPM2KNvyBU
 
 ################################################################################
   - module: Abstraction
