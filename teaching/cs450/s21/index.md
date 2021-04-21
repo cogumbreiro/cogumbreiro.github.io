@@ -131,31 +131,34 @@ data:
   - lecture: Monadic continuations
     date: Fr, Apr 16
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQfj5-jLAxtR8-NPM2KNvyBU
+  - closure: true
+    date: Mo, Apr 19
+  - lecture: QA Session / <a href="https://www.youtube.com/watch?v=iJMvEHJ7wmA">"The Lean Researcher" by Alastair Donaldson</a>
+    date: We, Apr 21
 
 ################################################################################
   - module: Abstraction
   - lecture: PhD in CS/Pattern-matching
-    date: Mo, Apr 19
-  - lecture: Generic methods
-    date: We, Apr 21
-  - lecture: Macros
     date: Fr, Apr 23
+  - lecture: Generic methods
+    date: Mo, Apr 26
+  - lecture: Macros
+    date: We, Apr 28
 
 ################################################################################
   - module: Object Oriented Programming
   - lecture: LambdaJS
-    date: Mo, Apr 26
-  - lecture: JavaScript method and class inheritance
-    date: We, Apr 28
-  - lecture: Translating SimpleJS to LambdaJS
     date: Fr, Apr 30
-  - lecture: The essence of JavaScript
+  - lecture: JavaScript method and class inheritance
     date: Mo, May  3
+  - lecture: Translating SimpleJS to LambdaJS
+    date: We, May  5
+  - lecture: The essence of JavaScript
+    date: Fri, May  7
   - lecture: QA Session
-    date: Mo, May  5
+    date: Mo, May 10
   - lecture: QA Session
-    date: We, May  7
-
+    date: We, May 12
 ---
 
 <h1 class="has-text-centered">{{ page.title }}</h1>
