@@ -135,6 +135,7 @@ data:
     date: Mo, Apr 19
   - lecture: QA Session / <a href="https://www.youtube.com/watch?v=iJMvEHJ7wmA">"The Lean Researcher" by Alastair Donaldson</a>
     date: We, Apr 21
+    skip_number: true
 
 ################################################################################
   - module: Abstraction
@@ -226,10 +227,13 @@ data:
   {% else %}
     {% assign is_pub = false %}
   {% endif %}
-  {% assign l_num = l_num | plus: 1 %}
+  {% if r.skip_number %}
+  {% else %}
+    {% assign l_num = l_num | plus: 1 %}
+  {% endif %}
   {% capture num %}{% if l_num < 10 %}0{% endif %}{{ l_num }}{% endcapture %}
   <td>{{ r.date }}</td>
-  <td>{{ num }}</td>
+  <td>{% if r.skip_number %}{% else %}{{ num }}{% endif %}</td>
   <td>
   {% if is_pub %}
     <a href="lecture{{num}}.html">{{ r.lecture }}</a>
