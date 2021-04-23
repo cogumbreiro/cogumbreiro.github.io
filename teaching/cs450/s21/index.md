@@ -141,6 +141,7 @@ data:
   - module: Abstraction
   - lecture: PhD in CS/Pattern-matching
     date: Fr, Apr 23
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQf38LUsc8eoKofLi9XnK7Gn
   - lecture: Generic methods
     date: Mo, Apr 26
   - lecture: Macros
