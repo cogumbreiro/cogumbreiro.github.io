@@ -144,6 +144,7 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQf38LUsc8eoKofLi9XnK7Gn
   - lecture: Generic methods
     date: Mo, Apr 26
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQeGzK8-N59AlTPLVTvCL0p6
   - lecture: Macros
     date: We, Apr 28
 
