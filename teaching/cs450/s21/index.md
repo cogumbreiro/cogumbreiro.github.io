@@ -147,6 +147,11 @@ data:
     video: https://www.youtube.com/playlist?list=PL_fXogTdDGQeGzK8-N59AlTPLVTvCL0p6
   - lecture: Macros
     date: We, Apr 28
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQckWJUo6ZeioxEWQOPq7rVc
+    attachments:
+    - title: Homework 7 recap (S20)
+      url: https://www.youtube.com/watch?v=NZLyyfmP2RA&feature=youtu.be
+      type: video
 
 ################################################################################
   - module: Object Oriented Programming
