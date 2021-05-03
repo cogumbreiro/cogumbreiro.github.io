@@ -161,6 +161,8 @@ data:
     skip_exercises: true
   - lecture: JavaScript method and class inheritance
     date: Mo, May  3
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQc3WnVchDm3FWtFhMPbcg6a
+    skip_exercises: true
   - lecture: Translating SimpleJS to LambdaJS
     date: We, May  5
   - lecture: The essence of JavaScript
