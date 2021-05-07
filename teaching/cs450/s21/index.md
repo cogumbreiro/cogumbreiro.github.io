@@ -169,6 +169,8 @@ data:
     skip_exercises: true
   - lecture: The essence of JavaScript
     date: Fri, May  7
+    video: https://www.youtube.com/playlist?list=PL_fXogTdDGQc3WnVchDm3FWtFhMPbcg6a
+    skip_exercises: true
   - lecture: QA Session
     date: Mo, May 10
   - lecture: QA Session
