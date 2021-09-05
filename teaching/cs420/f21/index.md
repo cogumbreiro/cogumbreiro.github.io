@@ -80,9 +80,7 @@ data:
 
 <div class="buttons is-centered">
 <a class="button is-large is-link" href="syllabus.pdf">Syllabus</a>
-<a class="button is-large is-link" href="https://piazza.com/class/k5ubsxch57r196">Forum</a>
 <a class="button is-large is-link" href="https://www.gradescope.com/courses/81793">Homework submission</a>
-<a class="button is-large is-link" href="https://www.estalee.com/">Attendance</a>
 </div>
 
 # Course information
@@ -93,7 +91,7 @@ data:
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
 * **Office:** {{ site.office.location }}
-* **Office hours:** {{ site.office.hours }}
+* **VIRTUAL Office hours:** {{ site.office.hours }}
 
 # Teaching assistants contact
 * (To Be Announced)
@@ -104,7 +102,8 @@ data:
 
 * [CS420 Supplementary Material: The Turing library (Coq)](https://gitlab.com/cogumbreiro/turing)
 * [CS420 Supplementary Material: NFA/DFA/REGEX algorithms (Python)](https://gitlab.com/cogumbreiro/karakuri/)
-* [Logic Foundations exercises](lf.tgz)
+* [Logic Foundations exercises](https://softwarefoundations.cis.upenn.edu/lf-current/lf.tgz)
+* [Final Grade Calculator (WARNING: the calculated result is **approximated**, because some values are calculated on a curve)](https://docs.google.com/spreadsheets/d/1nNruW7ls0jETG5z9vgfrmZKihjo_-2yx2iM7TmIPhuc/edit?usp=sharing)
 
 ## Class Schedule
 
