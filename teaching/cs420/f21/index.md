@@ -80,7 +80,6 @@ data:
 
 <div class="buttons is-centered">
 <a class="button is-large is-link" href="syllabus.pdf">Syllabus</a>
-<a class="button is-large is-link" href="https://www.gradescope.com/courses/81793">Homework submission</a>
 </div>
 
 # Course information
