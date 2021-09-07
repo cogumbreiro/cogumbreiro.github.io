@@ -85,17 +85,16 @@ data:
 # Course information
 
 * **Location:** (M01-0409) Room 409, 1<sup>st</sup> floor, McCormack
-* **Schedule:** 4:00pm to 5:15pm, Monday, Wednesday
+* **Schedule:** 4:00pm to 5:15pm on Monday, Wednesday
 
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
 * **Office:** {{ site.office.location }}
-* **VIRTUAL Office hours:** {{ site.office.hours }}
+* **Office hours:** {{ site.office.hours }}
 
 # Teaching assistants contact
-* (To Be Announced)
-* **Office:** ???
-* **Office hours:** ???
+* Hannah Zicarelli
+* **Office hours:** 5:30 to 6:30 on Monday, Tuesday, and Wednesday.
 
 # Resources
 
