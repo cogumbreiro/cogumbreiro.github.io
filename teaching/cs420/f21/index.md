@@ -9,6 +9,7 @@ data:
   - closure: true
     date: Mo, Sep 6
   - lecture: Course overview; Coq intro
+    video: https://echo360.org/media/3649172a-8974-4912-b092-ca75ec5962f5/public
     date: We, Sep 8
   - lecture: Pattern matching; reflexivity
     date: Mo, Sep 13
