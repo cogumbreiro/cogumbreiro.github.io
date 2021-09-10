@@ -94,8 +94,12 @@ data:
 * **Office hours:** {{ site.office.hours }}
 
 # Teaching assistants contact
+
+* Dennis Liew
+* **Office hours:** 12:30pm to 1:30pm on Tuesday, Wednesday, and Thursday.
+
 * Hannah Zicarelli
-* **Office hours:** 5:30 to 6:30 on Monday, Tuesday, and Wednesday.
+* **Office hours:** 5:30pm to 6:30pm on Monday, Tuesday, and Wednesday.
 
 # Resources
 
