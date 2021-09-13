@@ -13,6 +13,7 @@ data:
     date: We, Sep 8
   - lecture: Pattern matching; reflexivity
     date: Mo, Sep 13
+    video: https://echo360.org/media/ceb5e1c9-e9f3-49da-9ad5-61c86950c94b/public
   - lecture: Proofs by induction
     date: We, Sep 15
   - lecture: Manipulating theorems; data-structures
