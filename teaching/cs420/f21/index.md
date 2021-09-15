@@ -16,6 +16,7 @@ data:
     video: https://echo360.org/media/ceb5e1c9-e9f3-49da-9ad5-61c86950c94b/public
   - lecture: Proofs by induction
     date: We, Sep 15
+    video: https://echo360.org/media/f0ea8cb1-7fb8-43d9-9274-11d25c3cc3ed/public
   - lecture: Manipulating theorems; data-structures
     date: Mo, Sep 20
   - lecture: Polymorphism; Constructor injectivity, explosion principle
