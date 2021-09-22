@@ -22,6 +22,7 @@ data:
     video: https://echo360.org/media/4779b4aa-dd7f-4d4b-ab85-1d2e7d6cfd1b/public
   - lecture: Polymorphism; Constructor injectivity, explosion principle
     date: We, Sep 22
+    video: https://echo360.org/media/6f20d8f6-a6ae-4958-abc4-ae71bf0dd916/public
   - lecture: Logical Connectives
     date: Mo, Sep 27
   - lecture: Mini-test 1 recap
