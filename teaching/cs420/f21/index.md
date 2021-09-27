@@ -25,6 +25,7 @@ data:
     video: https://echo360.org/media/6f20d8f6-a6ae-4958-abc4-ae71bf0dd916/public
   - lecture: Logical Connectives
     date: Mo, Sep 27
+    video: https://echo360.org/media/5df5a80d-c155-4b89-a814-e42b0b29ecb1/public
   - lecture: Mini-test 1 recap
     date: We, Sep 29
 ################################################################################
