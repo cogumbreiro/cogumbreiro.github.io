@@ -28,6 +28,7 @@ data:
     video: https://echo360.org/media/5df5a80d-c155-4b89-a814-e42b0b29ecb1/public
   - lecture: Mini-test 1 recap
     date: We, Sep 29
+    video: https://echo360.org/media/937921ff-de9e-4c0d-aea2-51abca3b8f54/public
 ################################################################################
   - module: Regular Languages
   - lecture: Formal languages
