@@ -33,6 +33,7 @@ data:
   - module: Regular Languages
   - lecture: Formal languages
     date: Mo, Oct 4
+    video: https://echo360.org/media/b521946c-54ec-42f4-85a5-5cb52e098272/public
   - lecture: Kleene star, language equivalence
     date: We, Oct 6
   - closure: true
