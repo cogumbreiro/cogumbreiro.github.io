@@ -37,7 +37,7 @@ data:
     date: We, Oct 6
   - closure: true
     date: Mo, Oct 11
-  - lecture: Regular expressions <b>(Mini-Test 1)</b>
+  - lecture: Regular expressions
     date: We, Oct 13
   - lecture: REGEX & Nondeterministic Finite Automata
     date: Mo, Oct 18
