@@ -36,6 +36,7 @@ data:
     video: https://echo360.org/media/b521946c-54ec-42f4-85a5-5cb52e098272/public
   - lecture: Kleene star, language equivalence
     date: We, Oct 6
+    video: https://echo360.org/media/38717281-d2b9-459b-874a-d7036844fe70/public
   - closure: true
     date: Mo, Oct 11
   - lecture: Regular expressions
