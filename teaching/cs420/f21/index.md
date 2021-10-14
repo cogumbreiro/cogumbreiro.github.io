@@ -39,43 +39,45 @@ data:
     video: https://echo360.org/media/38717281-d2b9-459b-874a-d7036844fe70/public
   - closure: true
     date: Mo, Oct 11
-  - lecture: Regular expressions
+  - lecture: Recap & exercises
     date: We, Oct 13
-  - lecture: REGEX & Nondeterministic Finite Automata
+    video: https://echo360.org/media/c79ed98a-a956-4ea0-a19c-4252c855546f/public
+    skip_slides: true
+  - lecture: Regular expressions
     date: Mo, Oct 18
-  - lecture: NFA ⇔ REGEX
+  - lecture: REGEX & Nondeterministic Finite Automata
     date: We, Oct 20
-  - lecture: Deterministic Finite Automata; NFA ⇔ DFA
+  - lecture: NFA ⇔ REGEX
     date: Mo, Oct 25
-  - lecture: Pumping lemma; Non-regular languages; Mini-test 2 recap
+  - lecture: Deterministic Finite Automata; NFA ⇔ DFA
     date: We, Oct 27
 ################################################################################
   - module: Context-free Languages
-  - lecture: Context-free grammars
+  - lecture: Pumping lemma; Non-regular languages; Mini-test 2 recap
     date: Mo, Nov 1
-  - lecture: Pushdown Atomata
+  - lecture: Context-free grammars
     date: We, Nov 3
-  - lecture: PDA ⇔ CFG
+  - lecture: Pushdown Atomata
     date: Mo, Nov 8
-  - lecture: Pumping lemma; Non-context-free Languages; Turing Machines
+  - lecture: PDA ⇔ CFG
     date: We, Nov 10
-  - lecture: Variants of Turing Machines
+  - lecture: Pumping lemma; Non-context-free Languages; Turing Machines
     date: Mo, Nov 15
-  - lecture: Acceptance, emptiness and equality tests
+  - lecture: Variants of Turing Machines
     date: We, Nov 17
-  - lecture: Undecidability
+  - lecture: Acceptance, emptiness and equality tests
     date: Mo, Nov 22
 ################################################################################
   - module: Decidability
-  - lecture: Undecidable problems
+  - lecture: Undecidability
     date: We, Nov 24
   - lecture: Undecidable problems
     date: Mo, Nov 29
-  - lecture: Mapping reducibility
+  - lecture: Undecidable problems
     date: We, Dec 1
   - lecture: Mapping reducibility
     date: Mo, Dec 6
-  - lecture: QA session
+  - lecture: Mapping reducibility
     date: We, Dec 8
   - lecture: QA session
     date: We, Dec 13
@@ -161,15 +163,17 @@ data:
   <td>{{ r.date }}</td>
   <td>{{ num }}</td>
   <td>
-  {% if is_pub %}
-    <a href="lecture{{num}}.html">{{ r.lecture }}</a>
+  {% if is_pub and r.skip_slides != true %}
+    <a href="lecture{{num}}.html" title="View slides of lecture #{{num}} (press h for help) ">{{ r.lecture }}</a>
   {% else %}
-    {{ r.lecture }}
+    {{ r.lecture }}{% if r.skip_slides %} <i>(no slides)</i>{% endif %}
   {% endif %}
   </td>
   <td>
     {% if is_pub %}
+      {% if r.skip_slides %}{% assign s_url = nil %}{% else %}
       {% capture s_url %}lecture{{ num }}.pdf{% endcapture %}
+      {% endif %}
       {% if r.skip_exercises %}
         {% assign f_url = nil %}
       {% else %}
