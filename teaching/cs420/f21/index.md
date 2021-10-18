@@ -45,6 +45,8 @@ data:
     skip_slides: true
   - lecture: Regular expressions
     date: Mo, Oct 18
+    skip_exercises: true
+    video: https://echo360.org/media/f076ad16-4dcf-4518-883a-a23938fc489d/public
   - lecture: REGEX & Nondeterministic Finite Automata
     date: We, Oct 20
   - lecture: NFA ⇔ REGEX
