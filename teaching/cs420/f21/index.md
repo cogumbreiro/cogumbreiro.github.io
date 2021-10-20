@@ -49,6 +49,8 @@ data:
     video: https://echo360.org/media/f076ad16-4dcf-4518-883a-a23938fc489d/public
   - lecture: REGEX & Nondeterministic Finite Automata
     date: We, Oct 20
+    video: https://echo360.org/media/5c960347-39ec-4fa6-8c3a-8e2445a62387/public
+    skip_exercises: true
   - lecture: NFA ⇔ REGEX
     date: Mo, Oct 25
   - lecture: Deterministic Finite Automata; NFA ⇔ DFA
