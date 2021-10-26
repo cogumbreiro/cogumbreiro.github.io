@@ -53,6 +53,8 @@ data:
     skip_exercises: true
   - lecture: NFA ⇔ REGEX
     date: Mo, Oct 25
+    video: https://echo360.org/media/ba6adeb9-702a-4941-87ce-b45d2ef5c0fa/public
+    skip_exercises: true
   - lecture: Deterministic Finite Automata; NFA ⇔ DFA
     date: We, Oct 27
 ################################################################################
