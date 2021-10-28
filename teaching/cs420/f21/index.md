@@ -57,13 +57,15 @@ data:
     skip_exercises: true
   - lecture: Deterministic Finite Automata; NFA ⇔ DFA
     date: We, Oct 27
+    video: https://echo360.org/media/48027c7f-d93d-4ae6-906f-df12a5277021/public
+    skip_exercises: true
 ################################################################################
   - module: Context-free Languages
   - lecture: Pumping lemma; Non-regular languages; Mini-test 2 recap
     date: Mo, Nov 1
   - lecture: Context-free grammars
     date: We, Nov 3
-  - lecture: Pushdown Atomata
+  - lecture: Pushdown Automata
     date: Mo, Nov 8
   - lecture: PDA ⇔ CFG
     date: We, Nov 10
