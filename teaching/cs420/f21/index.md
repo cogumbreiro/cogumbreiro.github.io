@@ -61,8 +61,10 @@ data:
     skip_exercises: true
 ################################################################################
   - module: Context-free Languages
-  - lecture: Pumping lemma; Non-regular languages; Mini-test 2 recap
+  - lecture: Pumping lemma; Non-regular languages
     date: Mo, Nov 1
+    video: https://echo360.org/media/4bf32dfe-3248-4173-b3a6-35f262ce5f30/public
+    skip_exercises: true
   - lecture: Context-free grammars
     date: We, Nov 3
   - lecture: Pushdown Automata
