@@ -67,6 +67,7 @@ data:
     skip_exercises: true
   - lecture: Context-free grammars
     date: We, Nov 3
+    video: https://echo360.org/media/6baf0138-4b55-4824-90c8-ebac1056dad1/public
   - lecture: Pushdown Automata
     date: Mo, Nov 8
   - lecture: PDA ⇔ CFG
