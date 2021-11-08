@@ -65,11 +65,17 @@ data:
     date: Mo, Nov 1
     video: https://echo360.org/media/4bf32dfe-3248-4173-b3a6-35f262ce5f30/public
     skip_exercises: true
+    attachments:
+    - title: Playlist on proving irregularity with Coq
+      url: https://www.youtube.com/playlist?list=PL_fXogTdDGQdpggDhmLSxKxxXGOT-42rM
+      type: video
   - lecture: Context-free grammars
     date: We, Nov 3
     video: https://echo360.org/media/6baf0138-4b55-4824-90c8-ebac1056dad1/public
   - lecture: Pushdown Automata
     date: Mo, Nov 8
+    video: https://echo360.org/media/15b4adf6-048d-4065-81dc-045d1c6a7138/public
+    skip_exercises: true
   - lecture: PDA ⇔ CFG
     date: We, Nov 10
   - lecture: Pumping lemma; Non-context-free Languages; Turing Machines
