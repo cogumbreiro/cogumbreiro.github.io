@@ -78,6 +78,7 @@ data:
     skip_exercises: true
   - lecture: PDA ⇔ CFG
     date: We, Nov 10
+    video: https://echo360.org/media/01e6ae44-b046-4ed8-bfca-025653db639e/public
   - lecture: Pumping lemma; Non-context-free Languages; Turing Machines
     date: Mo, Nov 15
   - lecture: Variants of Turing Machines
