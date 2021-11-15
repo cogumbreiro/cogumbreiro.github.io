@@ -81,6 +81,8 @@ data:
     video: https://echo360.org/media/01e6ae44-b046-4ed8-bfca-025653db639e/public
   - lecture: Pumping lemma; Non-context-free Languages; Turing Machines
     date: Mo, Nov 15
+    video: https://echo360.org/media/84d412ca-c141-4afd-bff5-1ef68ffeafb4/public
+    skip_exercises: true
   - lecture: Variants of Turing Machines
     date: We, Nov 17
   - lecture: Acceptance, emptiness and equality tests
