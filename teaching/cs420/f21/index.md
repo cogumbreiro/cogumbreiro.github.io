@@ -69,9 +69,11 @@ data:
     - title: Playlist on proving irregularity with Coq
       url: https://www.youtube.com/playlist?list=PL_fXogTdDGQdpggDhmLSxKxxXGOT-42rM
       type: video
+    skip_exercises: true
   - lecture: Context-free grammars
     date: We, Nov 3
     video: https://echo360.org/media/6baf0138-4b55-4824-90c8-ebac1056dad1/public
+    skip_exercises: true
   - lecture: Pushdown Automata
     date: Mo, Nov 8
     video: https://echo360.org/media/15b4adf6-048d-4065-81dc-045d1c6a7138/public
@@ -79,29 +81,33 @@ data:
   - lecture: PDA ⇔ CFG
     date: We, Nov 10
     video: https://echo360.org/media/01e6ae44-b046-4ed8-bfca-025653db639e/public
+    skip_exercises: true
   - lecture: Pumping lemma; Non-context-free Languages; Turing Machines
     date: Mo, Nov 15
     video: https://echo360.org/media/84d412ca-c141-4afd-bff5-1ef68ffeafb4/public
     skip_exercises: true
   - lecture: Variants of Turing Machines
     date: We, Nov 17
+    video: https://echo360.org/media/b79ee861-e7d7-4b30-a32d-2d69ad030b91/public
   - lecture: Acceptance, emptiness and equality tests
-    date: Mo, Nov 22
+    date: We, Nov 17
+    video: https://echo360.org/media/b79ee861-e7d7-4b30-a32d-2d69ad030b91/public
 ################################################################################
   - module: Decidability
   - lecture: Undecidability
+    date: Mo, Nov 22
+  - lecture: Undecidable problems
     date: We, Nov 24
   - lecture: Undecidable problems
     date: Mo, Nov 29
-  - lecture: Undecidable problems
+  - lecture: Mapping reducibility
     date: We, Dec 1
   - lecture: Mapping reducibility
     date: Mo, Dec 6
-  - lecture: Mapping reducibility
-    date: We, Dec 8
   - lecture: QA session
+    date: We, Dec 8
+  - lecture: QA Session
     date: We, Dec 13
-
 ---
 
 **Past editions:** [**Spring '20**](../s20/), [**Fall '19**](../f19/)
