@@ -96,6 +96,7 @@ data:
   - module: Decidability
   - lecture: Undecidability
     date: Mo, Nov 22
+    video: https://echo360.org/media/f2d75bc1-6c5a-46d7-920a-6f4e4012e68e
   - lecture: Undecidable problems
     date: We, Nov 24
   - lecture: Undecidable problems
