@@ -96,16 +96,17 @@ data:
   - module: Decidability
   - lecture: Undecidability
     date: Mo, Nov 22
-    video: https://echo360.org/media/f2d75bc1-6c5a-46d7-920a-6f4e4012e68e
-  - lecture: Undecidable problems
+    video: https://echo360.org/media/5e9a4677-3c4c-4b48-8305-5b2cf54ae61c/public
+  - lecture: QA session
     date: We, Nov 24
+    skip_slides: true
   - lecture: Undecidable problems
     date: Mo, Nov 29
-  - lecture: Mapping reducibility
+  - lecture: Undecidable problems
     date: We, Dec 1
   - lecture: Mapping reducibility
     date: Mo, Dec 6
-  - lecture: QA session
+  - lecture: Mapping reducibility
     date: We, Dec 8
   - lecture: QA Session
     date: We, Dec 13
