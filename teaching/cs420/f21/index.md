@@ -102,6 +102,7 @@ data:
     skip_slides: true
   - lecture: Undecidable problems
     date: Mo, Nov 29
+    video: https://echo360.org/media/9c269192-3bf8-41ca-9d64-3cd70bdf0d4c/public
   - lecture: Undecidable problems
     date: We, Dec 1
   - lecture: Mapping reducibility
