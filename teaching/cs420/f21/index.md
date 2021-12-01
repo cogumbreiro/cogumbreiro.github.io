@@ -105,6 +105,7 @@ data:
     video: https://echo360.org/media/9c269192-3bf8-41ca-9d64-3cd70bdf0d4c/public
   - lecture: Undecidable problems
     date: We, Dec 1
+    video: https://echo360.org/media/1e2f5242-b1ee-4ba7-8291-a0cbf197b9aa/public
   - lecture: Mapping reducibility
     date: Mo, Dec 6
   - lecture: Mapping reducibility
