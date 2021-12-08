@@ -109,8 +109,17 @@ data:
   - lecture: Mapping reducibility
     date: Mo, Dec 6
     video: https://echo360.org/media/a82caf03-e9b8-4c83-b680-5170911d2a0d/public
-  - lecture: Mapping reducibility
+  - lecture: QA Session
     date: We, Dec 8
+    skip_video: true
+    skip_exercises: true
+    attachments:
+    - type: video
+      title: Homework 8 tutorial
+      url: https://www.youtube.com/playlist?list=PL_fXogTdDGQegtKOg9Z5MxENMrA-IYKwA
+    - type: video
+      title: Homework 7 tutorial
+      url: https://www.youtube.com/playlist?list=PL_fXogTdDGQdoHoSg0-cUJCfmpCeq7R77
   - lecture: QA Session
     date: Mo, Dec 13
 ---
