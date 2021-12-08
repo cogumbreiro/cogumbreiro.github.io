@@ -111,7 +111,7 @@ data:
     video: https://echo360.org/media/a82caf03-e9b8-4c83-b680-5170911d2a0d/public
   - lecture: QA Session
     date: We, Dec 8
-    skip_video: true
+    video: https://echo360.org/media/ede1021a-b81d-4bd2-bd96-7671dfda13da/public
     skip_exercises: true
     attachments:
     - type: video
