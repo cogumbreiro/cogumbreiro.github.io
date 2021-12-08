@@ -108,10 +108,11 @@ data:
     video: https://echo360.org/media/1e2f5242-b1ee-4ba7-8291-a0cbf197b9aa/public
   - lecture: Mapping reducibility
     date: Mo, Dec 6
+    video: https://echo360.org/media/a82caf03-e9b8-4c83-b680-5170911d2a0d/public
   - lecture: Mapping reducibility
     date: We, Dec 8
   - lecture: QA Session
-    date: We, Dec 13
+    date: Mo, Dec 13
 ---
 
 **Past editions:** [**Spring '20**](../s20/), [**Fall '19**](../f19/)
