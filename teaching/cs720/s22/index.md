@@ -198,7 +198,7 @@ calendar:
 {% if r.module %}
     {% assign vol = r.vol %}
 <tr>
-  <td colspan="4" style="background: #eee; text-align: center;"><b>&#1421; Module {{m_num}}: {{ r.module }} &#1421;</b></td>
+  <td colspan="4" style="background: #e9f3fc; text-align: center;"><b>&#1421; Module {{m_num}}: {{ r.module }} &#1421;</b></td>
   {% assign m_num = m_num | plus: 1 %}
 </tr>
 {% endif %}
