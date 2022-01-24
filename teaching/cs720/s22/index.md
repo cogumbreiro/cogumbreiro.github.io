@@ -44,7 +44,7 @@ data:
     chapters: [Auto]
 ################################################################################
     # Block 5
-  - module: Programming language foundation
+  - module: Programming Language Foundations
     volume: plf
     hw: 6 Imp
     lecture: Program equivalence
@@ -198,7 +198,7 @@ calendar:
 {% if r.module %}
     {% assign vol = r.vol %}
 <tr>
-  <td colspan="4" style="background: #e9f3fc; text-align: center;"><b>&#1421; Module {{m_num}}: {{ r.module }} &#1421;</b></td>
+  <td colspan="4" style="background: #e9f3fc; text-align: center;"><b>&#1421; <a href="{{r.volume}}.zip">{{ r.module }} (click to download)</a> &#1421;</b></td>
   {% assign m_num = m_num | plus: 1 %}
 </tr>
 {% endif %}
@@ -228,13 +228,6 @@ calendar:
     {{ title }}{% if r.skip_slides %} <i>(no slides)</i>{% endif %}
   {% endif %}
   </td>
-  {% comment %}
-    <td>
-    {%- for c in r.chapters -%}
-    {%- if forloop.index > 1 -%}, {% endif -%}<a style="font-style: x-small;" href="https://softwarefoundations.cis.upenn.edu/{% if m_num == 1 %}lf{% else %}plf{% endif %}-current/{{ c }}.html">{{ c }}</a>
-        {% endfor %}
-    </td>
-  {% endcomment %}
   <td>
     {% if s_pub %}
       {% capture h_url %}lecture{{ num }}.html{% endcapture %}
