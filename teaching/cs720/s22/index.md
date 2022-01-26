@@ -9,6 +9,7 @@ data:
     chapters: [Preface, Basics]
     module: Logical Foundations
     volume: lf
+    published: true
   - lecture: Functional programming
     chapters: [Basics]
   - lecture:  Induction
@@ -216,30 +217,39 @@ calendar:
   {% endif %}
   {% assign l_num = l_num | plus: 1 %}
   {% capture num %}{% if l_num < 10 %}0{% endif %}{{ l_num }}{% endcapture %}
-  <td>{{ d.date }}</td>
-  <td>{{ num }}</td>
+  <td title="Date">{{ d.date }}</td>
+  <td title="Lecture number">{{ num }}</td>
   <td {% if r.lab %}style="background: #fefede;"{% endif %}>
-  {% capture title %}{{ r.lecture }}
-  {%- if r.hw %} <b>HW{{ r.hw }} due!</b>{%- endif %}
-  {%- endcapture -%}
-  {% if is_pub and r.skip_slides != true %}
-    <a href="lecture{{num}}.html" title="View slides of lecture #{{num}} (press h for help) ">{{ title }}</a>
-  {% else %}
-    {{ title }}{% if r.skip_slides %} <i>(no slides)</i>{% endif %}
-  {% endif %}
+    {% capture title %}{{ r.lecture }}
+    {%- if r.hw %} <b>HW{{ r.hw }} due!</b>{%- endif %}
+    {%- endcapture -%}
+    {{ title }}
+    {% if is_pub and r.skip_slides %}
+        {% if r.skip_slides %} <i>(no slides)</i>{% endif %}
+    {% endif %}
   </td>
   <td>
-    {% if s_pub %}
+    {% if is_pub %}
       {% capture h_url %}lecture{{ num }}.html{% endcapture %}
+
       {% if r.skip_slides %}{% assign s_url = nil %}{% else %}
-      {% capture s_url %}lecture{{ num }}.pdf{% endcapture %}
+        {% capture s_url %}lecture{{ num }}.pdf{% endcapture %}
       {% endif %}
+
       {% if r.skip_exercises %}
         {% assign f_url = nil %}
       {% else %}
         {% capture f_url %}lecture{{ num }}{{ page.exercises_ext }}{% endcapture %}
       {% endif %}
-      <span class="buttons has-addons">{% include button.html url=h_url title="Download lecture slides (HTML)" icon="download" %}{% include button.html url=s_url title="Download lecture slides (PDF)" icon="book" %}{% include button.html url=r.video icon="file-video" title="Video recording" %}{% include button.html url=f_url icon="box" title="Class exercises" %}</span>
+
+      <span class="buttons has-addons">
+      {% include button.html url=h_url title="Download lecture slides (HTML)" icon="download" %}
+      {% include button.html url=s_url title="Download lecture slides (PDF)" icon="book" %}
+      {% comment %}
+      {% include button.html url=r.video icon="file-video" title="Video recording" %}
+      {% endcomment %}
+      {% include button.html url=f_url icon="box" title="Class exercises" %}
+      </span>
     {% endif %}
   </td>
 </tr>
