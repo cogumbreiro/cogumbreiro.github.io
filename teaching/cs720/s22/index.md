@@ -248,7 +248,7 @@ calendar:
       {% comment %}
       {% include button.html url=r.video icon="file-video" title="Video recording" %}
       {% endcomment %}
-      {% include button.html url=f_url icon="box" title="Class exercises" %}
+      {% include button.html url=f_url icon="box" title="Download lecture exercises" %}
       </span>
     {% endif %}
   </td>
