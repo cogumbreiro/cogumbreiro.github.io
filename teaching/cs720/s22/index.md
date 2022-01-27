@@ -12,6 +12,7 @@ data:
     published: true
   - lecture: Functional programming
     chapters: [Basics]
+    published: true
   - lecture:  Induction
     chapters: [Induction]
     hw: 1 Basics
