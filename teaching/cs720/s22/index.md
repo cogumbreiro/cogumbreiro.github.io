@@ -15,6 +15,7 @@ data:
     published: true
   - lecture:  Induction
     chapters: [Induction]
+    published: true
     hw: 1 Basics
   - lecture: Polymorphism
     chapters: [Lists, Poly]
