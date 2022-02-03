@@ -18,6 +18,7 @@ data:
     published: true
     hw: 1 Basics
   - lecture: Polymorphism
+    published: true
     chapters: [Lists, Poly]
   - lecture: Lab
     lab: true
