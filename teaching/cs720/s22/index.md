@@ -21,9 +21,11 @@ data:
     published: true
     chapters: [Lists, Poly]
   - lecture: Lab
+    skip_slides: true
     lab: true
     hw: 2 Induction, List
   - lecture: Tactics
+    published: true
     chapters: [Tactics]
   - lecture: Tactics
     chapters: [Tactics]
@@ -218,10 +220,21 @@ calendar:
   {% else %}
     {% assign is_pub = false %}
   {% endif %}
+  {% unless r.skip_slides %}
   {% assign l_num = l_num | plus: 1 %}
+  {% endunless %}
   {% capture num %}{% if l_num < 10 %}0{% endif %}{{ l_num }}{% endcapture %}
   <td title="Date">{{ d.date }}</td>
-  <td title="Lecture number">{{ num }}</td>
+  {% if r.skip_slides %}
+  <td title="Skipped lecture number">
+  —
+  </td>
+  {% else %}
+  <td title="Lecture number">
+    {{ num }}
+  </td>
+  {% endif %}
+  
   <td {% if r.lab %}style="background: #fefede;"{% endif %}>
     {% capture title %}{{ r.lecture }}
     {%- if r.hw %} <b>HW{{ r.hw }} due!</b>{%- endif %}
