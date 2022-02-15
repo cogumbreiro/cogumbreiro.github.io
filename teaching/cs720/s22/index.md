@@ -28,8 +28,10 @@ data:
     published: true
     chapters: [Tactics]
   - lecture: Tactics
+    published: true
     chapters: [Tactics]
   - lecture: Lab
+    skip_slides: true
     lab: true
   - lecture: Logic in Coq
     hw: 3 Poly, Tactics
@@ -192,7 +194,7 @@ calendar:
 
 {% if d.closure %}
 <tr>
-  <td class="has-text-grey-light">{{r.date}}</td>
+  <td class="has-text-grey-light">{{d.date}}</td>
   <td></td>
   <td class="has-text-grey-light">(School closure)</td>
   <td></td>
