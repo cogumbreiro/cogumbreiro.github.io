@@ -40,9 +40,9 @@ data:
   - lecture: Logic in Coq
     chapters: [Logic]
   - lecture: Inductive propositions
-    hw: 4 Logic
     chapters: [IndProp, ProofObjects]
   - lecture: Proof objects
+    hw: 4 Logic
     chapters: [IndProp, ProofObjects]
   - lecture: Lab
     lab: true
