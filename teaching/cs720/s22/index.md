@@ -35,6 +35,7 @@ data:
     lab: true
   - lecture: Logic in Coq
     hw: 3 Poly, Tactics
+    published: true
     chapters: [Logic]
   - lecture: Logic in Coq
     chapters: [Logic]
