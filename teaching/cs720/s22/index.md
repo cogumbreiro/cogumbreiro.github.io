@@ -39,15 +39,16 @@ data:
     chapters: [Logic]
   - lecture: Logic in Coq
     chapters: [Logic]
+    published: true
   - lecture: Inductive propositions
     chapters: [IndProp, ProofObjects]
+    published: true
   - lecture: Proof objects
-    hw: 4 Logic
     chapters: [IndProp, ProofObjects]
   - lecture: Lab
     lab: true
   - lecture: Imperative languages
-    hw: 5 IndProp
+    hw: 4 Logic, 5 IndProp
     chapters: [Maps, Imp, ImpParser, ImpCEvalFun]
   - lecture: 	More automation
     chapters: [Auto]
