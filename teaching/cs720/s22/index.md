@@ -45,7 +45,9 @@ data:
     published: true
   - lecture: Proof objects
     chapters: [IndProp, ProofObjects]
+    published: true
   - lecture: Lab
+    skip_slides: true
     lab: true
   - lecture: Imperative languages
     hw: 4 Logic, 5 IndProp
