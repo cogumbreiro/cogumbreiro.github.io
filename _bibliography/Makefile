@@ -21,17 +21,27 @@ build: $(PUB_HTML) $(BIB_HTML)
 
 $(PUBS_HTML): $(BIB)
 	$(BIBTEX2HTML) $(BIBTEX2HTML_FLAGS) -s $(BST) -o $(patsubst %.html,%,$@) $(BIB)
-	./replace.py $@ $(BIB_HTML) "{{ include.url }}" # Make the link a parameter
-	./replace.py $@ '<p><a name=' '<li class="bib" id=' # tag each element with a class
-	./replace.py $@ '></a>' '>' # do not use an <a>nchor
-	./replace.py $@ '</p>' '</li>' # tag each element with a class
+	# 1. Make the link a parameter
+	# 2. tag each element with a class
+	# 3. do not use an <a>nchor
+	# 4. tag each element with a class
+	./replace.py $@ \
+		$(BIB_HTML) "{{ include.url }}" \
+		'<p><a name=' '<li class="bib" id=' \
+		'></a>' '>' \
+		'</p>' '</li>'
 
 $(BIB_HTML): $(PUBS_HTML)
-	./replace.py $@ $(PUBS_HTML) "{{ include.url }}" # Make the link a parameter
-	./replace.py $@ '<h1>'$(shell basename $(BIB))'</h1>' "" # Remove the header, because ugly
-	./replace.py $@ '<a name=' '<div class="bib" id='
-	./replace.py $@ '</pre>' '</pre></div>' # Remove the header, because ugly
-	./replace.py $@ '</a><pre>' "<pre>" # HACK: Jekyll breaks silently without this
+	# 1. Make the link a parameter
+	# 2. Remove the header, because ugly
+	# 3. Remove the header, because ugly
+	# 5. HACK: Jekyll breaks silently without this
+	./replace.py \
+		$@ $(PUBS_HTML) "{{ include.url }}" \
+		'<h1>'$(shell basename $(BIB))'</h1>' "" \
+		'<a name=' '<div class="bib" id=' \
+		'</pre>' '</pre></div>' \
+		'</a><pre>' "<pre>"
 
 clean:
 	rm -f $(BIB_HTML) $(PUBS_HTML)
