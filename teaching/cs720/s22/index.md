@@ -50,7 +50,8 @@ data:
     skip_slides: true
     lab: true
   - lecture: Imperative languages
-    hw: 4 Logic, 5 IndProp
+    hw: 4 Logic, IndProp
+    published: true
     chapters: [Maps, Imp, ImpParser, ImpCEvalFun]
   - lecture: 	More automation
     chapters: [Auto]
@@ -58,7 +59,7 @@ data:
     # Block 5
   - module: Programming Language Foundations
     volume: plf
-    hw: 6 Imp
+    hw: 5 Imp
     lecture: Program equivalence
     chapters: [Equiv]
   - lecture: Lab
