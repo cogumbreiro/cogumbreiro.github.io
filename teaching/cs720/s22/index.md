@@ -65,17 +65,17 @@ data:
   - lecture: Lab
     lab: true
   - lecture: Hoare Logic
-    hw: 7 Equiv
+    hw: 6 Equiv
     chapters: [Hoare]
   - lecture: Hoare Logic (continued)
     chapters: [Hoare2]
   - lecture: Small-step operational semantics
     chapters: [Smallstep]
-    hw: 8 Hoare
+    hw: 7 Hoare
   - lecture: Lab
     lab: true
   - lecture: Type systems
-    hw: 9 Hoare2, Smallstep
+    hw: 8 Hoare2, Smallstep
     chapters: [Types]
   - lecture: Functional languages
     chapters: [Stlc]
@@ -83,16 +83,16 @@ data:
     chapters: [StlcProp]
   - lecture: Lab
     lab: true
-    hw: 10 Types
+    hw: 9 Types
   - lecture: Extending the STLC 
     chapters: [MoreStlc, Typechecking]
   - lecture: Lab
     lab: true
-    hw: 11 Stlc, StlcProp
+    hw: 10 Stlc, StlcProp
     chapters: [Sub]
   - lecture: Lab
     lab: true
-    hw: 12 Proj
+    hw: 11 Proj
   # - lecture: Subtyping
   #   chapters: [Sub]
   # - lecture: Mutable references
