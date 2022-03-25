@@ -55,6 +55,7 @@ data:
     chapters: [Maps, Imp, ImpParser, ImpCEvalFun]
   - lecture: 	More automation
     chapters: [Auto]
+    published: true
 ################################################################################
     # Block 5
   - module: Programming Language Foundations
