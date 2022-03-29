@@ -61,6 +61,7 @@ data:
   - module: Programming Language Foundations
     volume: plf
     hw: 5 Imp
+    published: true
     lecture: Program equivalence
     chapters: [Equiv]
   - lecture: Lab
