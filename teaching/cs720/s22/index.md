@@ -66,9 +66,11 @@ data:
     chapters: [Equiv]
   - lecture: Lab
     lab: true
+    skip_slides: true
   - lecture: Hoare Logic
     hw: 6 Equiv
     chapters: [Hoare]
+    published: true
   - lecture: Hoare Logic (continued)
     chapters: [Hoare2]
   - lecture: Small-step operational semantics
