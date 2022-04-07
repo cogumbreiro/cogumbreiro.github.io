@@ -73,6 +73,7 @@ data:
   - lecture: Hoare Logic (continued)
     hw: 6 Equiv
     chapters: [Hoare2]
+    published: true
   - lecture: Small-step operational semantics
     chapters: [Smallstep]
     hw: 7 Hoare
