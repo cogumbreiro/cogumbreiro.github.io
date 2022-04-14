@@ -76,11 +76,11 @@ data:
     published: true
   - lecture: Small-step operational semantics
     chapters: [Smallstep]
-    hw: 7 Hoare
   - lecture: Lab
     lab: true
+    skip_slides: true
   - lecture: Type systems
-    hw: 8 Hoare2, Smallstep
+    hw: 7 Hoare and HW8 Smallstep
     chapters: [Types]
   - lecture: Functional languages
     chapters: [Stlc]
