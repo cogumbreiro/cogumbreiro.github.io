@@ -216,7 +216,7 @@ calendar:
 {% if r.module %}
     {% assign vol = r.vol %}
 <tr>
-  <td colspan="4" style="background: #e9f3fc; text-align: center;"><b>&#1421; <a href="{{r.volume}}.zip">{{ r.module }} (click to download)</a> &#1421;</b></td>
+  <td colspan="4" style="background: #e9f3fc; text-align: center;"><b>&#1421; <a href="https://softwarefoundations.cis.upenn.edu/{{r.volume}}-current/{{r.volume}}.tgz">{{ r.module }} (click to download)</a> &#1421;</b></td>
   {% assign m_num = m_num | plus: 1 %}
 </tr>
 {% endif %}
