@@ -56,12 +56,14 @@ data:
   - lecture: 	More automation
     chapters: [Auto]
     published: true
+    skip_exercises: true
 ################################################################################
     # Block 5
   - module: Programming Language Foundations
     volume: plf
     hw: 5 Imp
     published: true
+    skip_exercises: true
     lecture: Program equivalence
     chapters: [Equiv]
   - lecture: Lab
@@ -75,9 +77,12 @@ data:
     chapters: [Hoare2]
     published: true
   - lecture: Small-step operational semantics
+    skip_exercises: true
     chapters: [Smallstep]
+    published: true
   - lecture: Lab
     lab: true
+    published: true
     skip_slides: true
   - lecture: Type systems
     hw: 7 Hoare and HW8 Smallstep
