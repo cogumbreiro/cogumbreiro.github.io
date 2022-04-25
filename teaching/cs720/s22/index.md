@@ -87,7 +87,7 @@ data:
   - lecture: Type systems
     hw: 7 Hoare and HW8 Smallstep
     published: true
-    skip_slides: true
+    skip_exercises: true
     chapters: [Types]
   - lecture: Functional languages
     chapters: [Stlc]
