@@ -82,7 +82,6 @@ data:
     published: true
   - lecture: Lab
     lab: true
-    published: true
     skip_slides: true
   - lecture: Type systems
     hw: 7 Hoare and HW8 Smallstep
@@ -91,10 +90,13 @@ data:
     chapters: [Types]
   - lecture: Functional languages
     chapters: [Stlc]
+    published: true
   - lecture: Properties of the STLC # HW19
     chapters: [StlcProp]
+    published: true
   - lecture: Lab
     lab: true
+    skip_slides: true
     hw: 9 Types
   - lecture: Extending the STLC 
     chapters: [MoreStlc, Typechecking]
