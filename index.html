@@ -51,34 +51,40 @@ type: grid
 <section class="hero">
   <div class="hero-body" style="padding: 0; padding-top: 2em; padding-bottom: 1em;">
     <div class="container">
-    <h1 class="title has-text-centered"><a href="https://umb-svl.gitlab.io/">Projects</a></h1>
+
+    <h1 id="lab" class="title has-text-centered" style="line-height: 100%; text-align: center;">
+    <a href="https://umb-svl.gitlab.io/"  style="display: inline-block; vertical-align: middle; line-height: normal;">Software Verification Laboratory</a>
+    <img style="padding-left:1em; display: inline-block; vertical-align: middle; line-height: normal;" src="{{site.baseurl}}/assets/umb.svg" width="128px"
+         />
+    </h1>
+
     </div>
     <div class="columns" style="padding: 0">
       <div class="column is-10-desktop is-offset-1-desktop is-full-mobile">
-        <div class="tile is-parent">
-            <a href="https://umb-svl.gitlab.io/" class="tile is-child notification">
+        <div class="tile is-ancestor section" style="padding: 0; padding-top: 2em;">
+          <a class="tile is-parent" href="https://umb-svl.gitlab.io/">
+            <div href="#" class="tile is-child notification">
               <p class="title">Education</p>
               <p class="subtitle">Developing software to support Higher Ed</p>
-            </a>
-        </div>
-        <div class="tile is-ancestor section" style="padding: 0; padding-top: 2em;">
-          <a href="https://umb-svl.gitlab.io/" class="tile is-parent">
+            </div>
+          </a>
+          <a class="tile is-parent" href="https://umb-svl.gitlab.io/">
             <div class="tile is-child notification">
               <p class="title">Safer GPU programming</p>
               <p class="subtitle">Localizing bugs caused by data-races & over-synchronization</p>
             </div>
           </a>
-          <div class="tile is-parent">
-            <a href="https://umb-svl.gitlab.io/" class="tile is-child notification">
+          <a class="tile is-parent" href="https://umb-svl.gitlab.io/">
+            <div class="tile is-child notification">
               <p class="title">Safer parallel runtimes</p>
               <p class="subtitle">Proving the correctness of parallel runtimes and
                   testing implementations</p>
-            </a>
-          </div>
+              </div>
+          </a>
         </div>
       </div>
     </div>
-  </div>
+
 </section>
 
 <div class="content">
