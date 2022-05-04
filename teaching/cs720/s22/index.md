@@ -98,7 +98,7 @@ data:
     lab: true
     skip_slides: true
     hw: 9 Types
-  - lecture: Extending the STLC 
+  - lecture: How to use verification?
     chapters: [MoreStlc, Typechecking]
   - lecture: Lab
     lab: true
