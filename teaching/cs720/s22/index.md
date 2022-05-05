@@ -98,8 +98,9 @@ data:
     lab: true
     skip_slides: true
     hw: 9 Types
-  - lecture: How to use verification?
+  - lecture: How to verify?
     chapters: [MoreStlc, Typechecking]
+    published: true
   - lecture: Lab
     lab: true
     hw: 10 Stlc, StlcProp
