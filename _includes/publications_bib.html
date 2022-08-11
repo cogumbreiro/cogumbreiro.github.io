@@ -5,7 +5,7 @@
   booktitle = {TYPES},
   year = {2022},
   url = {assets/turing-types22.pdf},
-  note = {\href{assets/turing-types22-pres.pdf}{Slides for TYPES'22},
+  note = {\href{assets/turing-types22-pres.pdf}{Presentation slides},
   \href{assets/turing-rhul22-pres.pdf}{slides for RHUL'22}}
 }
 </pre></div>
@@ -17,9 +17,9 @@
   booktitle = {ITiCSE},
   publisher = {{ACM}},
   year = {2022},
-  doi = {978-1-4503-9201-3/22/07},
-  note = {\href{assets/gidayu-iticse22-pres.pdf}{[slides]}},
-  url = {assets/gidayu-iticse22.pdf}
+  doi = {10.1145/3502718.3524742},
+  preprint = {<a href="assets/gidayu-iticse22.pdf">assets/gidayu-iticse22.pdf</a>},
+  note = {\href{assets/gidayu-iticse22-slides.pdf}{Presentation slides}}
 }
 </pre></div>
 
@@ -33,24 +33,25 @@
   volume = {356},
   pages = {36-45},
   doi = {10.4204/EPTCS.356.4},
-  url = {assets/faial-places22.pdf},
-  note = {\href{assets/provable-dr-places22-slides.pdf}{[slides]}}
+  note = {\href{assets/provable-races-places22-slides.pdf}{Presentation slides}},
+  preprint = {<a href="assets/provable-races-places22.pdf">assets/provable-races-places22.pdf</a>}
 }
 </pre></div>
 
-<div class="bib" id="ver-gpu-progs:places22"><pre>
-@misc{<a href="{{ include.url }}#ver-gpu-progs:places22">ver-gpu-progs:places22</a>,
-  author = {Hannah Zicarelli and Tiago Cogumbreiro},
-  title = {Verification of {GPU} Programs: Evaluation Challenges (Extended Abstract)},
-  note = {\href{assets/eval-challenges-places22-slides.pdf}{[slides]}},
+<div class="bib" id="eval-challenges:places22"><pre>
+@inproceedings{<a href="{{ include.url }}#eval-challenges:places22">eval-challenges:places22</a>,
+  author = {Zicarelli, Hannah and Cogumbreiro, Tiago},
+  title = {Verif‌ication of {GPU} Programs: Evaluation Challenges (Extended Abstract)},
+  booktitle = {PLACES},
   year = {2022},
-  url = {assets/verify-gpu-places22.pdf}
+  note = {\href{assets/eval-challenges-places22-slides.pdf}{Presentation slides}},
+  url = {assets/eval-challenges-places22.pdf}
 }
 </pre></div>
 
 <div class="bib" id="faial:cav21"><pre>
 @inproceedings{<a href="{{ include.url }}#faial:cav21">faial:cav21</a>,
-  author = {Cogumbreiro, Tiago and Lange, Julien and Liew, Dennis and Zicarelli, Hannah},
+  author = {Cogumbreiro, Tiago and Lange, Julien and Liew Zhen Rong, Dennis and Zicarelli, Hannah},
   title = {Checking Data-Race Freedom of {GPU} Kernels, Compositionally},
   booktitle = {CAV},
   year = {2021},
@@ -58,9 +59,13 @@
   volumne = {12759},
   doi = {10.1007/978-3-030-81685-8_19},
   publisher = {Springer},
-  url = {assets/cogumbreiro-etal-faial.pdf},
-  note = {\href{https://doi.org/10.5281/zenodo.4711923}{\textbf{Artifact awarded functional, available, reusable}; includes source code and Coq proofs}
-   [\href{https://ucl-pplv.github.io/CAV21/poster_P_195/}{video} | \href{assets/faial-cav21-pres.pdf}{slides}]}
+  preprint = {<a href="assets/faial-cav21.pdf">assets/faial-cav21.pdf</a>},
+  note = {
+    \href{https://doi.org/10.5281/zenodo.4711923}{\textbf{Artifact awarded functional, available, reusable}; includes source code and Coq proofs.}
+    \href{https://ucl-pplv.github.io/CAV21/poster_P_195/}{Video presentation.}
+    \href{assets/faial-brunel21-slides.pdf}{Presentation slides @ Brunel'21}
+    \href{assets/faial-cav21-slides.pdf}{Presentation slides @ CAV'21}
+}
 }
 </pre></div>
 
@@ -120,13 +125,17 @@
   volume = 1,
   articleno = 103,
   doi = {10.1145/3143359},
-  url = {assets/cogumbreiro-gorn.pdf},
-  note = {\href{https://gitlab.com/cogumbreiro/gorn/tree/oopsla17}{Source code and Coq proofs}}
+  preprint = {<a href="assets/gorn-oopsla17.pdf">assets/gorn-oopsla17.pdf</a>},
+  note = {
+    \href{https://gitlab.com/cogumbreiro/gorn/tree/oopsla17}{Source code and proof scripts.}
+    \href{assets/gorn-oopsla17-slides.pdf}{Presentation slides.}
+    \href{https://www.youtube.com/watch?v=p1SLkd1oKYA}{Video presentation.}
+    }
 }
 </pre></div>
 
-<div class="bib" id="formalize-habanero-phasers:jlamp17"><pre>
-@article{<a href="{{ include.url }}#formalize-habanero-phasers:jlamp17">formalize-habanero-phasers:jlamp17</a>,
+<div class="bib" id="phasers:jlamp17"><pre>
+@article{<a href="{{ include.url }}#phasers:jlamp17">phasers:jlamp17</a>,
   title = {Formalization of {Habanero} Phasers using {Coq}},
   journal = {Journal of Logical and Algebraic Methods in Programming},
   year = {2017},
@@ -136,8 +145,8 @@
   publisher = {Elsevier},
   doi = {10.1016/j.jlamp.2017.02.006},
   author = {Tiago Cogumbreiro and Jun Shirako and Vivek Sarkar},
-  note = {\href{https://cogumbreiro.github.io/jlamp17/}{Online interpreter and Coq proofs}},
-  url = {assets/cogumbreiro-formalizing-phasers.pdf}
+  note = {\href{https://cogumbreiro.github.io/jlamp17/}{Online interpreter and proof scripts}},
+  preprint = {<a href="assets/phasers-jlamp17.pdf">assets/phasers-jlamp17.pdf</a>}
 }
 </pre></div>
 
@@ -155,8 +164,7 @@
   publisher = {Springer},
   series = {LNCS},
   volume = {9833},
-  doi = {10.1007/978-3-319-43659-3_30},
-  url = {<a href="http://link.springer.com/chapter/10.1007%2F978-3-319-43659-3_30">http://link.springer.com/chapter/10.1007%2F978-3-319-43659-3_30</a>}
+  doi = {10.1007/978-3-319-43659-3_30}
 }
 </pre></div>
 
@@ -172,8 +180,8 @@
   volume = {211},
   pages = {13–24},
   doi = {10.4204/EPTCS.211.2},
-  note = {\href{https://github.com/cogumbreiro/habanero-coq/tree/places16}{Coq proofs}},
-  url = {assets/cogumbreiro-phase-ordering.pdf}
+  note = {\href{https://github.com/cogumbreiro/habanero-coq/tree/places16}{Proof scripts}},
+  preprint = {<a href="assets/phase-ordering-places16.pdf">assets/phase-ordering-places16.pdf</a>}
 }
 </pre></div>
 
@@ -190,13 +198,13 @@
   publisher = {ACM},
   pages = {150–160},
   numpages = {11},
-  note = {\href{https://bitbucket.org/cogumbreiro/armus/wiki/PPoPP15}{Source code}. \href{https://bitbucket.org/cogumbreiro/brenner-coq/commits/tag/v1.0}{Coq proofs}},
-  url = {assets/cogumbreiro-armus.pdf}
+  note = {\href{https://bitbucket.org/cogumbreiro/armus/wiki/PPoPP15}{Source code}. \href{https://bitbucket.org/cogumbreiro/brenner-coq/commits/tag/v1.0}{Proof scripts}},
+  preprint = {<a href="assets/armus-ppopp15.pdf">assets/armus-ppopp15.pdf</a>}
 }
 </pre></div>
 
-<div class="bib" id="coordinating-phased-acts:coordination13"><pre>
-@inproceedings{<a href="{{ include.url }}#coordinating-phased-acts:coordination13">coordinating-phased-acts:coordination13</a>,
+<div class="bib" id="phased-acts:coordination13"><pre>
+@inproceedings{<a href="{{ include.url }}#phased-acts:coordination13">phased-acts:coordination13</a>,
   author = {Tiago Cogumbreiro and
                Francisco Martins and
                Vasco Thudichum Vasconcelos},
@@ -207,12 +215,12 @@
   pages = {31–44},
   doi = {10.1007/978-3-642-38493-6_3},
   publisher = {Springer},
-  url = {assets/cogumbreiro.martins.vasconcelos_coordinating-phased-acts.pdf}
+  preprint = {<a href="assets/phased-acts-coordination13.pdf">assets/phased-acts-coordination13.pdf</a>}
 }
 </pre></div>
 
-<div class="bib" id="types-x10-clocks:places10"><pre>
-@inproceedings{<a href="{{ include.url }}#types-x10-clocks:places10">types-x10-clocks:places10</a>,
+<div class="bib" id="types-for-clocks:places10"><pre>
+@inproceedings{<a href="{{ include.url }}#types-for-clocks:places10">types-for-clocks:places10</a>,
   author = {Francisco Martins and Vasco T. Vasconcelos and Tiago Cogumbreiro},
   title = {Types for {X10} {C}locks},
   booktitle = {PLACES},
@@ -221,12 +229,12 @@
   doi = {10.4204/EPTCS.69.8},
   volume = {69},
   series = {EPTCS},
-  url = {assets/martins.vasconcelos.cogumbreiro_types-for-x10-clocks.pdf}
+  preprint = {<a href="assets/types-for-clocks-places10.pdf">assets/types-for-clocks-places10.pdf</a>}
 }
 </pre></div>
 
-<div class="bib" id="type-inference-mil:places09"><pre>
-@inproceedings{<a href="{{ include.url }}#type-inference-mil:places09">type-inference-mil:places09</a>,
+<div class="bib" id="mil-infer:places09"><pre>
+@inproceedings{<a href="{{ include.url }}#mil-infer:places09">mil-infer:places09</a>,
   author = {Vasco T. Vasconcelos and Francisco Martins and Tiago Cogumbreiro},
   title = {Type inference for deadlock detection in a multithreaded typed assembly language},
   booktitle = {PLACES},
@@ -235,13 +243,13 @@
   pages = {95–109},
   volume = 17,
   series = {EPTCS},
-  url = {assets/vasconcelos.martins.cogumbreiro_type-inference-mil.pdf},
+  preprint = {<a href="assets/mil-infer-places09.pdf">assets/mil-infer-places09.pdf</a>},
   doi = {10.4204/EPTCS.17.8}
 }
 </pre></div>
 
-<div class="bib" id="compiling-pi-into-mtal:places08"><pre>
-@inproceedings{<a href="{{ include.url }}#compiling-pi-into-mtal:places08">compiling-pi-into-mtal:places08</a>,
+<div class="bib" id="pi-to-mil:places08"><pre>
+@inproceedings{<a href="{{ include.url }}#pi-to-mil:places08">pi-to-mil:places08</a>,
   author = {Tiago Cogumbreiro and Francisco Martins and Vasco T. Vasconcelos},
   title = {Compiling the $pi$-calculus into a multithreaded typed assembly language},
   series = {ENTCS},
@@ -252,7 +260,7 @@
   optbooktitle = {PLACES'08},
   issn = {1571-0661},
   doi = {10.1016/j.entcs.2009.06.004},
-  url = {assets/cogumbreiro.martins.vasconcelos_compiling-pi-into-mtal.pdf}
+  preprint = {<a href="assets/pi-to-mil-places08.pdf">assets/pi-to-mil-places08.pdf</a>}
 }
 </pre></div>
 

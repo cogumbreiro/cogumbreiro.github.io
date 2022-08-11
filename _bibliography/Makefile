@@ -14,7 +14,7 @@ PUBS_HTML = $(TARGET)/publications.html
 BIB_HTML = $(TARGET)/publications_bib.html
 # The options for BIBTEX2HTML
 BIBTEX2HTML = bibtex2html
-BIBTEX2HTML_FLAGS = -nofooter -noheader -nokeywords -nokeys -nodoc 
+BIBTEX2HTML_FLAGS = -nofooter -noheader -nokeywords -nokeys -nodoc --named-field preprint preprint
 all: build
 
 build: $(PUB_HTML) $(BIB_HTML)
