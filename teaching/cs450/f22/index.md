@@ -116,8 +116,8 @@ calendar:
 **Past editions:** [**Spring '21**](../s21/), [**Spring '20**](../s20/), [**Spring '19**](../s19/)
 
 # Course information
-* **Location:** Room 2300, 2<sup>nd</sup> floor, University Hall (Y02-2300)
-* **Schedule:** Monday, Wednesday @ 5:30PM - 6:45PM
+* **Location:** (Y02-2300) Room 2300, 2<sup>nd</sup> floor, University Hall
+* **Schedule:** Monday, Wednesday / 5:30PM - 6:45PM
 
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)

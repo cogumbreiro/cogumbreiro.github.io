@@ -104,7 +104,7 @@ calendar:
 # Course information
 
 * **Location:** (Y01-1350) Room 1350, 1<sup>st</sup> floor, University Hall
-* **Schedule:** 4:00pm to 5:15pm on Monday, Wednesday
+* **Schedule:** Monday, Wednesday / 4:00pm to 5:15pm
 
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
