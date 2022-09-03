@@ -111,15 +111,13 @@ calendar:
 
 <div class="buttons is-centered">
 <a class="button is-large is-link" href="syllabus.pdf">Syllabus</a>
-<a class="button is-large is-link" href="https://gitlab.com/cogumbreiro/cs450-s21-qa">Announcements and QA</a>
-<a class="button is-large is-link" href="https://www.gradescope.com/courses/226255">Homework submission</a>
 </div>
 
 **Past editions:** [**Spring '21**](../s21/), [**Spring '20**](../s20/), [**Spring '19**](../s19/)
 
 # Course information
-
-* **Schedule:** 3:00pm to 3:50pm, Monday, Wednesday
+* **Location:** Room 2300, 2<sup>nd</sup> floor, University Hall (Y02-2300)
+* **Schedule:** Monday, Wednesday @ 5:30PM - 6:45PM
 
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
