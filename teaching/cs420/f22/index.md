@@ -113,7 +113,8 @@ calendar:
 
 # Teaching assistants contact
 
-To be announced...
+* **Paul Maynard**
+* **Office hours:** TBA
 
 # Resources
 

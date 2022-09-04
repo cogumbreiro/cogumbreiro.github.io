@@ -125,7 +125,8 @@ calendar:
 
 # Teaching assistants contact
 
-To be announced...
+* **Dakai Tzou**
+* **Office hours:** 7:00PM - 7:45PM, Monday and Wednesday
 
 ## Class Schedule
 
