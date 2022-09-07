@@ -7,6 +7,7 @@ exercises_ext: .v
 data:
   - module: Logical Foundations
     lecture: Course overview; Coq intro
+    video: https://echo360.org/public/media/72b488d6-ad90-4aa1-89ba-330d7be76964
   - lecture: Pattern matching; reflexivity
   - lecture: Proofs by induction
   - lecture: Manipulating theorems; data-structures

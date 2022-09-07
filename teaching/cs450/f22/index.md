@@ -8,6 +8,7 @@ exercises_ext: .zip
 data:
   - module: Basic Functional Programming
     lecture: Course info, arithmetic in Racket, evaluation
+    video: https://echo360.org/public/media/058b58dd-bc8a-4905-aa6a-f7072efff421
   - lecture: Branching and function definitions
   - lecture: Pairs, lists, user structures, and quoting
 ################################################################################
