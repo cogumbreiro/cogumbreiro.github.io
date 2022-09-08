@@ -217,9 +217,7 @@ calendar:
       <span class="buttons has-addons">
       {% include button.html url=h_url title="Download lecture slides (HTML)" icon="download" %}
       {% include button.html url=s_url title="Download lecture slides (PDF)" icon="book" %}
-      {% comment %}
       {% include button.html url=r.video icon="file-video" title="Video recording" %}
-      {% endcomment %}
       {% include button.html url=f_url icon="box" title="Download lecture exercises" %}
       </span>
     {% endif %}
