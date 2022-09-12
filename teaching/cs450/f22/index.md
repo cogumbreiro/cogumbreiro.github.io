@@ -126,8 +126,9 @@ calendar:
 
 # Teaching assistants contact
 
-* **Dakai Tzou**
-* **Office hours:** 7:00PM - 7:45PM, Monday and Wednesday
+* **Dakai Tzou**, **office hours:** 7:00PM - 7:45PM, Monday and Wednesday
+* **Paul Maynard**, **office hours:**  Monday, Wednesday at 3:00PM-4:00PM; Tuesday 11:00AM-12:00noon
+
 
 ## Class Schedule
 
