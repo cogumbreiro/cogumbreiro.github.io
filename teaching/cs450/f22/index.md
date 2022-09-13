@@ -10,6 +10,7 @@ data:
     lecture: Course info, arithmetic in Racket, evaluation
     video: https://echo360.org/public/media/058b58dd-bc8a-4905-aa6a-f7072efff421
   - lecture: Branching and function definitions
+    video: https://liveumb-my.sharepoint.com/:v:/g/personal/tiago_cogumbreiro_umb_edu/Ed3aY1v_IZJItxsEmeWWb6cBuKXLGvBZv-30AMtfzSc26w?e=uCcEui
   - lecture: Pairs, lists, user structures, and quoting
 ################################################################################
     # 4, 5, 6, 7
