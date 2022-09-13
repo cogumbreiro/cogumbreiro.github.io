@@ -5,16 +5,16 @@ title: "CS 420: Introduction to the Theory of Computation"
 layout: single
 exercises_ext: .v
 data:
-  - module: Logical Foundations
+  - module: (HW1) Logical Foundations
     lecture: Course overview; Coq intro
     video: https://echo360.org/public/media/72b488d6-ad90-4aa1-89ba-330d7be76964
-  - lecture: Pattern matching; reflexivity
+  - lecture: (HW1) Pattern matching; reflexivity
     video: https://liveumb-my.sharepoint.com/:v:/g/personal/tiago_cogumbreiro_umb_edu/EQ3rRWQ6m5FDvFc-G_R7DXgBWlDrLIpuX89eO3_yj9HNwQ
-  - lecture: Proofs by induction
-  - lecture: Manipulating theorems; data-structures
-  - lecture: Polymorphism; Constructor injectivity, explosion principle
-  - lecture: Logical Connectives
-  - lecture: Mini-test 1 recap
+  - lecture: (HW1) Proofs by induction
+  - lecture: (HW1) Manipulating theorems; data-structures
+  - lecture: (HW2) Polymorphism; Constructor injectivity, explosion principle
+  - lecture: (HW2) Logical Connectives
+  - lecture: (HW2) Mini-test 1 recap
 ################################################################################
   - module: Regular Languages
     lecture: Formal languages
