@@ -12,6 +12,7 @@ data:
   - lecture: Branching and function definitions
     video: https://liveumb-my.sharepoint.com/:v:/g/personal/tiago_cogumbreiro_umb_edu/Ed3aY1v_IZJItxsEmeWWb6cBuKXLGvBZv-30AMtfzSc26w?e=uCcEui
   - lecture: Pairs, lists, user structures, and quoting
+    video: https://echo360.org/public/media/7be049ac-c63d-4364-b45b-29a91ca29367
 ################################################################################
     # 4, 5, 6, 7
   - module: Advanced Functional Programming 
