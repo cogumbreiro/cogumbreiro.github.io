@@ -3,7 +3,7 @@ author: Tiago Cogumbreiro
 semester: Fall 2022
 title: "CS 450: Structure of Higher Level Languages"
 layout: single
-exercises_ext: .zip
+exercises_ext: -exercises.zip
 
 data:
   - module: Basic Functional Programming
