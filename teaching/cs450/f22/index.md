@@ -126,10 +126,10 @@ calendar:
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
 * **Office hours:** {{ site.office.hours }}
 
-# Teaching assistants contact
+# TA office hours (IN PERSON)
 
-* **Dakai Tzou**, **office hours:** 7:00PM - 7:45PM, Monday and Wednesday
-* **Paul Maynard**, **office hours:**  Monday, Wednesday at 3:00PM-4:00PM; Tuesday 11:00AM-12:00noon
+* **Dakai Tzou**, **office hours:** 7:00PM - 7:45PM, Monday and Wednesday @ Y02-2300 (where we have classes)
+* **Paul Maynard**, **office hours:**  Monday, Wednesday at 3:00PM-4:00PM; Tuesday 11:00AM-12:00noon @ M03-0201-33 (SVL office)
 
 
 ## Class Schedule
