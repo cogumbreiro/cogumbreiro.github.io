@@ -17,6 +17,7 @@ data:
     # 4, 5, 6, 7
   - module: Advanced Functional Programming 
     lecture: Nested definitions, tail calls
+    vide: https://echo360.org/public/media/bc4dbaf7-1a90-4334-9417-1d1a037b7c15
   - lecture: Activation frames, modules, structs, first-class funcs
   - lecture: Implementing AST's, currying, exists
   - lecture: Filter, append, foldr

@@ -17,6 +17,11 @@ data:
       type: video
 
   - lecture: (HW1/HW2) Manipulating theorems; data-structures
+    attachments:
+    - title: Classroom recording (S21)
+      url: https://echo360.org/media/f0ea8cb1-7fb8-43d9-9274-11d25c3cc3ed/public
+      type: video
+
   - lecture: (HW2) Polymorphism; Constructor injectivity, explosion principle
   - lecture: (HW2) Logical Connectives
   - lecture: (HW2) Mini-test 1 recap
