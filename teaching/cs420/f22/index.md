@@ -23,6 +23,7 @@ data:
       type: video
 
   - lecture: (HW2) Polymorphism; Constructor injectivity, explosion principle
+    video: https://echo360.org/public/media/e08a7505-1be3-4490-adfb-9ac42e174163
   - lecture: (HW2) Logical Connectives
   - lecture: (HW2) Mini-test 1 recap
 ################################################################################

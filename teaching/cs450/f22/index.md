@@ -19,6 +19,7 @@ data:
     lecture: Nested definitions, tail calls
     video: https://echo360.org/public/media/bc4dbaf7-1a90-4334-9417-1d1a037b7c15
   - lecture: Activation frames, modules, structs, first-class funcs
+    video: https://echo360.org/public/media/d1279ab6-08ea-4b10-84ad-2d9ca054d581
   - lecture: Implementing AST's, currying, exists
   - lecture: Filter, append, foldr
 
