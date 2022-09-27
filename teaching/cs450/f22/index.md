@@ -21,6 +21,7 @@ data:
   - lecture: Activation frames, modules, structs, first-class funcs
     video: https://echo360.org/public/media/d1279ab6-08ea-4b10-84ad-2d9ca054d581
   - lecture: Implementing AST's, currying, exists
+    video: https://echo360.org/public/media/4af750be-481d-450c-b6a0-6f399581b15c
   - lecture: Filter, append, foldr
 
 ################################################################################
