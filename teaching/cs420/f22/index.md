@@ -128,8 +128,7 @@ calendar:
 
 # Teaching assistants contact
 
-* **Paul Maynard**
-* **Office hours:** TBA
+* **Kleopatra Gjini (REMOTE):** Mondays and Wednesdays 11am-12pm; Fridays 10am-11am
 
 # Resources
 
