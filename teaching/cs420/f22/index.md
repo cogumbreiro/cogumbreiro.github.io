@@ -27,6 +27,7 @@ data:
   - lecture: (HW2) Logical Connectives
     video: https://echo360.org/public/media/1c7b85ec-082f-42a2-b18f-a0ece85bfa0c
   - lecture: (HW2) Mini-test 1 recap
+    video: https://echo360.org/public/media/35908250-a939-433d-b4cc-0f0e38fc34fc
 ################################################################################
   - module: Regular Languages
     lecture: Formal languages
