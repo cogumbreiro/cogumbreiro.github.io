@@ -24,7 +24,7 @@ data:
     video: https://echo360.org/public/media/4af750be-481d-450c-b6a0-6f399581b15c
   - lecture: Filter, append, foldr
     video: https://echo360.org/public/media/6f0e50ed-5edd-4ad8-b21e-8a7fb7145aa4
-  - lecture: Exercises to prepare for HW2
+  - lecture: Reverse, join-strings, foldl, performance
 ################################################################################
   - module: Lazy evaluation
     lecture: "Delayed evaluation"
