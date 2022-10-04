@@ -31,6 +31,7 @@ data:
 ################################################################################
   - module: Regular Languages
     lecture: Formal languages
+    video: https://echo360.org/public/media/0f876659-46e6-4519-8b55-a208857aa2d6
   - lecture: Kleene star, language equivalence
   - lecture: Recap & exercises
   - lecture: Regular expressions

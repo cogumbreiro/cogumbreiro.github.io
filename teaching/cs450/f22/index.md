@@ -25,6 +25,7 @@ data:
   - lecture: Filter, append, foldr
     video: https://echo360.org/public/media/6f0e50ed-5edd-4ad8-b21e-8a7fb7145aa4
   - lecture: Reverse, join-strings, foldl, performance
+    video: https://echo360.org/public/media/c6b796f0-6c5e-425f-b446-9c8d662c5a92
 ################################################################################
   - module: Lazy evaluation
     lecture: "Delayed evaluation"
