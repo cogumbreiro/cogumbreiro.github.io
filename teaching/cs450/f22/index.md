@@ -29,6 +29,7 @@ data:
 ################################################################################
   - module: Lazy evaluation
     lecture: "Delayed evaluation"
+    video: https://echo360.org/public/media/07377fdc-e323-477d-a9b7-0fb0a17028f8
   - lecture: "Streams / Evaluating expressions"
 
 ################################################################################
