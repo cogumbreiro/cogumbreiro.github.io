@@ -33,6 +33,7 @@ data:
     lecture: Formal languages
     video: https://echo360.org/public/media/0f876659-46e6-4519-8b55-a208857aa2d6
   - lecture: Kleene star, language equivalence
+    video: https://echo360.org/public/media/c575399c-eaba-4462-9fec-68edb61d8e34
   - lecture: Recap & exercises
   - lecture: Regular expressions
   - lecture: REGEX & Nondeterministic Finite Automata
