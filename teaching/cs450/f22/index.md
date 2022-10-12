@@ -31,7 +31,7 @@ data:
     lecture: "Delayed evaluation"
     video: https://echo360.org/public/media/07377fdc-e323-477d-a9b7-0fb0a17028f8
   - lecture: "Streams / Evaluating expressions"
-
+    video: https://echo360.org/public/media/c1c1eb01-7c1e-4e8e-82ef-7fdadfc00ad5
 ################################################################################
   - module: Formal methods; Lambda calculus
     lecture: "Language λ<sub>S</sub>: slow function calls"
