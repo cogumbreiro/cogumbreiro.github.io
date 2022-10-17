@@ -36,7 +36,6 @@ data:
     video: https://echo360.org/public/media/c575399c-eaba-4462-9fec-68edb61d8e34
   - lecture: Recap & exercises
     video: https://echo360.org/public/media/021ad153-ed90-4134-b131-58a79d1ddecb
-    skip_slides: true
   - lecture: Regular expressions
   - lecture: REGEX & Nondeterministic Finite Automata
   - lecture: NFA ⇔ REGEX
