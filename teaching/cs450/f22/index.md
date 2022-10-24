@@ -37,6 +37,7 @@ data:
     lecture: "Language λ<sub>S</sub>: slow function calls"
     video: https://echo360.org/public/media/e1f66414-86c4-468b-b73b-5785cc990e77
   - lecture: Lexical/dynamic scoping, function closures
+    video: https://echo360.org/public/media/cff8bd0f-f2dc-4c06-a218-5f42bc143213
   - lecture: "Language λ<sub>E</sub>: fast function calls"
 
 ################################################################################
