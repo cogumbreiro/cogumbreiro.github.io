@@ -40,7 +40,11 @@ data:
     video: https://echo360.org/public/media/c1e727b1-3c2f-447e-b9b2-2adac4282b6b
     skip_exercises: true
   - lecture: REGEX & Nondeterministic Finite Automata
+    video: https://echo360.org/public/media/f17fba8e-d264-4b45-bf1b-5d281a032c95
+    skip_exercises: true
   - lecture: NFA ⇔ REGEX
+    skip_exercises: true
+    video: https://echo360.org/public/media/73e0d272-f9d4-4b8f-9b25-9f9bb6a3f1b3
   - lecture: Deterministic Finite Automata; NFA ⇔ DFA
 ################################################################################
   - module: Context-free Languages

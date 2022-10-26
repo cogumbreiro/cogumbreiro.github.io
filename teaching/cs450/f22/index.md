@@ -39,6 +39,8 @@ data:
   - lecture: Lexical/dynamic scoping, function closures
     video: https://echo360.org/public/media/cff8bd0f-f2dc-4c06-a218-5f42bc143213
   - lecture: "Language λ<sub>E</sub>: fast function calls"
+    video: https://echo360.org/public/media/a553bbcb-8c29-431d-b50d-409f338b8937
+    skip_exercises: true
 
 ################################################################################
   - module: Mutable lambda calculus
