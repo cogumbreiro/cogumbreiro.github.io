@@ -45,7 +45,9 @@ data:
 ################################################################################
   - module: Mutable lambda calculus
     lecture: "Language λ<sub>F</sub>: adding definitions incorrectly"
+    video: https://echo360.org/public/media/a553bbcb-8c29-431d-b50d-409f338b8937
   - lecture: Implementing λ<sub>F</sub>
+    video: https://echo360.org/public/media/158b003e-a1e8-443e-84ba-3653000e1545
   - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
 
 ################################################################################
