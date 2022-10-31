@@ -39,13 +39,35 @@ data:
   - lecture: Regular expressions
     video: https://echo360.org/public/media/c1e727b1-3c2f-447e-b9b2-2adac4282b6b
     skip_exercises: true
+    skip_slides: true
+    attachments:
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture11.pdf
+      type: pdf
+
   - lecture: REGEX & Nondeterministic Finite Automata
     video: https://echo360.org/public/media/f17fba8e-d264-4b45-bf1b-5d281a032c95
     skip_exercises: true
+    skip_slides: true
+    attachments:
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture12.pdf
+      type: pdf
   - lecture: NFA ⇔ REGEX
     skip_exercises: true
     video: https://echo360.org/public/media/73e0d272-f9d4-4b8f-9b25-9f9bb6a3f1b3
+    skip_slides: true
+    attachments:
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture13.pdf
+      type: pdf
   - lecture: Deterministic Finite Automata; NFA ⇔ DFA
+    video: https://echo360.org/public/media/c9bcb5f8-5fe3-4695-808c-5112f1d82a9f
+    skip_slides: true
+    attachments:
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture14.pdf
+      type: pdf
 ################################################################################
   - module: Context-free Languages
     lecture: Pumping lemma; Non-regular languages
@@ -198,20 +220,12 @@ calendar:
   {% else %}
     {% assign is_pub = false %}
   {% endif %}
-  {% unless r.skip_slides %}
   {% assign l_num = l_num | plus: 1 %}
-  {% endunless %}
   {% capture num %}{% if l_num < 10 %}0{% endif %}{{ l_num }}{% endcapture %}
   <td title="Date">{{ d.date }}</td>
-  {% if r.skip_slides %}
-  <td title="Skipped lecture number">
-  —
-  </td>
-  {% else %}
   <td title="Lecture number">
     {{ num }}
   </td>
-  {% endif %}
   
   <td {% if r.lab %}style="background: #fefede;"{% endif %}>
     {% capture title %}{{ r.lecture }}
@@ -224,7 +238,9 @@ calendar:
   </td>
   <td>
     {% if is_pub %}
-      {% capture h_url %}lecture{{ num }}.html{% endcapture %}
+      {% if r.skip_slides %}{% assign h_url = nil %}{% else %}
+        {% capture h_url %}lecture{{ num }}.html{% endcapture %}
+      {% endif %}
 
       {% if r.skip_slides %}{% assign s_url = nil %}{% else %}
         {% capture s_url %}lecture{{ num }}.pdf{% endcapture %}
