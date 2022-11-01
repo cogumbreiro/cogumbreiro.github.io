@@ -47,7 +47,7 @@ data:
     lecture: "Language λ<sub>F</sub>: adding definitions incorrectly"
     video: https://echo360.org/public/media/a553bbcb-8c29-431d-b50d-409f338b8937
   - lecture: Implementing λ<sub>F</sub>
-    video: https://echo360.org/public/media/158b003e-a1e8-443e-84ba-3653000e1545
+    video: https://echo360.org/public/media/c1f614ed-accb-4b7d-9906-121af3a389f3
   - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
 
 ################################################################################

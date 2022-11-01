@@ -71,6 +71,12 @@ data:
 ################################################################################
   - module: Context-free Languages
     lecture: Pumping lemma; Non-regular languages
+    video: https://echo360.org/public/media/d20dbb17-3a23-4d33-8943-ce24b768c092
+    skip_slides: true
+    attachments:
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture14.pdf
+      type: pdf
   - lecture: Context-free grammars
   - lecture: Pushdown Automata
   - lecture: PDA ⇔ CFG
