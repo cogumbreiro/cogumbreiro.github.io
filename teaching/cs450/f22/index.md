@@ -49,7 +49,7 @@ data:
   - lecture: Implementing λ<sub>F</sub>
     video: https://echo360.org/public/media/c1f614ed-accb-4b7d-9906-121af3a389f3
   - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
-
+    video: https://echo360.org/public/media/85f93d92-4f95-4377-8df3-10eda145a844
 ################################################################################
   - module: Monads and side effects
     lecture: Garbage collection
