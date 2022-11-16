@@ -53,8 +53,14 @@ data:
 ################################################################################
   - module: Monads and side effects
     lecture: Garbage collection
+    skip_exercises: true
+    video: https://echo360.org/public/media/85f93d92-4f95-4377-8df3-10eda145a844
   - lecture: Effectful operations
-  - lecture: Exceptions
+    skip_exercises: true
+    video: https://echo360.org/public/media/661d9ad0-623c-4e7d-b80e-087ec9481854
+  - lecture: Monadic error/list; generics; parameters
+    skip_exercises: true
+    video: https://echo360.org/public/media/ec9bd571-3469-45ae-92fe-bb241ce3eefc
   - lecture: Monadic continuations
   
 ################################################################################
