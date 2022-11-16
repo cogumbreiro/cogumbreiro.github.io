@@ -44,6 +44,9 @@ data:
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture11.pdf
       type: pdf
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture11.html
+      type: html
 
   - lecture: REGEX & Nondeterministic Finite Automata
     video: https://echo360.org/public/media/f17fba8e-d264-4b45-bf1b-5d281a032c95
@@ -53,6 +56,9 @@ data:
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture12.pdf
       type: pdf
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture12.html
+      type: html
   - lecture: NFA ⇔ REGEX
     skip_exercises: true
     video: https://echo360.org/public/media/73e0d272-f9d4-4b8f-9b25-9f9bb6a3f1b3
@@ -61,6 +67,9 @@ data:
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture13.pdf
       type: pdf
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture13.html
+      type: html
   - lecture: Deterministic Finite Automata; NFA ⇔ DFA
     video: https://echo360.org/public/media/c9bcb5f8-5fe3-4695-808c-5112f1d82a9f
     skip_slides: true
@@ -68,6 +77,9 @@ data:
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture14.pdf
       type: pdf
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture14.html
+      type: html
 ################################################################################
   - module: Context-free Languages
     lecture: Pumping lemma; Non-regular languages
@@ -75,23 +87,71 @@ data:
     skip_slides: true
     attachments:
     - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture14.pdf
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture15.pdf
       type: pdf
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture15.html
+      type: html
   - lecture: Context-free grammars
+    skip_slides: true
+    video: https://echo360.org/public/media/e30ef20b-5b1f-4fa7-8b0a-4123246e50df
+    attachments:
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture16.pdf
+      type: pdf
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture16.html
+      type: html
   - lecture: Pushdown Automata
+    video: https://echo360.org/public/media/2a0c6d47-8b81-4675-b195-099cf13385d0
+    skip_slides: true
+    attachments:
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture17.pdf
+      type: pdf
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture17.html
+      type: html
   - lecture: PDA ⇔ CFG
+    skip_slides: true
+    video: https://echo360.org/public/media/f64fe3a0-7da1-478f-9d76-975aecfc1012
+    attachments:
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture18.pdf
+      type: pdf
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture18.html
+      type: html
   - lecture: Pumping lemma; Non-context-free Languages; Turing Machines
+    skip_slides: true
+    video: https://echo360.org/public/media/4f70d00f-3f5f-4633-808e-2ba60db4c4d3
+    attachments:
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture19.pdf
+      type: pdf
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture19.html
+      type: html
   - lecture: Variants of Turing Machines
-  - lecture: Acceptance, emptiness and equality tests
+    skip_slides: true
+    video: https://echo360.org/public/media/4f70d00f-3f5f-4633-808e-2ba60db4c4d3
+    attachments:
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture20.pdf
+      type: pdf
+    - title: Slides (S21)
+      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture20.html
+      type: html
 ################################################################################
   - module: Decidability
-    lecture: Undecidability
+    lecture: Acceptance, emptiness and equality tests (HW7)
+  - lecture: Undecidability
   - lecture: QA session
-  - lecture: Undecidable problems
+  - lecture: Undecidable problems (HW7 deadline)
   - lecture: Undecidable problems
   - lecture: Mapping reducibility
   - lecture: QA Session
-  - lecture: QA Session
+  - lecture: QA Session (HW8 deadline)
 
 calendar:
 - date: Mo, Sep 5
