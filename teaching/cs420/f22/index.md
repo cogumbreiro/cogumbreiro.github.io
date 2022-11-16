@@ -46,7 +46,7 @@ data:
       type: pdf
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture11.html
-      type: html
+      type: download
 
   - lecture: REGEX & Nondeterministic Finite Automata
     video: https://echo360.org/public/media/f17fba8e-d264-4b45-bf1b-5d281a032c95
@@ -58,7 +58,7 @@ data:
       type: pdf
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture12.html
-      type: html
+      type: download
   - lecture: NFA ⇔ REGEX
     skip_exercises: true
     video: https://echo360.org/public/media/73e0d272-f9d4-4b8f-9b25-9f9bb6a3f1b3
@@ -69,7 +69,7 @@ data:
       type: pdf
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture13.html
-      type: html
+      type: download
   - lecture: Deterministic Finite Automata; NFA ⇔ DFA
     video: https://echo360.org/public/media/c9bcb5f8-5fe3-4695-808c-5112f1d82a9f
     skip_slides: true
@@ -79,7 +79,7 @@ data:
       type: pdf
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture14.html
-      type: html
+      type: download
 ################################################################################
   - module: Context-free Languages
     lecture: Pumping lemma; Non-regular languages
@@ -91,7 +91,7 @@ data:
       type: pdf
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture15.html
-      type: html
+      type: download
   - lecture: Context-free grammars
     skip_slides: true
     video: https://echo360.org/public/media/e30ef20b-5b1f-4fa7-8b0a-4123246e50df
@@ -101,7 +101,7 @@ data:
       type: pdf
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture16.html
-      type: html
+      type: download
   - lecture: Pushdown Automata
     video: https://echo360.org/public/media/2a0c6d47-8b81-4675-b195-099cf13385d0
     skip_slides: true
@@ -111,7 +111,7 @@ data:
       type: pdf
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture17.html
-      type: html
+      type: download
   - lecture: PDA ⇔ CFG
     skip_slides: true
     video: https://echo360.org/public/media/f64fe3a0-7da1-478f-9d76-975aecfc1012
@@ -121,7 +121,8 @@ data:
       type: pdf
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture18.html
-      type: html
+      type: download
+
   - lecture: Pumping lemma; Non-context-free Languages; Turing Machines
     skip_slides: true
     video: https://echo360.org/public/media/4f70d00f-3f5f-4633-808e-2ba60db4c4d3
@@ -131,7 +132,7 @@ data:
       type: pdf
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture19.html
-      type: html
+      type: download
   - lecture: Variants of Turing Machines
     skip_slides: true
     video: https://echo360.org/public/media/4f70d00f-3f5f-4633-808e-2ba60db4c4d3
@@ -141,7 +142,7 @@ data:
       type: pdf
     - title: Slides (S21)
       url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture20.html
-      type: html
+      type: download
 ################################################################################
   - module: Decidability
     lecture: Acceptance, emptiness and equality tests (HW7)
