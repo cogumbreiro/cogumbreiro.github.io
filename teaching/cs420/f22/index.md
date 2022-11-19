@@ -148,7 +148,7 @@ data:
     lecture: Acceptance, emptiness and equality tests (HW7)
   - lecture: Undecidability
   - lecture: QA session
-  - lecture: Undecidable problems (HW7 deadline)
+  - lecture: Undecidable problems (HW8) (HW7 deadline)
   - lecture: Undecidable problems
   - lecture: Mapping reducibility
   - lecture: QA Session
