@@ -146,7 +146,11 @@ data:
 ################################################################################
   - module: Decidability
     lecture: Acceptance, emptiness and equality tests (HW7)
+    skip_exercises: true
+    video: https://echo360.org/public/media/d7a2b970-fe7d-458f-936b-c8f82c8f9ebc
   - lecture: Undecidability
+    video: https://echo360.org/public/media/76cd70c3-4c7b-4115-aee0-d3966fead93f
+    skip_exercises: true 
   - lecture: QA session
   - lecture: Undecidable problems (HW8) (HW7 deadline)
   - lecture: Undecidable problems
