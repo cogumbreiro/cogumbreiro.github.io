@@ -151,7 +151,9 @@ data:
   - lecture: Undecidability
     video: https://echo360.org/public/media/76cd70c3-4c7b-4115-aee0-d3966fead93f
     skip_exercises: true 
-  - lecture: QA session
+  - lecture: A<sub>tm</sub> is undecidable
+    video: https://echo360.org/public/media/f5855cd0-ed1a-4780-9322-ac033c17fbf0
+    skip_exercises: true
   - lecture: Undecidable problems (HW8) (HW7 deadline)
   - lecture: Undecidable problems
   - lecture: Mapping reducibility
@@ -228,14 +230,10 @@ calendar:
 * **Office:** {{ site.office.location }}
 * **Office hours:** {{ site.office.hours }}
 
-# Teaching assistants contact
-
-* **Kleopatra Gjini (REMOTE):** Mondays and Wednesdays 11am-12pm; Fridays 10am-11am
-
 # Resources
 
-* [CS420 Supplementary Material: The Turing library (Coq)](https://gitlab.com/cogumbreiro/turing)
-* [CS420 Supplementary Material: NFA/DFA/REGEX algorithms (Python)](https://gitlab.com/cogumbreiro/karakuri/)
+* [CS420 Supplementary Material: The Turing library (Coq)](https://gitlab.com/umb-svl/turing)
+* [CS420 Supplementary Material: NFA/DFA/REGEX algorithms (Python)](https://gitlab.com/umb-svl/karakuri/)
 * [Logic Foundations exercises](https://softwarefoundations.cis.upenn.edu/lf-current/lf.tgz)
 
 ## Class Schedule
