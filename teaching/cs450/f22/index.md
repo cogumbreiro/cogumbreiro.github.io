@@ -62,17 +62,29 @@ data:
     skip_exercises: true
     video: https://echo360.org/public/media/ec9bd571-3469-45ae-92fe-bb241ce3eefc
   - lecture: Monadic continuations
+    skip_exercises: true
+    video: https://echo360.org/public/media/ec9bd571-3469-45ae-92fe-bb241ce3eefc
   
 ################################################################################
   - module: Abstraction
     lecture: Pattern-matching
+    skip_exercises: true
+    video: https://echo360.org/public/media/ec9bd571-3469-45ae-92fe-bb241ce3eefc
   - lecture: Generic methods
+    skip_exercises: true
+    video: https://echo360.org/public/media/ec9bd571-3469-45ae-92fe-bb241ce3eefc
   - lecture: Macros
+    skip_exercises: true
+    video: https://echo360.org/public/media/ec9bd571-3469-45ae-92fe-bb241ce3eefc
 
 ################################################################################
   - module: Object Oriented Programming
     lecture: LambdaJS
+    skip_exercises: true
+    video: https://echo360.org/public/media/ec9bd571-3469-45ae-92fe-bb241ce3eefc
   - lecture: JavaScript method and class inheritance
+    skip_exercises: true
+    video: https://echo360.org/public/media/ec9bd571-3469-45ae-92fe-bb241ce3eefc
   - lecture: Translating SimpleJS to LambdaJS
   - lecture: The essence of JavaScript
   - lecture: QA
