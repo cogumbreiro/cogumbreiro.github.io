@@ -16,8 +16,11 @@ data:
     lecture: Nested definitions, tail calls
   - lecture: Activation frames, modules, structs, first-class funcs
   - lecture: Implementing AST's, currying, exists
-  - lecture: Filter, append, foldr
+################################################################################
+  - module: Optimized Functional Programming
+    lecture: Filter, append, foldr
   - lecture: Reverse, join-strings, foldl, performance
+  - lecture: Exercises
 ################################################################################
   - module: Lazy evaluation
     lecture: "Delayed evaluation"
