@@ -3,12 +3,14 @@ author: Tiago Cogumbreiro
 semester: Spring 2023
 title: "CS 450: Structure of Higher Level Languages"
 layout: single
-exercises_ext: -exercises.zip
+exercises_ext: .zip
 
 data:
   - module: Basic Functional Programming
     lecture: Course info, arithmetic in Racket, evaluation
+    published: true
   - lecture: Branching and function definitions
+    published: true
   - lecture: Pairs, lists, user structures, and quoting
 ################################################################################
     # 4, 5, 6, 7
