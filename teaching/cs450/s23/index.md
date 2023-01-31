@@ -11,7 +11,8 @@ data:
     published: true
   - lecture: Branching and function definitions
     published: true
-  - lecture: Pairs, lists, user structures, and quoting
+  - lecture: Lists and code serialization
+    published: true
 ################################################################################
     # 4, 5, 6, 7
   - module: Advanced Functional Programming 
