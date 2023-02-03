@@ -16,7 +16,8 @@ data:
 ################################################################################
     # 4, 5, 6, 7
   - module: Advanced Functional Programming 
-    lecture: Nested definitions, tail calls
+    lecture: Recursion, nested definitions
+    video: https://echo360.org/public/media/967f8e5c-5808-4e26-bb87-63cff58190b5
   - lecture: Activation frames, modules, structs, first-class funcs
   - lecture: Implementing AST's, currying, exists
 ################################################################################
