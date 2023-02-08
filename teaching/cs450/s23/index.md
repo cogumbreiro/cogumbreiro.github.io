@@ -18,8 +18,9 @@ data:
   - module: Advanced Functional Programming 
     lecture: Recursion, nested definitions
     video: https://echo360.org/public/media/967f8e5c-5808-4e26-bb87-63cff58190b5
-  - lecture: Activation frames, modules, structs, first-class funcs
-  - lecture: Implementing AST's, currying, exists
+  - lecture: Modules, structs, updating lists
+    video: https://echo360.org/public/media/35fa8d24-74b8-4293-a73a-8cf6ec139ee6
+  - lecture: Map, functions as data-structures, currying
 ################################################################################
   - module: Optimized Functional Programming
     lecture: Filter, append, foldr
