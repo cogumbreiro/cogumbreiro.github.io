@@ -14,7 +14,7 @@ data:
   - lecture: Lists and code serialization
     published: true
 ################################################################################
-    # 4, 5, 6, 7
+    # 4, 5, 6
   - module: Advanced Functional Programming 
     lecture: Recursion, nested definitions
     video: https://echo360.org/public/media/967f8e5c-5808-4e26-bb87-63cff58190b5
@@ -23,9 +23,10 @@ data:
   - lecture: Map, functions as data-structures, currying
     video: https://echo360.org/public/media/821e701c-4abc-4e8f-8741-414c1f99bbb5
 ################################################################################
+    # 7, 8, 9
   - module: Optimized Functional Programming
-    lecture: Filter, append, foldr
-  - lecture: Reverse, join-strings, foldl, performance
+    lecture: foldr, looping first-to-last
+  - lecture: foldl, looping last-to-first; tail-recursion
   - lecture: Exercises
 ################################################################################
   - module: Lazy evaluation
