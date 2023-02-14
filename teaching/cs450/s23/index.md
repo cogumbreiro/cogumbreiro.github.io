@@ -26,6 +26,7 @@ data:
     # 7, 8, 9
   - module: Optimized Functional Programming
     lecture: foldr, looping first-to-last
+    video: https://echo360.org/public/media/21fe47b3-9e36-4dd7-94fa-8365c93f5007
   - lecture: foldl, looping last-to-first; tail-recursion
   - lecture: Exercises
 ################################################################################
