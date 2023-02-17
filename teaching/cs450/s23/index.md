@@ -27,8 +27,9 @@ data:
   - module: Optimized Functional Programming
     lecture: foldr, looping first-to-last
     video: https://echo360.org/public/media/21fe47b3-9e36-4dd7-94fa-8365c93f5007
-  - lecture: foldl, looping last-to-first; tail-recursion
-  - lecture: Exercises
+  - lecture: foldl, looping last-to-first
+    video: https://echo360.org/public/media/f734dba6-99bb-411b-8fa9-6ae26db8aa76
+  - lecture: Exercises; tail-recursion
 ################################################################################
   - module: Lazy evaluation
     lecture: "Delayed evaluation"
