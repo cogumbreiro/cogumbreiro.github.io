@@ -5,7 +5,7 @@ url: https://cogumbreiro.github.io/
 office:
 #  location: via Discord
   location: "(M03-0201-16) Room 0201-16, 3<sup>rd</sup> floor, McCormack"
-  hours: "12:30pm to 2:00pm Tuesday, Thursday (in-person)"
+  hours: "12:30pm to 2:00pm Tuesday (in-person) / 2:30pm to 4pm Wednesday (remote)"
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York

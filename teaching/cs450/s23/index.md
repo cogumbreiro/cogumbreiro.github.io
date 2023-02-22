@@ -29,13 +29,14 @@ data:
     video: https://echo360.org/public/media/21fe47b3-9e36-4dd7-94fa-8365c93f5007
   - lecture: foldl, looping last-to-first
     video: https://echo360.org/public/media/f734dba6-99bb-411b-8fa9-6ae26db8aa76
-  - lecture: Exercises; tail-recursion
+  - lecture: Homework help; tail-recursion
     video: https://echo360.org/public/media/07be33d6-8efe-4084-bad0-f44267724923
     skip_exercises: true
 ################################################################################
   - module: Lazy evaluation
     lecture: "Delayed evaluation"
   - lecture: "Streams / Evaluating expressions"
+  - lecture: Exercises
 ################################################################################
   - module: Formal methods; Lambda calculus
     lecture: "Language λ<sub>S</sub>: slow function calls"
@@ -173,7 +174,7 @@ calendar:
 {% if r.module %}
     {% assign vol = r.vol %}
 <tr>
-  <td colspan="4" style="background: #e9f3fc; text-align: center;"><b>&#1421; {{ r.module }} &#1421;</b></td>
+  <td colspan="4" style="background: #e9f3fc; text-align: center;"><b><span class="has-text-grey-light">&#x1F659;</span> {{m_num}}. {{ r.module }} <span class="has-text-grey-light">&#x1F65A;</span></b></td>
   {% assign m_num = m_num | plus: 1 %}
 </tr>
 {% endif %}
