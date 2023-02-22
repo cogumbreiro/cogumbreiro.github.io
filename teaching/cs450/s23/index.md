@@ -30,6 +30,8 @@ data:
   - lecture: foldl, looping last-to-first
     video: https://echo360.org/public/media/f734dba6-99bb-411b-8fa9-6ae26db8aa76
   - lecture: Exercises; tail-recursion
+    video: https://echo360.org/public/media/07be33d6-8efe-4084-bad0-f44267724923
+    skip_exercises: true
 ################################################################################
   - module: Lazy evaluation
     lecture: "Delayed evaluation"
