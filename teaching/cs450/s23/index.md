@@ -34,9 +34,9 @@ data:
     skip_exercises: true
 ################################################################################
   - module: Lazy evaluation
-    lecture: "Delayed evaluation"
-  - lecture: "Streams / Evaluating expressions"
-  - lecture: Exercises
+    lecture: "TypedRacket, thunks, and promises"
+  - lecture: "Infinite streams, finite streams"
+  - lecture: Evaluating expressions
 ################################################################################
   - module: Formal methods; Lambda calculus
     lecture: "Language λ<sub>S</sub>: slow function calls"
@@ -84,6 +84,7 @@ calendar:
 
 - date: Tu, Feb 21
 - date: Th, Feb 23
+  closure: true
 
 - date: Tu, Feb 28
 - date: Th, Mar 2
