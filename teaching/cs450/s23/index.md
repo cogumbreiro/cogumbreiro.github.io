@@ -87,6 +87,7 @@ calendar:
   closure: true
 
 - date: Tu, Feb 28
+  closure: true
 - date: Th, Mar 2
 
 - date: Tu, Mar 7
