@@ -36,8 +36,9 @@ data:
   - module: Lazy evaluation
     lecture: "TypedRacket, thunks, and promises"
     video: https://echo360.org/public/media/fc39936d-baec-40ab-8dd0-485b2366c9ed
-  - lecture: "Infinite streams, finite streams"
-  - lecture: Evaluating expressions
+  - lecture: "Infinite streams"
+    video: https://echo360.org/public/media/1417e82f-15b8-431c-9607-fcaa96cc3fe4
+  - lecture: Finite streams, evaluating expressions
 ################################################################################
   - module: Formal methods; Lambda calculus
     lecture: "Language λ<sub>S</sub>: slow function calls"
