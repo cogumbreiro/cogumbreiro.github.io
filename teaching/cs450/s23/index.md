@@ -18,9 +18,9 @@ data:
   - module: Advanced Functional Programming 
     lecture: Recursion, nested definitions
     video: https://echo360.org/public/media/967f8e5c-5808-4e26-bb87-63cff58190b5
-  - lecture: Modules, structs, updating lists
+  - lecture: Modules, structs, (map) updating lists
     video: https://echo360.org/public/media/35fa8d24-74b8-4293-a73a-8cf6ec139ee6
-  - lecture: Map, functions as data-structures, currying
+  - lecture: Functions as data-structures, currying
     video: https://echo360.org/public/media/821e701c-4abc-4e8f-8741-414c1f99bbb5
 ################################################################################
     # 7, 8, 9
@@ -39,6 +39,7 @@ data:
   - lecture: "Infinite streams"
     video: https://echo360.org/public/media/1417e82f-15b8-431c-9607-fcaa96cc3fe4
   - lecture: Finite streams, evaluating expressions
+    video: https://echo360.org/public/media/b84930c3-6199-4d81-9757-134d0a768d41
 ################################################################################
   - module: Formal methods; Lambda calculus
     lecture: "Language λ<sub>S</sub>: slow function calls"
