@@ -43,8 +43,12 @@ data:
 ################################################################################
   - module: Formal methods; Lambda calculus
     lecture: "Language λ<sub>S</sub>: slow function calls"
-  - lecture: Lexical/dynamic scoping, function closures
+    video: https://echo360.org/public/media/29c71ccc-d21a-407f-abeb-f25e12f5e07a
+    skip_exercises: true
   - lecture: "Language λ<sub>E</sub>: fast function calls"
+    skip_exercises: true
+    video: https://echo360.org/public/media/5e67149e-c375-4071-b41e-054b0eaf94da
+  - lecture: Exercises
 
 ################################################################################
   - module: Mutable lambda calculus
