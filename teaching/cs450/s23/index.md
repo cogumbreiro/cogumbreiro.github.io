@@ -49,6 +49,8 @@ data:
     skip_exercises: true
     video: https://echo360.org/public/media/5e67149e-c375-4071-b41e-054b0eaf94da
   - lecture: Exercises
+    skip_exercises: true
+    video: https://echo360.org/public/media/08ee40ee-7c9e-4785-96fd-2c724d01a47b
 
 ################################################################################
   - module: Mutable lambda calculus
