@@ -41,7 +41,7 @@ data:
   - lecture: Finite streams, evaluating expressions
     video: https://echo360.org/public/media/b84930c3-6199-4d81-9757-134d0a768d41
 ################################################################################
-  - module: Formal methods; Lambda calculus
+  - module: Implementing function calls
     lecture: "Language λ<sub>S</sub>: slow function calls"
     video: https://echo360.org/public/media/29c71ccc-d21a-407f-abeb-f25e12f5e07a
     skip_exercises: true
@@ -53,10 +53,11 @@ data:
     video: https://echo360.org/public/media/08ee40ee-7c9e-4785-96fd-2c724d01a47b
 
 ################################################################################
-  - module: Mutable lambda calculus
-    lecture: "Language λ<sub>F</sub>: adding definitions incorrectly"
-  - lecture: Implementing λ<sub>F</sub>
-  - lecture: "Language λ<sub>D</sub>: adding definitions correctly"
+  - module: Implementing Racket's define
+    lecture: "Specifying λ<sub>D</sub>"
+    video: https://echo360.org/public/media/a76560ed-66ac-4667-a3e5-14233a60df3e
+  - lecture: Implementing λ<sub>D</sub>
+  - lecture: "Exercises"
 ################################################################################
   - module: Monads and side effects
     lecture: Garbage collection
