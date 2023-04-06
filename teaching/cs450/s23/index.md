@@ -57,6 +57,8 @@ data:
     lecture: "Specifying λ<sub>D</sub>"
     video: https://echo360.org/public/media/a76560ed-66ac-4667-a3e5-14233a60df3e
   - lecture: Implementing λ<sub>D</sub>
+    video: https://echo360.org/public/media/48b4a11c-d82a-40c0-81d1-4e005195d88e
+    skip_exercises: true
   - lecture: "Exercises"
 ################################################################################
   - module: Monads and side effects
