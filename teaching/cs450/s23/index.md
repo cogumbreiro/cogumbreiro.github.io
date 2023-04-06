@@ -60,6 +60,8 @@ data:
     video: https://echo360.org/public/media/48b4a11c-d82a-40c0-81d1-4e005195d88e
     skip_exercises: true
   - lecture: "Exercises"
+    skip_exercises: true
+    video: https://echo360.org/public/media/49d4a7c0-94bc-4d2c-8c56-c662b6e6601b
 ################################################################################
   - module: Monads and side effects
     lecture: Garbage collection
