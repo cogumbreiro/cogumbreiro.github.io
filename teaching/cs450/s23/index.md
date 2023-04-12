@@ -65,14 +65,13 @@ data:
 ################################################################################
   - module: Monads and side effects
     lecture: Garbage collection
-  - lecture: Effectful operations
-  - lecture: Monadic error/list; generics; parameters
-  - lecture: Monadic continuations
+  - lecture: The state monad
+  - lecture: Exercises
   
 ################################################################################
   - module: Abstraction
-    lecture: Pattern-matching
-  - lecture: Generic methods
+    lecture: Monadic error; Monadic continuations
+  - lecture: Parameters; Generic methods
   - lecture: Macros
 
 ################################################################################
