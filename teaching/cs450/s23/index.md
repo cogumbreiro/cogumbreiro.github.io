@@ -65,6 +65,8 @@ data:
 ################################################################################
   - module: Monads and side effects
     lecture: Garbage collection
+    video: https://echo360.org/public/media/e90532b0-2fd2-4336-8879-1127ebb24d9f
+    skip_exercises: true
   - lecture: The state monad
   - lecture: Exercises
   
