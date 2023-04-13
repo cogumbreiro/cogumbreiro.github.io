@@ -68,6 +68,7 @@ data:
     video: https://echo360.org/public/media/e90532b0-2fd2-4336-8879-1127ebb24d9f
     skip_exercises: true
   - lecture: The state monad
+    video: https://echo360.org/public/media/df514883-7806-464e-a421-02d951088baa
   - lecture: Exercises
   
 ################################################################################
