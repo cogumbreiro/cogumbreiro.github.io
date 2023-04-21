@@ -75,6 +75,7 @@ data:
 ################################################################################
   - module: Abstraction
     lecture: Monadic error; Monadic continuations
+    video: https://echo360.org/public/media/eaf1f31f-ebfe-4a87-a0f6-d8e51ec04eea
   - lecture: Parameters; Generic methods
   - lecture: Macros
 
