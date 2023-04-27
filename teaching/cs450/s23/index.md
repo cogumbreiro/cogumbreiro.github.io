@@ -77,7 +77,9 @@ data:
     lecture: Monadic error; Monadic continuations
     video: https://echo360.org/public/media/eaf1f31f-ebfe-4a87-a0f6-d8e51ec04eea
   - lecture: Parameters; Generic methods
+    video: https://echo360.org/public/media/c75d6b87-e47f-49e6-805b-0da76bb93c59
   - lecture: Macros
+    video: https://echo360.org/public/media/c58ba9bd-2352-41cc-a23f-682c09013ed5
 
 ################################################################################
   - module: Object Oriented Programming
