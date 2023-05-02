@@ -87,6 +87,8 @@ data:
     skip_exercises: true
     video: https://echo360.org/public/media/1a8580e1-3a88-4adf-9fd9-d8023a13fa41
   - lecture: JavaScript method and class inheritance
+    video: https://echo360.org/public/media/1a8580e1-3a88-4adf-9fd9-d8023a13fa41
+    skip_exercises: true
   - lecture: Translating SimpleJS to LambdaJS
   - lecture: QA
   - lecture: QA
