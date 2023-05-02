@@ -84,6 +84,7 @@ data:
 ################################################################################
   - module: Object Oriented Programming
     lecture: LambdaJS
+    skip_exercises: true
   - lecture: JavaScript method and class inheritance
   - lecture: Translating SimpleJS to LambdaJS
   - lecture: QA
