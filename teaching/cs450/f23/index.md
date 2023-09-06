@@ -135,7 +135,7 @@ calendar:
   [**Spring '19**](../s19/)
 
 # Course information
-* **Location:** (W01-0005) Room 0005, 1<sup>st</sup> floor, Wheatley
+* **Location:** University Hall, Y02-2120
 * **Schedule:** Monday/Wednesday 5:30PM - 6:45PM
 
 # Instructor contact
