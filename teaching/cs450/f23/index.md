@@ -8,6 +8,7 @@ exercises_ext: .zip
 data:
   - module: Basic Functional Programming
     lecture: Course info, arithmetic in Racket, evaluation
+    published: true
   - lecture: Branching and function definitions
   - lecture: Lists and code serialization
 ################################################################################
