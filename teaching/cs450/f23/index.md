@@ -17,6 +17,7 @@ data:
     # 4, 5, 6
   - module: Advanced Functional Programming 
     lecture: Recursion, nested definitions
+    video: https://echo360.org/public/media/3a1b403e-477d-4999-a0d3-baee57704630
   - lecture: Modules, structs, (map) updating lists
   - lecture: Functions as data-structures, currying
 ################################################################################
