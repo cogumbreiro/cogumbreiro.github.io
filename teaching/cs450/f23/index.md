@@ -19,6 +19,7 @@ data:
     lecture: Recursion, nested definitions
     video: https://echo360.org/public/media/3a1b403e-477d-4999-a0d3-baee57704630
   - lecture: Modules, structs, (map) updating lists
+    video: https://echo360.org/public/media/8a08499b-7e1a-479a-9b60-363a0f51e0f9
   - lecture: Functions as data-structures, currying
 ################################################################################
     # 7, 8, 9
