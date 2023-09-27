@@ -21,6 +21,7 @@ data:
   - lecture: Modules, structs, (map) updating lists
     video: https://echo360.org/public/media/8a08499b-7e1a-479a-9b60-363a0f51e0f9
   - lecture: Functions as data-structures, currying
+    video: https://echo360.org/public/media/34e7f999-b13b-4efa-8b54-2ee30191d0fc
 ################################################################################
     # 7, 8, 9
   - module: Optimized Functional Programming
