@@ -28,6 +28,7 @@ data:
     lecture: foldr, looping first-to-last
     video: https://echo360.org/public/media/ce95ec91-7e57-4ed6-a278-983178196433
   - lecture: foldl, looping last-to-first
+    video: https://echo360.org/public/media/c62fec6c-8f85-4979-b895-fa1ff32bf0c0
   - lecture: Homework help; tail-recursion
 ################################################################################
   - module: Lazy evaluation
