@@ -30,6 +30,7 @@ data:
   - lecture: foldl, looping last-to-first
     video: https://echo360.org/public/media/c62fec6c-8f85-4979-b895-fa1ff32bf0c0
   - lecture: Homework help; tail-recursion
+    video: https://echo360.org/public/media/17d08156-8893-4be6-ba35-9cfd155a9b51 
 ################################################################################
   - module: Lazy evaluation
     lecture: "TypedRacket, thunks, and promises"
