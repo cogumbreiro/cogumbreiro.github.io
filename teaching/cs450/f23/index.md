@@ -34,6 +34,7 @@ data:
 ################################################################################
   - module: Lazy evaluation
     lecture: "TypedRacket, thunks, and promises"
+    video: https://echo360.org/public/media/6058e8b5-1f2f-4fab-b308-a0ac10412f32
   - lecture: "Infinite streams"
   - lecture: Finite streams, evaluating expressions
 ################################################################################
