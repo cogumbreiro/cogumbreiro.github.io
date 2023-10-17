@@ -36,6 +36,7 @@ data:
     lecture: "TypedRacket, thunks, and promises"
     video: https://echo360.org/public/media/6058e8b5-1f2f-4fab-b308-a0ac10412f32
   - lecture: "Infinite streams"
+    video: https://echo360.org/public/media/48fdfd12-680b-4e6f-a7d8-472e07023d85
   - lecture: Finite streams, evaluating expressions
 ################################################################################
   - module: Implementing function calls
