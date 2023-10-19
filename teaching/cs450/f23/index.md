@@ -38,6 +38,7 @@ data:
   - lecture: "Infinite streams"
     video: https://echo360.org/public/media/48fdfd12-680b-4e6f-a7d8-472e07023d85
   - lecture: Finite streams, evaluating expressions
+    video: https://echo360.org/public/media/b71c2ac1-6e8f-4aca-82be-f14d5f7a9050
 ################################################################################
   - module: Implementing function calls
     lecture: "Language λ<sub>S</sub>: slow function calls"
