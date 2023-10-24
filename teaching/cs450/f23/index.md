@@ -43,6 +43,7 @@ data:
   - module: Implementing function calls
     lecture: "Language λ<sub>S</sub>: slow function calls"
     skip_exercises: true
+    video: https://echo360.org/public/media/ccbc0b0c-9265-435b-8502-d03a9db8c204
   - lecture: "Language λ<sub>E</sub>: fast function calls"
     skip_exercises: true
   - lecture: Exercises
