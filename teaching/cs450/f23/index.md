@@ -46,6 +46,7 @@ data:
     video: https://echo360.org/public/media/ccbc0b0c-9265-435b-8502-d03a9db8c204
   - lecture: "Language λ<sub>E</sub>: fast function calls"
     skip_exercises: true
+    video: https://echo360.org/public/media/0b719e46-cde5-4b72-bd13-6f30c72dfed4
   - lecture: Exercises
     skip_exercises: true
 
