@@ -49,6 +49,7 @@ data:
     video: https://echo360.org/public/media/0b719e46-cde5-4b72-bd13-6f30c72dfed4
   - lecture: Exercises
     skip_exercises: true
+    video: https://echo360.org/public/media/2b8f19d3-4ba6-45fb-91f5-8381ecbe1503
 
 ################################################################################
   - module: Implementing Racket's define
