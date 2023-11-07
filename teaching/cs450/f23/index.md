@@ -54,8 +54,10 @@ data:
 ################################################################################
   - module: Implementing Racket's define
     lecture: "Specifying λ<sub>D</sub>"
+    video: https://echo360.org/public/media/9c04b844-0b16-4539-8420-faf9a2a8069e
   - lecture: Implementing λ<sub>D</sub>
     skip_exercises: true
+    video: https://echo360.org/public/media/2d6ad108-75b4-4d4e-89dd-577e1fcf3164
   - lecture: "Exercises"
     skip_exercises: true
 ################################################################################
