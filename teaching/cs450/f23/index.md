@@ -66,8 +66,9 @@ data:
     skip_exercises: true
     video: https://echo360.org/public/media/44ba5a89-faeb-4940-b7d3-7de7c328bfe0
   - lecture: The state monad
-    video: https://echo360.org/public/media/c5554c42-97a0-433c-b892-a296f7d5037b
+    video: https://echo360.org/public/media/4379f495-c2d3-41ff-be59-70c14dd3abc5
   - lecture: Loops and error monad
+    video: https://echo360.org/public/media/c5554c42-97a0-433c-b892-a296f7d5037b
   
 ################################################################################
   - module: Abstraction
