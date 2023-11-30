@@ -73,8 +73,11 @@ data:
 ################################################################################
   - module: Abstraction
     lecture: Monadic error; Monadic continuations
-  - lecture: Parameters; Generic methods
-  - lecture: Macros
+    video: https://echo360.org/public/media/8c4e66e8-2b71-4be0-a639-20bfb21ef3f1
+  - lecture: What is a PhD / Parameters
+    video: https://echo360.org/public/media/fd8f3b8f-fc95-41b7-b067-404a4fa12778
+    skip_exercises: true
+  - lecture: Generic methods, Macros
 
 ################################################################################
   - module: Object Oriented Programming
