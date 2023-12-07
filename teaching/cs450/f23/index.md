@@ -78,11 +78,13 @@ data:
     video: https://echo360.org/public/media/fd8f3b8f-fc95-41b7-b067-404a4fa12778
     skip_exercises: true
   - lecture: Generic methods, Macros
+    video: https://echo360.org/public/media/4c97ce40-d9d3-44b7-a72d-595107c9934f
 
 ################################################################################
   - module: Object Oriented Programming
     lecture: LambdaJS
     skip_exercises: true
+    video: https://echo360.org/public/media/703c0dc8-008e-41e0-ae39-f4b95cd25cc6
   - lecture: JavaScript method and class inheritance
     skip_exercises: true
   - lecture: Conclusion
