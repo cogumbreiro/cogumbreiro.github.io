@@ -87,6 +87,7 @@ data:
     video: https://echo360.org/public/media/703c0dc8-008e-41e0-ae39-f4b95cd25cc6
   - lecture: JavaScript method and class inheritance
     skip_exercises: true
+    video: https://echo360.org/public/media/afbcbacb-e4de-4eeb-8cc3-f8931d285d93
   - lecture: Conclusion
     skip_exercises: true
   - lecture: QA
