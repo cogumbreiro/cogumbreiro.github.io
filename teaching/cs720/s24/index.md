@@ -11,6 +11,7 @@ data:
       chapters: [Basics]
       hw: 1
     volume: lf
+    published: true
   - lecture: Functional programming
     chapters: [Basics]
 
