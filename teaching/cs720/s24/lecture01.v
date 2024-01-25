@@ -1,3 +1,23 @@
+Inductive suite :=
+  | hearts
+  | clubs
+  | spades
+  | diamonds
+  .
+
+Compute hearts.
+
+Inductive boolean :=
+ | true
+ | false.
+
+Inductive nibble :=
+ | one
+ | two
+ | three
+ | zero
+ .
+
 Inductive day : Type :=
   | monday : day
   | tuesday : day
@@ -6,53 +26,43 @@ Inductive day : Type :=
   | friday : day
   | saturday : day
   | sunday : day.
-
-Compute monday.
-
-(*
-
-(* Here we just define an alias. *)
-
-*)
-Definition MONDAY := monday.
-
-Compute MONDAY.
-
-Definition next_weekday (d:day) := match d with
+  
+ 
+Definition next_week_day (d : day) : day :=
+  match d with
   | monday => tuesday
   | tuesday => wednesday
   | wednesday => thursday
   | thursday => friday
+  (*
   | friday => monday
   | saturday => monday
   | sunday => monday
+  *)
+  (*
+  | friday | saturday | sunday => monday
+  *)
+  | _ => monday
   end.
 
-Compute next_weekday saturday.
-Compute next_weekday (next_weekday saturday).
+Compute (next_week_day monday).
+Compute next_week_day tuesday.
+Compute next_week_day saturday.
 
-
-Example test_next_weekday:
-               (* = monday          *)
-  next_weekday (next_weekday saturday) = tuesday.
-  (* = tuesday *)
+Goal
+  next_week_day monday = tuesday.
 Proof.
   simpl.
   reflexivity.
 Qed.
 
-Check next_weekday.
-
-(*
-Example test_next_weekday_wrong:
-  next_weekday saturday = tuesday.
+Goal
+  next_week_day monday = wednesday.
 Proof.
   simpl.
-  reflexivity.
-*)
+  Fail reflexivity.
+Abort.
 
 
 
-
-
-
+ 
