@@ -21,6 +21,8 @@ data:
       hw: 2
     lecture:  Proofs by Induction
     chapters: [Induction]
+    published: true
+
   - lab: true
     lecture: Lab
     skip_slides: true
