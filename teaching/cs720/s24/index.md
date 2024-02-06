@@ -32,33 +32,34 @@ data:
       hw: 3
     lecture: Polymorphism
     chapters: [Lists, Poly]
-  - lecture: Lab
-    skip_slides: true
-    lab: true
 
+  - lecture: Tactics
+    chapters: [Tactics]
   - module:
       chapters: [Tactics]
       hw: 4
     lecture: Tactics
     chapters: [Tactics]
-  - lecture: Tactics
-    chapters: [Tactics]
   
+  - lecture: Defining logic connectives
+    chapters: [Logic]
   - module:
-      chapters: [Logic]
+      chapters: [Logic,IndProp,]
       hw: 4
     lecture: Defining logic connectives
     chapters: [Logic]
-  - lecture: Defining logic connectives
-    chapters: [Logic]
 
+  - lecture: Inductive propositions
+    chapters: [IndProp, ProofObjects]
   - module:
       chapters: [IndProp, ProofObjects]
       hw: 4
-    lecture: Inductive propositions
+    lecture: Proof objects
     chapters: [IndProp, ProofObjects]
-  - lecture: Proof objects
-    chapters: [IndProp, ProofObjects]
+
+  - lecture: Lab
+    skip_slides: true
+    lab: true
 
   - module:
       chapters: [Maps, Imp, ImpParser, ImpCEvalFun, Auto]
