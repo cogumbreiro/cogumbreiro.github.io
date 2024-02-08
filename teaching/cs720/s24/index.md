@@ -26,12 +26,14 @@ data:
   - lab: true
     lecture: Lab
     skip_slides: true
+    published: true
 
   - module:
       chapters: [Lists, Poly]
       hw: 3
     lecture: Polymorphism
     chapters: [Lists, Poly]
+    published: true
 
   - lecture: Tactics
     chapters: [Tactics]
