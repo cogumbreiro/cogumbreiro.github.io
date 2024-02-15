@@ -43,7 +43,7 @@ data:
       hw: 4
     lecture: Tactics
     chapters: [Tactics]
-  
+    published: true
   - lecture: Defining logic connectives
     chapters: [Logic]
   - module:

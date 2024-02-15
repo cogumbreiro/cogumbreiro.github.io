@@ -82,7 +82,9 @@ Proof.
   injection eq1 as eq1.
   assumption.
 Qed.
-
+Locate "+".
+Check 0 + 1.
+Print Nat.add.
 Goal
   forall n,
   S n <> 0.
