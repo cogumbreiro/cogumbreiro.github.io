@@ -37,6 +37,7 @@ data:
 
   - lecture: Tactics
     chapters: [Tactics]
+    published: true
   - module:
       chapters: [Tactics]
       hw: 4
@@ -170,6 +171,7 @@ calendar:
 
 - date: Tu, Feb 13
 - date: Th, Feb 15
+  closure: true
 
 - date: Tu, Feb 20
 - date: Th, Feb 22
