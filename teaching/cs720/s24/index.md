@@ -50,6 +50,7 @@ data:
   - module:
       chapters: [Logic,IndProp,]
       hw: 4
+    published: true
     lecture: Defining logic connectives
     chapters: [Logic]
 
