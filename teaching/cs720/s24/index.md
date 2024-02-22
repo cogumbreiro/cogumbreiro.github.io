@@ -46,6 +46,7 @@ data:
     published: true
   - lecture: Defining logic connectives
     chapters: [Logic]
+    published: true
   - module:
       chapters: [Logic,IndProp,]
       hw: 4
