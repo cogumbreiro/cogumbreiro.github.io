@@ -56,6 +56,8 @@ data:
 
   - lecture: Inductive propositions
     chapters: [IndProp, ProofObjects]
+    published: true
+
   - module:
       chapters: [IndProp, ProofObjects]
       hw: 4
