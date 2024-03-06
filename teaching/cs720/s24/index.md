@@ -63,10 +63,7 @@ data:
       hw: 4
     lecture: Proof objects
     chapters: [IndProp, ProofObjects]
-
-  - lecture: Lab
-    skip_slides: true
-    lab: true
+    published: true
 
   - module:
       chapters: [Maps, Imp, ImpParser, ImpCEvalFun, Auto]
@@ -74,9 +71,15 @@ data:
     lecture: Imperative languages
     hw: 4 #Logic, IndProp
     chapters: [Maps, Imp, ImpParser, ImpCEvalFun]
+    published: true
+
   - lecture: 	More automation
     chapters: [Auto]
     skip_exercises: true
+  - lecture: Lab
+    skip_slides: true
+    lab: true
+
 ################################################################################
     # Block 5
   - module:

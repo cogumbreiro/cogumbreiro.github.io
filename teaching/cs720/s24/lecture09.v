@@ -169,6 +169,19 @@ Proof.
   inversion H0.
 Qed.
 
+Print Even_ind.
+
+Goal forall n, Even n -> ~ Even (S n).
+Proof.
+  intros.
+  induction H.
+  - intros N. inversion N.
+  - unfold not in IHEven. intros N.
+    apply IHEven.
+    clear IHEven.
+    apply evSS in N.
+    assumption.
+Qed.
 
 
 
