@@ -75,10 +75,7 @@ data:
 
   - lecture: 	More automation
     chapters: [Auto]
-    skip_exercises: true
-  - lecture: Lab
-    skip_slides: true
-    lab: true
+    published: true
 
 ################################################################################
     # Block 5
@@ -88,9 +85,11 @@ data:
     #module: Programming Language Foundations
     volume: plf
     hw: 5 #Imp
-    skip_exercises: true
     lecture: Program equivalence
     chapters: [Equiv]
+    published: true
+
+
   - lecture: Lab
     lab: true
     skip_slides: true
@@ -139,14 +138,14 @@ data:
       hw: 9
     lecture: How to verify?
     chapters: [MoreStlc, Typechecking]
-  - lecture: Lab
+  - lecture: Presentation
     lab: true
     #hw: 10 #Stlc, StlcProp
     chapters: [Sub]
 
   - module:
       title: "Presentations"
-    lecture: Lab
+    lecture: Presentations
     lab: true
   - lecture: Lab
     skip_slides: true
@@ -154,9 +153,13 @@ data:
 
   - module:
       title: "Presentations"
-    lecture: Lab
+    lecture: Presentations
     lab: true
     hw: 11 #Proj
+  - lecture: Lab
+    skip_slides: true
+    lab: true
+
   # - lecture: Subtyping
   #   chapters: [Sub]
   # - lecture: Mutable references
