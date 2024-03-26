@@ -99,6 +99,7 @@ data:
       hw: 7
     lecture: Hoare Logic
     chapters: [Hoare]
+    published: true
   - lecture: Hoare Logic (continued)
     hw: 6 #Equiv
     chapters: [Hoare2]
