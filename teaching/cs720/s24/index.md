@@ -103,6 +103,7 @@ data:
   - lecture: Hoare Logic (continued)
     hw: 6 #Equiv
     chapters: [Hoare2]
+    published: true
 
   - module:
       chapters: [Smallstep]
