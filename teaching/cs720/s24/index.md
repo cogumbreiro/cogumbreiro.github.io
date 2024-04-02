@@ -114,6 +114,7 @@ data:
   - lecture: Lab
     lab: true
     skip_slides: true
+    published: true
 
   - module:
       chapters: [Types, Stlc]
