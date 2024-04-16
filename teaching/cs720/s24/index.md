@@ -109,12 +109,12 @@ data:
       chapters: [Smallstep]
       hw: 8
     lecture: Small-step operational semantics
-    skip_exercises: true
     chapters: [Smallstep]
+    published: true
+
   - lecture: Lab
     lab: true
     skip_slides: true
-    published: true
 
   - module:
       chapters: [Types, Stlc]
@@ -123,34 +123,45 @@ data:
     hw: 7 #Hoare and HW8 Smallstep
     skip_exercises: true
     chapters: [Types]
-  - lecture: Functional languages
-    chapters: [Stlc]
+    published: true
+
+  - lecture: Lab
+    lab: true
+    skip_slides: true
 
   - module:
       chapters: [StlcProp]
       hw: 9
-    lecture: Properties of the STLC # HW19
+    lecture: Functional languages
+    chapters: [Stlc]
+
+  - lecture: Properties of the STLC # HW19
     chapters: [StlcProp]
-  - lecture: Lab
-    lab: true
-    skip_slides: true
-    hw: 9 #Types
 
   - module:
       chapters: [MoreStlc, Typechecking, Sub]
       hw: 9
     lecture: How to verify?
     chapters: [MoreStlc, Typechecking]
-  - lecture: Presentation
+  - lecture: Lab
     lab: true
-    #hw: 10 #Stlc, StlcProp
-    chapters: [Sub]
+    skip_slides: true
+    hw: 9 #Types
 
   - module:
       title: "Presentations"
     lecture: Presentations
     lab: true
-  - lecture: Lab
+    skip_slides: true
+
+  - lecture: Presentations
+    skip_slides: true
+    lab: true
+
+  - lecture: Presentation
+    lab: true
+    #hw: 10 #Stlc, StlcProp
+    chapters: [Sub]
     skip_slides: true
     lab: true
 
@@ -159,7 +170,7 @@ data:
     lecture: Presentations
     lab: true
     hw: 11 #Proj
-  - lecture: Lab
+  - lecture: Presentations
     skip_slides: true
     lab: true
 
@@ -238,7 +249,7 @@ calendar:
 * **Schedule:** 11:00am to 12:15pm on Tuesday, Thursday
 * **Archives:** [**Spring '22**](../s22/), [**Fall '18**](../f18/)
 * [Textbook: Volume 1](https://softwarefoundations.cis.upenn.edu/lf-current/lf.tgz)
-* [Textbook: Valume 2](https://softwarefoundations.cis.upenn.edu/plf-current/plf.tgz)
+* [Textbook: Volume 2](https://softwarefoundations.cis.upenn.edu/plf-current/plf.tgz)
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
 * **Office:** {{ site.office.location }}
