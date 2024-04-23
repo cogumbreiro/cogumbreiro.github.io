@@ -104,6 +104,7 @@ data:
     hw: 6 #Equiv
     chapters: [Hoare2]
     published: true
+    skip_exercises: true
 
   - module:
       chapters: [Smallstep]
@@ -111,38 +112,40 @@ data:
     lecture: Small-step operational semantics
     chapters: [Smallstep]
     published: true
+    skip_exercises: true
 
   - lecture: Lab
     lab: true
-    skip_slides: true
 
   - module:
       chapters: [Types, Stlc]
       hw: 9
     lecture: Type systems
     hw: 7 #Hoare and HW8 Smallstep
-    skip_exercises: true
     chapters: [Types]
     published: true
 
   - lecture: Lab
     lab: true
-    skip_slides: true
 
   - module:
       chapters: [StlcProp]
       hw: 9
     lecture: Functional languages
     chapters: [Stlc]
+    published: true
 
   - lecture: Properties of the STLC # HW19
     chapters: [StlcProp]
+    published: true
+
 
   - module:
       chapters: [MoreStlc, Typechecking, Sub]
       hw: 9
     lecture: How to verify?
     chapters: [MoreStlc, Typechecking]
+    published: true
   - lecture: Lab
     lab: true
     skip_slides: true
@@ -308,8 +311,9 @@ calendar:
 {% endif %}
 
 <tr>
-
-  {% if r.published %}
+  {% if r.lab %}
+    {% assign is_pub = false %}
+  {% elsif r.published %}
     {% assign is_pub = true %}
   {% elsif r.video %}
     {% assign is_pub = true %}
@@ -318,18 +322,23 @@ calendar:
   {% else %}
     {% assign is_pub = false %}
   {% endif %}
-  {% unless r.skip_slides %}
+  {% if r.skip_slides or r.lab %}
+    {% assign has_num = false %}
+  {% else %}
+    {% assign has_num = true %}
+  {% endif %}
+  {% if has_num %}
   {% assign l_num = l_num | plus: 1 %}
-  {% endunless %}
+  {% endif %}
   {% capture num %}{% if l_num < 10 %}0{% endif %}{{ l_num }}{% endcapture %}
   <td title="Date">{{ d.date }}</td>
-  {% if r.skip_slides %}
-  <td title="Skipped lecture number">
-  —
-  </td>
-  {% else %}
+  {% if has_num %}
   <td title="Lecture number">
     {{ num }}
+  </td>
+  {% else %}
+  <td title="Skipped lecture number">
+  —
   </td>
   {% endif %}
   
