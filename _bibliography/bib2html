@@ -1,0 +1,91 @@
+#!/usr/bin/env python3
+import sys
+import subprocess
+import shlex
+from pathlib import Path
+import argparse
+
+BIBTEX2HTML = "bibtex2html"
+BIBTEX2HTML_FLAGS = "-nofooter -noheader -nokeywords -nokeys -nodoc"
+
+def replace(filename, many):
+    with filename.open() as fp:
+        data = fp.read()
+    for (src, dst) in many:
+        data = data.replace(src, dst)
+    with filename.open("w") as fd_out:
+        fd_out.write(data)
+
+def bibtex2html(bib_file, html_file, bib_html_file=None, exe=BIBTEX2HTML, flags=BIBTEX2HTML_FLAGS, style=None, verbose=True):
+    target = html_file.parent / html_file.stem
+    extra_args = []
+    if bib_html_file is None:
+        extra_args.append("-nobibsource")
+    if style is not None:
+        extra_args.append("-s")
+        extra_args.append(style)
+    cmd = (
+        shlex.split(exe) +
+        shlex.split(flags) +
+        extra_args +
+        ["-o", target, bib_file]
+    )
+    if verbose:
+        print(" ".join(map(str, cmd)))
+    subprocess.check_call(
+        cmd,
+        stdout=None if verbose else subprocess.DEVNULL,
+        stderr=None if verbose else subprocess.DEVNULL,
+    )
+    generated_html_file = html_file.parent / (html_file.stem + ".html")
+    generated_bib_html_file = html_file.parent / (html_file.stem + "_bib.html")
+    # Rename generated file
+    generated_html_file.rename(html_file)
+    # Rename generated _bib file.
+    if bib_html_file is not None:
+        generated_bib_html_file.rename(bib_html_file)
+    return (str(generated_html_file), str(generated_bib_html_file))
+
+def generate(bib_file, html_file, bib_html_file=None, verbose=False, style=None):
+  gen_html, gen_bib = bibtex2html(
+      bib_file,
+      html_file,
+      bib_html_file=bib_html_file,
+      verbose=verbose,
+      style=style,
+  )
+  replace(html_file, [
+      (gen_bib, r"{{ include.url }}"), # Make the link a parameter
+      ('<p><a name=', '<li class="bib" id='), # tag each element with a class
+      ('></a>', '>'), # do not use an <a>nchor
+      ('</p>', '</li>') # tag each element with a class
+  ])
+  if bib_html_file is not None:
+      replace(bib_html_file, [
+          (gen_html, r"{{ include.url }}"), # Make the link a parameter
+          ('<h1>' + bib_file.name + '</h1>', ""), # Remove the header, because ugly
+          ('<a name=', '<div class="bib" id='), # tag each element with a class
+          ('</pre>', '</pre></div>'), # Remove the header, because ugly
+          ('</a><pre>', "<pre>"), # HACK: Jekyll breaks silently without this
+      ])
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("bib", metavar="BIB_FILE", help="Input parameter. Where to load the bibtex database from." )
+    parser.add_argument("html", metavar="HTML_FILE", help="Output parameter. Where to save the html.")
+    parser.add_argument("--bib-html", metavar="HTML_FILE", help="Additionally generates an HTML-render of the bib file.")
+    parser.add_argument("--verbose", action="store_true")
+    parser.add_argument("--style", "-s", help="BibTeX style (plain, alpha, ...)")
+    args = parser.parse_args()
+    bib_file = Path(args.bib)
+    html_file = Path(args.html)
+    bib_html_file = Path(args.bib_html) if args.bib_html is not None else None
+    generate(
+        bib_file=bib_file,
+        html_file=html_file,
+        bib_html_file=bib_html_file,
+        verbose=args.verbose,
+        style=args.style,
+    )
+
+main()
