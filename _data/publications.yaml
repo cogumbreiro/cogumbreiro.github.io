@@ -40,7 +40,9 @@
   publisher: IEEE
   doi: 10.1109/DSN-W58399.2023.00069
   url: assets/shellypy-verdi23.pdf
-  extra: <a class="button" href="https://zenodo.org/records/7892202">Proofs</a>
+  media:
+  - title: Artifact
+    url: https://zenodo.org/records/7892202
 
 - type: journal
   id: faial-drf:fmsd23
@@ -50,7 +52,10 @@
   year: 2023
   doi: 10.1007/s10703-023-00415-0
   url: assets/faial-fmsd23.pdf
-  extra: <strong><a href="https://link.springer.com/journal/10.1007/s10703-024-00459-w">1 of 5</a></strong> invited publications from CAV21. <a class="button" href="assets/bu-sept-23.pdf">Slides for BU'23.</a>
+  media:
+  - title: Slides
+    url: assets/bu-sept-23.pdf
+  extra: <strong><a href="https://link.springer.com/journal/10.1007/s10703-024-00459-w">1 of 5</a></strong> invited publications from CAV21.
 
 - type: conference
   id: data-race-det:ecoop23
@@ -70,7 +75,9 @@
   booktitle: TFP
   year: 2023
   url: assets/verifying-verifiers-tfp23.pdf
-  extra: <a href="verifying-verifiers-slides-tfp23.pdf">Presentation slides.</a>
+  media:
+  - title: Slides
+    url: assets/verifying-verifiers-slides-tfp23.pdf
 
 - type: unpublished
   id: turing:types22
@@ -79,9 +86,11 @@
   booktitle: TYPES
   year: 2022
   url: assets/turing-types22.pdf
-  extra: |
-    <a class="button" href="assets/turing-types22-pres.pdf">Slides</a>
-    <a class="button" href="assets/turing-rhul22-pres.pdf">Slides (RHUL'22)</a>
+  media:
+  - title: Slides
+    url: assets/turing-types22-pres.pdf
+  - title: Slides (RHUL'22)
+    url: assets/turing-rhul22-pres.pdf
 
 - type: conference
   id: gidayu:iticse22
@@ -92,7 +101,9 @@
   year: 2022
   doi: 10.1145/3502718.3524742
   url: assets/gidayu-iticse22.pdf
-  extra: <a class="button" href="assets/gidayu-iticse22-slides.pdf">Slides</a>
+  media:
+  - title: Slides
+    url: assets/gidayu-iticse22-slides.pdf
 
 - type: conference
   id: provable-data-races:places22
@@ -104,7 +115,9 @@
   volume: 356
   pages: 36–45
   doi: 10.4204/EPTCS.356.4
-  extra: <a class="button" href="assets/provable-races-places22-slides.pdf">Slides</a>
+  media:
+  - url: assets/provable-races-places22-slides.pdf
+    title: Slides
   url: assets/provable-races-places22.pdf
 
 - type: unpublished
@@ -127,11 +140,15 @@
   doi: 10.1007/978-3-030-81685-8_19
   publisher: Springer
   url: assets/faial-cav21.pdf
-  extra: |
-    <a class="button" href="https://doi.org/10.5281/zenodo.4711923">Artifact</a>
-    <a class="button" href="https://ucl-pplv.github.io/CAV21/poster_P_195/">Video</a>
-    <a class="button" href="assets/faial-brunel21-slides.pdf">Slides (Brunel'21)</a>
-    <a class="button" href="assets/faial-cav21-slides.pdf">Slides</a>
+  media:
+  - title: Artifact
+    url: https://doi.org/10.5281/zenodo.4711923
+  - title: Slides
+    url: assets/faial-cav21-slides.pdf
+  - title: Video
+    url: https://ucl-pplv.github.io/CAV21/poster_P_195
+  - title: Slides (Brunel'21)
+    url: assets/faial-brunel21-slides.pdf
 
 - type: conference
   id: transitive-joins:ppopp19
@@ -180,10 +197,13 @@
   articleno: 103
   doi: 10.1145/3143359
   url: assets/gorn-oopsla17.pdf
-  extra: |
-    <a class="button" href="https://gitlab.com/cogumbreiro/gorn/tree/oopsla17">Source + Proofs</a>
-    <a class="button" href="assets/gorn-oopsla17-slides.pdf">Slides<a/>
-    <a class="button" href="https://www.youtube.com/watch?v=p1SLkd1oKYA">Video</a>
+  media:
+  - title: Artifact
+    url: https://gitlab.com/cogumbreiro/gorn/tree/oopsla17
+  - title: Slides
+    url: assets/gorn-oopsla17-slides.pdf
+  - title: Video
+    url: https://www.youtube.com/watch?v=p1SLkd1oKYA
 
 - type: journal
   id: phasers:jlamp17
@@ -199,7 +219,7 @@
     - Tiago Cogumbreiro
     - Jun Shirako
     - Vivek Sarkar
-  extra: |
+  buttons: |
     <a class="button" href="https://cogumbreiro.github.io/jlamp17/">Interpreter + Proofs</a>
   url: assets/phasers-jlamp17.pdf
 
@@ -234,7 +254,9 @@
   volume: 211
   pages: 13–24
   doi: 10.4204/EPTCS.211.2
-  extra: <a class="button" href="https://github.com/cogumbreiro/habanero-coq/tree/places16">Proofs</a>
+  media:
+  - url: https://github.com/cogumbreiro/habanero-coq/tree/places16
+    title: Artifact
   url: assets/phase-ordering-places16.pdf
 
 - type: conference
@@ -250,10 +272,12 @@
   doi: 10.1145/2688500.2688519
   publisher: ACM
   pages: 150–160
-  extra: |
-    <a class="button" href="https://bitbucket.org/cogumbreiro/armus/wiki/PPoPP15">Source code</a>
-    <a class="button" href="https://bitbucket.org/cogumbreiro/brenner-coq/commits/tag/v1.0">Proofs</a>
   url: assets/armus-ppopp15.pdf
+  media:
+  - url: https://bitbucket.org/cogumbreiro/armus/wiki/PPoPP15
+    title: Artifact
+  - title: Proofs
+    url: https://bitbucket.org/cogumbreiro/brenner-coq/commits/tag/v1.0
 
 - type: conference
   id: armus:x1014
