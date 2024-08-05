@@ -1,4 +1,4 @@
-- type: misc
+- type: unpublished
   id: regularc:tfpie24
   authors:  [Soroush Aghajani, Emma Kelminson, Tiago Cogumbreiro]
   title: "RegularIMP: an imperative calculus to describe regular languages (Extended Abstract)"
@@ -6,7 +6,7 @@
   booktitle: TFPIE
   url: assets/regular-c-tfpie24.pdf
 
-- type: misc
+- type: unpublished
   id: faial-repair:serpl23
   authors: [Gregory Blike, Tiago Cogumbreiro]
   title: Towards Concurrency Repair in GPU Kernels with Resource Cost Analysis (Extended Abstract)
@@ -14,7 +14,7 @@
   booktitle: SERPL
   url: assets/faial-repair-serpl23.pdf
 
-- type: misc
+- type: unpublished
   id: faial-proj:serpl23
   authors: [Paul Maynard, Tiago Cogumbreiro]
   title: Scaling data-race freedom analysis with array projections (Extended Abstract)
@@ -22,7 +22,7 @@
   booktitle: SERPL
   url: assets/faial-proj-serpl23.pdf
 
-- type: inproceedings
+- type: conference
   id: shelley:coordination23
   authors: [Carlos Mão de Ferro, Tiago Cogumbreiro,  Francisco Martins]
   title: "Shelley: a framework for model checking call ordering on hierarchical systems"
@@ -31,7 +31,7 @@
   publisher: Springer
   doi: 10.1007/978-3-031-35361-1_5
 
-- type: inproceedings
+- type: conference
   id: shelley-infer:verdi23
   authors: [Carlos Mão de Ferro, Tiago Cogumbreiro, Francisco Martins]
   title: Formalizing Model Inference of MicroPython
@@ -42,7 +42,7 @@
   url: assets/shellypy-verdi23.pdf
   extra: <a class="button" href="https://zenodo.org/records/7892202">Proofs</a>
 
-- type: article
+- type: journal
   id: faial-drf:fmsd23
   authors: [Tiago Cogumbreiro, Julien Lange,  Dennis Liew, Hannah Zicarelli]
   title: "Memory Access Protocols: Certified Data-Race Freedom for GPU Kernels"
@@ -50,9 +50,9 @@
   year: 2023
   doi: 10.1007/s10703-023-00415-0
   url: assets/faial-fmsd23.pdf
-  extra: <strong><a href="https://link.springer.com/article/10.1007/s10703-024-00459-w">1 of 5</a></strong> invited publications from CAV21. <a class="button" href="assets/bu-sept-23.pdf">Slides for BU'23.</a>
+  extra: <strong><a href="https://link.springer.com/journal/10.1007/s10703-024-00459-w">1 of 5</a></strong> invited publications from CAV21. <a class="button" href="assets/bu-sept-23.pdf">Slides for BU'23.</a>
 
-- type: inproceedings
+- type: conference
   id: data-race-det:ecoop23
   authors: [Feiyang Jin, Lechen Yu, Tiago Cogumbreiro, Vivek Sarkar, Jun Shirako]
   title: Dynamic Determinacy Race Detection for Task-Parallel Programs with Promises
@@ -63,7 +63,7 @@
   volume: 263
   doi: 10.4230/LIPIcs.ECOOP.2023.13
 
-- type: misc
+- type: unpublished
   id: verifying-faial:tfp22
   authors: [Udaya Sathiyamoorthy, Tiago Cogumbreiro]
   title: Verifying Static Analysis Tools (Extended Abstract)
@@ -72,7 +72,7 @@
   url: assets/verifying-verifiers-tfp23.pdf
   extra: <a href="verifying-verifiers-slides-tfp23.pdf">Presentation slides.</a>
 
-- type: misc
+- type: unpublished
   id: turing:types22
   authors: [Tiago Cogumbreiro, Yannick Forster]
   title: Towards a Mechanized Theory of Computation for Education (Extended Abstract)
@@ -83,7 +83,7 @@
     <a class="button" href="assets/turing-types22-pres.pdf">Slides</a>
     <a class="button" href="assets/turing-rhul22-pres.pdf">Slides (RHUL'22)</a>
 
-- type: inproceedings
+- type: conference
   id: gidayu:iticse22
   authors: [Tiago Cogumbreiro, Gregory Blike]
   title: "Gidayu: visualizing automata and their computations"
@@ -94,7 +94,7 @@
   url: assets/gidayu-iticse22.pdf
   extra: <a class="button" href="assets/gidayu-iticse22-slides.pdf">Slides</a>
 
-- type: inproceedings
+- type: conference
   id: provable-data-races:places22
   authors: [Dennis Liew, Tiago Cogumbreiro, Julien Lange]
   title: "Provable GPU Data-Races in Static Race Detection"
@@ -107,7 +107,7 @@
   extra: <a class="button" href="assets/provable-races-places22-slides.pdf">Slides</a>
   url: assets/provable-races-places22.pdf
 
-- type: misc
+- type: unpublished
   id: eval-challenges:places22
   authors: [Hannah Zicarelli,  Tiago Cogumbreiro]
   title: "Verification of GPU Programs: Evaluation Challenges (Extended Abstract)"
@@ -116,7 +116,7 @@
   extra: <a href="assets/eval-challenges-places22-slides.pdf">Presentation slides.</a>
   url: assets/eval-challenges-places22.pdf
 
-- type: inproceedings
+- type: conference
   id: faial:cav21
   authors: [Tiago Cogumbreiro, Julien Lange, Dennis Lew, Hannah Zicarelli]
   title: "Checking Data-Race Freedom of GPU Kernels, Compositionally"
@@ -133,7 +133,7 @@
     <a class="button" href="assets/faial-brunel21-slides.pdf">Slides (Brunel'21)</a>
     <a class="button" href="assets/faial-cav21-slides.pdf">Slides</a>
 
-- type: inproceedings
+- type: conference
   id: transitive-joins:ppopp19
   authors:
   - Caleb Voss
@@ -148,7 +148,7 @@
   publisher: ACM
 
 
-- type: article
+- type: journal
   id: armus:toplas19
   authors: [Tiago Cogumbreiro, Raymond Hu, Francisco Martins, Nobuko Yoshida]
   title: "Dynamic Deadlock Verification for General Barrier Synchronisation"
@@ -162,7 +162,7 @@
   doi: 10.1145/3229060
   publisher: ACM
 
-- type: article
+- type: journal
   id: gorn:oopsla17
   authors:
     - Tiago Cogumbreiro
@@ -185,7 +185,7 @@
     <a class="button" href="assets/gorn-oopsla17-slides.pdf">Slides<a/>
     <a class="button" href="https://www.youtube.com/watch?v=p1SLkd1oKYA">Video</a>
 
-- type: article
+- type: journal
   id: phasers:jlamp17
   title: "Formalization of Habanero Phasers using Coq"
   journal: JLAMP
@@ -203,7 +203,7 @@
     <a class="button" href="https://cogumbreiro.github.io/jlamp17/">Interpreter + Proofs</a>
   url: assets/phasers-jlamp17.pdf
 
-- type: inproceedings
+- type: conference
   id: dist-phasers:europar16,
   authors:
   - Karthik Murthy
@@ -221,7 +221,7 @@
   volume: 9833
   doi: 10.1007/978-3-319-43659-3_30
 
-- type: inproceedings
+- type: conference
   id: phase-ordering:places16
   authors:
   - Tiago Cogumbreiro
@@ -237,7 +237,7 @@
   extra: <a class="button" href="https://github.com/cogumbreiro/habanero-coq/tree/places16">Proofs</a>
   url: assets/phase-ordering-places16.pdf
 
-- type: inproceedings
+- type: conference
   id: armus:ppopp15
   authors:
   - Tiago Cogumbreiro
@@ -255,7 +255,7 @@
     <a class="button" href="https://bitbucket.org/cogumbreiro/brenner-coq/commits/tag/v1.0">Proofs</a>
   url: assets/armus-ppopp15.pdf
 
-- type: inproceedings
+- type: conference
   id: armus:x1014
   authors:
   - Tiago Cogumbreiro
@@ -267,7 +267,7 @@
   booktitle: X10
   url: assets/armus-x10.pdf
 
-- type: inproceedings
+- type: conference
   id: phased-acts:coordination13
   authors:
   - Tiago Cogumbreiro
@@ -282,7 +282,7 @@
   publisher: Springer
   url: assets/phased-acts-coordination13.pdf
 
-- type: inproceedings
+- type: conference
   id: types-for-clocks:places10
   authors:
   - Francisco Martins
@@ -297,7 +297,7 @@
   series: EPTCS
   url: assets/types-for-clocks-places10.pdf
 
-- type: inproceedings
+- type: conference
   id: mil-infer:places09
   authors:
   - Vasco T. Vasconcelos
@@ -312,7 +312,7 @@
   url: assets/mil-infer-places09.pdf
   doi: 10.4204/EPTCS.17.8
 
-- type: inproceedings
+- type: conference
   id: pi-to-mil:places08
   authors:
   - Tiago Cogumbreiro

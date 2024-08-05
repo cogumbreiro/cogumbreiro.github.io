@@ -5,7 +5,7 @@
   {% for author in article.authors -%}
     {{ author }}{% unless forloop.last %}, {% endunless %}
   {%- endfor -%}.
-  {% if article.type == "inproceedings" %}
+  {% if article.type == "conference" %}
     In <i>
     {% assign conf = site.data.conferences[article.booktitle] %}
     {%- if conf -%}
@@ -29,7 +29,7 @@
     {%- else -%}.
     {%- endif %}
     {{ article.year }}.
-  {% elsif article.type == "article" %}
+  {% elsif article.type == "journal" %}
     <i>
     {% assign conf = site.data.conferences[article.journal] %}
     {%- if conf -%}
@@ -48,7 +48,7 @@
       :{{ article.pages }}
     {%- endif -%}
     , {{article.year }}.
-  {% elsif article.type == "misc" %}
+  {% elsif article.type == "unpublished" %}
     In <i>
     {% assign conf = site.data.conferences[article.booktitle] %}
     {%- if conf -%}
@@ -61,7 +61,7 @@
   {% endif %}
   {{ article.extra }}
   {% if article.url %}<a class="button" href="{{article.url}}">PDF</a>{% endif %}
-  {% if article.doi %}<a class="button is-outlined {% if article.type == "article" %}is-success{% else %}is-info{% endif %}" href="https://dx.doi.org/{{article.doi}}">DOI</a>{% endif %}
+  {% if article.doi %}<a class="button is-outlined {% if article.type == "journal" %}is-success{% else %}is-info{% endif %}" href="https://dx.doi.org/{{article.doi}}">DOI</a>{% endif %}
 </li>
 {% endfor %}
 </ul>
