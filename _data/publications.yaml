@@ -1,0 +1,329 @@
+- type: misc
+  id: regularc:tfpie24
+  authors:  [Soroush Aghajani, Emma Kelminson, Tiago Cogumbreiro]
+  title: "RegularIMP: an imperative calculus to describe regular languages (Extended Abstract)"
+  year: 2024
+  booktitle: TFPIE
+  url: assets/regular-c-tfpie24.pdf
+
+- type: misc
+  id: faial-repair:serpl23
+  authors: [Gregory Blike, Tiago Cogumbreiro]
+  title: Towards Concurrency Repair in GPU Kernels with Resource Cost Analysis (Extended Abstract)
+  year: 2023
+  booktitle: SERPL
+  url: assets/faial-repair-serpl23.pdf
+
+- type: misc
+  id: faial-proj:serpl23
+  authors: [Paul Maynard, Tiago Cogumbreiro]
+  title: Scaling data-race freedom analysis with array projections (Extended Abstract)
+  year: 2023
+  booktitle: SERPL
+  url: assets/faial-proj-serpl23.pdf
+
+- type: inproceedings
+  id: shelley:coordination23
+  authors: [Carlos Mão de Ferro, Tiago Cogumbreiro,  Francisco Martins]
+  title: "Shelley: a framework for model checking call ordering on hierarchical systems"
+  booktitle: COORDINATION
+  year: 2023
+  publisher: Springer
+  doi: 10.1007/978-3-031-35361-1_5
+
+- type: inproceedings
+  id: shelley-infer:verdi23
+  authors: [Carlos Mão de Ferro, Tiago Cogumbreiro, Francisco Martins]
+  title: Formalizing Model Inference of MicroPython
+  booktitle: VERDI
+  year: 2023
+  publisher: IEEE
+  doi: 10.1109/DSN-W58399.2023.00069
+  url: assets/shellypy-verdi23.pdf
+  extra: <a class="button" href="https://zenodo.org/records/7892202">Proofs</a>
+
+- type: article
+  id: faial-drf:fmsd23
+  authors: [Tiago Cogumbreiro, Julien Lange,  Dennis Liew, Hannah Zicarelli]
+  title: "Memory Access Protocols: Certified Data-Race Freedom for GPU Kernels"
+  journal: FMSD
+  year: 2023
+  doi: 10.1007/s10703-023-00415-0
+  url: assets/faial-fmsd23.pdf
+  extra: <strong><a href="https://link.springer.com/article/10.1007/s10703-024-00459-w">1 of 5</a></strong> invited publications from CAV21. <a class="button" href="assets/bu-sept-23.pdf">Slides for BU'23.</a>
+
+- type: inproceedings
+  id: data-race-det:ecoop23
+  authors: [Feiyang Jin, Lechen Yu, Tiago Cogumbreiro, Vivek Sarkar, Jun Shirako]
+  title: Dynamic Determinacy Race Detection for Task-Parallel Programs with Promises
+  booktitle: ECOOP
+  publisher: Schloss Dagstuhl
+  series: LIPIcs
+  year: 2023
+  volume: 263
+  doi: 10.4230/LIPIcs.ECOOP.2023.13
+
+- type: misc
+  id: verifying-faial:tfp22
+  authors: [Udaya Sathiyamoorthy, Tiago Cogumbreiro]
+  title: Verifying Static Analysis Tools (Extended Abstract)
+  booktitle: TFP
+  year: 2023
+  url: assets/verifying-verifiers-tfp23.pdf
+  extra: <a href="verifying-verifiers-slides-tfp23.pdf">Presentation slides.</a>
+
+- type: misc
+  id: turing:types22
+  authors: [Tiago Cogumbreiro, Yannick Forster]
+  title: Towards a Mechanized Theory of Computation for Education (Extended Abstract)
+  booktitle: TYPES
+  year: 2022
+  url: assets/turing-types22.pdf
+  extra: |
+    <a class="button" href="assets/turing-types22-pres.pdf">Slides</a>
+    <a class="button" href="assets/turing-rhul22-pres.pdf">Slides (RHUL'22)</a>
+
+- type: inproceedings
+  id: gidayu:iticse22
+  authors: [Tiago Cogumbreiro, Gregory Blike]
+  title: "Gidayu: visualizing automata and their computations"
+  booktitle: ITiCSE
+  publisher: ACM
+  year: 2022
+  doi: 10.1145/3502718.3524742
+  url: assets/gidayu-iticse22.pdf
+  extra: <a class="button" href="assets/gidayu-iticse22-slides.pdf">Slides</a>
+
+- type: inproceedings
+  id: provable-data-races:places22
+  authors: [Dennis Liew, Tiago Cogumbreiro, Julien Lange]
+  title: "Provable GPU Data-Races in Static Race Detection"
+  booktitle: PLACES
+  year: 2022
+  series: EPTCS
+  volume: 356
+  pages: 36–45
+  doi: 10.4204/EPTCS.356.4
+  extra: <a class="button" href="assets/provable-races-places22-slides.pdf">Slides</a>
+  url: assets/provable-races-places22.pdf
+
+- type: misc
+  id: eval-challenges:places22
+  authors: [Hannah Zicarelli,  Tiago Cogumbreiro]
+  title: "Verification of GPU Programs: Evaluation Challenges (Extended Abstract)"
+  booktitle: PLACES
+  year: 2022
+  extra: <a href="assets/eval-challenges-places22-slides.pdf">Presentation slides.</a>
+  url: assets/eval-challenges-places22.pdf
+
+- type: inproceedings
+  id: faial:cav21
+  authors: [Tiago Cogumbreiro, Julien Lange, Dennis Lew, Hannah Zicarelli]
+  title: "Checking Data-Race Freedom of GPU Kernels, Compositionally"
+  booktitle: CAV
+  year: 2021
+  pages: 403–426
+  volume: 12759
+  doi: 10.1007/978-3-030-81685-8_19
+  publisher: Springer
+  url: assets/faial-cav21.pdf
+  extra: |
+    <a class="button" href="https://doi.org/10.5281/zenodo.4711923">Artifact</a>
+    <a class="button" href="https://ucl-pplv.github.io/CAV21/poster_P_195/">Video</a>
+    <a class="button" href="assets/faial-brunel21-slides.pdf">Slides (Brunel'21)</a>
+    <a class="button" href="assets/faial-cav21-slides.pdf">Slides</a>
+
+- type: inproceedings
+  id: transitive-joins:ppopp19
+  authors:
+  - Caleb Voss
+  - Tiago Cogumbreiro
+  - Vivek Sarkar
+  title: "Transitive Joins: A Sound and Efficient Online Deadlock-avoidance Policy"
+  booktitle: PPoPP
+  year: 2019
+  isbn: 978-1-4503-6225-2
+  pages: 378–390
+  doi: 10.1145/3293883.3295724
+  publisher: ACM
+
+
+- type: article
+  id: armus:toplas19
+  authors: [Tiago Cogumbreiro, Raymond Hu, Francisco Martins, Nobuko Yoshida]
+  title: "Dynamic Deadlock Verification for General Barrier Synchronisation"
+  journal: TOPLAS
+  volume: 41
+  number: 1
+  articleno: 1
+  year: 2018
+  issn: 0164-0925
+  pages: 1–38
+  doi: 10.1145/3229060
+  publisher: ACM
+
+- type: article
+  id: gorn:oopsla17
+  authors:
+    - Tiago Cogumbreiro
+    - Rishi Surendran
+    - Francisco Martins
+    - Vivek Sarkar
+    - Vasco T. Vasconcelos
+    - Max Grossman
+  title: "Deadlock Avoidance in Parallel Programs with Futures: Why parallel tasks should not wait for strangers"
+  journal: PACMPL
+  number: OOPSLA
+  year: 2017
+  publisher: ACM
+  volume: 1
+  articleno: 103
+  doi: 10.1145/3143359
+  url: assets/gorn-oopsla17.pdf
+  extra: |
+    <a class="button" href="https://gitlab.com/cogumbreiro/gorn/tree/oopsla17">Source + Proofs</a>
+    <a class="button" href="assets/gorn-oopsla17-slides.pdf">Slides<a/>
+    <a class="button" href="https://www.youtube.com/watch?v=p1SLkd1oKYA">Video</a>
+
+- type: article
+  id: phasers:jlamp17
+  title: "Formalization of Habanero Phasers using Coq"
+  journal: JLAMP
+  year: 2017
+  issn: 2352-2208
+  volume: 90
+  pages: 50–60
+  publisher: Elsevier
+  doi: 10.1016/j.jlamp.2017.02.006
+  authors:
+    - Tiago Cogumbreiro
+    - Jun Shirako
+    - Vivek Sarkar
+  extra: |
+    <a class="button" href="https://cogumbreiro.github.io/jlamp17/">Interpreter + Proofs</a>
+  url: assets/phasers-jlamp17.pdf
+
+- type: inproceedings
+  id: dist-phasers:europar16,
+  authors:
+  - Karthik Murthy
+  - Sri Raj Paul
+  - Kuldeep S. Meel
+  - Tiago Cogumbreiro
+  - John M. Mellor-Crummey
+
+  title: Design and verification of distributed phasers
+  booktitle: EuroPAR
+  year: 2016
+  pages: 405–418
+  publisher: Springer
+  series: LNCS
+  volume: 9833
+  doi: 10.1007/978-3-319-43659-3_30
+
+- type: inproceedings
+  id: phase-ordering:places16
+  authors:
+  - Tiago Cogumbreiro
+  - Jun Shirako
+  - Vivek Sarkar
+  title: Formalization of phase ordering
+  booktitle: PLACES
+  year: 2016
+  series: EPTCS
+  volume: 211
+  pages: 13–24
+  doi: 10.4204/EPTCS.211.2
+  extra: <a class="button" href="https://github.com/cogumbreiro/habanero-coq/tree/places16">Proofs</a>
+  url: assets/phase-ordering-places16.pdf
+
+- type: inproceedings
+  id: armus:ppopp15
+  authors:
+  - Tiago Cogumbreiro
+  - Raymond Hu
+  - Francisco Martins
+  - Nobuko Yoshida
+  title: Dynamic deadlock verification for general barrier synchronisation
+  booktitle: PPoPP
+  year: 2015
+  doi: 10.1145/2688500.2688519
+  publisher: ACM
+  pages: 150–160
+  extra: |
+    <a class="button" href="https://bitbucket.org/cogumbreiro/armus/wiki/PPoPP15">Source code</a>
+    <a class="button" href="https://bitbucket.org/cogumbreiro/brenner-coq/commits/tag/v1.0">Proofs</a>
+  url: assets/armus-ppopp15.pdf
+
+- type: inproceedings
+  id: armus:x1014
+  authors:
+  - Tiago Cogumbreiro
+  - Raymond Hu
+  - Francisco Martins
+  - Nobuko Yoshida
+  title: "Armus: dynamic deadlock verification for barriers"
+  year: 2014
+  booktitle: X10
+  url: assets/armus-x10.pdf
+
+- type: inproceedings
+  id: phased-acts:coordination13
+  authors:
+  - Tiago Cogumbreiro
+  - Francisco Martins
+  - Vasco T. Vasconcelos
+  title: Coordinating phased activities while maintaining progress
+  booktitle: COORDINATION
+  volume: 7890
+  year: 2013
+  pages: 31–44
+  doi: 10.1007/978-3-642-38493-6_3
+  publisher: Springer
+  url: assets/phased-acts-coordination13.pdf
+
+- type: inproceedings
+  id: types-for-clocks:places10
+  authors:
+  - Francisco Martins
+  - Vasco T. Vasconcelos
+  - Tiago Cogumbreiro
+  title: Types for X10 Clocks
+  booktitle: PLACES
+  year: 2010
+  pages: 111–129
+  doi: 10.4204/EPTCS.69.8
+  volume: 69
+  series: EPTCS
+  url: assets/types-for-clocks-places10.pdf
+
+- type: inproceedings
+  id: mil-infer:places09
+  authors:
+  - Vasco T. Vasconcelos
+  - Francisco Martins
+  - Tiago Cogumbreiro
+  title: Type inference for deadlock detection in a multithreaded typed assembly language
+  booktitle: PLACES
+  year: 2009
+  pages: 95–109
+  volume: 17
+  series: EPTCS
+  url: assets/mil-infer-places09.pdf
+  doi: 10.4204/EPTCS.17.8
+
+- type: inproceedings
+  id: pi-to-mil:places08
+  authors:
+  - Tiago Cogumbreiro
+  - Francisco Martins
+  - Vasco T. Vasconcelos
+  title: Compiling the π-calculus into a multithreaded typed assembly language
+  series: ENTCS
+  volume: 241
+  pages: 57–84
+  year: 2008
+  booktitle: PLACES
+  issn: 1571-0661
+  doi: 10.1016/j.entcs.2009.06.004
+  url: assets/pi-to-mil-places08.pdf

@@ -1,0 +1,70 @@
+TOPLAS:
+  title: ACM Transactions on Programming Languages and Systems
+  url: https://dl.acm.org/journal/toplas
+PACMPL:
+  title: Proceedings of the ACM on Programming Languages
+  url: https://dl.acm.org/journal/pacmpl
+JLAMP:
+  title: Journal of Logical and Algebraic Methods in Programming
+  url: https://www.sciencedirect.com/journal/journal-of-logical-and-algebraic-methods-in-programming
+PLACES:
+  title: Workshop on Programming Language Approaches to Concurrency- and Communication-cEntric Software
+  url:
+    2022: https://arxiv.org/abs/2203.12142
+    2016: https://arxiv.org/abs/1606.05403
+    2010: https://arxiv.org/abs/1110.3853
+    2009: https://arxiv.org/abs/1002.1408
+    2008: https://www.sciencedirect.com/journal/electronic-notes-in-theoretical-computer-science/vol/241/suppl/C
+X10:
+  title: The X10 Workshop
+  url:
+    2014: http://x10-lang.org/articles/246.html
+COORDINATION:
+  title: International Conference on Coordination Models and Languages
+  url:
+    2013: https://link.springer.com/book/10.1007/978-3-642-38493-6
+    2023: https://link.springer.com/book/10.1007/978-3-031-35361-1
+PPoPP:
+  title: ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming
+  url:
+    2015: https://dl.acm.org/doi/proceedings/10.1145/2688500
+    2019: https://dl.acm.org/doi/proceedings/10.1145/3293883
+ITiCSE:
+  title: ACM Conference on on Innovation and Technology in Computer Science Education
+  url:
+    2022: https://dl.acm.org/doi/proceedings/10.1145/3502718
+EuroPAR:
+  title: International European Conference on Parallel and Distributed Computing
+  url:
+    2016: https://link.springer.com/book/10.1007/978-3-319-43659-3
+CAV:
+  title: International Conference on Computer Aided Verification
+  url:
+    2021: https://link.springer.com/book/10.1007/978-3-030-81685-8
+TYPES:
+  title: International Conference on Types for Proofs and Programs
+  url:
+    2022: https://types22.inria.fr/
+TFP:
+  title: International Symposium on Trends in Functional Programming
+  url:
+    2023: https://trendsfp.github.io/2023/
+ECOOP:
+  title: European Conference on Object-Oriented Programming
+  url:
+    2023: https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-263
+FMSD:
+  title: Formal Methods in System Design
+  url: https://link.springer.com/journal/10703
+SERPL:
+  title: Southeast Regional Programming Languages Seminar
+  url:
+    2023: https://the-au-forml-lab.github.io/SERPL/events/2023/
+TFPIE:
+  title: Trends in Functional Programming in Education
+  url:
+    2024: https://wiki.tfpie.science.ru.nl/TFPIE2024
+VERDI:
+  title: International Workshop on Verification & Validation of Dependable Cyber-Physical Systems
+  url:
+    2023: https://ieeexplore.ieee.org/xpl/conhome/10207054/proceeding?isnumber=10207077

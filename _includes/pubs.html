@@ -1,0 +1,67 @@
+<ul>
+{% for article in site.data.publications %}
+  <li>
+  <strong>{{ article.title }}.</strong>
+  {% for author in article.authors -%}
+    {{ author }}{% unless forloop.last %}, {% endunless %}
+  {%- endfor -%}.
+  {% if article.type == "inproceedings" %}
+    In <i>
+    {% assign conf = site.data.conferences[article.booktitle] %}
+    {%- if conf -%}
+      {%- assign url = conf.url[article.year] -%}
+      <a href="{{ url }}" title="{{ conf.title }} ({{ article.year}})">{{ article.booktitle}}</a>
+    {%- else -%}
+      {{ article.booktitle}}
+    {%- endif -%}
+    </i>
+    {%- if article.volume -%}
+      , volume {{article.volume}}
+      {%- if article.series %}
+      of <i>{{ article.series}}</i>
+      {%- endif -%}
+    {% endif -%}
+    {%- if article.pages -%}
+      , page {{ article.pages }}
+    {%- endif -%}
+    {%- if article.publisher -%}
+      . {{ article.publisher }},
+    {%- else -%}.
+    {%- endif %}
+    {{ article.year }}.
+  {% elsif article.type == "article" %}
+    <i>
+    {% assign conf = site.data.conferences[article.journal] %}
+    {%- if conf -%}
+      <a href="{{ conf.url }}" title="{{ conf.title }}">{{ article.journal}}</a>
+    {%- else -%}
+      {{ article.journal }}
+    {%- endif -%}
+    </i>
+    {%- if article.volume -%}
+      , {{ article.volume }}
+      {%- if article.number -%}
+      ({{ article.number }})
+      {%- endif -%}
+    {%- endif -%}
+    {%- if article.pages -%}
+      :{{ article.pages }}
+    {%- endif -%}
+    , {{article.year }}.
+  {% elsif article.type == "misc" %}
+    In <i>
+    {% assign conf = site.data.conferences[article.booktitle] %}
+    {%- if conf -%}
+      {%- assign url = conf.url[article.year] -%}
+      <a href="{{ url }}" title="{{ conf.title }} ({{ article.year}})">{{ article.booktitle}}</a>
+    {%- else -%}
+      {{ article.booktitle}}
+    {%- endif -%}
+    </i>, {{ article.year }}
+  {% endif %}
+  {{ article.extra }}
+  {% if article.url %}<a class="button" href="{{article.url}}">PDF</a>{% endif %}
+  {% if article.doi %}<a class="button is-outlined {% if article.type == "article" %}is-success{% else %}is-info{% endif %}" href="https://dx.doi.org/{{article.doi}}">DOI</a>{% endif %}
+</li>
+{% endfor %}
+</ul>
