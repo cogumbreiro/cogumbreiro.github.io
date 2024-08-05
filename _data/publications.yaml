@@ -55,7 +55,7 @@
   media:
   - title: Slides
     url: assets/bu-sept-23.pdf
-  extra: <strong><a href="https://link.springer.com/journal/10.1007/s10703-024-00459-w">1 of 5</a></strong> invited publications from CAV21.
+  extra: <a href="https://link.springer.com/journal/10.1007/s10703-024-00459-w"><strong>1 of 5 invited publications from CAV21.</strong></a>
 
 - type: conference
   id: data-race-det:ecoop23
@@ -149,6 +149,7 @@
     url: https://ucl-pplv.github.io/CAV21/poster_P_195
   - title: Slides (Brunel'21)
     url: assets/faial-brunel21-slides.pdf
+  extra: <a href="https://link.springer.com/journal/10.1007/s10703-024-00459-w"><strong>1 of 5 invited publications from CAV21.</strong></a>
 
 - type: conference
   id: transitive-joins:ppopp19
