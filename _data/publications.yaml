@@ -1,4 +1,11 @@
 - type: unpublished
+  id: faial:vivekfest24
+  authors:  [Tiago Cogumbreiro, Julien Lange]
+  title: "Hidden assumptions in static verification of data-race free GPU programs"
+  year: 2024
+  booktitle: VIVEKFEST
+
+- type: unpublished
   id: regularc:tfpie24
   authors:  [Soroush Aghajani, Emma Kelminson, Tiago Cogumbreiro]
   title: "RegularIMP: an imperative calculus to describe regular languages (Extended Abstract)"
@@ -55,7 +62,7 @@
   media:
   - title: Slides
     url: assets/bu-sept-23.pdf
-  extra: <a href="https://link.springer.com/journal/10.1007/s10703-024-00459-w"><strong>1 of 5 invited publications from CAV21.</strong></a>
+  extra: <a class="tag is-medium is-warning" href="https://link.springer.com/journal/10.1007/s10703-024-00459-w"><strong>invited paper (CAV'21 special issue)</strong></a>
 
 - type: conference
   id: data-race-det:ecoop23
@@ -126,7 +133,9 @@
   title: "Verification of GPU Programs: Evaluation Challenges (Extended Abstract)"
   booktitle: PLACES
   year: 2022
-  extra: <a href="assets/eval-challenges-places22-slides.pdf">Presentation slides.</a>
+  media:
+  - url: assets/eval-challenges-places22-slides.pdf
+    title: Slides
   url: assets/eval-challenges-places22.pdf
 
 - type: conference
@@ -149,7 +158,7 @@
     url: https://ucl-pplv.github.io/CAV21/poster_P_195
   - title: Slides (Brunel'21)
     url: assets/faial-brunel21-slides.pdf
-  extra: <a href="https://link.springer.com/journal/10.1007/s10703-024-00459-w"><strong>1 of 5 invited publications from CAV21.</strong></a>
+  extra: <a class="tag is-medium is-warning" href="https://link.springer.com/journal/10.1007/s10703-024-00459-w"><strong>1 of 5 top papers invited for FMSD'23</strong></a>
 
 - type: conference
   id: transitive-joins:ppopp19
@@ -220,8 +229,9 @@
     - Tiago Cogumbreiro
     - Jun Shirako
     - Vivek Sarkar
-  buttons: |
-    <a class="button" href="https://cogumbreiro.github.io/jlamp17/">Interpreter + Proofs</a>
+  media:
+  - url: https://cogumbreiro.github.io/jlamp17/
+    title: Artifact
   url: assets/phasers-jlamp17.pdf
 
 - type: conference
