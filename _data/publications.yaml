@@ -20,6 +20,9 @@
   year: 2023
   booktitle: SERPL
   url: assets/faial-repair-serpl23.pdf
+  media:
+  - title: Slides
+    url: assets/faial-repair-serpl23-slides.pdf
 
 - type: unpublished
   id: faial-proj:serpl23
