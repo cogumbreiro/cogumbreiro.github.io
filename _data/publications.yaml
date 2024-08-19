@@ -1,4 +1,17 @@
-- type: unpublished
+- type: journal
+  authors:
+  - Dennis Liew
+  - Tiago Cogumbreiro
+  - Julien Lange
+  title: Sound and partially-complete static analysis of data-races in GPU programs
+  journal: PACMPL
+  number: OOPSLA
+  year: 2024
+  publisher: ACM
+  volume: 8
+  articleno: "?"
+
+- type: workshop
   id: faial:vivekfest24
   authors:  [Tiago Cogumbreiro, Julien Lange]
   title: "Hidden assumptions in static verification of data-race free GPU programs"
