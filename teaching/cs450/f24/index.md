@@ -10,7 +10,7 @@ data:
     lecture: Course info, arithmetic in Racket, evaluation
     published: true
   - lecture: Branching and function definitions
-    published: false
+    video: https://echo360.org/public/media/ff477918-3668-4ccd-8814-54c0edfd3ae7
   - lecture: Lists and code serialization
     published: false
 ################################################################################
