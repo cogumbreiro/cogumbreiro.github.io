@@ -4,6 +4,7 @@ semester: Fall 2024
 title: "CS 450: Structure of Higher Level Languages"
 layout: single
 exercises_ext: .zip
+previous_year: ../f23
 
 data:
   - module: Basic Functional Programming
@@ -263,6 +264,13 @@ calendar:
       {% include button.html url=s_url title="Download lecture slides (PDF)" icon="book" %}
       {% include button.html url=r.video icon="file-video" title="Video recording" %}
       {% include button.html url=f_url icon="box" title="Download lecture exercises" %}
+      </span>
+    {% else %}
+      {% capture h_url %}{{ page.previous_year }}/lecture{{ num }}.html{% endcapture %}
+      {% capture s_url %}{{ page.previous_year }}/lecture{{ num }}.pdf{% endcapture %}
+      <span class="buttons has-addons">
+      {% include button.html url=h_url title="Download lecture slides (HTML)" icon="download" %}
+      {% include button.html url=s_url title="Download lecture slides (PDF)" icon="book" %}
       </span>
     {% endif %}
   </td>
