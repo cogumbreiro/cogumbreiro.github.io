@@ -13,7 +13,7 @@ data:
   - lecture: Branching and function definitions
     video: https://echo360.org/public/media/ff477918-3668-4ccd-8814-54c0edfd3ae7
   - lecture: Lists and code serialization
-    published: false
+    video: https://echo360.org/public/media/ef8157f2-4722-4a74-82da-81078eab1152
 ################################################################################
     # 4, 5, 6
   - module: Advanced Functional Programming 
