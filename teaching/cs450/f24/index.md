@@ -20,9 +20,9 @@ data:
     lecture: Recursion, nested definitions
     video: https://echo360.org/public/media/13333e8b-f8ff-490e-ac30-8aedc0dcce5e
   - lecture: Modules, structs, (map) updating lists
-    #video: https://echo360.org/public/media/35fa8d24-74b8-4293-a73a-8cf6ec139ee6
+    video: https://echo360.org/public/media/1f57347b-f26c-4cea-8022-04bbd27cdf32
   - lecture: Functions as data-structures, currying
-    #video: https://echo360.org/public/media/821e701c-4abc-4e8f-8741-414c1f99bbb5
+    video: https://echo360.org/public/media/ab55368d-afe6-4a06-8295-cc2719f58da8
 ################################################################################
     # 7, 8, 9
   - module: Optimized Functional Programming
