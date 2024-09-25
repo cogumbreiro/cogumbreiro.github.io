@@ -3,7 +3,7 @@ author: Tiago Cogumbreiro
 semester: Fall 2024
 title: "CS 450: Structure of Higher Level Languages"
 layout: single
-exercises_ext: .zip
+exercises_ext: .rkt
 previous_year: ../f23
 
 data:
