@@ -23,6 +23,22 @@
   )
 )
 
+(define (list-to-string l)
+  (match l
+
+    [(list)
+      ; Input: []
+      ; Output: []
+      (list)
+    ]
+    [(list h l  ...)
+      (define result (list-to-string l))
+      (define x (float-to-string h)) ; x = 1
+      (cons x result)
+    ]
+  )
+)
+
 ;(list-exact-floor (list 1.1 2.6 3.0))
 
 (define (float-to-string f)
@@ -50,6 +66,12 @@
   )
 )
 
+(define (list-to-string2 l)
+  (map float-to-string l)
+)
+(define (list-exact-floor2 l)
+  (map exact-floor l)
+)
 ;(map float-to-string (list 1.1 2.6 3.0))
 
 #|
