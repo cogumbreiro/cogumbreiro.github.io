@@ -19,6 +19,7 @@
   title: "Hidden assumptions in static verification of data-race free GPU programs"
   year: 2024
   booktitle: VIVEKFEST
+  url: assets/faial-vivekfest24.pdf
 
 - type: unpublished
   id: regularc:tfpie24
