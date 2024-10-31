@@ -12,6 +12,9 @@
   articleno: 357
   doi: 10.1145/3689797
   url: assets/faial-oopsla24.pdf
+  media:
+  - title: Slides
+    url: assets/faial-oopsla24-slides.pdf
 
 - type: workshop
   id: faial:vivekfest24
