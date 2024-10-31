@@ -25,6 +25,9 @@
   year: 2024
   booktitle: VIVEKFEST
   url: assets/faial-vivekfest24.pdf
+  media:
+  - title: Slides
+    url: assets/faial-vivekfest24-slides.pdf
 
 - type: unpublished
   id: regularc:tfpie24
