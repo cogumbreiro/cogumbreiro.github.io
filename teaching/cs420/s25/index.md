@@ -296,15 +296,9 @@ calendar:
     {% endunless %}
     {% capture num %}{% if l_num < 10 %}0{% endif %}{{ l_num }}{% endcapture %}
     <td title="Date">{{ d.date }}</td>
-    {% if r.skip_slides %}
-      <td title="Skipped lecture number">
-      —
-      </td>
-    {% else %}
-      <td title="Lecture number">
-        {{ num }}
-      </td>
-    {% endif %}
+    <td title="Lecture number">
+      {{ num }}
+    </td>
     
     <td {% if r.lab %}style="background: #fefede;"{% endif %}>
       {% capture title %}{{ r.lecture }}
