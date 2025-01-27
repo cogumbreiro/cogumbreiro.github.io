@@ -226,8 +226,8 @@ calendar:
 
 # Course information
 
-* **Location:** (Y01-1350) Room 1350, 1<sup>st</sup> floor, University Hall
-* **Schedule:** Monday, Wednesday / 4:00pm to 5:15pm
+* **Location:** (W04-0138) Room 138, 4<sup>th</sup> floor, Wheatley
+* **Schedule:** Tuesday, Thursday / 11:00am to 12:15pm
 
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
