@@ -8,156 +8,168 @@ previous_year: ../f22
 data:
   - module: (HW1) Basics
     lecture: Course overview; Coq intro
-    video: https://echo360.org/public/media/72b488d6-ad90-4aa1-89ba-330d7be76964
+#    video: https://echo360.org/public/media/72b488d6-ad90-4aa1-89ba-330d7be76964
   - lecture: Pattern matching; reflexivity
-    video: https://liveumb-my.sharepoint.com/:v:/g/personal/tiago_cogumbreiro_umb_edu/EQ3rRWQ6m5FDvFc-G_R7DXgBWlDrLIpuX89eO3_yj9HNwQ
+#    video: https://liveumb-my.sharepoint.com/:v:/g/personal/tiago_cogumbreiro_umb_edu/EQ3rRWQ6m5FDvFc-G_R7DXgBWlDrLIpuX89eO3_yj9HNwQ
   - lecture: Proofs by induction
-    attachments:
-    - title: Classroom recording (S21)
-      url: https://echo360.org/media/f0ea8cb1-7fb8-43d9-9274-11d25c3cc3ed/public
-      type: video
-
+    # attachments:
+    # - title: Classroom recording (S21)
+    #   url: https://echo360.org/media/f0ea8cb1-7fb8-43d9-9274-11d25c3cc3ed/public
+    #   type: video
+  ##############################################################################
   - module: (HW2) Induction
     lecture: Manipulating theorems; data-structures
-    attachments:
-    - title: Classroom recording (S21)
-      url: https://echo360.org/media/4779b4aa-dd7f-4d4b-ab85-1d2e7d6cfd1b/public
-      type: video
+    # attachments:
+    # - title: Classroom recording (S21)
+    #   url: https://echo360.org/media/4779b4aa-dd7f-4d4b-ab85-1d2e7d6cfd1b/public
+    #   type: video
 
   - lecture: Polymorphism; Constructor injectivity, explosion principle
-    video: https://echo360.org/public/media/e08a7505-1be3-4490-adfb-9ac42e174163
+    # video: https://echo360.org/public/media/e08a7505-1be3-4490-adfb-9ac42e174163
   - lecture: Logical Connectives
-    video: https://echo360.org/public/media/1c7b85ec-082f-42a2-b18f-a0ece85bfa0c
-  - lecture: Mini-test 1 recap
-    video: https://echo360.org/public/media/35908250-a939-433d-b4cc-0f0e38fc34fc
+    # video: https://echo360.org/public/media/1c7b85ec-082f-42a2-b18f-a0ece85bfa0c
 ################################################################################
-  - module: Formal Languages
+  - module: (MT1) Logic and proving
+    lecture: Mini-test 1
+    # video: https://echo360.org/public/media/35908250-a939-433d-b4cc-0f0e38fc34fc
+################################################################################
+  - module: (HW3) Formal Languages
     lecture: Formal languages
-    video: https://echo360.org/public/media/0f876659-46e6-4519-8b55-a208857aa2d6
+    # video: https://echo360.org/public/media/0f876659-46e6-4519-8b55-a208857aa2d6
   - lecture: Kleene star, language equivalence
-    video: https://echo360.org/public/media/c575399c-eaba-4462-9fec-68edb61d8e34
-  - lecture: Recap & exercises
-    video: https://echo360.org/public/media/021ad153-ed90-4134-b131-58a79d1ddecb
-  - module: Regular Languages
+    # video: https://echo360.org/public/media/c575399c-eaba-4462-9fec-68edb61d8e34
+  - lecture: HW3 Recap & exercises
+    # video: https://echo360.org/public/media/021ad153-ed90-4134-b131-58a79d1ddecb
+################################################################################
+  - module: (HW4) Regular Languages
     lecture: Regular expressions
-    video: https://echo360.org/public/media/c1e727b1-3c2f-447e-b9b2-2adac4282b6b
-    skip_exercises: true
-    skip_slides: true
-    attachments:
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture11.pdf
-      type: pdf
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture11.html
-      type: download
-
+    # video: https://echo360.org/public/media/c1e727b1-3c2f-447e-b9b2-2adac4282b6b
+    # skip_exercises: true
+    # skip_slides: true
+    # attachments:
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture11.pdf
+    #   type: pdf
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture11.html
+    #   type: download
   - lecture: REGEX & Nondeterministic Finite Automata
-    video: https://echo360.org/public/media/f17fba8e-d264-4b45-bf1b-5d281a032c95
-    skip_exercises: true
-    skip_slides: true
-    attachments:
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture12.pdf
-      type: pdf
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture12.html
-      type: download
-  - lecture: NFA ⇔ REGEX
-    skip_exercises: true
-    video: https://echo360.org/public/media/73e0d272-f9d4-4b8f-9b25-9f9bb6a3f1b3
-    skip_slides: true
-    attachments:
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture13.pdf
-      type: pdf
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture13.html
-      type: download
+    # video: https://echo360.org/public/media/f17fba8e-d264-4b45-bf1b-5d281a032c95
+    # skip_exercises: true
+    # skip_slides: true
+    # attachments:
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture12.pdf
+    #   type: pdf
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture12.html
+    #   type: download
+  - lecture: HW4 recap & exercises
+################################################################################
+  - module: (MT2) Regular automata
+    lecture: NFA ⇔ REGEX
+    # skip_exercises: true
+    # video: https://echo360.org/public/media/73e0d272-f9d4-4b8f-9b25-9f9bb6a3f1b3
+    # skip_slides: true
+    # attachments:
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture13.pdf
+    #   type: pdf
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture13.html
+    #   type: download
   - lecture: Deterministic Finite Automata; NFA ⇔ DFA
-    video: https://echo360.org/public/media/c9bcb5f8-5fe3-4695-808c-5112f1d82a9f
-    skip_slides: true
-    attachments:
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture14.pdf
-      type: pdf
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture14.html
-      type: download
+    # video: https://echo360.org/public/media/c9bcb5f8-5fe3-4695-808c-5112f1d82a9f
+    # skip_slides: true
+    # attachments:
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture14.pdf
+    #   type: pdf
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture14.html
+    #   type: download
 ################################################################################
-  - module: Context-free Languages
+  - module: (HW5) Context-free Languages
     lecture: Pumping lemma; Non-regular languages
-    video: https://echo360.org/public/media/d20dbb17-3a23-4d33-8943-ce24b768c092
-    skip_slides: true
-    attachments:
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture15.pdf
-      type: pdf
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture15.html
-      type: download
+    # video: https://echo360.org/public/media/d20dbb17-3a23-4d33-8943-ce24b768c092
+    # skip_slides: true
+    # attachments:
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture15.pdf
+    #   type: pdf
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture15.html
+    #   type: download
   - lecture: Context-free grammars
-    skip_slides: true
-    video: https://echo360.org/public/media/e30ef20b-5b1f-4fa7-8b0a-4123246e50df
-    attachments:
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture16.pdf
-      type: pdf
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture16.html
-      type: download
-  - lecture: Pushdown Automata
-    video: https://echo360.org/public/media/2a0c6d47-8b81-4675-b195-099cf13385d0
-    skip_slides: true
-    attachments:
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture17.pdf
-      type: pdf
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture17.html
-      type: download
-  - lecture: PDA ⇔ CFG
-    skip_slides: true
-    video: https://echo360.org/public/media/f64fe3a0-7da1-478f-9d76-975aecfc1012
-    attachments:
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture18.pdf
-      type: pdf
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture18.html
-      type: download
-
-  - lecture: Pumping lemma; Non-context-free Languages; Turing Machines
-    skip_slides: true
-    video: https://echo360.org/public/media/4f70d00f-3f5f-4633-808e-2ba60db4c4d3
-    attachments:
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture19.pdf
-      type: pdf
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture19.html
-      type: download
-  - lecture: Variants of Turing Machines
-    skip_slides: true
-    video: https://echo360.org/public/media/4f70d00f-3f5f-4633-808e-2ba60db4c4d3
-    attachments:
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture20.pdf
-      type: pdf
-    - title: Slides (S21)
-      url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture20.html
-      type: download
+    # skip_slides: true
+    # video: https://echo360.org/public/media/e30ef20b-5b1f-4fa7-8b0a-4123246e50df
+    # attachments:
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture16.pdf
+    #   type: pdf
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture16.html
+    #   type: download
+  - lecture: HW5 recap & exercises
 ################################################################################
-  - module: Decidability
-    lecture: Acceptance, emptiness and equality tests (HW7)
-    skip_exercises: true
-    video: https://echo360.org/public/media/d7a2b970-fe7d-458f-936b-c8f82c8f9ebc
+  - module: (MT2) Context-free automata
+    lecture: Pushdown Automata
+    # video: https://echo360.org/public/media/2a0c6d47-8b81-4675-b195-099cf13385d0
+    # skip_slides: true
+    # attachments:
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture17.pdf
+    #   type: pdf
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture17.html
+    #   type: download
+  - lecture: PDA ⇔ CFG
+    # skip_slides: true
+    # video: https://echo360.org/public/media/f64fe3a0-7da1-478f-9d76-975aecfc1012
+    # attachments:
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture18.pdf
+    #   type: pdf
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture18.html
+    #   type: download
+################################################################################
+  - module: (HW6) Non-context-free languages
+    lecture: Pumping lemma; Non-context-free Languages; Turing Machines
+    # skip_slides: true
+    # video: https://echo360.org/public/media/4f70d00f-3f5f-4633-808e-2ba60db4c4d3
+    # attachments:
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture19.pdf
+    #   type: pdf
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture19.html
+    #   type: download
+  - lecture: Variants of Turing Machines
+    # skip_slides: true
+    # video: https://echo360.org/public/media/4f70d00f-3f5f-4633-808e-2ba60db4c4d3
+    # attachments:
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture20.pdf
+    #   type: pdf
+    # - title: Slides (S21)
+    #   url: https://cogumbreiro.github.io/teaching/cs420/f21/lecture20.html
+    #   type: download
+  - lecture: HW6 recap & exercises
+################################################################################
+  - module: (HW7) Decidability
+    lecture: Acceptance, emptiness and equality tests
+    # skip_exercises: true
+    # video: https://echo360.org/public/media/d7a2b970-fe7d-458f-936b-c8f82c8f9ebc
   - lecture: Undecidability
-    video: https://echo360.org/public/media/76cd70c3-4c7b-4115-aee0-d3966fead93f
-    skip_exercises: true 
+    # video: https://echo360.org/public/media/76cd70c3-4c7b-4115-aee0-d3966fead93f
+    # skip_exercises: true 
   - lecture: A<sub>tm</sub> is undecidable
-    video: https://echo360.org/public/media/f5855cd0-ed1a-4780-9322-ac033c17fbf0
-    skip_exercises: true
-  - lecture: Undecidable problems (HW8) (HW7 deadline)
+    # video: https://echo360.org/public/media/f5855cd0-ed1a-4780-9322-ac033c17fbf0
+    # skip_exercises: true
+################################################################################  
+  - module: (HW8) Undecidability
+    lecture: Undecidable problems
   - lecture: Undecidable problems
   - lecture: Mapping reducibility
   - lecture: QA Session
