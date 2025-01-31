@@ -8,6 +8,7 @@ previous_year: ../f22
 data:
   - module: (HW1) Basics
     lecture: Course overview; Coq intro
+    published: true
 #    video: https://echo360.org/public/media/72b488d6-ad90-4aa1-89ba-330d7be76964
   - lecture: Pattern matching; reflexivity
 #    video: https://liveumb-my.sharepoint.com/:v:/g/personal/tiago_cogumbreiro_umb_edu/EQ3rRWQ6m5FDvFc-G_R7DXgBWlDrLIpuX89eO3_yj9HNwQ
