@@ -171,7 +171,6 @@ data:
 ################################################################################  
   - module: (HW8) Undecidability
     lecture: Undecidable problems
-  - lecture: Undecidable problems
   - lecture: Mapping reducibility
   - lecture: QA Session
   - lecture: QA Session (HW8 deadline)
@@ -182,6 +181,7 @@ calendar:
 
 - date: Tu, Feb 04
 - date: Thu, Feb 06
+  closure: true
 
 - date: Tu, Feb 11
 - date: Thu, Feb 13
