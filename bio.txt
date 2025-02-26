@@ -1,0 +1,10 @@
+
+Tiago Cogumbreiro's research helps programmers write software with fewer bugs.
+He is interested in formal methods applied to High-Performance Computing,
+developing tools and techniques that localize errors.
+
+Tiago Cogumbreiro is an assistant professor, and joined the Department of
+Computer Science at the University of Massachusetts Boston in fall of 2018.
+Prior to that, Tiago was a postdoctoral researcher at the Georgia Institute of
+Technology and Rice University, a research assistant at Imperial College London.
+Tiago obtained a PhD from the University of Lisbon, Portugal.
