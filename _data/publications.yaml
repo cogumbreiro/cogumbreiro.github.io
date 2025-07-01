@@ -22,7 +22,8 @@
   id: faial:vivekfest24
   authors:  [Tiago Cogumbreiro, Julien Lange]
   title: "Hidden assumptions in static verification of data-race free GPU programs"
-  year: 2024
+  year: 2025
+  doi: 10.1007/978-3-031-97492-2_6
   booktitle: VIVEKFEST
   url: assets/faial-vivekfest24.pdf
   media:

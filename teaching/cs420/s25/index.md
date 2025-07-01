@@ -136,7 +136,7 @@ data:
     #   type: download
 ################################################################################
   - module: (HW6) Non-context-free languages
-    lecture: Pumping lemma; Non-context-free Languages; Turing Machines
+    lecture: Turing recognizable problems
     # skip_slides: true
     # video: https://echo360.org/public/media/4f70d00f-3f5f-4633-808e-2ba60db4c4d3
     # attachments:
