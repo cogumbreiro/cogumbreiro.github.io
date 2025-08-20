@@ -6,6 +6,18 @@ layout: single
 exercises_ext: .rkt
 previous_year: ../f23
 
+course_info:
+  location: "(W01-0005) Room 0005, 1<sup>st</sup> floor, Wheatley"
+  schedule: "Monday/Wednesday 5:30PM - 6:45PM"
+
+past_editions:
+  - {name: "Fall '23", link: "../f23/"}
+  - {name: "Spring '23", link: "../s23/"}
+  - {name: "Fall '22", link: "../f22/"}
+  - {name: "Spring '21", link: "../s21/"}
+  - {name: "Spring '20", link: "../s20/"}
+  - {name: "Spring '19", link: "../s19/"}
+
 data:
   - module: Basic Functional Programming
     lecture: Course info, arithmetic in Racket, evaluation
@@ -154,16 +166,14 @@ calendar:
 </div>
 
 **Past editions:**
-[**Fall '23**](../f23/),
-[**Spring '23**](../s23/),
-[**Fall '22**](../f22/),
-[**Spring '21**](../s21/),
-[**Spring '20**](../s20/),
-[**Spring '19**](../s19/)
+{% for edition in page.past_editions -%}
+[**{{ edition.name }}**]({{ edition.link }})
+{%- unless forloop.last %}, {% endunless -%}
+{% endfor %}
 
 # Course information
-* **Location:** (W01-0005) Room 0005, 1<sup>st</sup> floor, Wheatley
-* **Schedule:** Monday/Wednesday 5:30PM - 6:45PM
+* **Location:** {{ page.course_info.location }}
+* **Schedule:** {{ page.course_info.schedule }}
 
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
