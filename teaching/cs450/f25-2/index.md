@@ -7,7 +7,7 @@ exercises_ext: .rkt
 previous_year: ../f24
 
 course_info:
-  location: Wheatley-Peters W01-0004
+  location: W01-0004 (Wheatley)
   schedule: Tuesday/Thursday 4:00PM - 5:15PM
 past_editions:
 - name: Fall '24
