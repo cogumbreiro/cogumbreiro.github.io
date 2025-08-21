@@ -158,7 +158,7 @@ calendar:
 
 ---
 
-<h1 class="has-text-centered">{{ page.title }}</h1>
+<h1 class="has-text-centered">{{ page.title }}{% if page.section %} (Section {{ page.section }}){% endif %}</h1>
 <h2 class="has-text-centered" style="padding-bottom:1em;">{{ page.semester }}</h2>
 
 <div class="buttons is-centered">
