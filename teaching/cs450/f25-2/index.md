@@ -169,7 +169,7 @@ section: '2'
 # Instructor contact
 * **Email:** [`Tiago.Cogumbreiro@umb.edu`](mailto:Tiago.Cogumbreiro@umb.edu)
 * **Office hours:** {{ site.office.hours }}
-
+* **Office location:** {{ site.office.location }}
 
 ## Class Schedule
 
