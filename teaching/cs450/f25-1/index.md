@@ -4,7 +4,7 @@ semester: Fall 2025
 title: "CS 450: Structure of Higher Level Languages"
 layout: single
 exercises_ext: .rkt
-previous_year: ../f24
+previous_year: ../f23
 
 course_info:
   location: W01-0004 (Wheatley)
@@ -27,89 +27,104 @@ past_editions:
 data:
 - module: Basic Functional Programming
   lecture: Course info, arithmetic in Racket, evaluation
-  published: true
+  skip_exercises: true
 - lecture: Branching and function definitions
-  video: https://echo360.org/public/media/ff477918-3668-4ccd-8814-54c0edfd3ae7
+  skip_exercises: true
+  #video: https://echo360.org/public/media/ff477918-3668-4ccd-8814-54c0edfd3ae7
 - lecture: Lists and code serialization
-  video: https://echo360.org/public/media/ef8157f2-4722-4a74-82da-81078eab1152
+  skip_exercises: true
+  #video: https://echo360.org/public/media/ef8157f2-4722-4a74-82da-81078eab1152
 ################################################################################
     # 4, 5, 6
 - module: Advanced Functional Programming
   lecture: Recursion, nested definitions
-  video: https://echo360.org/public/media/13333e8b-f8ff-490e-ac30-8aedc0dcce5e
+  skip_exercises: true
+  #video: https://echo360.org/public/media/13333e8b-f8ff-490e-ac30-8aedc0dcce5e
 - lecture: Modules, structs, (map) updating lists
-  video: https://echo360.org/public/media/1f57347b-f26c-4cea-8022-04bbd27cdf32
+  skip_exercises: true
+  #video: https://echo360.org/public/media/1f57347b-f26c-4cea-8022-04bbd27cdf32
 - lecture: Functions as data-structures, currying
-  video: https://echo360.org/public/media/ab55368d-afe6-4a06-8295-cc2719f58da8
+  skip_exercises: true
+  #video: https://echo360.org/public/media/ab55368d-afe6-4a06-8295-cc2719f58da8
 ################################################################################
     # 7, 8, 9
 - module: Optimized Functional Programming
   lecture: foldr, looping first-to-last
-    #video: https://echo360.org/public/media/21fe47b3-9e36-4dd7-94fa-8365c93f5007
+  skip_exercises: true
+  #video: https://echo360.org/public/media/21fe47b3-9e36-4dd7-94fa-8365c93f5007
 - lecture: foldl, looping last-to-first
-    #video: https://echo360.org/public/media/f734dba6-99bb-411b-8fa9-6ae26db8aa76
+  skip_exercises: true
+  #video: https://echo360.org/public/media/f734dba6-99bb-411b-8fa9-6ae26db8aa76
 - lecture: Homework help; tail-recursion
-    #video: https://echo360.org/public/media/07be33d6-8efe-4084-bad0-f44267724923
-    #skip_exercises: true
+  #video: https://echo360.org/public/media/07be33d6-8efe-4084-bad0-f44267724923
+  skip_exercises: true
 ################################################################################
 - module: Lazy evaluation
   lecture: "TypedRacket, thunks, and promises"
-    #video: https://echo360.org/public/media/fc39936d-baec-40ab-8dd0-485b2366c9ed
+  skip_exercises: true
+  #video: https://echo360.org/public/media/fc39936d-baec-40ab-8dd0-485b2366c9ed
 - lecture: "Infinite streams"
-    #video: https://echo360.org/public/media/1417e82f-15b8-431c-9607-fcaa96cc3fe4
+  skip_exercises: true
+  #video: https://echo360.org/public/media/1417e82f-15b8-431c-9607-fcaa96cc3fe4
 - lecture: Finite streams, evaluating expressions
-    #video: https://echo360.org/public/media/b84930c3-6199-4d81-9757-134d0a768d41
+  skip_exercises: true
+  #video: https://echo360.org/public/media/b84930c3-6199-4d81-9757-134d0a768d41
 ################################################################################
 - module: Implementing function calls
   lecture: "Language λ<sub>S</sub>: slow function calls"
-    #video: https://echo360.org/public/media/29c71ccc-d21a-407f-abeb-f25e12f5e07a
-    #skip_exercises: true
+  #video: https://echo360.org/public/media/29c71ccc-d21a-407f-abeb-f25e12f5e07a
+  skip_exercises: true
 - lecture: "Language λ<sub>E</sub>: fast function calls"
-    #skip_exercises: true
-    #video: https://echo360.org/public/media/5e67149e-c375-4071-b41e-054b0eaf94da
+  skip_exercises: true
+  #video: https://echo360.org/public/media/5e67149e-c375-4071-b41e-054b0eaf94da
 - lecture: Exercises
-    #skip_exercises: true
-    #video: https://echo360.org/public/media/08ee40ee-7c9e-4785-96fd-2c724d01a47b
+  skip_exercises: true
+  #video: https://echo360.org/public/media/08ee40ee-7c9e-4785-96fd-2c724d01a47b
 
 ################################################################################
 - module: Implementing Racket's define
   lecture: "Specifying λ<sub>D</sub>"
-    #video: https://echo360.org/public/media/a76560ed-66ac-4667-a3e5-14233a60df3e
+  skip_exercises: true
+  #video: https://echo360.org/public/media/a76560ed-66ac-4667-a3e5-14233a60df3e
 - lecture: Implementing λ<sub>D</sub>
-    #video: https://echo360.org/public/media/48b4a11c-d82a-40c0-81d1-4e005195d88e
-    #skip_exercises: true
+  #video: https://echo360.org/public/media/48b4a11c-d82a-40c0-81d1-4e005195d88e
+  skip_exercises: true
 - lecture: "Exercises"
-    #skip_exercises: true
-    #video: https://echo360.org/public/media/49d4a7c0-94bc-4d2c-8c56-c662b6e6601b
+  skip_exercises: true
+  #video: https://echo360.org/public/media/49d4a7c0-94bc-4d2c-8c56-c662b6e6601b
 ################################################################################
 - module: Monads and side effects
   lecture: Garbage collection
-    #video: https://echo360.org/public/media/e90532b0-2fd2-4336-8879-1127ebb24d9f
-    #skip_exercises: true
+  #video: https://echo360.org/public/media/e90532b0-2fd2-4336-8879-1127ebb24d9f
+  skip_exercises: true
 - lecture: The state monad
-    #video: https://echo360.org/public/media/df514883-7806-464e-a421-02d951088baa
+  #video: https://echo360.org/public/media/df514883-7806-464e-a421-02d951088baa
 - lecture: Loops and error monad
-    #video: https://echo360.org/public/media/e7c43caf-8a43-457f-bffd-59dae44d9ba9
+  #video: https://echo360.org/public/media/e7c43caf-8a43-457f-bffd-59dae44d9ba9
+  skip_exercises: true
 ################################################################################
 - module: Abstraction
   lecture: Monadic error; Monadic continuations
-    #video: https://echo360.org/public/media/eaf1f31f-ebfe-4a87-a0f6-d8e51ec04eea
+  skip_exercises: true
+  #video: https://echo360.org/public/media/eaf1f31f-ebfe-4a87-a0f6-d8e51ec04eea
 - lecture: Parameters; Generic methods
-    #video: https://echo360.org/public/media/c75d6b87-e47f-49e6-805b-0da76bb93c59
+  skip_exercises: true
+  #video: https://echo360.org/public/media/c75d6b87-e47f-49e6-805b-0da76bb93c59
 - lecture: Macros
-    #video: https://echo360.org/public/media/c58ba9bd-2352-41cc-a23f-682c09013ed5
+  skip_exercises: true
+  #video: https://echo360.org/public/media/c58ba9bd-2352-41cc-a23f-682c09013ed5
 
 ################################################################################
 - module: Object Oriented Programming
   lecture: LambdaJS
-    #skip_exercises: true
-    #video: https://echo360.org/public/media/1a8580e1-3a88-4adf-9fd9-d8023a13fa41
+  skip_exercises: true
+  #video: https://echo360.org/public/media/1a8580e1-3a88-4adf-9fd9-d8023a13fa41
 - lecture: JavaScript method and class inheritance
-    #video: https://echo360.org/public/media/3fc02e34-d393-4292-a481-be4caa56222b
-    #skip_exercises: true
+  #video: https://echo360.org/public/media/3fc02e34-d393-4292-a481-be4caa56222b
+  skip_exercises: true
 - lecture: Conclusion
-    #video: https://echo360.org/public/media/cd5b4b04-f60d-4f59-b759-92a86a1f5624
-    #skip_exercises: true
+  #video: https://echo360.org/public/media/cd5b4b04-f60d-4f59-b759-92a86a1f5624
+  skip_exercises: true
 - lecture: QA
 - lecture: QA
 
