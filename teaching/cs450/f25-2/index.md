@@ -28,6 +28,7 @@ data:
 - module: Basic Functional Programming
   lecture: Course info, arithmetic in Racket, evaluation
   skip_exercises: true
+  video: https://echo360.org/public/media/ef6cf8cf-d920-42fe-835b-deee58cba80e
   #published: true
 - lecture: Branching and function definitions
   skip_exercises: true
