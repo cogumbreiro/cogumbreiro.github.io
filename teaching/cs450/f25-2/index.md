@@ -27,109 +27,85 @@ past_editions:
 data:
 - module: Basic Functional Programming
   lecture: Course info, arithmetic in Racket, evaluation
-  skip_exercises: true
   video: https://echo360.org/public/media/ef6cf8cf-d920-42fe-835b-deee58cba80e
   #published: true
+  slides_from: f25-2
 - lecture: Branching and function definitions
-  skip_exercises: true
-  #video: https://echo360.org/public/media/ff477918-3668-4ccd-8814-54c0edfd3ae7
+  slides_from: f23
 - lecture: Lists and code serialization
-  skip_exercises: true
-  #video: https://echo360.org/public/media/ef8157f2-4722-4a74-82da-81078eab1152
-################################################################################
-    # 4, 5, 6
+  slides_from: f23
 - module: Advanced Functional Programming
   lecture: Recursion, nested definitions
-  skip_exercises: true
-  #video: https://echo360.org/public/media/13333e8b-f8ff-490e-ac30-8aedc0dcce5e
+  slides_from: f23
 - lecture: Modules, structs, (map) updating lists
-  skip_exercises: true
-  #video: https://echo360.org/public/media/1f57347b-f26c-4cea-8022-04bbd27cdf32
+  slides_from: f23
 - lecture: Functions as data-structures, currying
-  skip_exercises: true
-  #video: https://echo360.org/public/media/ab55368d-afe6-4a06-8295-cc2719f58da8
-################################################################################
-    # 7, 8, 9
+  slides_from: f23
 - module: Optimized Functional Programming
   lecture: foldr, looping first-to-last
-  skip_exercises: true
-  #video: https://echo360.org/public/media/21fe47b3-9e36-4dd7-94fa-8365c93f5007
+  slides_from: f23
 - lecture: foldl, looping last-to-first
-  skip_exercises: true
-  #video: https://echo360.org/public/media/f734dba6-99bb-411b-8fa9-6ae26db8aa76
+  slides_from: f23
 - lecture: Homework help; tail-recursion
   #video: https://echo360.org/public/media/07be33d6-8efe-4084-bad0-f44267724923
-  skip_exercises: true
-################################################################################
+  slides_from: f23
 - module: Lazy evaluation
   lecture: "TypedRacket, thunks, and promises"
-  skip_exercises: true
-  #video: https://echo360.org/public/media/fc39936d-baec-40ab-8dd0-485b2366c9ed
+  slides_from: f23
 - lecture: "Infinite streams"
-  skip_exercises: true
-  #video: https://echo360.org/public/media/1417e82f-15b8-431c-9607-fcaa96cc3fe4
+  slides_from: f23
 - lecture: Finite streams, evaluating expressions
-  skip_exercises: true
-  #video: https://echo360.org/public/media/b84930c3-6199-4d81-9757-134d0a768d41
-################################################################################
+  slides_from: f23
 - module: Implementing function calls
   lecture: "Language λ<sub>S</sub>: slow function calls"
   #video: https://echo360.org/public/media/29c71ccc-d21a-407f-abeb-f25e12f5e07a
-  skip_exercises: true
+  slides_from: f23
 - lecture: "Language λ<sub>E</sub>: fast function calls"
-  skip_exercises: true
-  #video: https://echo360.org/public/media/5e67149e-c375-4071-b41e-054b0eaf94da
+  slides_from: f23
 - lecture: Exercises
-  skip_exercises: true
-  #video: https://echo360.org/public/media/08ee40ee-7c9e-4785-96fd-2c724d01a47b
-
-################################################################################
+  slides_from: f23
 - module: Implementing Racket's define
   lecture: "Specifying λ<sub>D</sub>"
-  skip_exercises: true
-  #video: https://echo360.org/public/media/a76560ed-66ac-4667-a3e5-14233a60df3e
+  slides_from: f23
 - lecture: Implementing λ<sub>D</sub>
   #video: https://echo360.org/public/media/48b4a11c-d82a-40c0-81d1-4e005195d88e
-  skip_exercises: true
+  slides_from: f23
 - lecture: "Exercises"
-  skip_exercises: true
-  #video: https://echo360.org/public/media/49d4a7c0-94bc-4d2c-8c56-c662b6e6601b
-################################################################################
+  slides_from: f23
 - module: Monads and side effects
   lecture: Garbage collection
   #video: https://echo360.org/public/media/e90532b0-2fd2-4336-8879-1127ebb24d9f
-  skip_exercises: true
+  slides_from: f23
 - lecture: The state monad
   #video: https://echo360.org/public/media/df514883-7806-464e-a421-02d951088baa
+  show_exercises: true
+  slides_from: f23
 - lecture: Loops and error monad
   #video: https://echo360.org/public/media/e7c43caf-8a43-457f-bffd-59dae44d9ba9
-  skip_exercises: true
-################################################################################
+  slides_from: f23
 - module: Abstraction
   lecture: Monadic error; Monadic continuations
-  skip_exercises: true
-  #video: https://echo360.org/public/media/eaf1f31f-ebfe-4a87-a0f6-d8e51ec04eea
+  slides_from: f23
 - lecture: Parameters; Generic methods
-  skip_exercises: true
-  #video: https://echo360.org/public/media/c75d6b87-e47f-49e6-805b-0da76bb93c59
+  slides_from: f23
 - lecture: Macros
-  skip_exercises: true
-  #video: https://echo360.org/public/media/c58ba9bd-2352-41cc-a23f-682c09013ed5
-
-################################################################################
+  slides_from: f23
 - module: Object Oriented Programming
   lecture: LambdaJS
-  skip_exercises: true
-  #video: https://echo360.org/public/media/1a8580e1-3a88-4adf-9fd9-d8023a13fa41
+  slides_from: f23
 - lecture: JavaScript method and class inheritance
   #video: https://echo360.org/public/media/3fc02e34-d393-4292-a481-be4caa56222b
-  skip_exercises: true
+  slides_from: f23
 - lecture: Conclusion
   #video: https://echo360.org/public/media/cd5b4b04-f60d-4f59-b759-92a86a1f5624
-  skip_exercises: true
+  slides_from: f23
 - lecture: QA
+  show_exercises: true
+  slides_from: f23
 - lecture: QA
 
+  show_exercises: true
+  slides_from: f23
 calendar:
 - date: Tue, Sep 2
 - date: Thu, Sep 4
@@ -229,16 +205,6 @@ section: '2'
 {% endif %}
 
 <tr>
-
-  {% if r.published %}
-    {% assign is_pub = true %}
-  {% elsif r.video %}
-    {% assign is_pub = true %}
-  {% elsif r.attachments %}
-    {% assign is_pub = true %}
-  {% else %}
-    {% assign is_pub = false %}
-  {% endif %}
   {% unless r.skip_slides %}
   {% assign l_num = l_num | plus: 1 %}
   {% endunless %}
@@ -256,41 +222,30 @@ section: '2'
   
   <td {% if r.lab %}style="background: #fefede;"{% endif %}>
     {% capture title %}{{ r.lecture }}
-    {%- if r.hw %} <b>HW{{ r.hw }} due!</b>{%- endif %}
     {%- endcapture -%}
     {{ title }}
-    {% if is_pub and r.skip_slides %}
-        {% if r.skip_slides %} <i>(no slides)</i>{% endif %}
-    {% endif %}
+    {% if r.skip_slides %} <i>(no slides)</i>{% endif %}
   </td>
   <td>
-    {% if is_pub %}
-      {% capture h_url %}lecture{{ num }}.html{% endcapture %}
-
-      {% if r.skip_slides %}{% assign s_url = nil %}{% else %}
-        {% capture s_url %}lecture{{ num }}.pdf{% endcapture %}
+    <span class="buttons has-addons">
+      {% unless r.skip_slides %}
+        {% if r.slides_from %}
+          {% capture h_url %}../{{ r.slides_from }}/lecture{{ num }}.html{% endcapture %}
+          {% capture s_url %}../{{ r.slides_from }}/lecture{{ num }}.pdf{% endcapture %}
+          {% include button.html url=h_url title="Download lecture slides (HTML)" icon="download" %}
+          {% include button.html url=s_url title="Download lecture slides (PDF)" icon="book" %}
+        {% endif %}
+      {% endunless %}
+      
+      {% if r.video %}
+        {% include button.html url=r.video icon="file-video" title="Video recording" %}
       {% endif %}
-
-      {% if r.skip_exercises %}
-        {% assign f_url = nil %}
-      {% else %}
+      
+      {% if r.show_exercises %}
         {% capture f_url %}lecture{{ num }}{{ page.exercises_ext }}{% endcapture %}
+        {% include button.html url=f_url icon="box" title="Download lecture exercises" %}
       {% endif %}
-
-      <span class="buttons has-addons">
-      {% include button.html url=h_url title="Download lecture slides (HTML)" icon="download" %}
-      {% include button.html url=s_url title="Download lecture slides (PDF)" icon="book" %}
-      {% include button.html url=r.video icon="file-video" title="Video recording" %}
-      {% include button.html url=f_url icon="box" title="Download lecture exercises" %}
-      </span>
-    {% else %}
-      {% capture h_url %}{{ page.previous_year }}/lecture{{ num }}.html{% endcapture %}
-      {% capture s_url %}{{ page.previous_year }}/lecture{{ num }}.pdf{% endcapture %}
-      <span class="buttons has-addons">
-      {% include button.html url=h_url title="Download lecture slides (HTML)" icon="download" %}
-      {% include button.html url=s_url title="Download lecture slides (PDF)" icon="book" %}
-      </span>
-    {% endif %}
+    </span>
   </td>
 </tr>
 {% endif %}
