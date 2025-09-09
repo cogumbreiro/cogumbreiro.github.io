@@ -30,8 +30,11 @@ data:
   video: https://echo360.org/public/media/ef6cf8cf-d920-42fe-835b-deee58cba80e
   #published: true
   slides_from: f25-2
+  last_updated: '2025-09-08'
 - lecture: Branching and function definitions
   slides_from: f23
+  video: https://echo360.org/public/media/8da0a241-1e3e-4e99-b918-16b93ddd10b9
+  last_updated: '2025-09-08'
 - lecture: Lists and code serialization
   slides_from: f23
 - module: Advanced Functional Programming
