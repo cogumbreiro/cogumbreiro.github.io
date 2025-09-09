@@ -4,7 +4,7 @@ semester: Fall 2025
 title: "CS 450: Structure of Higher Level Languages"
 layout: single
 exercises_ext: .rkt
-previous_year: ../f23
+previous_year: ../f24
 
 course_info:
   location: W01-0004 (Wheatley)
@@ -35,7 +35,9 @@ data:
   video: https://echo360.org/public/media/8da0a241-1e3e-4e99-b918-16b93ddd10b9
   last_updated: '2025-09-08'
 - lecture: Lists and code serialization
-  slides_from: f23
+  slides_from: f25-1
+  video: https://echo360.org/public/media/06583e7a-c801-4fa5-b23e-7c1246f2caf4
+  last_updated: '2025-09-09'
 - module: Advanced Functional Programming
   lecture: Recursion, nested definitions
   slides_from: f23
