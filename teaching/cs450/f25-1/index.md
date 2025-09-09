@@ -31,6 +31,8 @@ data:
   slides_from: f25-1
 - lecture: Branching and function definitions
   slides_from: f23
+  video: https://echo360.org/public/media/8da0a241-1e3e-4e99-b918-16b93ddd10b9
+  last_updated: '2025-09-08'
 - lecture: Lists and code serialization
   slides_from: f23
 - module: Advanced Functional Programming
@@ -98,9 +100,8 @@ data:
   #video: https://echo360.org/public/media/cd5b4b04-f60d-4f59-b759-92a86a1f5624
   slides_from: f23
 - lecture: QA
-  slides_from: f23
 - lecture: QA
-  slides_from: f23
+
 calendar:
 - date: Tue, Sep 2
 - date: Thu, Sep 4
@@ -200,18 +201,18 @@ section: '1'
 {% endif %}
 
 <tr>
-  {% unless r.skip_slides %}
+  {% if r.slides_from %}
   {% assign l_num = l_num | plus: 1 %}
-  {% endunless %}
+  {% endif %}
   {% capture num %}{% if l_num < 10 %}0{% endif %}{{ l_num }}{% endcapture %}
   <td title="Date">{{ d.date }}</td>
-  {% if r.skip_slides %}
-  <td title="Skipped lecture number">
-  —
-  </td>
-  {% else %}
+  {% if r.slides_from %}
   <td title="Lecture number">
     {{ num }}
+  </td>
+  {% else %}
+  <td title="No lecture number">
+  —
   </td>
   {% endif %}
   
@@ -219,7 +220,7 @@ section: '1'
     {% capture title %}{{ r.lecture }}
     {%- endcapture -%}
     {{ title }}
-    {% if r.skip_slides %} <i>(no slides)</i>{% endif %}
+    {% unless r.slides_from %} <i>(no slides)</i>{% endunless %}
   </td>
   <td>
     <span class="buttons has-addons">

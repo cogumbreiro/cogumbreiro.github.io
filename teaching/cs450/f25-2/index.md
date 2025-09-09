@@ -78,7 +78,6 @@ data:
   slides_from: f23
 - lecture: The state monad
   #video: https://echo360.org/public/media/df514883-7806-464e-a421-02d951088baa
-  show_exercises: true
   slides_from: f23
 - lecture: Loops and error monad
   #video: https://echo360.org/public/media/e7c43caf-8a43-457f-bffd-59dae44d9ba9
@@ -100,12 +99,8 @@ data:
   #video: https://echo360.org/public/media/cd5b4b04-f60d-4f59-b759-92a86a1f5624
   slides_from: f23
 - lecture: QA
-  show_exercises: true
-  slides_from: f23
 - lecture: QA
 
-  show_exercises: true
-  slides_from: f23
 calendar:
 - date: Tue, Sep 2
 - date: Thu, Sep 4
@@ -205,18 +200,18 @@ section: '2'
 {% endif %}
 
 <tr>
-  {% unless r.skip_slides %}
+  {% if r.slides_from %}
   {% assign l_num = l_num | plus: 1 %}
-  {% endunless %}
+  {% endif %}
   {% capture num %}{% if l_num < 10 %}0{% endif %}{{ l_num }}{% endcapture %}
   <td title="Date">{{ d.date }}</td>
-  {% if r.skip_slides %}
-  <td title="Skipped lecture number">
-  —
-  </td>
-  {% else %}
+  {% if r.slides_from %}
   <td title="Lecture number">
     {{ num }}
+  </td>
+  {% else %}
+  <td title="No lecture number">
+  —
   </td>
   {% endif %}
   
@@ -224,7 +219,7 @@ section: '2'
     {% capture title %}{{ r.lecture }}
     {%- endcapture -%}
     {{ title }}
-    {% if r.skip_slides %} <i>(no slides)</i>{% endif %}
+    {% unless r.slides_from %} <i>(no slides)</i>{% endunless %}
   </td>
   <td>
     <span class="buttons has-addons">
