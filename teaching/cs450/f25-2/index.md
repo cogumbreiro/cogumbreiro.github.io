@@ -42,8 +42,12 @@ data:
 - module: Advanced Functional Programming
   lecture: Recursion, nested definitions
   slides_from: f23
+  video: https://echo360.org/public/media/8506583a-77e0-4301-9863-28a9aabac3ea
+  last_updated: '2025-09-16'
 - lecture: Modules, structs, (map) updating lists
   slides_from: f23
+  video: https://echo360.org/public/media/5b4e7e2c-8452-4447-be46-996ed694656b
+  last_updated: '2025-09-16'
 - lecture: Functions as data-structures, currying
   slides_from: f23
 - module: Optimized Functional Programming
