@@ -49,6 +49,8 @@ data:
   last_updated: '2025-09-16'
 - lecture: Functions as data-structures, currying
   slides_from: f23
+  video: https://echo360.org/public/media/7393fb00-7532-45bb-83e5-45ae9fc4006b
+  last_updated: '2025-09-18'
 - module: Optimized Functional Programming
   lecture: foldr, looping first-to-last
   slides_from: f23
