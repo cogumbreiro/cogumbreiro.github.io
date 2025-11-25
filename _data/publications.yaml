@@ -20,13 +20,17 @@
   - title: Artifact
     url: https://doi.org/10.6084/m9.figshare.30689102.v1
 
-- type: workshop
+- type: incollection
   id: faial:vivekfest24
-  authors:  [Tiago Cogumbreiro, Julien Lange]
-  title: "Hidden assumptions in static verification of data-race free GPU programs"
-  year: 2025
+  authors: [Tiago Cogumbreiro, Julien Lange]
+  title: "Hidden Assumptions in Static Verification of Data-race Free GPU Programs"
+  editors: [Barik, R., Gupta, R., Palsberg, J.]
+  booktitle: "Principles and Practices of Building Parallel Software"
+  series: "Lecture Notes in Computer Science"
+  volume: 14564
+  publisher: Springer
   doi: 10.1007/978-3-031-97492-2_6
-  booktitle: VIVEKFEST
+  year: 2025
   url: assets/faial-vivekfest24.pdf
   media:
   - title: Slides

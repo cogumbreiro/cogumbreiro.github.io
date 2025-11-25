@@ -56,4 +56,14 @@
     {{ article.booktitle}}
   {%- endif -%}
   </i>, {{ article.year }}
+{% elsif article.type == "incollection" %}
+  In: <i>{{ article.booktitle }}</i>
+  {%- if article.series -%}
+    . {{ article.series }}
+    {%- if article.volume %}, vol {{ article.volume }}{%- endif -%}
+  {%- endif -%}
+  {%- if article.publisher -%}
+    . {{ article.publisher }}
+  {%- endif -%}
+  . {{ article.year }}
 {% endif %}
