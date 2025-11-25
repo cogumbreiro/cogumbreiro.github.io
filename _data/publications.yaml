@@ -1,5 +1,39 @@
 - type: journal
   authors:
+  - Gregory Blike
+  - Hannah Zicarelli
+  - Udaya Sathiyamoorthy
+  - Julien Lange
+  - Tiago Cogumbreiro
+  title: A Modular Static Cost Analysis for GPU Warp-Level Parallelism
+  journal: PACMPL
+  number: POPL
+  year: 2026
+  publisher: ACM
+  volume: 10
+  articleno: 51
+  doi: 110.1145/3776693
+  url: assets/faial-popl26.pdf
+  media:
+  - title: Slides
+    url: assets/faial-popl26-cogumbreiro.pdf
+  - title: Artifact
+    url: https://doi.org/10.6084/m9.figshare.30689102.v1
+
+- type: workshop
+  id: faial:vivekfest24
+  authors:  [Tiago Cogumbreiro, Julien Lange]
+  title: "Hidden assumptions in static verification of data-race free GPU programs"
+  year: 2025
+  doi: 10.1007/978-3-031-97492-2_6
+  booktitle: VIVEKFEST
+  url: assets/faial-vivekfest24.pdf
+  media:
+  - title: Slides
+    url: assets/faial-vivekfest24-slides.pdf
+
+- type: journal
+  authors:
   - Dennis Liew
   - Tiago Cogumbreiro
   - Julien Lange
@@ -17,18 +51,6 @@
     url: assets/faial-oopsla24-slides.pdf
   - title: Artifact
     url: https://doi.org/10.5281/zenodo.12666682
-
-- type: workshop
-  id: faial:vivekfest24
-  authors:  [Tiago Cogumbreiro, Julien Lange]
-  title: "Hidden assumptions in static verification of data-race free GPU programs"
-  year: 2025
-  doi: 10.1007/978-3-031-97492-2_6
-  booktitle: VIVEKFEST
-  url: assets/faial-vivekfest24.pdf
-  media:
-  - title: Slides
-    url: assets/faial-vivekfest24-slides.pdf
 
 - type: unpublished
   id: regularc:tfpie24
