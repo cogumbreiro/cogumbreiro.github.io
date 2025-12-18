@@ -38,6 +38,7 @@ data:
   slides_from: f25-1
   video: https://echo360.org/public/media/06583e7a-c801-4fa5-b23e-7c1246f2caf4
   last_updated: '2025-09-09'
+
 - module: Advanced Functional Programming
   lecture: Recursion, nested definitions
   slides_from: f23
@@ -51,64 +52,88 @@ data:
   slides_from: f23
   video: https://echo360.org/public/media/da6374da-7913-4ba0-8ab1-adcda0564daa
   last_updated: '2025-09-22'
+
 - module: Optimized Functional Programming
   lecture: foldr, looping first-to-last
   slides_from: f23
+  video: https://echo360.org/public/media/c5b78415-4997-409f-ae8b-59fe130e1137
 - lecture: foldl, looping last-to-first
   slides_from: f23
+  video: https://echo360.org/public/media/bc9453ed-9106-4a3f-818e-5aa505957d32
 - lecture: Homework help; tail-recursion
-  #video: https://echo360.org/public/media/07be33d6-8efe-4084-bad0-f44267724923
   slides_from: f23
+  video: https://echo360.org/public/media/2ef3f79a-688b-4c1f-81b9-74a84738b5e3
+  
+
 - module: Lazy evaluation
   lecture: "TypedRacket, thunks, and promises"
+  video: https://echo360.org/public/media/6f273c30-06b8-476f-92c2-6144ca06f573
   slides_from: f23
 - lecture: "Infinite streams"
   slides_from: f23
+  video: https://echo360.org/public/media/012c3e0c-82b7-4b5a-8c7a-ff0416c9a421
 - lecture: Finite streams, evaluating expressions
+  video: https://echo360.org/public/media/dafb9f98-3df7-49c7-b2f8-040c72313c75
   slides_from: f23
+  
+
 - module: Implementing function calls
   lecture: "Language λ<sub>S</sub>: slow function calls"
-  #video: https://echo360.org/public/media/29c71ccc-d21a-407f-abeb-f25e12f5e07a
+  video: https://echo360.org/public/media/2c127bff-e5a9-4214-8e93-e50afd4c95e2
   slides_from: f23
 - lecture: "Language λ<sub>E</sub>: fast function calls"
+  video: https://echo360.org/public/media/de75ca35-8268-4697-a08e-f052e0553d3f
   slides_from: f23
 - lecture: Exercises
+  video: https://echo360.org/public/media/851441be-ab43-40af-a598-ee4ae16d5e84
   slides_from: f23
+
 - module: Implementing Racket's define
   lecture: "Specifying λ<sub>D</sub>"
   slides_from: f23
+  video: https://echo360.org/public/media/d0962e0e-2ed8-421d-8eab-0fcc57503e7b
 - lecture: Implementing λ<sub>D</sub>
-  #video: https://echo360.org/public/media/48b4a11c-d82a-40c0-81d1-4e005195d88e
+  video: https://echo360.org/public/media/ecec3dcd-42de-461e-ad4a-02d1e4b86b08
   slides_from: f23
 - lecture: "Exercises"
+  video: https://echo360.org/public/media/c2d96171-329b-4cfb-97e0-6b1cb3283a98
   slides_from: f23
+
 - module: Monads and side effects
   lecture: Garbage collection
-  #video: https://echo360.org/public/media/e90532b0-2fd2-4336-8879-1127ebb24d9f
+  video: https://echo360.org/public/media/c2039bbf-e06e-4e1e-87a4-a885535be3ea
   slides_from: f23
 - lecture: The state monad
-  #video: https://echo360.org/public/media/df514883-7806-464e-a421-02d951088baa
+  video: https://echo360.org/public/media/2830306c-f95f-4f42-bc6d-c2821126127a
   slides_from: f23
 - lecture: Loops and error monad
-  #video: https://echo360.org/public/media/e7c43caf-8a43-457f-bffd-59dae44d9ba9
+  video: https://echo360.org/public/media/9e1b9e62-ca4b-4079-984a-c6ddf4955eee
   slides_from: f23
+
 - module: Abstraction
   lecture: Monadic error; Monadic continuations
+  video: https://echo360.org/public/media/f8e3f0f1-60d6-440a-9682-45dc8f85a59b
   slides_from: f23
 - lecture: Parameters; Generic methods
+  video: https://echo360.org/public/media/c24dda83-8079-4df0-8976-9c9eb8a64e7e
   slides_from: f23
 - lecture: Macros
+  video: https://echo360.org/public/media/403c07fc-96d9-408f-95fe-d7a672555145
   slides_from: f23
+
 - module: Object Oriented Programming
   lecture: LambdaJS
   slides_from: f23
+  video: https://echo360.org/public/media/8c2ded79-9c83-4a39-8c46-cd8437b3eba4
 - lecture: JavaScript method and class inheritance
-  #video: https://echo360.org/public/media/3fc02e34-d393-4292-a481-be4caa56222b
+  video: https://echo360.org/public/media/25389661-8be5-45d6-a72a-39188c81a93f
   slides_from: f23
 - lecture: Conclusion
-  #video: https://echo360.org/public/media/cd5b4b04-f60d-4f59-b759-92a86a1f5624
+  video: https://echo360.org/public/media/36eb8fa8-2bdd-42b1-a9f4-f23b4dc0f803
   slides_from: f23
 - lecture: QA
+  video: https://echo360.org/public/media/7bfc2730-468f-488c-885a-b8e79d0b3065
+  slides_from: f23
 - lecture: QA
 
 calendar:
