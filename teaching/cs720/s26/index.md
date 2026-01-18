@@ -42,7 +42,6 @@ data:
   - chapters: [Logic, IndProp]
     published: true
     lecture: Defining logic connectives
-    chapters: [Logic]
   - lecture: Inductive propositions
     chapters: [IndProp, ProofObjects]
     published: true
@@ -111,7 +110,6 @@ data:
     #hw: 9
     lecture: Type systems
     #hw: 7 #Hoare and HW8 Smallstep
-    chapters: [Types]
     published: true
 
   - lecture: Lab
@@ -129,7 +127,6 @@ data:
   - chapters: [MoreStlc, Typechecking, Sub]
     hw: 9
     lecture: How to verify?
-    chapters: [MoreStlc, Typechecking]
     published: true
   - lecture: Lab
     lab: true
