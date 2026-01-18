@@ -23,33 +23,42 @@ data:
     slides_from: s24
     chapters: [Induction]
     #published: true
-  - lecture: QA
+  - lecture: Lab
   # Module 3
   - module: Generalized Induction
     lecture: Polymorphism
     chapters: [Lists, Poly]
     published: true
+    slides_from: s24
+    
   - lecture: Tactics
     chapters: [Tactics]
     published: true
+    slides_from: s24
   - module: Inductive Propositions
     lecture: Tactics
     published: true
+    slides_from: s24
   # Module 4
   - lecture: Defining logic connectives
     chapters: [Logic]
     published: true
+    slides_from: s24
   - chapters: [Logic, IndProp]
     published: true
     lecture: Defining logic connectives
+    slides_from: s24
   - lecture: Inductive propositions
     chapters: [IndProp, ProofObjects]
     published: true
+    slides_from: s24
   - lecture: Proof objects
     chapters: [IndProp, ProofObjects]
     published: true
+    slides_from: s24
   - module: Big-step Operational Semantics
     chapters: [Maps, Imp, ImpParser, ImpCEvalFun, Auto]
+    slides_from: s24
     lecture: Imperative languages
     #hw: 4 #Logic, IndProp
     #chapters: [Maps, Imp, ImpParser, ImpCEvalFun]
@@ -57,6 +66,7 @@ data:
   - lecture: More automation
     chapters: [Auto]
     published: true
+    slides_from: s24
   - lecture: Presentations
     skip_slides: true
     lab: true
@@ -73,7 +83,6 @@ data:
     chapters: [Equiv]
     published: true
   - lecture: Lab
-    lab: true
     skip_slides: true
   - lecture: Presentations
     lab: true
@@ -100,7 +109,6 @@ data:
     published: true
     skip_exercises: true
   - lecture: Lab
-    lab: true
   - lecture: Presentations
     lab: true
     hw: 11 #Proj
@@ -113,7 +121,6 @@ data:
     published: true
 
   - lecture: Lab
-    lab: true
 
   - lecture: Functional languages
     chapters: [Stlc]
@@ -129,7 +136,6 @@ data:
     lecture: How to verify?
     published: true
   - lecture: Lab
-    lab: true
     skip_slides: true
     hw: 9 #Types
 
