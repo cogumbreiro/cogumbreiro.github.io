@@ -149,6 +149,7 @@ data:
 
 calendar:
 - date: Tue, Jan 27
+  closure: true
 - date: Thu, Jan 29
 - date: Tue, Feb 3
 - date: Thu, Feb 5
