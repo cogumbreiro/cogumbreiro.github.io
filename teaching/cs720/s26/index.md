@@ -82,6 +82,7 @@ data:
     lecture: Program equivalence
     chapters: [Equiv]
     published: true
+    slides_from: s24
   - lecture: Lab
     skip_slides: true
   - lecture: Presentations
