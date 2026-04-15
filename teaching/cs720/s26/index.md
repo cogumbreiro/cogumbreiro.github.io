@@ -91,12 +91,14 @@ data:
 
   - module: Hoare Logic
     lecture: Hoare Logic
+    slides_from: s24
     chapters: [Hoare]
     published: true
   - lecture: Hoare Logic (continued)
     hw: 6 #Equiv
     chapters: [Hoare2]
     published: true
+    slides_from: s26
     skip_exercises: true
   - lecture: Presentations
     skip_slides: true
@@ -108,6 +110,7 @@ data:
     lecture: Small-step operational semantics
     chapters: [Smallstep]
     published: true
+    slides_from: s26
     skip_exercises: true
   - lecture: Lab
   - lecture: Presentations
@@ -116,7 +119,7 @@ data:
   ###################### HW9 ##########################
   - module: Type systems
     chapters: [Types, Stlc]
-    #hw: 9
+    slides_from: s26
     lecture: Type systems
     #hw: 7 #Hoare and HW8 Smallstep
     published: true
@@ -125,10 +128,12 @@ data:
 
   - lecture: Functional languages
     chapters: [Stlc]
+    slides_from: s26
     published: true
 
   - lecture: Properties of the STLC # HW19
     chapters: [StlcProp]
+    slides_from: s26
     published: true
 
 
@@ -136,6 +141,7 @@ data:
     hw: 9
     lecture: How to verify?
     published: true
+    slides_from: s26
   - lecture: Lab
     skip_slides: true
     hw: 9 #Types
