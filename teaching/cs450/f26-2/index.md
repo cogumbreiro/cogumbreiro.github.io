@@ -31,10 +31,10 @@ data:
   lecture: Course info, arithmetic in Racket, evaluation
   video: https://echo360.org/public/media/ef6cf8cf-d920-42fe-835b-deee58cba80e
   #published: true
-  slides_from: f25-2
+  slides_from: f26-1
   last_updated: '2025-09-08'
 - lecture: Branching and function definitions
-  slides_from: f23
+  slides_from: f26-1
   video: https://echo360.org/public/media/8da0a241-1e3e-4e99-b918-16b93ddd10b9
   last_updated: '2025-09-08'
 - lecture: Lists and code serialization
@@ -43,22 +43,22 @@ data:
   last_updated: '2025-09-09'
 - module: Advanced Functional Programming
   lecture: Recursion, nested definitions
-  slides_from: f23
+  slides_from: f26-1
   video: https://echo360.org/public/media/8506583a-77e0-4301-9863-28a9aabac3ea
   last_updated: '2025-09-16'
 - lecture: Modules, structs, (map) updating lists
-  slides_from: f23
+  slides_from: f26-1
   video: https://echo360.org/public/media/5b4e7e2c-8452-4447-be46-996ed694656b
   last_updated: '2025-09-16'
 - lecture: Functions as data-structures, currying
-  slides_from: f23
+  slides_from: f26-1
   video: https://echo360.org/public/media/7393fb00-7532-45bb-83e5-45ae9fc4006b
   last_updated: '2025-09-18'
 - module: Optimized Functional Programming
   lecture: foldr, looping first-to-last
-  slides_from: f23
+  slides_from: f26-1
 - lecture: foldl, looping last-to-first
-  slides_from: f23
+  slides_from: f26-1
 - lecture: Homework help; tail-recursion
   #video: https://echo360.org/public/media/07be33d6-8efe-4084-bad0-f44267724923
   slides_from: f23
@@ -84,7 +84,7 @@ data:
   #video: https://echo360.org/public/media/48b4a11c-d82a-40c0-81d1-4e005195d88e
   slides_from: f23
 - lecture: "Exercises"
-  slides_from: f23
+  slides_from: f26-1
 - module: Monads and side effects
   lecture: Garbage collection
   #video: https://echo360.org/public/media/e90532b0-2fd2-4336-8879-1127ebb24d9f
@@ -110,7 +110,7 @@ data:
   slides_from: f23
 - lecture: Conclusion
   #video: https://echo360.org/public/media/cd5b4b04-f60d-4f59-b759-92a86a1f5624
-  slides_from: f23
+  slides_from: f26-1
 
 calendar:
 - date: Tue, Sep 8
