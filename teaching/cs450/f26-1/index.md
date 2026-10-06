@@ -63,10 +63,11 @@ data:
   slides_from: f26-1
   video: https://echo360.org/public/media/bc9453ed-9106-4a3f-818e-5aa505957d32
 - lecture: Homework help; tail-recursion
-  slides_from: f23
+  slides_from: f26-1
   video: https://echo360.org/public/media/2ef3f79a-688b-4c1f-81b9-74a84738b5e3
 
 
+  last_updated: '2026-10-06'
 - module: Lazy evaluation
   lecture: "TypedRacket, thunks, and promises"
   video: https://echo360.org/public/media/6f273c30-06b8-476f-92c2-6144ca06f573
