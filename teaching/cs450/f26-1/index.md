@@ -71,7 +71,7 @@ data:
 - module: Lazy evaluation
   lecture: "TypedRacket, thunks, and promises"
   video: https://echo360.org/public/media/6f273c30-06b8-476f-92c2-6144ca06f573
-  slides_from: f23
+  slides_from: f26-1
 - lecture: "Infinite streams"
   slides_from: f23
   video: https://echo360.org/public/media/012c3e0c-82b7-4b5a-8c7a-ff0416c9a421

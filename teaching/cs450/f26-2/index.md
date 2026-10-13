@@ -61,10 +61,10 @@ data:
   slides_from: f26-1
 - lecture: Homework help; tail-recursion
   #video: https://echo360.org/public/media/07be33d6-8efe-4084-bad0-f44267724923
-  slides_from: f23
+  slides_from: f26-1
 - module: Lazy evaluation
   lecture: "TypedRacket, thunks, and promises"
-  slides_from: f23
+  slides_from: f26-1
 - lecture: "Infinite streams"
   slides_from: f23
 - lecture: Finite streams, evaluating expressions

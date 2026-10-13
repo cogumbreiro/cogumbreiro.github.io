@@ -1219,6 +1219,97 @@ The accumulator delays the application of `(cons (f h) ?)`.
 (list (f 1) (f 2) (f 3))
 ```
 
+---
+# Benchmark evaluation
+
+* Unoptimized `foldr`
+* Tail-recursive `foldr`
+
+```bash
+Processing a list of size: 1000000
+-------------------------------------------------------
+Throughput (unopt): 7310 elems/ms 
+Mean (unopt): 136.8±7.56ms
+-------------------------------------------------------
+Throughput (tailrec): 12349 elems/ms 
+Mean (tailrec): 80.98±1.49ms
+Speed-up (tailrec): 1.7
+```
+.center[
+## A speed improvement of 1.7
+]
+
+---
+class: impact
+# What if we use foldl + reverse?
+---
+# What if we use foldl + reverse?
+
+* Instead of creating nested functions,
+* We reverse the list and apply foldl
+
+```scheme
+(define (foldr step base-case l)
+  (foldl step base-case (reverse l)))
+```
+
+--
+.center[
+## Simpler implementation!
+## But is it faster?
+]
+---
+# Rev+foldl runs slower (0.7)
+```bash
+Processing a list of size: 1000000
+-------------------------------------------------------
+Throughput (unopt): 7310 elems/ms
+Mean (unopt): `136.8±7.56ms`
+-------------------------------------------------------
+Throughput (tailrec): 12349 elems/ms
+Mean (tailrec): `80.98±1.49ms`
+Speed-up (tailrec): 1.7
+-------------------------------------------------------
+Throughput (rev+foldl): 4846 elems/ms
+Mean (rev+foldl): `206.34±3.33ms`
+Speed-up (rev+foldl): 0.7
+```
+---
+# Conclusion
+
+We learned to generalize two reduction patterns (foldl and foldr)
+
+* .green[**Pro:**] generalizing code can lead to a central point to optimize code
+* .green[**Pro:**] generalizing code can reduce our code base&lt;br/&gt;
+  (less code means less code to maintain)
+* .red[**Con:**] one level of indirection increases the cognitive load&lt;br/&gt;
+  (more cognitive load, code harder to understand)
+.col-6[
+### Easier to understand (self-contained)
+&lt;div class=&quot;small&quot; markdown&gt;
+```scheme
+(define (reverse l)
+  (define (rev accum l)
+    (match l
+      [(list) accum]
+      [(list h l ...) (rev (cons h accum) l)]))
+  (rev (list) l))
+```
+&lt;/div&gt;
+]
+.col-6[
+### Harder to understand (what is foldl?)
+&lt;div class=&quot;small&quot; markdown&gt;
+```scheme
+(define (reverse l)
+  (define (on-elem elem accum)
+    (cons elem accum))
+  (foldl on-elem (list) l))
+```
+&lt;/div&gt;
+]
+
+
 </textarea>
     <script type="text/javascript">
       var options = {
