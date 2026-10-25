@@ -73,7 +73,7 @@ data:
   video: https://echo360.org/public/media/6f273c30-06b8-476f-92c2-6144ca06f573
   slides_from: f26-1
 - lecture: "Infinite streams"
-  slides_from: f23
+  slides_from: f26-1
   video: https://echo360.org/public/media/012c3e0c-82b7-4b5a-8c7a-ff0416c9a421
 - lecture: Finite streams, evaluating expressions
   video: https://echo360.org/public/media/dafb9f98-3df7-49c7-b2f8-040c72313c75
