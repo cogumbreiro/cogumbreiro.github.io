@@ -77,7 +77,7 @@ data:
   video: https://echo360.org/public/media/012c3e0c-82b7-4b5a-8c7a-ff0416c9a421
 - lecture: Finite streams, evaluating expressions
   video: https://echo360.org/public/media/dafb9f98-3df7-49c7-b2f8-040c72313c75
-  slides_from: f23
+  slides_from: f26-1
 
 
 - module: Implementing function calls

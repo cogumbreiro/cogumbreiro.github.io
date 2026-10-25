@@ -66,9 +66,9 @@ data:
   lecture: "TypedRacket, thunks, and promises"
   slides_from: f26-1
 - lecture: "Infinite streams"
-  slides_from: f23
+  slides_from: f26-1
 - lecture: Finite streams, evaluating expressions
-  slides_from: f23
+  slides_from: f26-1
 - module: Implementing function calls
   lecture: "Language λ<sub>S</sub>: slow function calls"
   #video: https://echo360.org/public/media/29c71ccc-d21a-407f-abeb-f25e12f5e07a
