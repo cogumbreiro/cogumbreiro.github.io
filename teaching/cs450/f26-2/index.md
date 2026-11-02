@@ -38,7 +38,7 @@ data:
   video: https://echo360.org/public/media/8da0a241-1e3e-4e99-b918-16b93ddd10b9
   last_updated: '2025-09-08'
 - lecture: Lists and code serialization
-  slides_from: f25-1
+  slides_from: f26-1
   video: https://echo360.org/public/media/06583e7a-c801-4fa5-b23e-7c1246f2caf4
   last_updated: '2025-09-09'
 - module: Advanced Functional Programming
@@ -55,9 +55,9 @@ data:
   video: https://echo360.org/public/media/7393fb00-7532-45bb-83e5-45ae9fc4006b
   last_updated: '2025-09-18'
 - module: Optimized Functional Programming
-  lecture: foldr, looping first-to-last
+  lecture: foldr, looping last-to-first
   slides_from: f26-1
-- lecture: foldl, looping last-to-first
+- lecture: foldl, looping first-to-last
   slides_from: f26-1
 - lecture: Homework help; tail-recursion
   #video: https://echo360.org/public/media/07be33d6-8efe-4084-bad0-f44267724923
@@ -72,14 +72,14 @@ data:
 - module: Implementing function calls
   lecture: "Language λ<sub>S</sub>: slow function calls"
   #video: https://echo360.org/public/media/29c71ccc-d21a-407f-abeb-f25e12f5e07a
-  slides_from: f23
+  slides_from: f26-1
 - lecture: "Language λ<sub>E</sub>: fast function calls"
-  slides_from: f23
+  slides_from: f26-1
 - lecture: Exercises
-  slides_from: f23
+  slides_from: f26-1
 - module: Implementing Racket's define
   lecture: "Specifying λ<sub>D</sub>"
-  slides_from: f23
+  slides_from: f26-1
 - lecture: Implementing λ<sub>D</sub>
   #video: https://echo360.org/public/media/48b4a11c-d82a-40c0-81d1-4e005195d88e
   slides_from: f23
