@@ -97,7 +97,7 @@ data:
   video: https://echo360.org/public/media/d0962e0e-2ed8-421d-8eab-0fcc57503e7b
 - lecture: Implementing λ<sub>D</sub>
   video: https://echo360.org/public/media/ecec3dcd-42de-461e-ad4a-02d1e4b86b08
-  slides_from: f23
+  slides_from: f26-1
 - lecture: "Exercises"
   video: https://echo360.org/public/media/c2d96171-329b-4cfb-97e0-6b1cb3283a98
   slides_from: f26-1
@@ -105,7 +105,7 @@ data:
 - module: Monads and side effects
   lecture: Garbage collection
   video: https://echo360.org/public/media/c2039bbf-e06e-4e1e-87a4-a885535be3ea
-  slides_from: f23
+  slides_from: f26-1
 - lecture: The state monad
   video: https://echo360.org/public/media/2830306c-f95f-4f42-bc6d-c2821126127a
   slides_from: f23

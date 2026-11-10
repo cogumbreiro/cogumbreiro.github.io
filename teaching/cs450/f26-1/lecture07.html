@@ -1060,7 +1060,680 @@ together.</p>
     <div class="remark-slide">
       <div class="remark-slide-content full no-counter hljs-github"><p><img id="logo" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iYSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTI0LjggNTkuNiI+PGRlZnM+PHN0eWxlPi5ie2ZpbGw6IzAwNWE4Yjt9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImIiIGQ9Ik02LjQ1LDQzLjkxYzEuMzgsMCwyLjUyLS4zMiwzLjQtLjk3LC44OC0uNjUsMS4zMi0xLjUyLDEuMzItMi42MSwwLS43OC0uMjctMS40Ny0uODEtMi4wNS0uNTQtLjU4LTEuMjUtLjk1LTIuMTUtMS4wOSwxLjY5LS41MSwyLjUzLTEuNTIsMi41My0zLjAzLDAtLjk1LS4zNy0xLjcxLTEuMTItMi4yNy0uNzUtLjU2LTEuODEtLjg0LTMuMTktLjg0SC4yOHYxMi44NUg2LjQ1Wm0tMy4zOC0xMC41NGgyLjk0Yy42NSwwLDEuMTQsLjExLDEuNDYsLjMyLC4zMiwuMjEsLjQ5LC41NywuNDksMS4wNiwwLC45My0uNjUsMS40LTEuOTUsMS40SDMuMDd2LTIuNzdoMFptMCw1LjAxaDIuOTdjMS40OSwwLDIuMjQsLjU0LDIuMjQsMS42MnMtLjc1LDEuNi0yLjI0LDEuNkgzLjA3di0zLjIxaDBabTEwLjcsNC40M2MuOTIsLjkyLDIuMDcsMS4zOSwzLjQ1LDEuMzlzMi41OS0uNDUsMy40OS0xLjM0Yy44OS0uODksMS4zNC0yLjA3LDEuMzQtMy41NHMtLjQ1LTIuNjItMS4zNS0zLjUyYy0uOS0uOS0yLjA2LTEuMzUtMy40OC0xLjM1cy0yLjU2LC40NS0zLjQ3LDEuMzVjLS45MSwuOS0xLjM2LDIuMDctMS4zNiwzLjUycy40NiwyLjU3LDEuMzgsMy41aDBabTMuNDUtLjY5Yy0uNjYsMC0xLjE4LS4yNC0xLjU1LS43MS0uMzctLjQ3LS41Ni0xLjE2LS41Ni0yLjA3cy4xOS0xLjYxLC41Ni0yLjFjLjM3LS41LC44OS0uNzQsMS41NS0uNzRzMS4xOCwuMjUsMS41NSwuNzRjLjM3LC41LC41NiwxLjIsLjU2LDIuMXMtLjE5LDEuNTktLjU2LDIuMDdjLS4zNywuNDctLjg5LC43MS0xLjU1LC43MWgwWm03LjI2LDEuMzJjLjgsLjQ4LDEuNzUsLjcyLDIuODQsLjcyLDEuMzIsMCwyLjM2LS4yNywzLjEyLS44MiwuNzYtLjU0LDEuMTQtMS4yOCwxLjE0LTIuMjEsMC0xLjUxLTEuMDUtMi40Ni0zLjE2LTIuODZsLTEuMjctLjI0Yy0uNDktLjA5LS44Mi0uMTktMS0uMzItLjE4LS4xMy0uMjctLjMyLS4yNy0uNThzLjExLS40OCwuMzQtLjY0Yy4yMy0uMTYsLjU1LS4yNCwuOTYtLjI0LC45MiwwLDEuNTQsLjQzLDEuODUsMS4yOWwyLjE1LS45N2MtLjI1LS41OC0uNy0xLjA3LTEuMzctMS40OS0uNjctLjQyLTEuNS0uNjItMi41MS0uNjItMS4yMSwwLTIuMTcsLjI2LTIuODgsLjc5LS43MSwuNTMtMS4wNiwxLjIzLTEuMDYsMi4xMXMuMjQsMS40OCwuNzMsMS44OWMuNDgsLjQyLDEuMjYsLjczLDIuMzIsLjk0bDEuMywuMjZjLjQyLC4wOSwuNzEsLjIxLC44OCwuMzYsLjE3LC4xNSwuMjYsLjM2LC4yNiwuNjJzLS4xMywuNDktLjM4LC42NmMtLjI1LC4xNy0uNTksLjI2LTEuMDIsLjI2LS43NywwLTEuMjktLjE3LTEuNTYtLjUxLS4yOC0uMzYtLjQ2LS43LS41My0xLjAzbC0yLjM3LC43NWMuMTgsLjgsLjY4LDEuNDMsMS40OCwxLjkxaDBabTkuOTgtLjJjLjQyLC40NCwuOTksLjY2LDEuNzEsLjY2aDMuMDd2LTIuMDdoLTEuOThjLS4yOCwwLS40OS0uMDYtLjYyLS4xOS0uMTMtLjEzLS4xOS0uMzMtLjE5LS42MnYtNC4zMWgyLjM5di0xLjk4aC0yLjM5di0yLjg4aC0yLjYxdjIuODhoLTEuOTN2MS45OGgxLjkzdjQuNzljMCwuNzIsLjIxLDEuMywuNjIsMS43NGgwWm02Ljc2LS40M2MuOTIsLjkyLDIuMDcsMS4zOSwzLjQ1LDEuMzlzMi41OS0uNDUsMy40OS0xLjM0Yy44OS0uODksMS4zNC0yLjA3LDEuMzQtMy41NHMtLjQ1LTIuNjItMS4zNS0zLjUyYy0uOS0uOS0yLjA2LTEuMzUtMy40OC0xLjM1cy0yLjU2LC40NS0zLjQ3LDEuMzVjLS45MSwuOS0xLjM2LDIuMDctMS4zNiwzLjUycy40NiwyLjU3LDEuMzgsMy41aDBabTMuNDUtLjY5Yy0uNjYsMC0xLjE4LS4yNC0xLjU1LS43MS0uMzctLjQ3LS41Ni0xLjE2LS41Ni0yLjA3cy4xOS0xLjYxLC41Ni0yLjFjLjM3LS41LC44OS0uNzQsMS41NS0uNzRzMS4xOCwuMjUsMS41NSwuNzRjLjM3LC41LC41NiwxLjIsLjU2LDIuMXMtLjE5LDEuNTktLjU2LDIuMDdjLS4zNywuNDctLjg5LC43MS0xLjU1LC43MWgwWm05LjE2LDEuNzh2LTQuMzVjMC0xLjE1LC4yLTEuOTcsLjYxLTIuNDYsLjI3LS4zMywuNjgtLjUsMS4yMy0uNSwuOTgsMCwxLjQ3LC41OCwxLjQ3LDEuNzN2NS41OGgyLjYxdi02LjE1YzAtMS4wNS0uMjUtMS44Ny0uNzYtMi40NC0uNTEtLjU4LTEuMjYtLjg2LTIuMjctLjg2LTEuMjgsMC0yLjI3LC41Ni0yLjk2LDEuNjl2LTEuNDFoLTIuNTN2OS4xOGgyLjYxWiIvPjxwYXRoIGNsYXNzPSJiIiBkPSJNMS44NiwyNS43YzEuMDUsLjk1LDIuNDQsMS40Myw0LjE5LDEuNDNzMy4xLS40OCw0LjE3LTEuNDNjMS4wNi0uOTUsMS42LTIuMjUsMS42LTMuODd2LTcuODRoLTIuNzl2Ny40YzAsMi4yNC0uOTksMy4zNi0yLjk3LDMuMzYtLjk4LDAtMS43Mi0uMjgtMi4yMi0uODUtLjUtLjU3LS43NS0xLjQtLjc1LTIuNTF2LTcuNEguMjl2Ny44NGMwLDEuNjMsLjUyLDIuOTIsMS41NywzLjg3aDBabTE1LjUsMS4xNHYtMTAuNDZsMy41NCwxMC40NmgyLjQ4bDMuNTgtMTAuNDh2MTAuNDhoMi43OVYxMy45OWgtNC40MWwtMi4xNSw2LjI2Yy0uNCwxLjIxLS43MywyLjEyLS45NywyLjc0LS4yNC0uNjEtLjU3LTEuNTItLjk3LTIuNzRsLTIuMTEtNi4yNmgtNC41N3YxMi44NWgyLjc5Wm0xNS4xMy0uNDRjLjU1LC40OSwxLjI0LC43MywyLjA3LC43MywxLjM4LDAsMi40My0uNTQsMy4xNC0xLjYzLC4xLC44OSwuNjUsMS4zNCwxLjY1LDEuMzRoMnYtMS45OGgtLjgxYy0uMjUsMC0uNC0uMDMtLjQ2LS4wOS0uMDYtLjA2LS4wOS0uMjEtLjA5LS40NnYtMy4zNmMwLTEuMTctLjM1LTIuMDYtMS4wNi0yLjY2LS43LS42LTEuNzItLjktMy4wNC0uOS0xLjI1LDAtMi4yNywuMjgtMy4wNiwuODMtLjc5LC41NS0xLjIyLDEuMjEtMS4yOSwxLjk4bDIuMzUsLjUxYy4yMy0uOTcsLjkxLTEuNDUsMi4wMi0xLjQ1LDEsMCwxLjUxLC40MiwxLjUxLDEuMjd2LjM1Yy0uODksLjA5LTEuNjcsLjIxLTIuMzIsLjM2LS42NSwuMTUtMS4yNSwuMzYtMS43OCwuNjMtLjUzLC4yNy0uOTQsLjYyLTEuMjIsMS4wNi0uMjgsLjQ0LS40MywuOTYtLjQ0LDEuNTYsMCwuNzgsLjI4LDEuNDIsLjgzLDEuOTFoMFptNC4zOS0xLjczYy0uMzcsLjM3LS44MywuNTUtMS4zOCwuNTUtLjgsMC0xLjE5LS4zMy0xLjE5LS45OSwwLS41NCwuMjYtLjkzLC43Ny0xLjE3LC41MS0uMjQsMS4zLS40MywyLjM1LS41N3YuNTljMCwuNy0uMTgsMS4yMy0uNTUsMS42aDBabTYuMzgsMS43MWMuOCwuNDgsMS43NSwuNzIsMi44NCwuNzIsMS4zMiwwLDIuMzYtLjI3LDMuMTItLjgyLC43Ni0uNTQsMS4xNC0xLjI4LDEuMTQtMi4yMSwwLTEuNTEtMS4wNS0yLjQ2LTMuMTYtMi44NmwtMS4yNy0uMjRjLS40OS0uMDktLjgyLS4xOS0xLS4zMi0uMTgtLjEzLS4yNy0uMzItLjI3LS41OHMuMTEtLjQ4LC4zNC0uNjRjLjIzLS4xNiwuNTUtLjI0LC45Ni0uMjQsLjkyLDAsMS41NCwuNDMsMS44NSwxLjI5bDIuMTUtLjk3Yy0uMjQtLjU4LS43LTEuMDctMS4zNy0xLjQ5LS42Ny0uNDItMS41LS42Mi0yLjUxLS42Mi0xLjIxLDAtMi4xNywuMjYtMi44OCwuNzktLjcxLC41My0xLjA3LDEuMjMtMS4wNywyLjExcy4yNCwxLjQ3LC43MiwxLjg5Yy40OCwuNDIsMS4yNiwuNzMsMi4zMiwuOTRsMS4zLC4yNmMuNDIsLjA5LC43MSwuMjEsLjg4LC4zNiwuMTcsLjE1LC4yNiwuMzYsLjI2LC42MnMtLjEzLC40OS0uMzgsLjY2Yy0uMjUsLjE3LS41OSwuMjYtMS4wMiwuMjYtLjc3LDAtMS4yOS0uMTctMS41Ni0uNTEtLjI4LS4zNS0uNDYtLjctLjUzLTEuMDNsLTIuMzcsLjc1Yy4xOCwuOCwuNjgsMS40MywxLjQ4LDEuOTFoMFptOS40NSwwYy44LC40OCwxLjc1LC43MiwyLjg0LC43MiwxLjMyLDAsMi4zNi0uMjcsMy4xMi0uODIsLjc2LS41NCwxLjE0LTEuMjgsMS4xNC0yLjIxLDAtMS41MS0xLjA1LTIuNDYtMy4xNi0yLjg2bC0xLjI3LS4yNGMtLjQ5LS4wOS0uODItLjE5LTEtLjMyLS4xOC0uMTMtLjI3LS4zMi0uMjctLjU4cy4xMS0uNDgsLjM0LS42NGMuMjMtLjE2LC41NS0uMjQsLjk2LS4yNCwuOTIsMCwxLjU0LC40MywxLjg1LDEuMjlsMi4xNS0uOTdjLS4yNC0uNTgtLjctMS4wNy0xLjM3LTEuNDktLjY3LS40Mi0xLjUtLjYyLTIuNTEtLjYyLTEuMjEsMC0yLjE3LC4yNi0yLjg4LC43OS0uNzEsLjUzLTEuMDcsMS4yMy0xLjA3LDIuMTFzLjI0LDEuNDcsLjczLDEuODljLjQ4LC40MiwxLjI2LC43MywyLjMyLC45NGwxLjMsLjI2Yy40MiwuMDksLjcxLC4yMSwuODgsLjM2LC4xNywuMTUsLjI2LC4zNiwuMjYsLjYycy0uMTMsLjQ5LS4zOCwuNjZjLS4yNSwuMTctLjU5LC4yNi0xLjAyLC4yNi0uNzcsMC0xLjI5LS4xNy0xLjU2LS41MS0uMjgtLjM1LS40Ni0uNy0uNTMtMS4wM2wtMi4zNywuNzVjLjE4LC44LC42OCwxLjQzLDEuNDgsMS45MWgwWiIvPjxwYXRoIGNsYXNzPSJiIiBkPSJNMTIzLjU2LDM3Ljk1YzAtNS40NCwwLTEwLjg5LDAtMTYuMzMsMC0uNTMtLjAyLTEuMDYtLjA0LTEuNi0uMDUtMS4xNS0uMjItMi4yOS0uNDctMy40MS0xLjY2LTcuNDEtNy4yMy0xMy4zNi0xNC41LTE1LjUtMS42Ni0uNDktMy4zNi0uNzgtNS4xLS44Mi0uNTQtLjAxLTEuMDgsMC0xLjYyLDBoLTM2LjU2di40YzAsNy4xOCwwLDE0LjM2LDAsMjEuNTQsMCw1LjI1LDAsMTAuNTEsMCwxNS43NiwwLC42NiwuMDQsMS4zMywuMDgsMS45OSwuMDksMS4zMiwuMzQsMi42MSwuNjksMy44OCwxLjc4LDYuNDYsNi43MSwxMS43OCwxMywxNC4wNiwyLjM4LC44Niw0LjgzLDEuMjYsNy4zNiwxLjI2LDUuMiwwLDEwLjQsMCwxNS42LDAsLjg0LDAsMS42Ny0uMDQsMi41MS0uMDksMS4wNC0uMDYsMi4wNi0uMjQsMy4wNy0uNDksNS4yMi0xLjMyLDkuMzUtNC4yMSwxMi4zOS04LjY0LDEuNjgtMi40NCwyLjc0LTUuMTQsMy4yNy04LjA2LC4yMy0xLjMsLjMyLTIuNjEsLjMyLTMuOTNoMFptLTIwLjAxLTIzLjc5Yy0uMDMsLjg3LS4xMiwxLjcyLS4zNCwyLjU2LS4zLDEuMTktLjgzLDIuMjYtMS42OCwzLjE1LS42OCwuNzItMS41LDEuMjQtMi40MSwxLjYzLTEuMDcsLjQ2LTIuMTksLjczLTMuMzUsLjg5LTEuMjYsLjE4LTIuNTMsLjIyLTMuODEsLjIxLS42MywwLTEuMjYsMC0xLjg4LDBoLS4zMVY4LjE5YzAtLjYzLC4wMS0xLjI2LC4xMS0xLjg4LC4wMi0uMTEsLjA0LS4yMiwuMDYtLjMzLC4wOC0uNDQsLjMzLS43MiwuNzgtLjg1LC41NS0uMTYsMS4xMi0uMjksMS42OS0uMzQsLjY3LS4wNiwxLjM0LS4xLDIuMDEtLjEsMS4zMiwwLDIuNjIsLjE4LDMuODgsLjY0LDIuNDQsLjg4LDQuMDMsMi41OCw0Ljc5LDUuMDYsLjM4LDEuMjMsLjUsMi40OSwuNDUsMy43N2gwWm0yLjM5LDIwLjQ4Yy4zMiwxLjMyLC40MSwyLjY3LC4zMyw0LjAyLS4wNiwxLjExLS4yNCwyLjItLjYxLDMuMjUtLjg3LDIuNDgtMi41NSw0LjItNC45NCw1LjI1LTEuMDEsLjQ0LTIuMDcsLjczLTMuMTYsLjg5LS45NCwuMTUtMS44OSwuMjItMi44NCwuMTktLjg3LS4wMy0xLjc0LS4wOS0yLjU4LS4zNS0uOTQtLjI5LTEuNTctLjktMS45LTEuODMtLjIzLS42Ni0uMzUtMS4zNS0uNC0yLjA1LS4wNC0uNy0uMDctMS4zOS0uMDctMi4wOSwwLTQuNzUsMC05LjQ5LDAtMTQuMjR2LS40Yy4xMiwwLC4yMS0uMDEsLjI5LS4wMSwxLjEyLDAsMi4yMy0uMDEsMy4zNSwuMDEsMi4wMiwuMDUsNC4wMSwuMjksNS45NSwuODgsLjk5LC4zLDEuOTMsLjcsMi44MSwxLjI1LDEuOTcsMS4yMiwzLjIsMi45NywzLjc1LDUuMjFoMFptMTUuNjQsMy43OWMtLjA0LDQuODQtMS43NCw5LjA3LTUuMDEsMTIuNjQtMi41NywyLjgxLTUuNzIsNC42Ny05LjQyLDUuNThoMGMtLjkxLC4yMy0xLjg0LC40LTIuNzgsLjQ1LS43MSwuMDQtMS40MywuMDktMi4xNCwuMDktNS4zNSwwLTEwLjcsLjAxLTE2LjA1LDAtMy43OCwwLTcuMjYtMS4wNS0xMC40MS0zLjEzLTEuNjgtMS4xMS0zLjE0LTIuNDYtNC40LTQuMDQtMS4wMy0xLjI5LTEuNjMtMi43Ny0xLjg5LTQuNC0uMTgtMS4xMy0uMjItMi4yNi0uMTItMy4zOSwuMS0xLjE2LC4yNC0yLjMyLC4zNi0zLjQ5LC4xMi0xLjExLC4yNS0yLjIyLC4zOS0zLjMzLC4xMy0xLjEsLjI2LTIuMiwuMzktMy4zLC4xMS0uOTYsLjIyLTEuOTIsLjM0LTIuODgsLjExLS45NSwuMjMtMS45LC4zNC0yLjg2LC4xMS0uOTYsLjIzLTEuOTIsLjM0LTIuODgsLjExLS45NSwuMjMtMS45LC4zNC0yLjg2LC4wOC0uNjUsLjE1LTEuMywuMjQtMS45NSwuMDMtLjE5LS4wMy0uMzItLjE4LS40NC0uMzgtLjMtLjc1LS42My0xLjEzLS45My0uMTItLjA5LS4xOC0uMi0uMTgtLjM1LDAtLjg5LDAtMi42NywwLTIuNjd2LS4yN2gyLjQ1di00LjZoLTEuMnMyLjc4LTIuMTcsNC4wOC0zLjE0Yy4xMy0uMSwuMjktLjM0LC4yOS0uNTQtLjAxLS44LDAtMS41NiwwLTIuMzYsMC0uMDgsMC0uMTYsMC0uMjQsLjAyLS4xMSwuMDgtLjE5LC4xOC0uMjIsLjAzLS4wMSwuMDYtLjAyLC4xLS4wMiwuMTQsMCwuMjUsLjA5LC4yNywuMjMsLjAxLC4wOCwwLC4xNiwwLC4yMywwLC44MiwuMDIsMS41NCwwLDIuMzYsMCwuMiwuMTQsLjQ0LC4yNywuNTQsMS4yOSwuOTYsNC4xMSwzLjE0LDQuMTEsMy4xNGgtMS4ydjQuNmgyLjQ2czAsLjI5LDAsLjY5YzAsLjU4LDAsMS42MiwwLDIuMjQsMCwuMTQtLjA1LC4yNC0uMTYsLjM0LS40MSwuMzMtLjgsLjY3LTEuMjEsMS0uMTIsLjA5LS4xNiwuMTktLjE0LC4zNCwuMSwuODcsLjE5LDEuNzMsLjI5LDIuNiwuMSwuODgsLjE5LDEuNzUsLjI4LDIuNjMsLjEsLjg5LC4yLDEuNzksLjI5LDIuNjgsLjA5LC44OCwuMTksMS43NSwuMjgsMi42MywuMSwuODksLjE5LDEuNzksLjI5LDIuNjgsLjEsLjg4LC4xOSwxLjc1LC4yOCwyLjYzLC4xLC45LC4yLDEuOCwuMjksMi43LC4wOSwuODgsLjE5LDEuNzUsLjI4LDIuNjMsLjEsLjg5LC4xOSwxLjc5LC4yOSwyLjY4LC4wOSwuODgsLjE5LDEuNzUsLjI4LDIuNjMsLjEyLDEuMTMsLjE5LDIuMjgsLjQ3LDMuMzksLjA5LC4zNSwuMTksLjcxLC4zMiwxLjA1LC41LDEuMzUsMS40NCwyLjI2LDIuNzgsMi43NiwuNzQsLjI3LDEuNTEsLjQzLDIuMjksLjUyLDEuMTksLjEzLDIuMzgsLjIsMy41OCwuMTUsMS4yNi0uMDUsMi41My0uMSwzLjc5LS4yLDEuODgtLjE2LDMuNzMtLjQ1LDUuNTUtLjkyLC42MS0uMTYsMS4yMS0uMzMsMS44MS0uNTMsMi4xMS0uNyw0LjA4LTEuNjYsNS44Ni0zLDEuOTItMS40NCwzLjQ4LTMuMTksNC41NC01LjM2LC42OC0xLjQxLDEuMDktMi45LDEuMjUtNC40NiwuMi0xLjk3LC4wNC0zLjktLjYtNS43OC0uNzYtMi4yMi0yLjEyLTQtMy45OS01LjQyLTEuNDgtMS4xMi0zLjEyLTEuOTEtNC44Ni0yLjUtLjQ5LS4xNy0xLS4zMS0xLjUtLjQ3LS4wOC0uMDMtLjE2LS4wNS0uMzEtLjA5LC4xMy0uMDcsLjIxLS4xMSwuMjktLjE1LDEuMTctLjU1LDIuMjgtMS4yMSwzLjI5LTIuMDIsMi4zMS0xLjg0LDMuOC00LjE5LDQuMjgtNy4xMiwuNTItMy4xMywuMDMtNi4xLTEuNjItOC44NC0uMS0uMTYtLjIyLS4zNC0uMzYtLjUzLS44My0xLjA2LTIuMjYtMi4zOS0yLjMtMi40NiwuMDgsLjAyLC4xNiwuMDQsLjI0LC4wNyw1LjQxLDEuODksOS4yNiw1LjQ3LDExLjU0LDEwLjczLC42NiwxLjUzLDEuMDgsMy4xMywxLjI5LDQuNzgsLjEsLjc3LC4xNiwxLjU1LC4xNiwyLjMyLC4wMSw1LjgsLjA1LDExLjYxLDAsMTcuNDFoMFpNNzUsMTQuMDRzMS45OCwwLDIuOTgsMGMwLTEuNTUsMC00LjYxLDAtNC42MWgtMi45OHY0LjZoMFptNDIuNDEsNDUuMTR2LTIuNTRoLjk1di0uMzRoLTIuMjh2LjM0aC45NXYyLjU0aC4zOFptMS43LDB2LTIuNDVsLjgzLDIuNDVoLjM0bC44NC0yLjQxdjIuNDFoLjM3di0yLjg4aC0uNTFsLS42OSwyYy0uMDcsLjItLjEyLC4zNi0uMTUsLjQ2LS4wMy0uMDktLjA3LS4yNC0uMTQtLjQzbC0uNjgtMi4wNGgtLjU3djIuODhoLjM3WiIvPjwvc3ZnPg==" height="64"></p>
 <div class="bottom-bar"><p>CS450 &nbsp;☽&nbsp; foldr, looping last-to-first &nbsp;☽&nbsp; Lecture 07 &nbsp;☽&nbsp; Tiago Cogumbreiro</p></div>
-<iframe src="append-trace-standalone.html" style="position: absolute; inset: 0; width: 100%; height: 100%; transform: none;"></iframe>
+<script>
+// <append-trace l1="xyz" l2="abc">: a step-by-step trace of (append l1 l2) with
+// box-and-pointer lists, one element per character of the attribute; "" is the empty list.
+// Two entries below the trace edit the lists and restart the trace. The stage fits at most 3
+// elements in l1, and 7 in both lists together; the entries take 3 and 4 characters.
+// A Shearwater widget: the deck sets the `step` attribute, from 0 to `stepCount` - 1, and
+// without `step` the widget shows its final state.
+//
+// Every drawing is created once, with the step where it appears and the step where it
+// disappears. Showing a step sets what is visible at that step, and moving forward by one
+// step also animates the change.
+(() => {
+  "use strict";
+  if (customElements.get("append-trace")) return;
+
+  const STYLE = `
+:host {
+  display: block;
+  --ink: #1F2328;
+  --muted: #57606A;
+  --rule: #D0D7DE;
+  --panel: #F6F8FA;
+  --code-hl: rgba(245, 213, 71, 0.45);
+  --kw: #8250DF;
+  --fn: #0A7F86;
+  --c1: #2F6FB0;
+  --c2: #D9731F;
+  --hl: #C98A00;
+  --ptr: #FFFFFF;
+  --f-mono: "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, monospace;
+}
+svg { display: block; width: 100%; height: auto; }
+@media print { * { transition: none !important; } }
+.code { font-family: var(--f-mono); font-size: 25px; fill: var(--ink); white-space: pre; }
+.kw { fill: var(--kw); }
+.fn { fill: var(--fn); }
+.panel { fill: var(--panel); stroke: var(--rule); stroke-width: 1.5; }
+.codehl { fill: var(--code-hl); transition: transform .35s ease, opacity .25s ease; }
+.val { stroke: var(--ink); stroke-width: 2.2; }
+.val.c1 { fill: var(--c1); }
+.val.c2 { fill: var(--c2); }
+.ptr { fill: var(--ptr); stroke: var(--ink); stroke-width: 2.2; }
+.dot, .head { fill: var(--ink); }
+.vtxt { fill: #FFFFFF; font: 500 24px var(--f-mono); text-anchor: middle; }
+.link, .conn { stroke: var(--ink); stroke-width: 2.4; fill: none; }
+.nil line { stroke: var(--ink); stroke-width: 2.6; }
+.plus { fill: var(--muted); font: 400 30px var(--f-mono); text-anchor: middle; }
+.hcirc { fill: none; stroke: var(--hl); stroke-width: 3.5; }
+.hlab { fill: var(--hl); font: 500 20px var(--f-mono); text-anchor: middle; }
+.u1 { stroke: var(--c1); stroke-width: 3; }
+.u2 { stroke: var(--c2); stroke-width: 3; }
+.ulab { font: 500 19px var(--f-mono); text-anchor: middle; }
+.ulab.c1 { fill: var(--c1); }
+.ulab.c2 { fill: var(--c2); }
+.brace { fill: none; stroke: var(--muted); stroke-width: 2; }
+.brace.strong { stroke: var(--ink); }
+.blab { fill: var(--muted); font: 400 19px var(--f-mono); text-anchor: middle; }
+.blab.strong { fill: var(--ink); font-size: 21px; }
+.consw { fill: var(--fn); font: 500 26px var(--f-mono); }
+.eq { font: 400 40px var(--f-mono); fill: var(--ink); text-anchor: middle; }
+.eq .c1 { fill: var(--c1); }
+.eq .c2, .lbl.c2 { fill: var(--c2); }
+.note { fill: var(--muted); font: 400 22px var(--f-mono); }
+.lbl { font: 500 22px var(--f-mono); fill: var(--ink); }
+.leg { fill: var(--muted); font: 400 18px var(--f-mono); }
+.item { transform-box: fill-box; transform-origin: center; }
+.entries { display: flex; justify-content: center; align-items: center; gap: 48px; height: 100%; font: 400 26px var(--f-mono); }
+.entries label:first-child { color: var(--c1); }
+.entries label:last-child { color: var(--c2); }
+.entries input { width: 5em; margin-left: 8px; padding: 4px 10px; font: inherit; color: var(--ink); background: #FFFFFF; border: 1.5px solid var(--rule); border-radius: 6px; }
+@media print { foreignObject { display: none; } }
+`;
+
+  // The trace goes in the <svg>, after the entries, which stay when the trace is drawn again.
+  const SHADOW_CONTENT = `<style>${STYLE}</style>` +
+    `<svg viewBox="0 0 1600 900"><desc></desc><foreignObject x="0" y="810" width="1600" height="70">` +
+    `<div class="entries">` +
+    `<label>l1<input name="l1" maxlength="3" spellcheck="false" autocomplete="off"></label>` +
+    `<label>l2<input name="l2" maxlength="4" spellcheck="false" autocomplete="off"></label>` +
+    `</div></foreignObject></svg>`;
+
+  const CODE = [
+    "(define (append l1 l2)",
+    "  (match l1",
+    "    [(list) l2]",
+    "    [(cons h l1)",
+    "     (define result (append l1 l2))",
+    "     (cons h result)]))",
+  ];
+  const KEYWORDS = ["define", "match"];
+  const FUNCTIONS = ["cons", "append", "list"];
+  const CODE_WORD = new RegExp(`\\b(${[...KEYWORDS, ...FUNCTIONS].join("|")})\\b`);
+  // The line of CODE that each kind of step highlights.
+  const BASE_LINE = 2;
+  const CONS_LINE = 3;
+  const CALL_LINE = 4;
+  const RESULT_LINE = 5;
+
+  // Sizes and positions, in the units of the 1600x900 viewBox.
+  const VALUE_W = 45;   // the value box of a cell, and the height of a cell
+  const POINTER_W = 20;
+  const PITCH = VALUE_W + POINTER_W + 28;   // from the start of a cell to the start of the next
+  const NIL_GAP = 18;   // the line from the last cell to the symbol of the empty list
+  const NIL_W = 14;
+  const MONO_ADVANCE = 0.6;   // the width of a monospace character, in em
+  const INTRO_Y = 470;
+  const INTRO_L1_X = 425;
+  const INTRO_L2_X = 892;
+  const CONS_W = "cons".length * 26 * MONO_ADVANCE + 20;   // the word `cons`, then a space
+
+  const rowX = level => 700 + level * 84;
+  const rowY = row => 92 + row * 100;
+  const codeLineY = line => 92 + line * 42;
+  const listWidth = length =>
+    length ? (length - 1) * PITCH + VALUE_W + POINTER_W + NIL_GAP + NIL_W : NIL_W;
+  const nilX = length =>
+    length ? (length - 1) * PITCH + VALUE_W + POINTER_W + NIL_GAP : 0;
+
+  // [x, y, z], or (list) when empty.
+  const formatList = list =>
+    list.length ? `[${list.map(cell => cell.value).join(", ")}]` : "(list)";
+
+  // ---- Drawing
+
+  function createSvg(tag, attributes = {}, parent = null) {
+    const element = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    for (const name in attributes) element.setAttribute(name, attributes[name]);
+    if (parent) parent.appendChild(element);
+    return element;
+  }
+
+  function createText(content, attributes, parent = null) {
+    const text = createSvg("text", attributes, parent);
+    text.textContent = content;
+    return text;
+  }
+
+  function addSpan(text, content, cssClass) {
+    const span = createSvg("tspan", cssClass ? { class: cssClass } : {}, text);
+    span.textContent = content;
+  }
+
+  function drawCell({ value, color }) {
+    const group = createSvg("g");
+    createSvg("rect", { x: 0, y: -VALUE_W / 2, width: VALUE_W, height: VALUE_W, class: "val " + color }, group);
+    createText(value, { x: VALUE_W / 2, y: 8, class: "vtxt" }, group);
+    createSvg("rect", { x: VALUE_W, y: -VALUE_W / 2, width: POINTER_W, height: VALUE_W, class: "ptr" }, group);
+    createSvg("circle", { cx: VALUE_W + POINTER_W / 2, cy: 0, r: 3.6, class: "dot" }, group);
+    return group;
+  }
+
+  function drawNil(parent, x) {
+    const group = createSvg("g", { class: "nil", transform: `translate(${x},0)` }, parent);
+    [34, 21, 9].forEach((height, i) => createSvg("line", {
+      x1: i * 7, x2: i * 7, y1: -height / 2, y2: height / 2,
+    }, group));
+  }
+
+  // A horizontal line that the `draw` animation draws from start to end.
+  function drawLink(parent, x1, x2) {
+    createSvg("path", { d: `M${x1},0 H${x2}`, class: "link drawable", pathLength: 1 }, parent);
+  }
+
+  // A pointer at y = 0 whose tip is at x2.
+  function drawArrow(parent, x1, x2) {
+    drawLink(parent, x1, x2 - 9);
+    createSvg("path", { d: `M${x2},0 L${x2 - 10},-5.5 L${x2 - 10},5.5 Z`, class: "head" }, parent);
+  }
+
+  // The cells of `list` and the symbol of the empty list.
+  function drawList(list) {
+    const group = createSvg("g");
+    list.forEach((cell, i) => {
+      const node = drawCell(cell);
+      node.setAttribute("transform", `translate(${i * PITCH},0)`);
+      group.appendChild(node);
+      const pointerX = i * PITCH + VALUE_W + POINTER_W / 2;
+      if (i + 1 < list.length) drawArrow(group, pointerX, (i + 1) * PITCH);
+      else drawLink(group, pointerX, nilX(list.length));
+    });
+    drawNil(group, nilX(list.length));
+    return group;
+  }
+
+  // The L-shaped line from a call to the row below it: down from (x1, y1), then right to (x2, y2).
+  function drawConnector(x1, y1, x2, y2) {
+    const group = createSvg("g");
+    createSvg("path", { d: `M${x1},${y1} V${y2} H${x2 - 10}`, class: "conn drawable", pathLength: 1 }, group);
+    createSvg("path", { d: `M${x2 - 1},${y2} L${x2 - 12},${y2 - 6} L${x2 - 12},${y2 + 6} Z`, class: "head" }, group);
+    return group;
+  }
+
+  // A line under x1 to x2 of the row, with a label; its y is relative to the row.
+  function drawUnderline(x1, x2, listNumber) {
+    const group = createSvg("g");
+    createSvg("line", { x1, x2, y1: 37, y2: 37, class: `u${listNumber}` }, group);
+    createText(`l${listNumber}`, { x: (x1 + x2) / 2, y: 63, class: `ulab c${listNumber}` }, group);
+    return group;
+  }
+
+  // A brace under a row at y, from x over `width`, with a label below it.
+  function drawBrace(x, width, y, label, strong = false) {
+    const group = createSvg("g");
+    const size = strong ? 14 : 12;
+    const half = size / 2;
+    const top = y + (strong ? 34 : 32);
+    const middle = x + width / 2;
+    const end = x + width;
+    createSvg("path", {
+      d: `M${x},${top} q0,${half} ${half},${half} H${middle - half} q${half},0 ${half},${half}` +
+         ` q0,${-half} ${half},${-half} H${end - half} q${half},0 ${half},${-half}`,
+      class: strong ? "brace strong" : "brace",
+    }, group);
+    createText(label, {
+      x: middle, y: y + (strong ? 74 : 66), class: strong ? "blab strong" : "blab",
+    }, group);
+    return group;
+  }
+
+  // [x, y, z] + [a, b, c] = [x, y, z, a, b, c]
+  function drawEquation(l1, l2) {
+    const equation = createSvg("text", { x: 800, y: 250, class: "eq" });
+    const addList = list => {
+      if (!list.length) {
+        addSpan(equation, "(list)");
+        return;
+      }
+      addSpan(equation, "[");
+      list.forEach((cell, i) => {
+        if (i) addSpan(equation, ", ");
+        addSpan(equation, cell.value, cell.color);
+      });
+      addSpan(equation, "]");
+    };
+    addList(l1);
+    addSpan(equation, " + ");
+    addList(l2);
+    addSpan(equation, " = ");
+    addList([...l1, ...l2]);
+    return equation;
+  }
+
+  // The symbol of the empty list and what it means.
+  function drawNilNote() {
+    const group = createSvg("g");
+    drawNil(group, 0);
+    createText("= (list), the empty list", { x: 34, y: 7, class: "note" }, group);
+    return group;
+  }
+
+  // Each word of `line` as a span, colored by its kind.
+  function drawCodeLine(parent, line, y) {
+    const text = createSvg("text", { x: 66, y, class: "code", "xml:space": "preserve" }, parent);
+    for (const part of line.split(CODE_WORD)) {
+      if (!part) continue;
+      if (KEYWORDS.includes(part)) addSpan(text, part, "kw");
+      else if (FUNCTIONS.includes(part)) addSpan(text, part, "fn");
+      else addSpan(text, part);
+    }
+  }
+
+  // Each entry is a swatch followed by its name, after the text of the previous entry.
+  function drawLegend(parent) {
+    const legend = createSvg("g", { transform: "translate(40,392)" }, parent);
+    const characterW = 18 * MONO_ADVANCE;
+    let x = 0;
+    const addEntry = (drawSwatch, name) => {
+      drawSwatch(x);
+      createText(name, { x: x + 32, y: 6, class: "leg" }, legend);
+      x += 32 + name.length * characterW + 36;
+    };
+    const drawBox = color => boxX =>
+      createSvg("rect", { x: boxX, y: -11, width: 22, height: 22, class: "val " + color }, legend);
+    addEntry(drawBox("c1"), "l1");
+    addEntry(drawBox("c2"), "l2");
+    addEntry(symbolX => {
+      drawNil(createSvg("g", { transform: `translate(${symbolX},0) scale(0.75)` }, legend), 0);
+    }, "(list)");
+  }
+
+  // ---- The stage: the drawings and steps, and showing a step
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const EASING = "cubic-bezier(.45,.05,.25,1)";
+
+  const isVisibleAt = (item, step) =>
+    item.show <= step && (item.hide === undefined || step < item.hide);
+
+  function setVisible(item, visible) {
+    item.element.style.visibility = visible ? "visible" : "hidden";
+    item.element.style.opacity = visible ? "1" : "0";
+  }
+
+  function animateIn(item) {
+    const { element, kind, from } = item;
+    const timing = {
+      duration: reducedMotion.matches ? 1 : item.duration,
+      delay: reducedMotion.matches ? 0 : item.delay,
+      easing: EASING,
+      fill: "backwards",
+    };
+    const linear = { ...timing, easing: "linear" };
+    const fade = [{ opacity: 0 }, { opacity: 1 }];
+    if (kind === "move") {
+      element.animate([
+        { transform: `translate(${from[0]}px, ${from[1]}px)` },
+        { transform: "translate(0px, 0px)" },
+      ], timing);
+      if (item.fadeToo) element.animate(fade, linear);
+    } else if (kind === "pop") {
+      element.animate([
+        { opacity: 0, transform: "scale(0.4)" },
+        { opacity: 1, transform: "scale(1)" },
+      ], timing);
+    } else if (kind === "draw") {
+      element.querySelectorAll(".drawable").forEach(path => path.animate([
+        { strokeDasharray: "1 1", strokeDashoffset: 1 },
+        { strokeDasharray: "1 1", strokeDashoffset: 0 },
+      ], timing));
+      element.querySelectorAll(".head").forEach(head => head.animate([
+        { opacity: 0 },
+        { opacity: 0, offset: 0.85 },
+        { opacity: 1 },
+      ], linear));
+    } else {
+      element.animate(fade, timing);
+    }
+  }
+
+  function animateOut(item) {
+    if (item.hideInstantly || reducedMotion.matches) {
+      setVisible(item, false);
+      return;
+    }
+    const { element } = item;
+    element.style.visibility = "visible";
+    const animation = element.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 280, easing: "ease-out" });
+    element.style.opacity = "0";
+    animation.onfinish = () => { element.style.visibility = "hidden"; };
+  }
+
+  function pulse(item) {
+    item.element.animate([
+      { transform: "scale(1)" },
+      { transform: "scale(1.28)" },
+      { transform: "scale(1)" },
+    ], { duration: 650, easing: "ease-in-out" });
+  }
+
+  class Stage {
+    #svg;
+    #root;
+    #items = [];
+    #steps = [];
+    // The bar behind the highlighted line of code.
+    codeHighlight = null;
+
+    constructor(svg) {
+      this.#svg = svg;
+      this.#root = createSvg("g", {}, svg);
+    }
+
+    get stepCount() {
+      return this.#steps.length;
+    }
+
+    // Adds a step that highlights `codeLine` and pulses the item `pulsed`; returns its index.
+    addStep(codeLine = null, pulsed = null) {
+      this.#steps.push({ codeLine, pulsed });
+      return this.#steps.length - 1;
+    }
+
+    // Adds `node` at (x, y). The options are the steps `show` and `hide`; `from`, the point it
+    // moves in from, and `fadeToo`, which also fades it in; or else `kind`, pop or draw (the
+    // default is a fade); and `delay` and `duration`, in ms. Returns the item.
+    place(node, x, y, { show, hide, from = null, fadeToo = false, kind = from ? "move" : "fade", delay = 0, duration = 450 }) {
+      const outer = createSvg("g", { transform: `translate(${x},${y})` }, this.#root);
+      const element = createSvg("g", { class: "item" }, outer);
+      element.appendChild(node);
+      const item = {
+        element, show, hide, kind, delay, duration, fadeToo, hideInstantly: false,
+        from: from && [from[0] - x, from[1] - y],
+      };
+      this.#items.push(item);
+      return item;
+    }
+
+    // Shows step `step`, animating the change when `previous` is the step before it.
+    show(step, previous) {
+      const animated = previous === step - 1;
+      this.#setVisibleAt(animated ? previous : step);
+      if (animated) {
+        for (const item of this.#items) {
+          if (item.show === step) {
+            setVisible(item, true);
+            animateIn(item);
+          } else if (item.hide === step && isVisibleAt(item, previous)) {
+            animateOut(item);
+          }
+        }
+        const { pulsed } = this.#steps[step];
+        if (pulsed && !reducedMotion.matches) pulse(pulsed);
+      }
+      this.#highlightCode(this.#steps[step].codeLine, animated);
+    }
+
+    #setVisibleAt(step) {
+      this.#svg.getAnimations({ subtree: true }).forEach(animation => animation.cancel());
+      this.#items.forEach(item => setVisible(item, isVisibleAt(item, step)));
+    }
+
+    #highlightCode(line, animated) {
+      const { style } = this.codeHighlight;
+      style.transition = animated ? "" : "none";
+      if (line === null) {
+        style.opacity = "0";
+      } else {
+        style.opacity = "1";
+        style.transform = `translateY(${codeLineY(line) - 28}px)`;
+      }
+    }
+  }
+
+  // Makes `items` disappear at `step`.
+  function hideAt(step, items, hideInstantly = false) {
+    for (const item of items) {
+      item.hide = step;
+      item.hideInstantly = hideInstantly;
+    }
+  }
+
+  // ---- The trace
+
+  // The row of a call: l1, then +, then l2.
+  function makeRow(level, rowNumber, l1Length) {
+    const x = rowX(level);
+    const l1Width = listWidth(l1Length);
+    return {
+      x, y: rowY(rowNumber), l1Length, plusX: x + l1Width + 25, l2X: x + l1Width + 50,
+    };
+  }
+
+  function placePlus(stage, x, y, options) {
+    return stage.place(createText("+", { x, y: y + 10, class: "plus" }), 0, 0, options);
+  }
+
+  // The equation, then the two lists as cells. Returns what the next step hides.
+  function placeIntro(stage, l1, l2) {
+    const equation = stage.place(drawEquation(l1, l2), 0, 0, { show: stage.addStep() });
+    const show = stage.addStep();
+    const list1 = stage.place(drawList(l1), INTRO_L1_X, INTRO_Y,
+      { show, from: [INTRO_L1_X - 30, INTRO_Y], duration: 600, fadeToo: true });
+    const list2 = stage.place(drawList(l2), INTRO_L2_X, INTRO_Y,
+      { show, from: [INTRO_L2_X + 30, INTRO_Y], duration: 600, fadeToo: true });
+    const plus = placePlus(stage, 800, INTRO_Y, { show });
+    const underline1 = stage.place(drawUnderline(INTRO_L1_X, INTRO_L1_X + listWidth(l1.length), 1),
+      0, INTRO_Y, { show, delay: 400 });
+    const underline2 = stage.place(drawUnderline(INTRO_L2_X, INTRO_L2_X + listWidth(l2.length), 2),
+      0, INTRO_Y, { show, delay: 400 });
+    const note = stage.place(drawNilNote(), 640, 640, { show, delay: 700 });
+    return { faded: [equation, plus, underline1, underline2, note], replaced: [list1, list2] };
+  }
+
+  // The code panel and the legend. Returns the bar behind the highlighted line.
+  function placeCodePanel(stage, show) {
+    const group = createSvg("g");
+    createSvg("rect", { x: 40, y: 40, width: 600, height: 300, rx: 12, class: "panel" }, group);
+    const highlight = createSvg("rect", { x: 46, y: 0, width: 588, height: 40, rx: 4, class: "codehl" }, group);
+    CODE.forEach((line, i) => drawCodeLine(group, line, codeLineY(i)));
+    drawLegend(group);
+    stage.place(group, 0, 0, { show });
+    return highlight;
+  }
+
+  // One row per call, each below and to the right of its caller. Returns the last row, the
+  // item of its l1, and the circle of the `h` of each call.
+  function placeDescent(stage, l1, l2, show) {
+    let row = makeRow(0, 0, l1.length);
+    let rowL1 = stage.place(drawList(l1), row.x, row.y, { show, from: [INTRO_L1_X, INTRO_Y], duration: 900 });
+    placePlus(stage, row.plusX, row.y, { show, delay: 500 });
+    stage.place(drawList(l2), row.l2X, row.y, { show, from: [INTRO_L2_X, INTRO_Y], duration: 900 });
+
+    const circles = [];
+    l1.forEach((cell, k) => {
+      const rest = l1.slice(k + 1);
+      const restX = rest.length ? row.x + PITCH : row.x + nilX(1);
+      const restEnd = row.x + listWidth(row.l1Length);
+      const l2End = row.l2X + listWidth(l2.length);
+
+      // Matching (cons h l1): circle h, underline the l1 and l2 of the recursive call.
+      const matched = stage.addStep(CONS_LINE);
+      const circle = createSvg("g");
+      createSvg("circle", { cx: 0, cy: 0, r: 33, class: "hcirc" }, circle);
+      createText("h", { x: 0, y: 55, class: "hlab" }, circle);
+      circles.push(stage.place(circle, row.x + VALUE_W / 2, row.y, { show: matched, kind: "pop" }));
+
+      // The recursive call: l1 and l2 move to the next row.
+      const called = stage.addStep(CALL_LINE);
+      const underlined = { show: matched, hide: called, delay: 250 };
+      stage.place(drawUnderline(restX - (rest.length ? 0 : 6), restEnd, 1), 0, row.y, underlined);
+      stage.place(drawUnderline(row.l2X, l2End, 2), 0, row.y, underlined);
+
+      const next = makeRow(k + 1, k + 1, rest.length);
+      stage.place(drawConnector(row.x + 3, row.y + 38, next.x, next.y), 0, 0,
+        { show: called, kind: "draw", duration: 550 });
+      rowL1 = stage.place(drawList(rest), next.x, next.y,
+        { show: called, from: [restX, row.y], delay: 550, duration: 800 });
+      placePlus(stage, next.plusX, next.y, { show: called, delay: 900 });
+      stage.place(drawList(l2), next.l2X, next.y,
+        { show: called, from: [row.l2X, row.y], delay: 550, duration: 800 });
+      row = next;
+    });
+    return { row, rowL1, circles };
+  }
+
+  // Returns the labels that the first return hides.
+  function placeBaseCase(stage, l2, row, rowL1) {
+    const show = stage.addStep(BASE_LINE, rowL1);
+    const l2End = row.l2X + listWidth(l2.length);
+    return [
+      stage.place(drawUnderline(row.l2X, l2End, 2), 0, row.y, { show, delay: 300 }),
+      stage.place(createText("= l2", { x: l2End + 22, y: row.y + 8, class: "lbl c2" }), 0, 0, { show, delay: 300 }),
+    ];
+  }
+
+  // The calls return, last to first, each in a row of its own. Returns the position of the
+  // final list, which is l2 itself when l1 is empty.
+  function placeReturns(stage, l1, l2, startRow, baseLabels, circles) {
+    let returned = { x: startRow.l2X, y: startRow.y };
+    for (let k = l1.length - 1; k >= 0; k--) {
+      const cell = l1[k];
+      const result = [...l1.slice(k + 1), ...l2];
+      const x = rowX(k + 1);
+      const y = rowY(2 * l1.length - k);
+      const hX = x + CONS_W;
+      const resultX = hX + VALUE_W + POINTER_W + 26;
+
+      // The call returns its result, which moves in next to `cons`.
+      const returnedStep = stage.addStep(CALL_LINE);
+      if (k === l1.length - 1) hideAt(returnedStep, baseLabels);
+      stage.place(drawConnector(rowX(k) + 3, rowY(k + 1), x, y), 0, 0,
+        { show: returnedStep, kind: "draw", duration: 550 });
+      const cons = stage.place(createText("cons", { x, y: y + 9, class: "consw" }), 0, 0,
+        { show: returnedStep, delay: 450 });
+      const resultItem = stage.place(drawList(result), resultX, y,
+        { show: returnedStep, from: [returned.x, returned.y], delay: 450, duration: 900 });
+      const brace = stage.place(drawBrace(resultX, listWidth(result.length), y, "result"), 0, 0,
+        { show: returnedStep, delay: 1200 });
+
+      // h moves from its circle to the front of the result.
+      const hStep = stage.addStep(RESULT_LINE, circles[k]);
+      const hItem = stage.place(drawCell(cell), hX, y,
+        { show: hStep, from: [rowX(k), rowY(k)], delay: 300, duration: 900 });
+
+      // h and the result become one list: new drawings slide to the final position.
+      const joined = stage.addStep(RESULT_LINE);
+      hideAt(joined, [cons, brace]);
+      hideAt(joined, [hItem, resultItem], true);
+      stage.place(drawCell(cell), x, y, { show: joined, from: [hX, y], duration: 650 });
+      stage.place(drawList(result), x + PITCH, y, { show: joined, from: [resultX, y], duration: 650 });
+      const link = createSvg("g");
+      drawArrow(link, VALUE_W + POINTER_W / 2, PITCH);
+      stage.place(link, x, y, { show: joined, kind: "draw", delay: 650, duration: 350 });
+
+      returned = { x, y };
+    }
+    return returned;
+  }
+
+  // The brace under the final list. With no return to hide them, it also hides the base case's labels.
+  function placeDone(stage, l1, l2, finalList, baseLabels) {
+    const show = stage.addStep();
+    if (!l1.length) hideAt(show, baseLabels);
+    const label = `${formatList(l1)} + ${formatList(l2)}`;
+    const brace = drawBrace(finalList.x, listWidth(l1.length + l2.length), finalList.y, label, true);
+    stage.place(brace, 0, 0, { show });
+  }
+
+  // Draws the trace of (append l1 l2) into `svg`, replacing the one there, and returns its stage.
+  function createStage(svg, l1Values, l2Values) {
+    svg.querySelector(":scope > g")?.remove();
+    const l1 = l1Values.map(value => ({ value, color: "c1" }));
+    const l2 = l2Values.map(value => ({ value, color: "c2" }));
+    svg.querySelector("desc").textContent =
+      `Step-by-step trace of (append ${formatList(l1)} ${formatList(l2)}) using box-and-pointer lists.`;
+
+    const stage = new Stage(svg);
+    const intro = placeIntro(stage, l1, l2);
+    const traceStep = stage.addStep();
+    hideAt(traceStep, intro.faded);
+    hideAt(traceStep, intro.replaced, true);
+    stage.codeHighlight = placeCodePanel(stage, traceStep);
+    const { row, rowL1, circles } = placeDescent(stage, l1, l2, traceStep);
+    const baseLabels = placeBaseCase(stage, l2, row, rowL1);
+    const finalList = placeReturns(stage, l1, l2, row, baseLabels, circles);
+    placeDone(stage, l1, l2, finalList, baseLabels);
+    return stage;
+  }
+
+  // ---- The element
+
+  // One element per character; whitespace is ignored, and "" is the empty list.
+  const parseList = text => [...text.replace(/\s/g, "")];
+  const DEFAULT_LISTS = { l1: "xy", l2: "ab" };
+
+  customElements.define("append-trace", class extends HTMLElement {
+    static observedAttributes = ["step", "l1", "l2"];
+
+    #stage = null;
+    #shownStep = null;
+
+    get stepCount() {
+      return this.#ensureStage().stepCount;
+    }
+
+    connectedCallback() {
+      this.#ensureStage();
+    }
+
+    attributeChangedCallback(name) {
+      if (!this.#stage) return;
+      if (name === "step") {
+        this.#render();
+      } else {
+        this.#stage = null;
+        this.#ensureStage();
+      }
+    }
+
+    #ensureStage() {
+      if (this.#stage) return this.#stage;
+      const shadow = this.shadowRoot ?? this.#createShadow();
+      const lists = {};
+      for (const input of shadow.querySelectorAll("input")) {
+        lists[input.name] = this.getAttribute(input.name) ?? DEFAULT_LISTS[input.name];
+        // Not while typing, when it is already the same: this would move the cursor.
+        if (input.value !== lists[input.name]) input.value = lists[input.name];
+      }
+      this.#stage = createStage(shadow.querySelector("svg"), parseList(lists.l1), parseList(lists.l2));
+      this.#shownStep = null;
+      this.#render();
+      return this.#stage;
+    }
+
+    #createShadow() {
+      const shadow = this.attachShadow({ mode: "open" });
+      shadow.innerHTML = SHADOW_CONTENT;
+      for (const input of shadow.querySelectorAll("input")) {
+        input.addEventListener("input", () => {
+          this.setAttribute(input.name, input.value);
+          if (this.hasAttribute("step")) this.setAttribute("step", "0");
+        });
+        // Gives the arrow keys back to the deck.
+        input.addEventListener("keydown", event => {
+          if (event.key === "Enter" || event.key === "Escape") input.blur();
+        });
+      }
+      return shadow;
+    }
+
+    #render() {
+      const last = this.#stage.stepCount - 1;
+      const requested = parseInt(this.getAttribute("step"), 10);
+      const step = Number.isNaN(requested) ? last : Math.max(0, Math.min(last, requested));
+      if (step === this.#shownStep) return;
+      // Only a change of `step` by the deck animates, never the final state.
+      this.#stage.show(step, Number.isNaN(requested) ? null : this.#shownStep);
+      this.#shownStep = step;
+    }
+  });
+})();
+
+</script>
+<append-trace style="position: absolute; inset: 0;"></append-trace>
 <div class="remark-slide-number">13 / 24</div></div>
     </div>
   </div>
@@ -1538,6 +2211,53 @@ for h in reversed(l):
     if (e.matches) scale(908, 681); else fit();
   });
 
+  function widgetOf(container) {
+    var all = container.querySelectorAll('*');
+    for (var i = 0; i < all.length; i++) {
+      var stepCount = all[i].stepCount;
+      if (typeof stepCount === 'number' && stepCount > 0) return all[i];
+    }
+    return null;
+  }
+
+  function stepOf(widget) {
+    var step = parseInt(widget.getAttribute('step'), 10);
+    return isNaN(step) ? widget.stepCount - 1 : step;
+  }
+
+  function setStep(widget, step) {
+    widget.setAttribute('step', String(Math.max(0, Math.min(widget.stepCount - 1, step))));
+  }
+
+  function continues(i) {
+    return i > 0 && containers[i - 1].dataset.number === containers[i].dataset.number &&
+      widgetOf(containers[i - 1]) !== null;
+  }
+
+  function enterWidget(i, direction) {
+    var widget = widgetOf(containers[i]);
+    if (widget) setStep(widget, direction === -1 || continues(i) ? widget.stepCount - 1 : 0);
+  }
+
+  function leaveWidget(i) {
+    var widget = widgetOf(containers[i]);
+    if (widget) widget.removeAttribute('step');
+  }
+
+  function widgetCanStep(side) {
+    var widget = current === -1 ? null : widgetOf(containers[current]);
+    if (!widget) return false;
+    if (side < 0) return stepOf(widget) > 0 && !continues(current);
+    return stepOf(widget) < widget.stepCount - 1;
+  }
+
+  function stepWidget(side) {
+    if (!widgetCanStep(side)) return false;
+    var widget = widgetOf(containers[current]);
+    setStep(widget, stepOf(widget) + side);
+    return true;
+  }
+
   // -- Navigation --------------------------------------------------------------
 
   var current = -1;
@@ -1558,10 +2278,12 @@ for h in reversed(l):
     finish();
   }
 
-  function show(i) {
+  function show(i, direction) {
     settle();
     if (i === current || i < 0 || i >= containers.length) return;
+    enterWidget(i, direction);
     if (current !== -1) {
+      leaveWidget(current);
       var previous = containers[current];
       previous.classList.remove('remark-visible');
       containers.forEach(function (c) { c.classList.remove('remark-fading'); });
@@ -1592,11 +2314,35 @@ for h in reversed(l):
     getSlides: function () { return slides.slice(); },
     getSlideCount: function () { return slides.length; },
     getCurrentSlideIndex: function () { return current; },
-    gotoSlide: function (target) { show(indexOf(target)); },
-    gotoNextSlide: function () { show(current + 1); },
-    gotoPreviousSlide: function () { show(current - 1); },
+    gotoSlide: function (target) { show(indexOf(target), 0); },
+    gotoNextSlide: function () { show(current + 1, 1); },
+    gotoPreviousSlide: function () { show(current - 1, -1); },
+    next: function () {
+      settle();
+      if (!stepWidget(1)) slideshow.gotoNextSlide();
+    },
+    previous: function () {
+      settle();
+      if (!stepWidget(-1)) slideshow.gotoPreviousSlide();
+    },
   };
   window.slideshow = slideshow;
+
+  var printed = null;
+  function beforePrint() {
+    var widget = current === -1 ? null : widgetOf(containers[current]);
+    if (printed || !widget || !widget.hasAttribute('step')) return;
+    printed = {widget: widget, step: widget.getAttribute('step')};
+    widget.removeAttribute('step');
+  }
+  function afterPrint() {
+    if (!printed) return;
+    printed.widget.setAttribute('step', printed.step);
+    printed = null;
+  }
+  window.addEventListener('beforeprint', beforePrint);
+  window.addEventListener('afterprint', afterPrint);
+  window.matchMedia('print').addListener(function (e) { if (e.matches) beforePrint(); else afterPrint(); });
 
   function fromHash() { slideshow.gotoSlide((window.location.hash || '').substr(1)); }
   window.addEventListener('hashchange', fromHash);
@@ -1607,11 +2353,18 @@ for h in reversed(l):
     else if (document.body.requestFullscreen) document.body.requestFullscreen();
   }
 
+  function claimed(e) {
+    if (e.defaultPrevented) return true;
+    var target = e.composedPath ? e.composedPath()[0] : e.target;
+    return !!target && (target.isContentEditable ||
+      /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName || ''));
+  }
+
   window.addEventListener('keydown', function (e) {
-    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.metaKey || e.ctrlKey || e.altKey || claimed(e)) return;
     switch (e.key) {
-      case 'ArrowLeft': case 'ArrowUp': slideshow.gotoPreviousSlide(); break;
-      case 'ArrowRight': case 'ArrowDown': slideshow.gotoNextSlide(); break;
+      case 'ArrowLeft': case 'ArrowUp': slideshow.previous(); break;
+      case 'ArrowRight': case 'ArrowDown': slideshow.next(); break;
       case 'f': case 'F': toggleFullscreen(); e.preventDefault(); break;
     }
   });
@@ -1629,6 +2382,7 @@ for h in reversed(l):
   }
 
   function place(i, x) {
+    if (i !== current) enterWidget(i, i > current ? 1 : -1);
     var style = containers[i].style;
     style.display = 'block';
     style.visibility = 'visible';
@@ -1638,6 +2392,7 @@ for h in reversed(l):
 
   function unplace(i) {
     if (i < 0 || i >= containers.length) return;
+    if (i !== current) leaveWidget(i);
     var style = containers[i].style;
     style.display = style.visibility = style.zIndex = style.transform = style.transition = '';
   }
@@ -1646,7 +2401,8 @@ for h in reversed(l):
     var width = area.clientWidth;
     var side = dx < 0 ? 1 : -1;
     var hasNeighbor = slidesAcross(current + side);
-    var isStep = !hasNeighbor && current + side >= 0 && current + side < containers.length;
+    var isStep = widgetCanStep(side) ||
+      (!hasNeighbor && current + side >= 0 && current + side < containers.length);
     unplace(current - side);
     if (isStep) {
       unplace(current);
@@ -1666,7 +2422,7 @@ for h in reversed(l):
       unplace(from - 1);
       unplace(from);
       unplace(from + 1);
-      show(target);
+      show(target, target > from ? 1 : -1);
       return;
     }
     var side = target > from ? 1 : -1;
@@ -1688,7 +2444,7 @@ for h in reversed(l):
         unplace(from - 1);
         unplace(from);
         unplace(from + 1);
-        if (moving) show(target);
+        if (moving) show(target, side);
       },
     };
   }
@@ -1706,11 +2462,12 @@ for h in reversed(l):
     doc.documentElement.style.overscrollBehaviorX = 'none';
     doc.body.style.overscrollBehaviorX = 'none';
     doc.addEventListener('touchstart', function (e) {
-      if (e.touches.length !== 1) { abandon(); return; }
+      if (e.touches.length !== 1 || claimed(e)) { abandon(); return; }
       settle();
       start = {x: e.touches[0].clientX, y: e.touches[0].clientY, dragging: false};
     }, {passive: true});
     if (follows) doc.addEventListener('touchmove', function (e) {
+      if (e.defaultPrevented) { abandon(); return; }
       if (start === null || isZoomed() || e.touches.length !== 1) return;
       var dx = e.touches[0].clientX - start.x;
       var dy = e.touches[0].clientY - start.y;
@@ -1732,7 +2489,8 @@ for h in reversed(l):
       var dy = e.changedTouches[0].clientY - start.y;
       var dragging = start.dragging;
       start = null;
-      var swiped = !isZoomed() && Math.abs(dx) >= 50 && Math.abs(dx) >= 2 * Math.abs(dy);
+      var swiped = !e.defaultPrevented && !isZoomed() && Math.abs(dx) >= 50 && Math.abs(dx) >= 2 * Math.abs(dy);
+      if (swiped && stepWidget(dx < 0 ? 1 : -1)) return;
       var target = swiped ? current + (dx < 0 ? 1 : -1) : current;
       if (target < 0 || target >= containers.length) target = current;
       if (dragging || target !== current) release(target);
@@ -1759,18 +2517,57 @@ for h in reversed(l):
       });
     </script>
     <style>
-      .nav-box {
-        position: fixed; right: 0; top: 0; z-index: 100; display: flex;
-        background: #fff; border: solid #bbb; border-width: 0 0 1px 1px; border-radius: 0 0 0 6px;
+      /* The controls of an exported page: a bar that minimizes to a line. */
+      .rail { position: fixed; z-index: 100; height: 0; }
+      .rail-line {
+        position: absolute; left: 0; right: 0; bottom: 0; height: 6px;
+        background: var(--rail-background); overflow: hidden; pointer-events: none; transition: opacity .2s;
       }
-      .nav-box button {
-        width: 36px; height: 36px; padding: 0; font-size: 22px; line-height: 1; color: #333;
-        background: none; border: none; cursor: pointer;
+      .rail-ahead {
+        position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+        background: var(--rail-foreground); transition: transform .15s;
       }
-      .nav-box button:hover:enabled { background: #e8e8e8; }
-      .nav-box button:disabled { color: #bbb; cursor: default; }
+      .rail-bar {
+        position: absolute; left: 0; right: 0; bottom: 0; height: 44px; display: flex;
+        background: #1c2026; transform: translateY(100%); visibility: hidden;
+        transition: transform .2s, visibility .2s;
+      }
+      .rail.big .rail-bar { transform: none; visibility: visible; }
+      .rail.big .rail-line { opacity: 0; }
+      .rail.off .rail-bar, .rail.off .rail-line { display: none; }
+      .rail-bar button {
+        flex: none; width: 64px; padding: 0; border: 0; color: #fff; background: #2b3038; cursor: pointer;
+        display: grid; place-items: center;
+      }
+      .rail-bar button + button { margin-left: 1px; }
+      .rail-bar button:hover:enabled { background: #40454e; }
+      .rail-bar button:disabled { color: #6b727d; cursor: default; }
+      .rail-track { flex: 1; min-width: 0; display: flex; align-items: center; padding: 0 20px; cursor: pointer; }
+      .rail-solid {
+        position: relative; flex: 1; height: 10px; border-radius: 5px; overflow: hidden; background: #40454e;
+      }
+      .rail[data-direction="rtl"] .rail-solid { transform: scaleX(-1); }
+      .rail-done { height: 100%; background: #9aa1ab; }
+      .rail-slide { position: absolute; top: 0; bottom: 0; background: #6b727d; }
+      .rail-step { height: 100%; background: #fff; }
+      .rail-toast {
+        position: fixed; left: 50%; bottom: 16px; z-index: 101; transform: translateX(-50%); padding: 8px 14px;
+        border-radius: 999px; color: #fff; background: #1c2026; font-size: 14px; white-space: nowrap;
+      }
+      .rail-help {
+        position: fixed; left: 50%; top: 50%; z-index: 101; transform: translate(-50%, -50%);
+        box-sizing: border-box; width: 340px; max-width: calc(100vw - 32px); padding: 16px 20px; border-radius: 12px;
+        color: #fff; background: #1c2026; font-size: 14px;
+      }
+      .rail-help h2 { margin: 0 0 10px; color: #fff; font-size: 16px; font-weight: 600; }
+      .rail-help dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; align-items: center; }
+      .rail-help dd { margin: 0; }
+      .rail-toast kbd, .rail-help kbd {
+        padding: 2px 8px; border-radius: 5px; background: #40454e; font: 13px monospace; white-space: nowrap;
+      }
+      .rail-help dt { justify-self: start; }
       @media (any-pointer: none) {
-        .nav-box { display: none; }
+        .rail-bar { display: none; }
       }
       /* On a phone held upright, the slide leaves empty space below it. */
       .rotate-hint { display: none; }
@@ -1781,7 +2578,7 @@ for h in reversed(l):
         }
       }
       @media print {
-        .nav-box { display: none; }
+        .rail, .rail-toast, .rail-help { display: none; }
         .remark-slide-container.interim-step { display: none; }
       }
     </style>
@@ -1796,48 +2593,227 @@ for h in reversed(l):
       })();
     </script>
     <script>
-      // A box in the top right corner of the window of an exported page, on every slide, for
-      // devices with a pointer: its arrows go to the previous and next slide, the square enters and
-      // leaves full screen (no such button where the browser has no full screen), and x removes it.
-      // The same template renders the slides that `shearwater serve` shows in class, on
-      // localhost, which have no box.
+      // The controls of a page: a bar with full screen, a line that shows how far the lecture has
+      // gone, back and forward. It shows when the page opens, and minimizes to a thin line, under
+      // the slide when the window has room there and over the slide's bottom edge when not.
+      // On localhost, where `shearwater serve` runs, they start hidden unless the URL has
+      // `?controls`; the keys work either way.
       (function () {
-        if (location.hostname === 'localhost') return;
-        var box = document.createElement('div');
-        box.className = 'nav-box';
-        function add(text, label, action) {
-          var button = document.createElement('button');
-          button.textContent = text;
-          button.setAttribute('aria-label', label);
-          button.title = label;
-          button.addEventListener('click', action);
-          box.appendChild(button);
-          return button;
+        var startHidden = location.hostname === 'localhost' && !new URLSearchParams(location.search).has('controls');
+
+        var SETTINGS = {
+          // 'ltr': the foreground of the thin line recedes from the left edge to the right.
+          // 'rtl': the reverse. It also sets the direction of the line in the bar.
+          direction: 'ltr',
+          // The colors of the thin line: the part of the lecture ahead, and the part done.
+          foreground: '#3f3f3f',
+          background: '#f1f1f1',
+        };
+        var LINE_HEIGHT_PX = 6;
+        var MINIMIZE_MS = 3000;
+        var TOAST_MS = 3000;
+        var POINTER_EDGE_PX = 24;
+        var TAP_EDGE_PX = 32;
+        var TAP_MOVEMENT_PX = 10;
+
+        var ICON = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+          'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="PATH"></path></svg>';
+        function icon(path) { return ICON.replace('PATH', path); }
+
+        var rail = document.createElement('div');
+        rail.className = startHidden ? 'rail off' : 'rail big';
+        rail.dataset.direction = SETTINGS.direction;
+        rail.style.setProperty('--rail-foreground', SETTINGS.foreground);
+        rail.style.setProperty('--rail-background', SETTINGS.background);
+        rail.innerHTML =
+          '<div class="rail-line"><div class="rail-ahead"></div></div>' +
+          '<div class="rail-bar">' +
+          (document.fullscreenEnabled
+            ? '<button class="rail-fullscreen" aria-label="Full screen" title="Full screen">' +
+              icon('M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5') + '</button>'
+            : '') +
+          '<div class="rail-track"><div class="rail-solid"><div class="rail-done"></div>' +
+          '<div class="rail-slide"><div class="rail-step"></div></div></div></div>' +
+          '<button class="rail-back" aria-label="Back" title="Back">' + icon('M15 5l-7 7 7 7') + '</button>' +
+          '<button class="rail-forward" aria-label="Forward" title="Forward">' + icon('M9 5l7 7-7 7') + '</button>' +
+          '</div>';
+        function part(name) { return rail.querySelector('.rail-' + name); }
+
+        // -- Where the lecture is --------------------------------------------------------
+
+        // A slide is the containers that share a number; a container with a widget has its steps.
+        var area = document.querySelector('.remark-slides-area');
+        var containers = Array.prototype.slice.call(area.children);
+        var slides = [];
+        var slideOf = containers.map(function (container, i) {
+          var last = slides[slides.length - 1];
+          if (last && containers[last[0]].dataset.number === container.dataset.number) last.push(i);
+          else slides.push([i]);
+          return slides.length - 1;
+        });
+        var widgets = containers.map(function (container) {
+          var all = container.querySelectorAll('*');
+          for (var i = 0; i < all.length; i++) {
+            if (typeof all[i].stepCount === 'number' && all[i].stepCount > 0) return all[i];
+          }
+          return null;
+        });
+        function stepsIn(i) { return widgets[i] ? widgets[i].stepCount : 1; }
+        function stepsReached(i) {
+          if (!widgets[i]) return 1;
+          var step = parseInt(widgets[i].getAttribute('step'), 10);
+          return isNaN(step) ? widgets[i].stepCount : step + 1;
         }
-        var previous = add('←', 'Previous slide', function () { slideshow.gotoPreviousSlide(); });
-        var next = add('→', 'Next slide', function () { slideshow.gotoNextSlide(); });
+
+        function update() {
+          var current = slideshow.getCurrentSlideIndex();
+          var slide = slideOf[current];
+          var total = 0, reached = 0;
+          slides[slide].forEach(function (i) {
+            if (i < current) reached += stepsIn(i);
+            total += stepsIn(i);
+          });
+          reached += stepsReached(current);
+          var count = slides.length;
+          var side = SETTINGS.direction === 'rtl' ? -1 : 1;
+          part('ahead').style.transform = 'translateX(' + side * 100 * (slide + reached / total) / count + '%)';
+          part('done').style.width = 100 * slide / count + '%';
+          part('slide').style.left = 100 * slide / count + '%';
+          part('slide').style.width = 100 / count + '%';
+          part('step').style.width = 100 * reached / total + '%';
+          part('back').disabled = slide === 0 && reached === 1;
+          part('forward').disabled = slide === count - 1 && reached === total;
+        }
+
+        // The slideshow has no event for a change of slide: the slide shown has the class
+        // remark-visible, and a widget's step and lists are attributes.
+        new MutationObserver(update).observe(area, {subtree: true, attributeFilter: ['class', 'step', 'l1', 'l2']});
+
+        // The controls have the width of the slide. The thin line touches the slide's bottom edge:
+        // from below when there is room for it, and from above when not. The bar grows up from it.
+        function place() {
+          var visible = containers[slideshow.getCurrentSlideIndex()];
+          var box = visible.firstElementChild.getBoundingClientRect();
+          var lineBottom = box.bottom + LINE_HEIGHT_PX <= window.innerHeight ? box.bottom + LINE_HEIGHT_PX : box.bottom;
+          rail.style.left = box.left + 'px';
+          rail.style.width = box.width + 'px';
+          rail.style.bottom = window.innerHeight - lineBottom + 'px';
+        }
+        function lineBottom() { return window.innerHeight - parseFloat(rail.style.bottom); }
+        window.addEventListener('resize', place);
+        document.addEventListener('fullscreenchange', place);
+
+        // -- Big and minimized -----------------------------------------------------------
+
+        var minimizeTimer = null;
+        function minimize() {
+          clearTimeout(minimizeTimer);
+          rail.classList.remove('big');
+        }
+        function waitToMinimize() {
+          clearTimeout(minimizeTimer);
+          minimizeTimer = setTimeout(function () {
+            if (part('bar').matches(':hover')) waitToMinimize();
+            else minimize();
+          }, MINIMIZE_MS);
+        }
+        function showBig() {
+          rail.classList.add('big');
+          waitToMinimize();
+        }
+
+        window.addEventListener('pointermove', function (e) {
+          if (e.pointerType === 'mouse' && e.clientY >= lineBottom() - POINTER_EDGE_PX) showBig();
+        });
+
+        var touchStart = null;
+        window.addEventListener('touchstart', function (e) { touchStart = e.changedTouches[0]; }, {capture: true, passive: true});
+        window.addEventListener('touchend', function (e) {
+          var end = e.changedTouches[0];
+          var moved = Math.max(Math.abs(end.clientX - touchStart.clientX), Math.abs(end.clientY - touchStart.clientY));
+          if (moved >= TAP_MOVEMENT_PX) minimize();
+          else if (end.clientY >= lineBottom() - TAP_EDGE_PX) showBig();
+        }, {capture: true, passive: true});
+
+        // -- Buttons ---------------------------------------------------------------------
+
+        // The keys stay with the slides after a click, and a click keeps the bar showing.
+        part('bar').addEventListener('click', function (e) {
+          var button = e.target.closest('button');
+          if (button) button.blur();
+          waitToMinimize();
+        });
+        part('back').addEventListener('click', function () { slideshow.previous(); });
+        part('forward').addEventListener('click', function () { slideshow.next(); });
+        part('track').addEventListener('click', function (e) {
+          var box = part('solid').getBoundingClientRect();
+          var at = (e.clientX - box.left) / box.width;
+          if (SETTINGS.direction === 'rtl') at = 1 - at;
+          var slide = Math.floor(Math.max(0, Math.min(0.999, at)) * slides.length);
+          slideshow.gotoSlide(slides[slide][0] + 1);
+        });
         if (document.fullscreenEnabled) {
-          var fullscreen = add('⛶', 'Full screen', function () {
+          part('fullscreen').addEventListener('click', function () {
             if (document.fullscreenElement) document.exitFullscreen();
             else document.documentElement.requestFullscreen();
           });
           document.addEventListener('fullscreenchange', function () {
             var label = document.fullscreenElement ? 'Exit full screen' : 'Full screen';
-            fullscreen.setAttribute('aria-label', label);
-            fullscreen.title = label;
+            part('fullscreen').setAttribute('aria-label', label);
+            part('fullscreen').title = label;
           });
         }
-        add('×', 'Close', function () { box.remove(); });
-        function update() {
-          var index = slideshow.getCurrentSlideIndex();
-          previous.disabled = index === 0;
-          next.disabled = index === slideshow.getSlideCount() - 1;
+
+        // -- Keys ------------------------------------------------------------------------
+
+        var help = document.createElement('div');
+        help.className = 'rail-help';
+        help.hidden = true;
+        help.innerHTML = '<h2>Keys</h2><dl>' +
+          '<dt><kbd>← →</kbd></dt><dd>Back and forward</dd>' +
+          '<dt><kbd>F</kbd></dt><dd>Full screen</dd>' +
+          '<dt><kbd>C</kbd></dt><dd>Hide or show the controls</dd>' +
+          '<dt><kbd>?</kbd></dt><dd>This help</dd></dl>';
+
+        var toast = document.createElement('div');
+        toast.className = 'rail-toast';
+        toast.hidden = true;
+        toast.innerHTML = 'Controls hidden. Press <kbd>C</kbd> to show them.';
+        var toastTimer = null;
+
+        function toggleControls() {
+          var off = rail.classList.toggle('off');
+          clearTimeout(toastTimer);
+          toast.hidden = !off;
+          if (off) toastTimer = setTimeout(function () { toast.hidden = true; }, TOAST_MS);
+          else showBig();
         }
-        // The slideshow has no event for a change of slide: the slide shown has the class remark-visible.
-        new MutationObserver(update).observe(document.querySelector('.remark-slides-area'),
-                                             {subtree: true, attributeFilter: ['class']});
+
+        function typing(e) {
+          var target = e.composedPath()[0];
+          return target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName || '');
+        }
+
+        // In the capture phase, so that the key that closes the help does not reach the slides.
+        window.addEventListener('keydown', function (e) {
+          if (e.metaKey || e.ctrlKey || e.altKey || typing(e)) return;
+          if (!help.hidden) {
+            help.hidden = true;
+            e.stopImmediatePropagation();
+            return;
+          }
+          if (e.key === '?') help.hidden = false;
+          else if (e.key === 'c' || e.key === 'C') toggleControls();
+          else if (e.key !== 'Shift') minimize();
+        }, true);
+        window.addEventListener('pointerdown', function () { help.hidden = true; }, true);
+
+        document.body.appendChild(rail);
+        document.body.appendChild(toast);
+        document.body.appendChild(help);
         update();
-        document.body.appendChild(box);
+        place();
+        waitToMinimize();
       })();
     </script>
   </body>

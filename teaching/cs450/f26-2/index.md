@@ -82,13 +82,13 @@ data:
   slides_from: f26-1
 - lecture: Implementing λ<sub>D</sub>
   #video: https://echo360.org/public/media/48b4a11c-d82a-40c0-81d1-4e005195d88e
-  slides_from: f23
+  slides_from: f26-1
 - lecture: "Exercises"
   slides_from: f26-1
 - module: Monads and side effects
   lecture: Garbage collection
   #video: https://echo360.org/public/media/e90532b0-2fd2-4336-8879-1127ebb24d9f
-  slides_from: f23
+  slides_from: f26-1
 - lecture: The state monad
   #video: https://echo360.org/public/media/df514883-7806-464e-a421-02d951088baa
   slides_from: f23
