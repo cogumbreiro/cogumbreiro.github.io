@@ -1637,7 +1637,7 @@ $$
 (define `mem1` (eff-state v1+mem1))
 (define v1 (eff-result v1+mem1))
 ;; E' &lt;- E + [x := v1]
-(define env2+mem2 (environ-push `mem1` env y v1)
+(define env2+mem2 (environ-push `mem1` env x v1)
 (define `mem2` (eff-state env2+mem2))
 (define env2 (eff-result env2+mem2))
 ;; e2 ⇓E' v2
