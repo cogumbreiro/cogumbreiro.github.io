@@ -108,7 +108,7 @@ data:
   slides_from: f26-1
 - lecture: The state monad
   video: https://echo360.org/public/media/2830306c-f95f-4f42-bc6d-c2821126127a
-  slides_from: f23
+  slides_from: f26-1
 - lecture: Loops and error monad
   video: https://echo360.org/public/media/9e1b9e62-ca4b-4079-984a-c6ddf4955eee
   slides_from: f23
